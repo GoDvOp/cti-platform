@@ -1,0 +1,102 @@
+{
+  "checked_at": "2026-10-24T06:58:44+00:00",
+  "method": "manual_web_verification",
+  "records": [
+    {
+      "url": "https://securelist.ru/macsync-new-version/117145/",
+      "publication_day": "2026-09-24",
+      "excerpt": "24 Сен 2026",
+      "basis": "Видимая дата публикации под заголовком статьи, проверена через веб-доступ; не дата UPD и не дата события."
+    },
+    {
+      "url": "https://securelist.ru/investigating-1c-compromise/117167/",
+      "publication_day": "2026-09-30",
+      "excerpt": "30 Сен 2026",
+      "basis": "Видимая дата публикации под заголовком статьи, проверена через веб-доступ; не дата UPD и не дата события."
+    },
+    {
+      "url": "https://securelist.ru/armored-likho-still-toolkit/116417/",
+      "publication_day": "2026-08-13",
+      "excerpt": "13 Авг 2026",
+      "basis": "Видимая дата публикации под заголовком статьи, проверена через веб-доступ; не дата UPD и не дата события."
+    },
+    {
+      "url": "https://securelist.ru/honeymyte-coolclient-driver-rootkit/116614/",
+      "publication_day": "2026-08-14",
+      "excerpt": "14 Авг 2026",
+      "basis": "Видимая дата публикации под заголовком статьи, проверена через веб-доступ; не дата UPD и не дата события."
+    },
+    {
+      "url": "https://securelist.ru/lazarus-operation-flashhole/117319/",
+      "publication_day": "2026-10-21",
+      "excerpt": "21 Окт 2026",
+      "basis": "Видимая дата публикации под заголовком статьи, проверена через веб-доступ; не дата UPD и не дата события."
+    },
+    {
+      "url": "https://securelist.ru/compromise-assessment-findings-2025/116234/",
+      "publication_day": "2026-07-02",
+      "excerpt": "02 Июл 2026",
+      "basis": "Видимая дата публикации под заголовком статьи, проверена через веб-доступ; не дата UPD и не дата события."
+    },
+    {
+      "url": "https://securelist.ru/tr/php2shell-critical-vulnerabilities-in-php/117380/",
+      "publication_day": "2026-10-21",
+      "excerpt": "21 Окт 2026",
+      "basis": "Видимая дата публикации под заголовком статьи, проверена через веб-доступ; не дата UPD и не дата события."
+    },
+    {
+      "url": "https://securelist.ru/paper-unicorn-warehouse-security/117315/",
+      "publication_day": "2026-10-20",
+      "excerpt": "20 Окт 2026",
+      "basis": "Видимая дата публикации под заголовком статьи, проверена через веб-доступ; не дата UPD и не дата события."
+    },
+    {
+      "url": "https://securelist.ru/tr/payload-ransomware-via-group-policy/117100/",
+      "publication_day": "2026-09-21",
+      "excerpt": "21 Сен 2026",
+      "basis": "Видимая дата публикации под заголовком статьи, проверена через веб-доступ; не дата UPD и не дата события."
+    },
+    {
+      "url": "https://securelist.ru/moviereaper-malware-torrent-odyssey-solana/117109/",
+      "publication_day": "2026-09-17",
+      "excerpt": "17 Сен 2026",
+      "basis": "Видимая дата публикации под заголовком статьи, проверена через веб-доступ; не дата UPD и не дата события."
+    },
+    {
+      "url": "https://securelist.ru/toy-ghouls-new-hivemq-and-element-backdoors/117010/",
+      "publication_day": "2026-09-04",
+      "excerpt": "04 Сен 2026",
+      "basis": "Видимая дата публикации под заголовком статьи, проверена через веб-доступ; не дата UPD и не дата события."
+    },
+    {
+      "url": "https://securelist.ru/tr/hacking-cat/117062/",
+      "publication_day": "2026-09-11",
+      "excerpt": "11 Сен 2026",
+      "basis": "Видимая дата публикации под заголовком статьи, проверена через веб-доступ; не дата UPD и не дата события."
+    },
+    {
+      "url": "https://securelist.ru/tr/nighteagle-apt-ghostcontainer-and-tunneling/117051/",
+      "publication_day": "2026-09-16",
+      "excerpt": "16 Сен 2026",
+      "basis": "Видимая дата публикации под заголовком статьи, проверена через веб-доступ; не дата UPD и не дата события."
+    },
+    {
+      "url": "https://securelist.ru/toddycat-apt-umbrij-tool-and-oauth/116029/",
+      "publication_day": "2026-06-30",
+      "excerpt": "30 Июн 2026",
+      "basis": "Видимая дата публикации под заголовком статьи, проверена через веб-доступ; не дата UPD и не дата события."
+    },
+    {
+      "url": "https://securelist.ru/uefi-bootkit-blackx/117317/",
+      "publication_day": "2026-10-22",
+      "excerpt": "22 Окт 2026",
+      "basis": "Видимая дата публикации под заголовком статьи, проверена через веб-доступ; не дата UPD и не дата события."
+    },
+    {
+      "url": "https://securelist.ru/awaken-likho-tokenbuoy/116536/",
+      "publication_day": "2026-08-07",
+      "excerpt": "07 Авг 2026",
+      "basis": "Видимая дата публикации под заголовком статьи, проверена через веб-доступ; не дата UPD и не дата события."
+    }
+  ]
+}

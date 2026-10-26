@@ -1,0 +1,39 @@
+# Local configuration and environments
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+.vscode/
+.idea/
+
+# Python caches and test output
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local databases, archives and operating-system files
+*.sqlite3*
+*.db
+*.zip
+*.zip.sha256
+.DS_Store
+
+# Include only the reproducible submission data under data/.
+/data/*
+!/data/review_snapshot.json.gz
+!/data/submission_manifest.json
+!/data/attack/
+/data/attack/*
+!/data/attack/LICENSE-MITRE.txt
+!/data/attack/import_manifest.json
+!/data/attack/status.json
+!/data/attack/reviewed_mappings.json
+!/data/processed/
+/data/processed/*
+!/data/processed/real/
+!/data/processed/evaluation/
+!/data/processed/sensitivity/
+!/data/processed/extraction_evaluation/

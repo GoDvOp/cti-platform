@@ -1,0 +1,309 @@
+{
+  "format": "cti-extraction-predictions-v1",
+  "corpus_id": "41a838a3e2e74fad2ff9dfdd40c8366fa13bfc343ba39de24b5c624bd9808328",
+  "frozen_at": "2026-10-24T14:53:59+00:00",
+  "extractor_sha256": "9a2d228c405a89317296b4de915152fd88e7a11959b543dbd60483fe46affa6f",
+  "records": [
+    {
+      "sample_id": 1,
+      "content_hash": "3c340510bea3d8cb05ee64309fc1cf4cbfcb0cf1efacec8baefb884c12002b1c",
+      "products": [
+        "trueconf-server"
+      ],
+      "vulnerabilities": [
+        "BDU:2026-03092"
+      ],
+      "relations": [
+        {
+          "kind": "affects_product",
+          "subject": "BDU:2026-03092",
+          "object": "trueconf-server"
+        }
+      ]
+    },
+    {
+      "sample_id": 2,
+      "content_hash": "db786e367dc617169487976afabc847798f8d25e550c3f5673fb37cb7aefcdd0",
+      "products": [
+        "trueconf-server"
+      ],
+      "vulnerabilities": [
+        "CVE-2025-66824"
+      ],
+      "relations": [
+        {
+          "kind": "affects_product",
+          "subject": "CVE-2025-66824",
+          "object": "trueconf-server"
+        }
+      ]
+    },
+    {
+      "sample_id": 3,
+      "content_hash": "9a7a5cf5dd0188573f47a1d809bb2d989b2805f3f69c0243eb5ed14f1499f5b5",
+      "products": [],
+      "vulnerabilities": [],
+      "relations": []
+    },
+    {
+      "sample_id": 4,
+      "content_hash": "6776741063828c4fe78b88a65e9985c93c00568f7116b78f0438fc7f14e80e4e",
+      "products": [],
+      "vulnerabilities": [
+        "CVE-2026-86060"
+      ],
+      "relations": []
+    },
+    {
+      "sample_id": 5,
+      "content_hash": "e8559367bb7492d484fafa83641394bb61a2d024b2b87ce9646fb4e79a85a149",
+      "products": [
+        "trueconf-server"
+      ],
+      "vulnerabilities": [],
+      "relations": [
+        {
+          "kind": "uses_product",
+          "subject": "roszarubezhneft",
+          "object": "trueconf-server"
+        }
+      ]
+    },
+    {
+      "sample_id": 6,
+      "content_hash": "45170093868771f7a488cd96e3b22d83056a67ee22d18faef2e53f95ef2d8865",
+      "products": [],
+      "vulnerabilities": [
+        "CVE-2026-102489",
+        "CVE-2026-102490"
+      ],
+      "relations": []
+    },
+    {
+      "sample_id": 7,
+      "content_hash": "d58b098ed2fcb9e75d2f5eadb9f521bb5a671692026fe14ccbafc66eaeb296d2",
+      "products": [],
+      "vulnerabilities": [],
+      "relations": []
+    },
+    {
+      "sample_id": 8,
+      "content_hash": "62ed9a1d5abe52fab564490c2e7942ec091b49e80c45ca9cda7b04c607bd6b36",
+      "products": [],
+      "vulnerabilities": [],
+      "relations": []
+    },
+    {
+      "sample_id": 9,
+      "content_hash": "f11056d5a5dfcf1b98094777b672ab4d9f498b057bfde10773a0756a0beeb7c4",
+      "products": [
+        "trueconf-server"
+      ],
+      "vulnerabilities": [
+        "CVE-2017-20120"
+      ],
+      "relations": [
+        {
+          "kind": "affects_product",
+          "subject": "CVE-2017-20120",
+          "object": "trueconf-server"
+        }
+      ]
+    },
+    {
+      "sample_id": 10,
+      "content_hash": "d7ccfbdc0339588b66ad5e70605ba25a14ed76d476fb93d7f4be90d495af3551",
+      "products": [],
+      "vulnerabilities": [],
+      "relations": []
+    },
+    {
+      "sample_id": 11,
+      "content_hash": "1b5fca83cc57fcce4fa170e47598968af3497ba37a7e472fedd002b16b2e28ab",
+      "products": [
+        "trueconf-client"
+      ],
+      "vulnerabilities": [
+        "CVE-2025-66835"
+      ],
+      "relations": [
+        {
+          "kind": "affects_product",
+          "subject": "CVE-2025-66835",
+          "object": "trueconf-client"
+        }
+      ]
+    },
+    {
+      "sample_id": 12,
+      "content_hash": "092fffb6045780041ec583a17ea5c6a13a81fcee81cd099a0de47c9d8353b042",
+      "products": [],
+      "vulnerabilities": [],
+      "relations": []
+    },
+    {
+      "sample_id": 13,
+      "content_hash": "bcb7bd439ea7f3d37857e2920ca585c1fc8b6d556c2c9b437ec0d8bb25f23a4b",
+      "products": [],
+      "vulnerabilities": [
+        "CVE-2026-102489",
+        "CVE-2026-102490"
+      ],
+      "relations": []
+    },
+    {
+      "sample_id": 14,
+      "content_hash": "f73949f89f1474e58ad7b5179d920231d9f3c04429667abda5862ee722e3c329",
+      "products": [],
+      "vulnerabilities": [],
+      "relations": []
+    },
+    {
+      "sample_id": 15,
+      "content_hash": "00e49a2c99ead271b1cd0d95bc0cea24ab97469cb609b96dd1e7fac8ee572c9f",
+      "products": [
+        "trueconf-server"
+      ],
+      "vulnerabilities": [],
+      "relations": [
+        {
+          "kind": "uses_product",
+          "subject": "ingosstrakh",
+          "object": "trueconf-server"
+        }
+      ]
+    },
+    {
+      "sample_id": 16,
+      "content_hash": "e8942c5e17094fb21b9a802d89ab4d1c4e3a85c48e37d6a2c03d65574b9b61e8",
+      "products": [
+        "trueconf-server"
+      ],
+      "vulnerabilities": [
+        "CVE-2017-20117"
+      ],
+      "relations": [
+        {
+          "kind": "affects_product",
+          "subject": "CVE-2017-20117",
+          "object": "trueconf-server"
+        }
+      ]
+    },
+    {
+      "sample_id": 17,
+      "content_hash": "891b2df1d7fc3b251d6302a1fd6e9b7c41b42979a56166403861d17921ef67c6",
+      "products": [],
+      "vulnerabilities": [],
+      "relations": []
+    },
+    {
+      "sample_id": 18,
+      "content_hash": "1ff6d85439bffbde28db3b5d8313ab3dd5d3c693c4559dca6c3bf63345ec9de4",
+      "products": [],
+      "vulnerabilities": [],
+      "relations": []
+    },
+    {
+      "sample_id": 19,
+      "content_hash": "518e43654f6d38da0e72387bf43c4654bdffe41fa43a98c85144f6aafa4dbd7d",
+      "products": [
+        "trueconf-enterprise"
+      ],
+      "vulnerabilities": [],
+      "relations": [
+        {
+          "kind": "uses_product",
+          "subject": "oteko",
+          "object": "trueconf-enterprise"
+        }
+      ]
+    },
+    {
+      "sample_id": 20,
+      "content_hash": "0aab7907b95fc84fe8fddcc1a7137609b031bb7abb770501f2a4fd54c2822277",
+      "products": [],
+      "vulnerabilities": [],
+      "relations": []
+    },
+    {
+      "sample_id": 21,
+      "content_hash": "33b522e3dbaa4c1b7601e7c11af04fc99ae1cf3803b6e741eafaf4809b00abf4",
+      "products": [
+        "trueconf-server"
+      ],
+      "vulnerabilities": [],
+      "relations": []
+    },
+    {
+      "sample_id": 22,
+      "content_hash": "7e2d436eb99d33e0b67b5c8beacb0f47e789cecb67524db26870e4c186d47370",
+      "products": [],
+      "vulnerabilities": [],
+      "relations": []
+    },
+    {
+      "sample_id": 23,
+      "content_hash": "58fc0fdc2aabc3babdcda38515511517e06b420364d5e5037e20f3bf4ffeed02",
+      "products": [],
+      "vulnerabilities": [
+        "CVE-2026-60004"
+      ],
+      "relations": []
+    },
+    {
+      "sample_id": 24,
+      "content_hash": "fffb7b4c1c5ede99060c1d54b4ef9cc5490d30671da76beb95e349205e1f25c3",
+      "products": [],
+      "vulnerabilities": [],
+      "relations": []
+    },
+    {
+      "sample_id": 25,
+      "content_hash": "250dbcdf0cf80fd895c12f529033fd89ca6658f9f147fa734257077f06c836eb",
+      "products": [],
+      "vulnerabilities": [
+        "CVE-2026-18556"
+      ],
+      "relations": []
+    },
+    {
+      "sample_id": 26,
+      "content_hash": "864233929b6e3ecc0acc2137e2db3b0530cb5ba6c1cb9bb3158caab96f5cffa4",
+      "products": [],
+      "vulnerabilities": [],
+      "relations": []
+    },
+    {
+      "sample_id": 27,
+      "content_hash": "72dd4615941a4ac52879b740e61070f10aed87485b473343e440af69e19cd1f8",
+      "products": [],
+      "vulnerabilities": [],
+      "relations": []
+    },
+    {
+      "sample_id": 28,
+      "content_hash": "4a3227ba228f89fab5afc345b3d61988e1bbbf9d166e997184996d07ec5792f9",
+      "products": [
+        "gitlab"
+      ],
+      "vulnerabilities": [],
+      "relations": []
+    },
+    {
+      "sample_id": 29,
+      "content_hash": "bdf3fdee000379accf42401499d0a4fa7097939041ffb144e8469ce1e51b8d01",
+      "products": [],
+      "vulnerabilities": [],
+      "relations": []
+    },
+    {
+      "sample_id": 30,
+      "content_hash": "b05d67097d6c8eed91b92680876354e23b3878dcb4527ba6a06fc19033020917",
+      "products": [],
+      "vulnerabilities": [],
+      "relations": []
+    }
+  ],
+  "run_id": "611d464ba55dc2535365d99b7f144ea334f91dff4e2c1c40dc5e39425a08915a"
+}

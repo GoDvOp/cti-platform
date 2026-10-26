@@ -1,0 +1,72 @@
+{
+  "project_version": "3.0.0",
+  "model_version": "weighted-graph-v3",
+  "status": "passed",
+  "snapshot_as_of": "2026-10-24T14:46:40+00:00",
+  "snapshot_content_sha256": "3d52fcf47ca50a9ef55a5a6d78cc5c5d17b7f6514d2d42d2fc8194e4e76acea7",
+  "unit_tests": {
+    "status": "passed",
+    "count": 339,
+    "python": "3.14.7"
+  },
+  "cli_smoke": {
+    "status": "passed",
+    "host": true,
+    "container": true
+  },
+  "docker": {
+    "status": "passed",
+    "receipt": "docs/analysis/release-3.0.0/docker.json",
+    "checks": 19,
+    "runtime_input_sha256": "8cafa5b64a8bad5125fca7db7c9db9b12e9a6a2ab3efa0facc604bd64fc5e94d",
+    "execution": "real_docker_clean_archive"
+  },
+  "browser": {
+    "status": "passed",
+    "receipt": "docs/analysis/release-3.0.0/browser/checks.json",
+    "checks": 8
+  },
+  "extraction_review": {
+    "status": "awaiting_human_labels",
+    "count": 30,
+    "corpus_id": "41a838a3e2e74fad2ff9dfdd40c8366fa13bfc343ba39de24b5c624bd9808328",
+    "run_id": "611d464ba55dc2535365d99b7f144ea334f91dff4e2c1c40dc5e39425a08915a",
+    "extractor_sha256": "9a2d228c405a89317296b4de915152fd88e7a11959b543dbd60483fe46affa6f",
+    "gold_labels": 0,
+    "quality_metrics": null,
+    "blind_page": "evaluation/blind_review.html",
+    "unseen_holdout": false
+  },
+  "classification_pilot": {
+    "correct": 21,
+    "total": 30,
+    "accuracy": 0.7,
+    "independent": false
+  },
+  "independent_prediction_validation": "not_performed",
+  "author_name": "pending_user_input",
+  "protected_inputs": {
+    "status": "unchanged",
+    "receipt": "docs/analysis/release-3.0.0/protected_inputs.json"
+  },
+  "checked_at": "2026-10-25T09:58:06.739995+00:00",
+  "submission_ready": false,
+  "pending_fields": [
+    "author_full_name"
+  ],
+  "offline_review": {
+    "status": "passed",
+    "snapshot_verified": true,
+    "repeat_reproducible": true
+  },
+  "provenance": {
+    "old_releases": "archived_outside_submission",
+    "snapshot_and_review_corpus": "preserved"
+  },
+  "container_unit_tests": {
+    "status": "passed",
+    "count": 339,
+    "skipped": 2,
+    "reason": "Node checks run on host"
+  }
+}

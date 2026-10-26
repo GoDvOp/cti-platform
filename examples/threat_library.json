@@ -1,0 +1,835 @@
+{
+  "version": "1.5",
+  "provenance": "Авторские краткие пересказы открытых первичных источников; ручная проверка соответствия источнику. Исторические примеры не входят в рейтинг текущих целей.",
+  "companies": [
+    {
+      "id": "equifax",
+      "name": "Equifax",
+      "aliases": [],
+      "domains": [],
+      "sector": "финансовые услуги",
+      "country": "US",
+      "monitor_target": false,
+      "entity_type": "historical_case",
+      "is_demo": false
+    },
+    {
+      "id": "british-library",
+      "name": "British Library",
+      "aliases": [],
+      "domains": [],
+      "sector": "культура и библиотеки",
+      "country": "GB",
+      "monitor_target": false,
+      "entity_type": "historical_case",
+      "is_demo": false
+    },
+    {
+      "id": "singtel",
+      "name": "Singtel",
+      "aliases": [],
+      "domains": [],
+      "sector": "телекоммуникации",
+      "country": "SG",
+      "monitor_target": false,
+      "entity_type": "historical_case",
+      "is_demo": false
+    },
+    {
+      "id": "qualys",
+      "name": "Qualys",
+      "aliases": [],
+      "domains": [],
+      "sector": "кибербезопасность",
+      "country": "US",
+      "monitor_target": false,
+      "entity_type": "historical_case",
+      "is_demo": false
+    },
+    {
+      "id": "novabev",
+      "name": "Novabev Group",
+      "aliases": [
+        "Novabev",
+        "Новабев"
+      ],
+      "domains": [
+        "novabev.com"
+      ],
+      "sector": "производство и дистрибуция напитков",
+      "country": "RU",
+      "reference_url": "https://novabev.com/"
+    },
+    {
+      "id": "winelab",
+      "name": "ВинЛаб",
+      "aliases": [
+        "Winelab"
+      ],
+      "domains": [
+        "winelab.ru"
+      ],
+      "sector": "розничная торговля",
+      "country": "RU",
+      "reference_url": "https://www.winelab.ru/"
+    }
+  ],
+  "products": [
+    {
+      "id": "apache-struts2",
+      "name": "Apache Struts 2",
+      "aliases": [
+        "Apache Struts"
+      ],
+      "vendor": "Apache Software Foundation",
+      "is_demo": false
+    },
+    {
+      "id": "accellion-fta",
+      "name": "Accellion FTA",
+      "aliases": [],
+      "vendor": "Accellion",
+      "is_demo": false
+    },
+    {
+      "id": "moveit-transfer",
+      "name": "MOVEit Transfer",
+      "aliases": [],
+      "vendor": "Progress Software",
+      "is_demo": false
+    }
+  ],
+  "entities": [
+    {
+      "id": "clop",
+      "name": "CL0P",
+      "aliases": [
+        "Clop",
+        "Cl0p"
+      ],
+      "entity_type": "ThreatActor",
+      "is_demo": false,
+      "note": "Идентичность и связи оцениваются в конкретных источниках и датах; автоматического объединения кластеров нет."
+    },
+    {
+      "id": "ta505",
+      "name": "TA505",
+      "aliases": [],
+      "entity_type": "ThreatActor",
+      "is_demo": false,
+      "note": "Идентичность и связи оцениваются в конкретных источниках и датах; автоматического объединения кластеров нет."
+    },
+    {
+      "id": "fin11",
+      "name": "FIN11",
+      "aliases": [],
+      "entity_type": "ThreatActor",
+      "is_demo": false,
+      "note": "Идентичность и связи оцениваются в конкретных источниках и датах; автоматического объединения кластеров нет."
+    },
+    {
+      "id": "unc2546",
+      "name": "UNC2546",
+      "aliases": [],
+      "entity_type": "ThreatActor",
+      "is_demo": false,
+      "note": "Идентичность и связи оцениваются в конкретных источниках и датах; автоматического объединения кластеров нет."
+    },
+    {
+      "id": "unc2582",
+      "name": "UNC2582",
+      "aliases": [],
+      "entity_type": "ThreatActor",
+      "is_demo": false,
+      "note": "Идентичность и связи оцениваются в конкретных источниках и датах; автоматического объединения кластеров нет."
+    },
+    {
+      "id": "rhysida",
+      "name": "Rhysida",
+      "aliases": [],
+      "entity_type": "ThreatActor",
+      "is_demo": false,
+      "note": "Идентичность и связи оцениваются в конкретных источниках и датах; автоматического объединения кластеров нет."
+    },
+    {
+      "id": "pla54",
+      "name": "PLA 54th Research Institute",
+      "aliases": [],
+      "entity_type": "ThreatActor",
+      "is_demo": false,
+      "note": "Идентичность и связи оцениваются в конкретных источниках и датах; автоматического объединения кластеров нет."
+    },
+    {
+      "id": "equifax-2017",
+      "name": "Инцидент Equifax 2017",
+      "aliases": [],
+      "entity_type": "Incident",
+      "incident_type": "data_breach",
+      "date_precision": "day_reported",
+      "is_demo": false,
+      "start_day": "2017-05-13"
+    },
+    {
+      "id": "british-library-2023",
+      "name": "Инцидент British Library 2023",
+      "aliases": [],
+      "entity_type": "Incident",
+      "incident_type": "ransomware",
+      "date_precision": "day_detected",
+      "is_demo": false,
+      "start_day": "2023-10-28"
+    },
+    {
+      "id": "singtel-2021",
+      "name": "Инцидент Singtel 2021",
+      "aliases": [],
+      "entity_type": "Incident",
+      "incident_type": "data_breach",
+      "date_precision": "unknown",
+      "is_demo": false
+    },
+    {
+      "id": "qualys-2020",
+      "name": "Инцидент Qualys 2020",
+      "aliases": [],
+      "entity_type": "Incident",
+      "incident_type": "data_breach",
+      "date_precision": "day_detected",
+      "is_demo": false,
+      "start_day": "2020-12-24"
+    },
+    {
+      "id": "accellion-campaign-2020",
+      "name": "Кампания Accellion 2020–2021",
+      "aliases": [],
+      "entity_type": "Incident",
+      "incident_type": "campaign",
+      "date_precision": "month_range",
+      "is_demo": false
+    },
+    {
+      "id": "moveit-campaign-2023",
+      "name": "Кампания MOVEit 2023",
+      "aliases": [],
+      "entity_type": "Incident",
+      "incident_type": "campaign",
+      "date_precision": "month",
+      "is_demo": false
+    },
+    {
+      "id": "novabev-2025",
+      "name": "Инцидент Novabev 2025",
+      "aliases": [],
+      "entity_type": "Incident",
+      "incident_type": "cyberattack",
+      "date_precision": "day_reported",
+      "is_demo": false,
+      "start_day": "2025-07-14"
+    },
+    {
+      "id": "clop-ransomware",
+      "name": "CLOP ransomware",
+      "aliases": [],
+      "entity_type": "Malware",
+      "is_demo": false
+    },
+    {
+      "id": "dewmode",
+      "name": "DEWMODE",
+      "aliases": [],
+      "entity_type": "Malware",
+      "is_demo": false
+    }
+  ],
+  "publications": [
+    {
+      "key": "equifax-victim",
+      "source_id": "manual_web_equifax",
+      "url": "https://investor.equifax.com/news-events/press-releases/detail/237/equifax-releases-details-on-cybersecurity-incident",
+      "title": "Equifax: опубликованный разбор атаки 2017 года",
+      "text": "Инцидент Equifax 2017 затронул Equifax. Компания описала эксплуатацию CVE-2017-5638 в Apache Struts 2, использовавшемся в приложении портала споров. Точная установленная версия здесь не приведена.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:36:07+00:00",
+      "is_demo": false,
+      "external_id": "threat-library:equifax-victim",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "content_scope": "reviewed_historical_summary",
+        "publication_day": "2017-09-15",
+        "date_precision": "day",
+        "note": "Краткий авторский пересказ источника; не живой сбор и не сканирование."
+      }
+    },
+    {
+      "key": "equifax-attribution",
+      "source_id": "manual_web_doj",
+      "url": "https://www.justice.gov/usao-ndga/pr/chinese-military-personnel-charged-computer-fraud-economic-espionage-and-wire-fraud",
+      "title": "Минюст США: обвинение по делу Equifax",
+      "text": "Инцидент Equifax 2017: Минюст США предъявил обвинение четырём предполагаемым участникам PLA 54th Research Institute. Это атрибуция в обвинении, а не установленная этим проектом виновность.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:36:07+00:00",
+      "is_demo": false,
+      "external_id": "threat-library:equifax-attribution",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "content_scope": "reviewed_historical_summary",
+        "publication_day": "2020-02-10",
+        "date_precision": "day",
+        "note": "Краткий авторский пересказ источника; не живой сбор и не сканирование."
+      }
+    },
+    {
+      "key": "struts-advisory",
+      "source_id": "manual_web_oracle",
+      "url": "https://www.oracle.com/security-alerts/alert-cve-2017-9805.html",
+      "title": "Oracle: отдельное упоминание CVE-2017-5638",
+      "text": "Oracle связывает CVE-2017-5638 с Apache Struts 2 и инцидентом Equifax. Перечисленные рядом более поздние CVE не приписываются атаке на Equifax.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:36:07+00:00",
+      "is_demo": false,
+      "external_id": "threat-library:struts-advisory",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "content_scope": "reviewed_historical_summary",
+        "publication_day": null,
+        "date_precision": "unknown",
+        "note": "Краткий авторский пересказ источника; не живой сбор и не сканирование."
+      }
+    },
+    {
+      "key": "bl-victim",
+      "source_id": "manual_web_bl",
+      "url": "https://www.bl.uk/stories/blogs/posts/learning-lessons-from-the-cyber-attack",
+      "title": "British Library: собственный разбор инцидента",
+      "text": "Инцидент British Library 2023 затронул British Library в октябре 2023 года. В собственном разборе организация называет Rhysida группировкой за атакой. Конкретная использованная CVE в этом пересказе не установлена.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:36:07+00:00",
+      "is_demo": false,
+      "external_id": "threat-library:bl-victim",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "content_scope": "reviewed_historical_summary",
+        "publication_day": "2024-03-08",
+        "date_precision": "day",
+        "note": "Краткий авторский пересказ источника; не живой сбор и не сканирование."
+      }
+    },
+    {
+      "key": "singtel-victim",
+      "source_id": "manual_web_singtel",
+      "url": "https://www.singtel.com/content/dam/singtel/investorRelations/stockExchange/2021/NR-20210217-support%20affected%20stakeholders.pdf",
+      "title": "Singtel: нарушение конфиденциальности файлов Accellion FTA",
+      "text": "Инцидент Singtel 2021 затронул Singtel: компания сообщила о незаконном доступе к файлам на Accellion FTA. В сообщении нет установленной здесь конкретной CVE или группировки.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:36:07+00:00",
+      "is_demo": false,
+      "external_id": "threat-library:singtel-victim",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "content_scope": "reviewed_historical_summary",
+        "publication_day": "2021-02-17",
+        "date_precision": "day",
+        "note": "Краткий пересказ индексированного фрагмента официального PDF; атрибуция неизвестна."
+      }
+    },
+    {
+      "key": "qualys-victim",
+      "source_id": "manual_web_qualys",
+      "url": "https://blog.qualys.com/vulnerabilities-threat-research/2021/04/02/qualys-update-on-accellion-fta-security-incident",
+      "title": "Qualys: изолированный инцидент Accellion FTA",
+      "text": "Инцидент Qualys 2020 затронул файлы Qualys на изолированном Accellion FTA. Компания сообщила об обнаружении в декабре 2020 года и отсутствии перехода в производственные среды. Точная использованная CVE и группировка здесь не установлены.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:36:07+00:00",
+      "is_demo": false,
+      "external_id": "threat-library:qualys-victim",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "content_scope": "reviewed_historical_summary",
+        "publication_day": "2021-04-02",
+        "date_precision": "day",
+        "note": "Пересказ разделов исходного сообщения 03.03.2021 и обновления 02.04.2021; текущая страница имеет более позднюю дату обновления."
+      }
+    },
+    {
+      "key": "accellion-research",
+      "source_id": "manual_web_mandiant",
+      "url": "https://cloud.google.com/blog/topics/threat-intelligence/accellion-fta-exploited-for-data-theft-and-extortion",
+      "title": "Mandiant: разные кластеры Accellion и пересечения FIN11",
+      "text": "Кампания Accellion 2020–2021: Mandiant отслеживала эксплуатацию Accellion FTA как UNC2546, а вымогательство как UNC2582. UNC2546 использовал DEWMODE. Описаны пересечения UNC2546 и UNC2582 с FIN11, но на дату отчёта основания объединять кластеры считались недостаточными. FIN11 ранее применял CLOP ransomware.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:36:07+00:00",
+      "is_demo": false,
+      "external_id": "threat-library:accellion-research",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "content_scope": "reviewed_historical_summary",
+        "publication_day": "2021-02-22",
+        "date_precision": "day",
+        "note": "Краткий авторский пересказ источника; не живой сбор и не сканирование."
+      }
+    },
+    {
+      "key": "accellion-advisory",
+      "source_id": "manual_web_cisa",
+      "url": "https://content.govdelivery.com/accounts/USDHSCISA/bulletins/2c39d96",
+      "title": "CISA: эксплуатация Accellion FTA",
+      "text": "Кампания Accellion 2020–2021 включала эксплуатацию CVE-2021-27101 в Accellion FTA. В бюллетене перечислены также CVE-2021-27102, CVE-2021-27103 и CVE-2021-27104. Это сведения о кампании, без переноса конкретной CVE на каждый отдельный инцидент.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:36:07+00:00",
+      "is_demo": false,
+      "external_id": "threat-library:accellion-advisory",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "content_scope": "reviewed_historical_summary",
+        "publication_day": "2021-02-24",
+        "date_precision": "day",
+        "note": "Краткий авторский пересказ источника; не живой сбор и не сканирование."
+      }
+    },
+    {
+      "key": "moveit-russian",
+      "source_id": "manual_web_kaspersky",
+      "url": "https://www.kaspersky.ru/resource-center/definitions/cl0p-ransomware",
+      "title": "Касперский: кампания CL0P против MOVEit",
+      "text": "Кампания MOVEit 2023: Касперский связывает CL0P с эксплуатацией CVE-2023-34362 в MOVEit Transfer и вымогательством. Это атрибуция кампании; она не устанавливает причастность ко всем отдельным утечкам у пользователей продукта.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:36:07+00:00",
+      "is_demo": false,
+      "external_id": "threat-library:moveit-russian",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "content_scope": "reviewed_historical_summary",
+        "publication_day": "2025-10-02",
+        "date_precision": "day",
+        "note": "Краткий авторский пересказ источника; не живой сбор и не сканирование."
+      }
+    },
+    {
+      "key": "ta505-clop",
+      "source_id": "manual_web_cisa",
+      "url": "https://www.cisa.gov/sites/default/files/2023-06/aa23-158a-stopransomware-cl0p-ransomware-gang-exploits-moveit-vulnerability_2.pdf",
+      "title": "CISA/FBI: TA505 и вредоносное ПО CLOP",
+      "text": "По бюллетеню CISA/FBI, TA505 использовал CLOP ransomware в фишинговой кампании 2019 года. Название вредоносного ПО не является достаточным основанием объединять TA505, FIN11 и операцию CL0P в одну группировку.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:36:07+00:00",
+      "is_demo": false,
+      "external_id": "threat-library:ta505-clop",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "content_scope": "reviewed_historical_summary",
+        "publication_day": "2023-06-07",
+        "date_precision": "day",
+        "note": "Краткий пересказ индексированного текста официального PDF."
+      }
+    },
+    {
+      "key": "novabev-victim",
+      "source_id": "manual_web_novabev",
+      "url": "https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/",
+      "title": "Novabev и ВинЛаб: отдельный узел июльского инцидента",
+      "text": "Инцидент Novabev 2025 затронул Novabev Group и ВинЛаб: официальное сообщение описывает кибератаку 14 июля 2025 года и денежное требование. Группировка, конкретная CVE и установленное ПО в этом источнике не установлены.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:36:07+00:00",
+      "is_demo": false,
+      "external_id": "threat-library:novabev-victim",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "content_scope": "reviewed_historical_summary",
+        "publication_day": "2025-07-16",
+        "date_precision": "day",
+        "note": "Краткий авторский пересказ источника; не живой сбор и не сканирование."
+      }
+    }
+  ],
+  "claims": [
+    {
+      "publication_key": "equifax-victim",
+      "kind": "incident_affects",
+      "subject": "equifax-2017",
+      "object": "equifax",
+      "excerpt": "Инцидент Equifax 2017 затронул Equifax. Компания описала эксплуатацию CVE-2017-5638 в Apache Struts 2, использовавшемся в приложении портала споров. Точная установленная версия здесь не приведена.",
+      "attributes": {
+        "confidence": "high",
+        "basis": "victim_report"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "equifax-victim",
+      "kind": "incident_exploited",
+      "subject": "equifax-2017",
+      "object": "CVE-2017-5638",
+      "excerpt": "Инцидент Equifax 2017 затронул Equifax. Компания описала эксплуатацию CVE-2017-5638 в Apache Struts 2, использовавшемся в приложении портала споров. Точная установленная версия здесь не приведена.",
+      "attributes": {
+        "confidence": "high",
+        "basis": "victim_report"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "equifax-victim",
+      "kind": "incident_product",
+      "subject": "equifax-2017",
+      "object": "apache-struts2",
+      "excerpt": "Инцидент Equifax 2017 затронул Equifax. Компания описала эксплуатацию CVE-2017-5638 в Apache Struts 2, использовавшемся в приложении портала споров. Точная установленная версия здесь не приведена.",
+      "attributes": {
+        "confidence": "high",
+        "basis": "victim_report"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "equifax-victim",
+      "kind": "uses_product",
+      "subject": "equifax",
+      "object": "apache-struts2",
+      "excerpt": "Инцидент Equifax 2017 затронул Equifax. Компания описала эксплуатацию CVE-2017-5638 в Apache Struts 2, использовавшемся в приложении портала споров. Точная установленная версия здесь не приведена.",
+      "attributes": {
+        "observed_day": "2017-05-13",
+        "note": "Исторический стек из описания атаки; версия неизвестна.",
+        "basis": "victim_report",
+        "confidence": "medium"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "equifax-attribution",
+      "kind": "attributed_to",
+      "subject": "equifax-2017",
+      "object": "pla54",
+      "excerpt": "Инцидент Equifax 2017: Минюст США предъявил обвинение четырём предполагаемым участникам PLA 54th Research Institute. Это атрибуция в обвинении, а не установленная этим проектом виновность.",
+      "attributes": {
+        "confidence": "high",
+        "basis": "legal_allegation",
+        "attribution_scope": "allegation_in_indictment"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "struts-advisory",
+      "kind": "affects_product",
+      "subject": "CVE-2017-5638",
+      "object": "apache-struts2",
+      "excerpt": "Oracle связывает CVE-2017-5638 с Apache Struts 2 и инцидентом Equifax. Перечисленные рядом более поздние CVE не приписываются атаке на Equifax.",
+      "attributes": {
+        "note": "Диапазон не извлечён; соседние идентификаторы не относятся автоматически к инциденту.",
+        "basis": "vendor_advisory",
+        "confidence": "medium"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "bl-victim",
+      "kind": "incident_affects",
+      "subject": "british-library-2023",
+      "object": "british-library",
+      "excerpt": "Инцидент British Library 2023 затронул British Library в октябре 2023 года. В собственном разборе организация называет Rhysida группировкой за атакой. Конкретная использованная CVE в этом пересказе не установлена.",
+      "attributes": {
+        "confidence": "high",
+        "basis": "victim_report"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "bl-victim",
+      "kind": "attributed_to",
+      "subject": "british-library-2023",
+      "object": "rhysida",
+      "excerpt": "Инцидент British Library 2023 затронул British Library в октябре 2023 года. В собственном разборе организация называет Rhysida группировкой за атакой. Конкретная использованная CVE в этом пересказе не установлена.",
+      "attributes": {
+        "confidence": "high",
+        "basis": "victim_report",
+        "attribution_scope": "victim_public_assessment"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "singtel-victim",
+      "kind": "incident_affects",
+      "subject": "singtel-2021",
+      "object": "singtel",
+      "excerpt": "Инцидент Singtel 2021 затронул Singtel: компания сообщила о незаконном доступе к файлам на Accellion FTA. В сообщении нет установленной здесь конкретной CVE или группировки.",
+      "attributes": {
+        "confidence": "high",
+        "basis": "victim_report"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "singtel-victim",
+      "kind": "incident_product",
+      "subject": "singtel-2021",
+      "object": "accellion-fta",
+      "excerpt": "Инцидент Singtel 2021 затронул Singtel: компания сообщила о незаконном доступе к файлам на Accellion FTA. В сообщении нет установленной здесь конкретной CVE или группировки.",
+      "attributes": {
+        "confidence": "high",
+        "basis": "victim_report"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "singtel-victim",
+      "kind": "uses_product",
+      "subject": "singtel",
+      "object": "accellion-fta",
+      "excerpt": "Инцидент Singtel 2021 затронул Singtel: компания сообщила о незаконном доступе к файлам на Accellion FTA. В сообщении нет установленной здесь конкретной CVE или группировки.",
+      "attributes": {
+        "observed_day": "2021-02-17",
+        "note": "Историческое использование в сообщении об инциденте.",
+        "basis": "victim_report",
+        "confidence": "medium"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "qualys-victim",
+      "kind": "incident_affects",
+      "subject": "qualys-2020",
+      "object": "qualys",
+      "excerpt": "Инцидент Qualys 2020 затронул файлы Qualys на изолированном Accellion FTA. Компания сообщила об обнаружении в декабре 2020 года и отсутствии перехода в производственные среды. Точная использованная CVE и группировка здесь не установлены.",
+      "attributes": {
+        "confidence": "high",
+        "basis": "victim_report"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "qualys-victim",
+      "kind": "incident_product",
+      "subject": "qualys-2020",
+      "object": "accellion-fta",
+      "excerpt": "Инцидент Qualys 2020 затронул файлы Qualys на изолированном Accellion FTA. Компания сообщила об обнаружении в декабре 2020 года и отсутствии перехода в производственные среды. Точная использованная CVE и группировка здесь не установлены.",
+      "attributes": {
+        "confidence": "high",
+        "basis": "victim_report"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "qualys-victim",
+      "kind": "uses_product",
+      "subject": "qualys",
+      "object": "accellion-fta",
+      "excerpt": "Инцидент Qualys 2020 затронул файлы Qualys на изолированном Accellion FTA. Компания сообщила об обнаружении в декабре 2020 года и отсутствии перехода в производственные среды. Точная использованная CVE и группировка здесь не установлены.",
+      "attributes": {
+        "observed_day": "2020-12-24",
+        "note": "Историческое использование; изоляция сервера не означает компрометацию всей компании.",
+        "basis": "victim_report",
+        "confidence": "medium"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "accellion-research",
+      "kind": "incident_product",
+      "subject": "accellion-campaign-2020",
+      "object": "accellion-fta",
+      "excerpt": "Кампания Accellion 2020–2021: Mandiant отслеживала эксплуатацию Accellion FTA как UNC2546, а вымогательство как UNC2582. UNC2546 использовал DEWMODE. Описаны пересечения UNC2546 и UNC2582 с FIN11, но на дату отчёта основания объединять кластеры считались недостаточными. FIN11 ранее применял CLOP ransomware.",
+      "attributes": {
+        "confidence": "high",
+        "basis": "research_report"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "accellion-research",
+      "kind": "attributed_to",
+      "subject": "accellion-campaign-2020",
+      "object": "unc2546",
+      "excerpt": "Кампания Accellion 2020–2021: Mandiant отслеживала эксплуатацию Accellion FTA как UNC2546, а вымогательство как UNC2582. UNC2546 использовал DEWMODE. Описаны пересечения UNC2546 и UNC2582 с FIN11, но на дату отчёта основания объединять кластеры считались недостаточными. FIN11 ранее применял CLOP ransomware.",
+      "attributes": {
+        "confidence": "high",
+        "basis": "research_report",
+        "attribution_scope": "exploitation_stage_as_of_2021-02-22"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "accellion-research",
+      "kind": "attributed_to",
+      "subject": "accellion-campaign-2020",
+      "object": "unc2582",
+      "excerpt": "Кампания Accellion 2020–2021: Mandiant отслеживала эксплуатацию Accellion FTA как UNC2546, а вымогательство как UNC2582. UNC2546 использовал DEWMODE. Описаны пересечения UNC2546 и UNC2582 с FIN11, но на дату отчёта основания объединять кластеры считались недостаточными. FIN11 ранее применял CLOP ransomware.",
+      "attributes": {
+        "confidence": "high",
+        "basis": "research_report",
+        "attribution_scope": "extortion_stage_as_of_2021-02-22"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "accellion-research",
+      "kind": "actor_uses_malware",
+      "subject": "unc2546",
+      "object": "dewmode",
+      "excerpt": "Кампания Accellion 2020–2021: Mandiant отслеживала эксплуатацию Accellion FTA как UNC2546, а вымогательство как UNC2582. UNC2546 использовал DEWMODE. Описаны пересечения UNC2546 и UNC2582 с FIN11, но на дату отчёта основания объединять кластеры считались недостаточными. FIN11 ранее применял CLOP ransomware.",
+      "attributes": {
+        "confidence": "high",
+        "basis": "research_report"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "accellion-research",
+      "kind": "actor_uses_malware",
+      "subject": "fin11",
+      "object": "clop-ransomware",
+      "excerpt": "Кампания Accellion 2020–2021: Mandiant отслеживала эксплуатацию Accellion FTA как UNC2546, а вымогательство как UNC2582. UNC2546 использовал DEWMODE. Описаны пересечения UNC2546 и UNC2582 с FIN11, но на дату отчёта основания объединять кластеры считались недостаточными. FIN11 ранее применял CLOP ransomware.",
+      "attributes": {
+        "confidence": "high",
+        "basis": "research_report"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "accellion-research",
+      "kind": "actor_overlap",
+      "subject": "unc2546",
+      "object": "fin11",
+      "excerpt": "Кампания Accellion 2020–2021: Mandiant отслеживала эксплуатацию Accellion FTA как UNC2546, а вымогательство как UNC2582. UNC2546 использовал DEWMODE. Описаны пересечения UNC2546 и UNC2582 с FIN11, но на дату отчёта основания объединять кластеры считались недостаточными. FIN11 ранее применял CLOP ransomware.",
+      "attributes": {
+        "confidence": "medium",
+        "basis": "research_report",
+        "note": "Ограниченные пересечения в отчёте 22.02.2021; не тождество и не доказанное сотрудничество."
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "accellion-research",
+      "kind": "actor_overlap",
+      "subject": "unc2582",
+      "object": "fin11",
+      "excerpt": "Кампания Accellion 2020–2021: Mandiant отслеживала эксплуатацию Accellion FTA как UNC2546, а вымогательство как UNC2582. UNC2546 использовал DEWMODE. Описаны пересечения UNC2546 и UNC2582 с FIN11, но на дату отчёта основания объединять кластеры считались недостаточными. FIN11 ранее применял CLOP ransomware.",
+      "attributes": {
+        "confidence": "medium",
+        "basis": "research_report",
+        "note": "Пересечение активности по оценке Mandiant на 22.02.2021; отдельные кластеры."
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "accellion-advisory",
+      "kind": "incident_exploited",
+      "subject": "accellion-campaign-2020",
+      "object": "CVE-2021-27101",
+      "excerpt": "Кампания Accellion 2020–2021 включала эксплуатацию CVE-2021-27101 в Accellion FTA. В бюллетене перечислены также CVE-2021-27102, CVE-2021-27103 и CVE-2021-27104. Это сведения о кампании, без переноса конкретной CVE на каждый отдельный инцидент.",
+      "attributes": {
+        "confidence": "high",
+        "basis": "government_advisory"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "accellion-advisory",
+      "kind": "affects_product",
+      "subject": "CVE-2021-27101",
+      "object": "accellion-fta",
+      "excerpt": "Кампания Accellion 2020–2021 включала эксплуатацию CVE-2021-27101 в Accellion FTA. В бюллетене перечислены также CVE-2021-27102, CVE-2021-27103 и CVE-2021-27104. Это сведения о кампании, без переноса конкретной CVE на каждый отдельный инцидент.",
+      "attributes": {
+        "affected_version_text": "9_12_370 и ранее",
+        "note": "Формат версий производителя с подчёркиваниями; числовой диапазон не выдуман.",
+        "basis": "government_advisory",
+        "confidence": "medium"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "moveit-russian",
+      "kind": "attributed_to",
+      "subject": "moveit-campaign-2023",
+      "object": "clop",
+      "excerpt": "Кампания MOVEit 2023: Касперский связывает CL0P с эксплуатацией CVE-2023-34362 в MOVEit Transfer и вымогательством. Это атрибуция кампании; она не устанавливает причастность ко всем отдельным утечкам у пользователей продукта.",
+      "attributes": {
+        "confidence": "high",
+        "basis": "research_report",
+        "attribution_scope": "campaign_assessment"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "moveit-russian",
+      "kind": "actor_exploits",
+      "subject": "clop",
+      "object": "CVE-2023-34362",
+      "excerpt": "Кампания MOVEit 2023: Касперский связывает CL0P с эксплуатацией CVE-2023-34362 в MOVEit Transfer и вымогательством. Это атрибуция кампании; она не устанавливает причастность ко всем отдельным утечкам у пользователей продукта.",
+      "attributes": {
+        "confidence": "high",
+        "basis": "research_report"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "moveit-russian",
+      "kind": "incident_exploited",
+      "subject": "moveit-campaign-2023",
+      "object": "CVE-2023-34362",
+      "excerpt": "Кампания MOVEit 2023: Касперский связывает CL0P с эксплуатацией CVE-2023-34362 в MOVEit Transfer и вымогательством. Это атрибуция кампании; она не устанавливает причастность ко всем отдельным утечкам у пользователей продукта.",
+      "attributes": {
+        "confidence": "high",
+        "basis": "research_report"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "moveit-russian",
+      "kind": "incident_product",
+      "subject": "moveit-campaign-2023",
+      "object": "moveit-transfer",
+      "excerpt": "Кампания MOVEit 2023: Касперский связывает CL0P с эксплуатацией CVE-2023-34362 в MOVEit Transfer и вымогательством. Это атрибуция кампании; она не устанавливает причастность ко всем отдельным утечкам у пользователей продукта.",
+      "attributes": {
+        "confidence": "high",
+        "basis": "research_report"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "moveit-russian",
+      "kind": "affects_product",
+      "subject": "CVE-2023-34362",
+      "object": "moveit-transfer",
+      "excerpt": "Кампания MOVEit 2023: Касперский связывает CL0P с эксплуатацией CVE-2023-34362 в MOVEit Transfer и вымогательством. Это атрибуция кампании; она не устанавливает причастность ко всем отдельным утечкам у пользователей продукта.",
+      "attributes": {
+        "note": "Версии не извлечены из обзорного материала.",
+        "basis": "research_report",
+        "confidence": "medium"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "ta505-clop",
+      "kind": "actor_uses_malware",
+      "subject": "ta505",
+      "object": "clop-ransomware",
+      "excerpt": "По бюллетеню CISA/FBI, TA505 использовал CLOP ransomware в фишинговой кампании 2019 года. Название вредоносного ПО не является достаточным основанием объединять TA505, FIN11 и операцию CL0P в одну группировку.",
+      "attributes": {
+        "confidence": "high",
+        "basis": "government_advisory"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "novabev-victim",
+      "kind": "incident_affects",
+      "subject": "novabev-2025",
+      "object": "novabev",
+      "excerpt": "Инцидент Novabev 2025 затронул Novabev Group и ВинЛаб: официальное сообщение описывает кибератаку 14 июля 2025 года и денежное требование. Группировка, конкретная CVE и установленное ПО в этом источнике не установлены.",
+      "attributes": {
+        "confidence": "high",
+        "basis": "victim_report"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    },
+    {
+      "publication_key": "novabev-victim",
+      "kind": "incident_affects",
+      "subject": "novabev-2025",
+      "object": "winelab",
+      "excerpt": "Инцидент Novabev 2025 затронул Novabev Group и ВинЛаб: официальное сообщение описывает кибератаку 14 июля 2025 года и денежное требование. Группировка, конкретная CVE и установленное ПО в этом источнике не установлены.",
+      "attributes": {
+        "confidence": "high",
+        "basis": "victim_report"
+      },
+      "review_note": "Проверено соответствие краткого пересказа источнику. Подтверждение проверки не снимает ограничения атрибуции."
+    }
+  ]
+}

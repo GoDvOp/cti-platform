@@ -1,0 +1,214 @@
+[
+  {
+    "id": "aeroflot",
+    "name": "ПАО Аэрофлот",
+    "aliases": [
+      "Аэрофлот",
+      "Aeroflot"
+    ],
+    "domains": [
+      "aeroflot.ru"
+    ],
+    "sector": "авиационный транспорт",
+    "country": "RU",
+    "reference_url": "https://www.aeroflot.ru/"
+  },
+  {
+    "id": "novabev",
+    "name": "Novabev Group",
+    "aliases": [
+      "Novabev",
+      "Новабев"
+    ],
+    "domains": [
+      "novabev.com"
+    ],
+    "sector": "производство и дистрибуция напитков",
+    "country": "RU",
+    "reference_url": "https://novabev.com/"
+  },
+  {
+    "id": "winelab",
+    "name": "ВинЛаб",
+    "aliases": [
+      "Winelab"
+    ],
+    "domains": [
+      "winelab.ru"
+    ],
+    "sector": "розничная торговля",
+    "country": "RU",
+    "reference_url": "https://www.winelab.ru/"
+  },
+  {
+    "id": "rostelecom",
+    "name": "ПАО Ростелеком",
+    "aliases": [
+      "Ростелеком",
+      "Rostelecom"
+    ],
+    "domains": [
+      "rt.ru",
+      "company.rt.ru"
+    ],
+    "sector": "телекоммуникации",
+    "country": "RU",
+    "reference_url": "https://www.company.rt.ru/"
+  },
+  {
+    "id": "yandex",
+    "name": "Яндекс",
+    "aliases": [
+      "Yandex"
+    ],
+    "domains": [
+      "yandex.ru"
+    ],
+    "sector": "интернет-сервисы",
+    "country": "RU",
+    "reference_url": "https://yandex.ru/company/"
+  },
+  {
+    "id": "sibur",
+    "name": "СИБУР",
+    "aliases": [
+      "Сибур"
+    ],
+    "sector": "нефтехимия",
+    "country": "RU",
+    "entity_type": "group",
+    "reference_url": "https://trueconf.ru/blog/success-stories/sibur-trueconf",
+    "domains": []
+  },
+  {
+    "id": "oteko",
+    "name": "ОТЭКО",
+    "aliases": [
+      "ОТЭКО Групп"
+    ],
+    "sector": "портовая логистика",
+    "country": "RU",
+    "reference_url": "https://trueconf.ru/company/customers.html",
+    "domains": []
+  },
+  {
+    "id": "metalloinvest",
+    "name": "Металлоинвест",
+    "aliases": [],
+    "sector": "металлургия",
+    "country": "RU",
+    "reference_url": "https://trueconf.ru/company/customers.html",
+    "domains": []
+  },
+  {
+    "id": "askon",
+    "name": "АСКОН",
+    "aliases": [
+      "Аскон"
+    ],
+    "sector": "разработка ПО",
+    "country": "RU",
+    "reference_url": "https://trueconf.ru/company/customers.html",
+    "domains": []
+  },
+  {
+    "id": "ingosstrakh",
+    "name": "Ингосстрах",
+    "aliases": [
+      "СПАО Ингосстрах"
+    ],
+    "sector": "страхование",
+    "country": "RU",
+    "reference_url": "https://trueconf.ru/blog/wp-content/uploads/2022/06/ingosstakh.pdf",
+    "domains": []
+  },
+  {
+    "id": "rosatom-engineering",
+    "name": "Инжиниринговый дивизион Росатома",
+    "aliases": [
+      "Инжиниринговый дивизион Госкорпорации «Росатом»"
+    ],
+    "sector": "атомная энергетика",
+    "country": "RU",
+    "entity_type": "division",
+    "reference_url": "https://trueconf.ru/blog/wp-content/uploads/2023/06/id-rosatom-ru.pdf",
+    "domains": []
+  },
+  {
+    "id": "rosatom",
+    "name": "Росатом",
+    "aliases": [
+      "Госкорпорация Росатом"
+    ],
+    "sector": "атомная энергетика",
+    "country": "RU",
+    "entity_type": "group",
+    "reference_url": "https://trueconf.ru/blog/wp-content/uploads/2023/06/id-rosatom-ru.pdf",
+    "domains": []
+  },
+  {
+    "id": "roszarubezhneft",
+    "name": "Росзарубежнефть",
+    "aliases": [],
+    "sector": "нефтегазовая отрасль",
+    "country": "RU",
+    "reference_url": "https://trueconf.ru/blog/success-stories/roszarubezhneft-trueconf-server",
+    "domains": []
+  },
+  {
+    "id": "government-mo",
+    "name": "Правительство Московской области",
+    "aliases": [],
+    "sector": "государственное управление",
+    "country": "RU",
+    "entity_type": "public_authority",
+    "reference_url": "https://trueconf.ru/company/customers.html",
+    "domains": []
+  },
+  {
+    "id": "1c-vendor",
+    "name": "Фирма 1С",
+    "aliases": [
+      "Фирма «1С»"
+    ],
+    "sector": "разработка ПО",
+    "country": "RU",
+    "entity_type": "technology_vendor",
+    "monitor_target": false,
+    "reference_url": "https://www.company.rt.ru/press/REGIONALNEWS/d457564/",
+    "domains": []
+  },
+  {
+    "id": "cloud-ru",
+    "name": "Cloud.ru",
+    "aliases": [
+      "Cloud․ru",
+      "Клауд.ру"
+    ],
+    "sector": "облачные сервисы",
+    "country": "RU",
+    "domains": [],
+    "reference_url": "https://bugbounty.standoff365.com/en-US/programs/cloud_ru",
+    "monitor_target": true
+  },
+  {
+    "id": "zvuk",
+    "name": "Звук",
+    "aliases": [],
+    "sector": "цифровые сервисы",
+    "country": "RU",
+    "domains": [],
+    "reference_url": "https://bugbounty.bi.zone/companies/zvuk/main",
+    "monitor_target": true
+  },
+  {
+    "id": "sovcombank",
+    "name": "Совкомбанк",
+    "aliases": [],
+    "sector": "финансовые услуги",
+    "country": "RU",
+    "domains": [],
+    "reference_url": "https://sovcombank.ru/",
+    "monitor_target": true
+  }
+]

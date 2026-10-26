@@ -1,0 +1,414 @@
+{
+  "corpus_version": "pilot-2026-10-24-v1",
+  "corpus_sha256": "b38e6308f3e570c3883743338a308e9063c2fa7024674728871e45e069ee8944",
+  "status": "development_pilot_not_independent_holdout",
+  "annotator": "assistant_manual_annotation",
+  "sampling": "Fixed seed 20261024 within seven source classes; three explicit case controls appended. 30 records.",
+  "task": "Primary event type of saved publication; ordinary research, recovery and business follow-ups are unknown.",
+  "limitations": [
+    "Labels prepared with AI assistance by the same agent that edits the code; independent human review required.",
+    "Not a random population sample, not a test of prediction or factual truth.",
+    "Some inputs are headlines/listing summaries only; company extraction not measured on this sample."
+  ],
+  "count": 30,
+  "correct": 21,
+  "accuracy": 0.7,
+  "macro_f1_supported": 0.7300982800982802,
+  "per_class": [
+    {
+      "class": "unknown",
+      "support": 18,
+      "predicted": 19,
+      "precision": 0.7368421052631579,
+      "recall": 0.7777777777777778,
+      "f1": 0.7567567567567568
+    },
+    {
+      "class": "attack_claim",
+      "support": 5,
+      "predicted": 6,
+      "precision": 0.3333333333333333,
+      "recall": 0.4,
+      "f1": 0.36363636363636365
+    },
+    {
+      "class": "ransomware_claim",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "class": "availability_claim",
+      "support": 0,
+      "predicted": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    {
+      "class": "data_leak_claim",
+      "support": 0,
+      "predicted": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    {
+      "class": "access_sale_claim",
+      "support": 0,
+      "predicted": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null
+    },
+    {
+      "class": "vulnerability_advisory",
+      "support": 6,
+      "predicted": 4,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8
+    }
+  ],
+  "confusion": [
+    {
+      "gold": "attack_claim",
+      "predicted": "attack_claim",
+      "count": 2
+    },
+    {
+      "gold": "attack_claim",
+      "predicted": "unknown",
+      "count": 3
+    },
+    {
+      "gold": "ransomware_claim",
+      "predicted": "ransomware_claim",
+      "count": 1
+    },
+    {
+      "gold": "unknown",
+      "predicted": "attack_claim",
+      "count": 4
+    },
+    {
+      "gold": "unknown",
+      "predicted": "unknown",
+      "count": 14
+    },
+    {
+      "gold": "vulnerability_advisory",
+      "predicted": "unknown",
+      "count": 2
+    },
+    {
+      "gold": "vulnerability_advisory",
+      "predicted": "vulnerability_advisory",
+      "count": 4
+    }
+  ],
+  "records": [
+    {
+      "sample_id": 1,
+      "publication_id": "649229526dcfb235f457c5a1",
+      "title": "Обновили WordPress и впустили хакеров. Популярный SEO-плагин раздавал скрытые бэкдоры",
+      "url": "https://www.securitylab.ru/news/579019.php",
+      "gold": "attack_claim",
+      "predicted": "unknown",
+      "correct": false,
+      "note": "Сообщение о вредоносном распространении бэкдора, не штатном обновлении."
+    },
+    {
+      "sample_id": 2,
+      "publication_id": "bbb5ea6de6a36faecd2f6277",
+      "title": "Китай оставили, Украину вычеркнули. Роскомнадзор утвердил 88 стран для передачи данных россиян",
+      "url": "https://www.securitylab.ru/news/578979.php",
+      "gold": "unknown",
+      "predicted": "unknown",
+      "correct": true,
+      "note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 3,
+      "publication_id": "814cc947a2d3d864e52b9fa9",
+      "title": "Киберпанк, который мы заслужили. Вымогатели взяли в заложники батареи и дверные замки в школах",
+      "url": "https://www.securitylab.ru/news/579051.php",
+      "gold": "ransomware_claim",
+      "predicted": "ransomware_claim",
+      "correct": true,
+      "note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 4,
+      "publication_id": "52f27229732dc29153d5f621",
+      "title": "Мозг дрозофилы заперли в реальности, которой ещё не существует. ИИ достраивает мир прямо у неё под носом",
+      "url": "https://www.securitylab.ru/news/579007.php",
+      "gold": "unknown",
+      "predicted": "unknown",
+      "correct": true,
+      "note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 5,
+      "publication_id": "9d14e730d34c5eb90f18d3eb",
+      "title": "PS5 снова взломали. Последняя прошивка продержалась меньше трёх недель",
+      "url": "https://www.securitylab.ru/news/579012.php",
+      "gold": "unknown",
+      "predicted": "attack_claim",
+      "correct": false,
+      "note": "Обход ограничений игровой консоли не назван атакой на компанию."
+    },
+    {
+      "sample_id": 6,
+      "publication_id": "132cbb21b01f56dfe9d6ea67",
+      "title": "Добро пожаловать в квантовую мультивселенную: физики объяснили, почему мы, вероятно, уже живём в ней",
+      "url": "https://www.securitylab.ru/news/579088.php",
+      "gold": "unknown",
+      "predicted": "unknown",
+      "correct": true,
+      "note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 7,
+      "publication_id": "73a6ced41f1d6f2c7a1b9949",
+      "title": "GitHub стал командным центром. Касперский раскрыл новую операцию северокорейских хакеров",
+      "url": "https://www.securitylab.ru/news/579073.php",
+      "gold": "attack_claim",
+      "predicted": "unknown",
+      "correct": false,
+      "note": "В тексте явно сообщается об операции атакующих."
+    },
+    {
+      "sample_id": 8,
+      "publication_id": "ce8804bf62d47bcb14b9b910",
+      "title": "США приказали удалить DeepSeek со всех гражданских федеральных систем",
+      "url": "https://www.securitylab.ru/news/578995.php",
+      "gold": "unknown",
+      "predicted": "unknown",
+      "correct": true,
+      "note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 9,
+      "publication_id": "43d934054367bd0c19e84f46",
+      "title": "Физики впервые построили квантовый циклотрон для одной частицы антиматерии",
+      "url": "https://www.securitylab.ru/news/579145.php",
+      "gold": "unknown",
+      "predicted": "unknown",
+      "correct": true,
+      "note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 10,
+      "publication_id": "a2573f0bc0f5fbd1642b7ef0",
+      "title": "Две критические дыры в PHP. Готовый эксплойт появился раньше исправлений",
+      "url": "https://www.securitylab.ru/news/579027.php",
+      "gold": "vulnerability_advisory",
+      "predicted": "unknown",
+      "correct": false,
+      "note": "Эксплойт и исправления описывают техническую уязвимость."
+    },
+    {
+      "sample_id": 11,
+      "publication_id": "3e524976cecfcf875e7ed264",
+      "title": "R-Vision SIEM в бою: опыт эксплуатации командой защитников на Standoff",
+      "url": "https://www.securitylab.ru/analytics/578851.php",
+      "gold": "unknown",
+      "predicted": "unknown",
+      "correct": true,
+      "note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 12,
+      "publication_id": "447f1b308c138dda878cac03",
+      "title": "ИИ-расследователь в центре мониторинга. Где кончается автономия и начинается риск",
+      "url": "https://www.securitylab.ru/analytics/579059.php",
+      "gold": "unknown",
+      "predicted": "unknown",
+      "correct": true,
+      "note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 13,
+      "publication_id": "76c5e42c8d7fc49dbe514d27",
+      "title": "Reflective DLL Injection. DLL без файла, но со следами",
+      "url": "https://www.securitylab.ru/analytics/559714.php",
+      "gold": "unknown",
+      "predicted": "unknown",
+      "correct": true,
+      "note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 14,
+      "publication_id": "a954556caa89a02f3214fd32",
+      "title": "Первая домашняя лаборатория: что собрать на своём компьютере, чтобы понять корпоративную сеть",
+      "url": "https://www.securitylab.ru/analytics/579163.php",
+      "gold": "unknown",
+      "predicted": "unknown",
+      "correct": true,
+      "note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 15,
+      "publication_id": "6a86081e22d9ece53d2c9461",
+      "title": "Одиссей и троянцы снова вместе: MovieReaper атакует пользователей по всему миру через скомпрометированные торренты",
+      "url": "https://securelist.ru/moviereaper-malware-torrent-odyssey-solana/117109/",
+      "gold": "attack_claim",
+      "predicted": "unknown",
+      "correct": false,
+      "note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 16,
+      "publication_id": "27152a205ef9d3bcb31c86a2",
+      "title": "Благотворительность как приманка: Armored Likho расширяет арсенал инструментов для кибершпионажа",
+      "url": "https://securelist.ru/armored-likho-still-toolkit/116417/",
+      "gold": "unknown",
+      "predicted": "unknown",
+      "correct": true,
+      "note": "По одному заголовку об инструментарии недостаточно сведений о конкретном событии."
+    },
+    {
+      "sample_id": 17,
+      "publication_id": "ab07fc4ee986d3045525de6a",
+      "title": "ToddyCat — ваш скрытый почтовый ассистент. Часть 2",
+      "url": "https://securelist.ru/toddycat-apt-umbrij-tool-and-oauth/116029/",
+      "gold": "unknown",
+      "predicted": "unknown",
+      "correct": true,
+      "note": "Заголовок не позволяет восстановить тип события."
+    },
+    {
+      "sample_id": 18,
+      "publication_id": "5fb15ae4d040d410cf18cfbf",
+      "title": "Приключения бумажного единорога внутри современного склада",
+      "url": "https://securelist.ru/paper-unicorn-warehouse-security/117315/",
+      "gold": "unknown",
+      "predicted": "unknown",
+      "correct": true,
+      "note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 19,
+      "publication_id": "3f7053c03571c746f90cd465",
+      "title": "Novabev: итоги девяти месяцев 2026 года и последствия прежнего инцидента",
+      "url": "https://novabev.com/press-room/lenta/operating-results-9m-2026/",
+      "gold": "unknown",
+      "predicted": "attack_claim",
+      "correct": false,
+      "note": "Основная тема — последствия старого инцидента, не новая атака."
+    },
+    {
+      "sample_id": 20,
+      "publication_id": "5a4f2e808c4db46eb551315b",
+      "title": "Novabev Group и ВинЛаб восстанавливают работу после кибератаки",
+      "url": "https://novabev.com/press-room/lenta/novabev-group-and-winelab-are-gradually-restoring-operations-following-the-cyberattack/",
+      "gold": "unknown",
+      "predicted": "attack_claim",
+      "correct": false,
+      "note": "Восстановление, не новая атака."
+    },
+    {
+      "sample_id": 21,
+      "publication_id": "e77e2d2008b7be95fb1b6487",
+      "title": "Novabev и ВинЛаб: отдельный узел июльского инцидента",
+      "url": "https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/",
+      "gold": "attack_claim",
+      "predicted": "attack_claim",
+      "correct": true,
+      "note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 22,
+      "publication_id": "05c99685d0b93186bfe9224e",
+      "title": "Novabev Group: собственная розничная сеть ВинЛаб",
+      "url": "https://novabev.com/about/business/",
+      "gold": "unknown",
+      "predicted": "unknown",
+      "correct": true,
+      "note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 23,
+      "publication_id": "29341b44e2a179b9c769574b",
+      "title": "СИБУР перевёл 40 тысяч сотрудников на Труконф",
+      "url": "https://trueconf.ru/blog/success-stories/sibur-trueconf",
+      "gold": "unknown",
+      "predicted": "unknown",
+      "correct": true,
+      "note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 24,
+      "publication_id": "c1bc55745e1cf327645f3585",
+      "title": "BDU:2025-11412 — TrueConf Server",
+      "url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories",
+      "gold": "vulnerability_advisory",
+      "predicted": "unknown",
+      "correct": false,
+      "note": "BDU — запись об уязвимости, несмотря на отсутствие CVE в заголовке."
+    },
+    {
+      "sample_id": 25,
+      "publication_id": "1dbc009e2dfac399a2a8648b",
+      "title": "CVE-2017-20114 — TrueConf Server",
+      "url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories",
+      "gold": "vulnerability_advisory",
+      "predicted": "vulnerability_advisory",
+      "correct": true,
+      "note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 26,
+      "publication_id": "8b9adcd7fc5ecf9d9e5c3466",
+      "title": "CVE-2025-62593 — Ray-Project Ray Code Injection Vulnerability",
+      "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+      "gold": "vulnerability_advisory",
+      "predicted": "vulnerability_advisory",
+      "correct": true,
+      "note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 27,
+      "publication_id": "2d60d2d0215e27c5fb1e2f87",
+      "title": "CVE-2026-20079 — Cisco Firewall Management Center Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+      "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+      "gold": "vulnerability_advisory",
+      "predicted": "vulnerability_advisory",
+      "correct": true,
+      "note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 28,
+      "publication_id": "5bb37949c284cdfdb3dbbd19",
+      "title": "Критические RCE-уязвимости в ядре PHP (CVE-2026-109618, CVE-2026-109619)",
+      "url": "https://securelist.ru/tr/php2shell-critical-vulnerabilities-in-php/117380/",
+      "gold": "vulnerability_advisory",
+      "predicted": "vulnerability_advisory",
+      "correct": true,
+      "note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 29,
+      "publication_id": "e16f2c58cb6657ae24c861f7",
+      "title": "Novabev Group: модернизация защиты после июльского инцидента",
+      "url": "https://novabev.com/en/press-room/lenta/novabev-group-has-begun-modernizing-its-cybersecurity-system/",
+      "gold": "unknown",
+      "predicted": "attack_claim",
+      "correct": false,
+      "note": "Модернизация после прежнего инцидента."
+    },
+    {
+      "sample_id": 30,
+      "publication_id": "2c2d4a8b9cba7d1ed6584f25",
+      "title": "Официальное заявление Novabev Group и сети ВинЛаб о кибератаке",
+      "url": "https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/",
+      "gold": "attack_claim",
+      "predicted": "attack_claim",
+      "correct": true,
+      "note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    }
+  ]
+}

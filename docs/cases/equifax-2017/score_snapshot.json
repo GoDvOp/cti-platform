@@ -1,0 +1,875 @@
+{
+  "model_version": "weighted-graph-v3",
+  "weights_sha256": "0cfa0b6a99d5e34e137aafa355fa88ea33da3fe0d479611b4fcdb2f01c911cae",
+  "weights": {
+    "model_version": "weighted-graph-v3",
+    "confidence": {
+      "high": 1.0,
+      "medium": 0.7,
+      "low": 0.4
+    },
+    "default_confidence": "medium",
+    "basis": {
+      "victim_report": 0.9,
+      "research_report": 0.85,
+      "vendor_advisory": 0.9,
+      "government_advisory": 0.9,
+      "legal_allegation": 0.65,
+      "attacker_claim": 0.3,
+      "unspecified": 0.6
+    },
+    "signal_status": {
+      "unresolved": 0.4,
+      "corroborated": 0.7,
+      "confirmed": 1.0
+    },
+    "half_life_days": {
+      "interest": 90,
+      "technical": 180
+    },
+    "interest_caps": {
+      "direct_signal": 60,
+      "incident_history": 20,
+      "sector_activity": 20
+    },
+    "technical_cap": 100,
+    "unknown_version_multiplier": 0.25,
+    "technical_base_multiplier": 0.6,
+    "exploitation_bonus_multiplier": 0.4,
+    "notes": "Экспертные коэффициенты, не вероятности. Текущая применимость отделена от подтверждённой исторической эксплуатации. Для событий используется завершение периода либо начало; для использования ПО — наблюдение, дата публикации отмечается как приближение. Статические факты CVE не затухают. В компоненте учитывается максимум, не сумма путей.",
+    "temporal_policy": {
+      "affects_product": "static_reference",
+      "actor_exploits": "static_reference",
+      "incident_exploited": "static_reference",
+      "known_exploited": "static_reference"
+    },
+    "include_incident_exploitation": true
+  },
+  "calculated_at": "2026-10-24T14:46:40+00:00",
+  "is_probability": false,
+  "aggregation": "strongest_path_per_component",
+  "snapshot_note": "Расчёт по текущему снимку и текущим проверкам; as_of не восстанавливает прошлые версии.",
+  "companies": [
+    {
+      "company_id": "equifax",
+      "company": "Equifax",
+      "is_demo": false,
+      "monitor_target": false,
+      "interest": {
+        "score": 5.1575632213488224e-11,
+        "status": "historical_evidence_only",
+        "observed_components": [
+          "incident_history"
+        ],
+        "missing_components": [
+          "direct_signal",
+          "sector_activity"
+        ],
+        "component_coverage": 20,
+        "selected_path_ids": [
+          "bbbb7cf106c5755facde33d6"
+        ],
+        "candidate_paths": 1,
+        "interpretation": "Индекс силы доступных оснований, не вероятность атаки. Пропуски не означают безопасность."
+      },
+      "technical": {
+        "score": 1.0664158149180905e-05,
+        "status": "historical_evidence_only",
+        "observed_components": [
+          "product_cve"
+        ],
+        "missing_components": [],
+        "component_coverage": 100,
+        "selected_path_ids": [
+          "b61d29c968daaf2d55619689"
+        ],
+        "candidate_paths": 4,
+        "interpretation": "Индекс силы доступных оснований, не вероятность атаки. Пропуски не означают безопасность."
+      },
+      "historical_technical": {
+        "score": 90.0,
+        "status": "confirmed_historical_exploitation",
+        "observed_components": [
+          "confirmed_incident_exploitation"
+        ],
+        "missing_components": [],
+        "component_coverage": 100,
+        "selected_path_ids": [
+          "7905ec74e74899d6296ae97b"
+        ],
+        "candidate_paths": 2,
+        "interpretation": "Сила подтверждения исторической цепочки эксплуатации. Не оценка текущей уязвимости, тяжести инцидента или вероятности атаки.",
+        "scope": "historical_fact",
+        "current_vulnerability_established": false
+      },
+      "paths": [
+        {
+          "id": "bbbb7cf106c5755facde33d6",
+          "dimension": "interest",
+          "component": "incident_history",
+          "edges": [
+            {
+              "id": "74be99fb09dc1d0923274afd",
+              "kind": "incident_affects",
+              "subject": "equifax-2017",
+              "object": "equifax",
+              "publication_id": "4398f03b9d90d8355c06dcca",
+              "source_url": "https://investor.equifax.com/news-events/press-releases/detail/237/equifax-releases-details-on-cybersecurity-incident",
+              "evidence_hash": "786d706c68bfd875dd49b5a12fad15959cc5f995a58038f2828c92a1d73c2391",
+              "excerpt": "Инцидент Equifax 2017 затронул Equifax. Компания описала эксплуатацию CVE-2017-5638 в Apache Struts 2, использовавшемся в приложении портала споров. Точная установленная версия здесь не приведена.",
+              "status": "confirmed",
+              "confidence": "high",
+              "basis": "victim_report",
+              "quality": 0.9,
+              "date": "2017-05-13",
+              "date_basis": "event_start",
+              "age_days": 3451,
+              "temporal_policy": "decay",
+              "decay": 2.8653129007493458e-12,
+              "weight": 2.5787816106744113e-12,
+              "defaults_used": [],
+              "warnings": [],
+              "published_day": "2017-09-15",
+              "catalog_added_day": null,
+              "observed_day": null,
+              "event_start_day": "2017-05-13",
+              "event_end_day": null,
+              "collected_at": "2026-10-23T20:36:07+00:00",
+              "reviewed_at": "2026-10-23T20:36:08+00:00",
+              "excluded_reason": null
+            }
+          ],
+          "event_groups": [
+            "event:equifax-2017",
+            "hash:786d706c68bfd875dd49b5a12fad15959cc5f995a58038f2828c92a1d73c2391",
+            "url:https://investor.equifax.com/news-events/press-releases/detail/237/equifax-releases-details-on-cybersecurity-incident"
+          ],
+          "multiplier": 1,
+          "strength": 2.5787816106744113e-12,
+          "max_points": 20,
+          "candidate_points": 5.1575632213488224e-11,
+          "contribution": 5.1575632213488224e-11,
+          "selected": true,
+          "excluded_reasons": [],
+          "context": {
+            "incident_id": "equifax-2017",
+            "interpretation": "Прошлый инцидент, не прогноз повторения."
+          }
+        },
+        {
+          "id": "b61d29c968daaf2d55619689",
+          "dimension": "technical",
+          "component": "product_cve",
+          "edges": [
+            {
+              "id": "e46cd5b9fba3574134aea9dd",
+              "kind": "uses_product",
+              "subject": "equifax",
+              "object": "apache-struts2",
+              "publication_id": "4398f03b9d90d8355c06dcca",
+              "source_url": "https://investor.equifax.com/news-events/press-releases/detail/237/equifax-releases-details-on-cybersecurity-incident",
+              "evidence_hash": "786d706c68bfd875dd49b5a12fad15959cc5f995a58038f2828c92a1d73c2391",
+              "excerpt": "Инцидент Equifax 2017 затронул Equifax. Компания описала эксплуатацию CVE-2017-5638 в Apache Struts 2, использовавшемся в приложении портала споров. Точная установленная версия здесь не приведена.",
+              "status": "confirmed",
+              "confidence": "medium",
+              "basis": "unspecified",
+              "quality": 0.42,
+              "date": "2017-05-13",
+              "date_basis": "observation",
+              "age_days": 3451,
+              "temporal_policy": "decay",
+              "decay": 1.692723515743001e-06,
+              "weight": 7.109438766120604e-07,
+              "defaults_used": [
+                "confidence",
+                "basis"
+              ],
+              "warnings": [
+                "default_confidence",
+                "default_basis"
+              ],
+              "published_day": "2017-09-15",
+              "catalog_added_day": null,
+              "observed_day": "2017-05-13",
+              "event_start_day": null,
+              "event_end_day": null,
+              "collected_at": "2026-10-23T20:36:07+00:00",
+              "reviewed_at": "2026-10-23T20:36:08+00:00",
+              "excluded_reason": null
+            },
+            {
+              "id": "7480a558992ae98d7577372d",
+              "kind": "affects_product",
+              "subject": "CVE-2017-5638",
+              "object": "apache-struts2",
+              "publication_id": "a3908e3f7df746d6f5da6316",
+              "source_url": "https://www.oracle.com/security-alerts/alert-cve-2017-9805.html",
+              "evidence_hash": "1fb78676e93840c388be10d6d5db4c3d7a8317712d9c2c229ecf0cb22fa9e95c",
+              "excerpt": "Oracle связывает CVE-2017-5638 с Apache Struts 2 и инцидентом Equifax. Перечисленные рядом более поздние CVE не приписываются атаке на Equifax.",
+              "status": "confirmed",
+              "confidence": "medium",
+              "basis": "unspecified",
+              "quality": 0.42,
+              "date": null,
+              "date_basis": "unknown",
+              "age_days": null,
+              "temporal_policy": "static_reference",
+              "decay": 1,
+              "weight": 0.42,
+              "defaults_used": [
+                "confidence",
+                "basis"
+              ],
+              "warnings": [
+                "default_confidence",
+                "default_basis"
+              ],
+              "published_day": null,
+              "catalog_added_day": null,
+              "observed_day": null,
+              "event_start_day": null,
+              "event_end_day": null,
+              "collected_at": "2026-10-23T20:36:07+00:00",
+              "reviewed_at": "2026-10-23T20:36:08+00:00",
+              "excluded_reason": null
+            }
+          ],
+          "event_groups": [
+            "cve:CVE-2017-5638"
+          ],
+          "multiplier": 0.15,
+          "strength": 1.0664158149180905e-07,
+          "max_points": 100,
+          "candidate_points": 1.0664158149180905e-05,
+          "contribution": 1.0664158149180905e-05,
+          "selected": true,
+          "excluded_reasons": [],
+          "context": {
+            "product_id": "apache-struts2",
+            "cve": "CVE-2017-5638",
+            "installed_version": null,
+            "version_match": null,
+            "interpretation": "Кандидат технической подверженности; конфигурация и текущее состояние не проверены."
+          }
+        },
+        {
+          "id": "1c50552e5dd32cb13e80c07f",
+          "dimension": "technical",
+          "component": "product_cve",
+          "edges": [
+            {
+              "id": "e46cd5b9fba3574134aea9dd",
+              "kind": "uses_product",
+              "subject": "equifax",
+              "object": "apache-struts2",
+              "publication_id": "4398f03b9d90d8355c06dcca",
+              "source_url": "https://investor.equifax.com/news-events/press-releases/detail/237/equifax-releases-details-on-cybersecurity-incident",
+              "evidence_hash": "786d706c68bfd875dd49b5a12fad15959cc5f995a58038f2828c92a1d73c2391",
+              "excerpt": "Инцидент Equifax 2017 затронул Equifax. Компания описала эксплуатацию CVE-2017-5638 в Apache Struts 2, использовавшемся в приложении портала споров. Точная установленная версия здесь не приведена.",
+              "status": "confirmed",
+              "confidence": "medium",
+              "basis": "unspecified",
+              "quality": 0.42,
+              "date": "2017-05-13",
+              "date_basis": "observation",
+              "age_days": 3451,
+              "temporal_policy": "decay",
+              "decay": 1.692723515743001e-06,
+              "weight": 7.109438766120604e-07,
+              "defaults_used": [
+                "confidence",
+                "basis"
+              ],
+              "warnings": [
+                "default_confidence",
+                "default_basis"
+              ],
+              "published_day": "2017-09-15",
+              "catalog_added_day": null,
+              "observed_day": "2017-05-13",
+              "event_start_day": null,
+              "event_end_day": null,
+              "collected_at": "2026-10-23T20:36:07+00:00",
+              "reviewed_at": "2026-10-23T20:36:08+00:00",
+              "excluded_reason": null
+            },
+            {
+              "id": "7a2e5b6ed3fc0831a695f676",
+              "kind": "affects_product",
+              "subject": "CVE-2016-3081",
+              "object": "apache-struts2",
+              "publication_id": "d57f43480e319db1f04867d3",
+              "source_url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+              "evidence_hash": "b79c94ab7b9717b354d104054dc22a5d6a22ae9b3b1785874ad165530888c9f9",
+              "excerpt": "CVE-2016-3081 — Apache Struts Command Injection Vulnerability",
+              "status": "needs_review",
+              "confidence": "medium",
+              "basis": "unspecified",
+              "quality": 0.42,
+              "date": "2026-10-08",
+              "date_basis": "catalog_added",
+              "age_days": 16,
+              "temporal_policy": "static_reference",
+              "decay": 1,
+              "weight": 0,
+              "defaults_used": [
+                "confidence",
+                "basis"
+              ],
+              "warnings": [
+                "default_confidence",
+                "default_basis"
+              ],
+              "published_day": null,
+              "catalog_added_day": "2026-10-08",
+              "observed_day": null,
+              "event_start_day": null,
+              "event_end_day": null,
+              "collected_at": "2026-10-24T07:02:56+00:00",
+              "reviewed_at": null,
+              "excluded_reason": "assertion_not_confirmed"
+            }
+          ],
+          "event_groups": [
+            "cve:CVE-2016-3081"
+          ],
+          "multiplier": 0.15,
+          "strength": 0,
+          "max_points": 100,
+          "candidate_points": 0,
+          "contribution": 0,
+          "selected": false,
+          "excluded_reasons": [
+            "assertion_not_confirmed"
+          ],
+          "context": {
+            "product_id": "apache-struts2",
+            "cve": "CVE-2016-3081",
+            "installed_version": null,
+            "version_match": null,
+            "interpretation": "Кандидат технической подверженности; конфигурация и текущее состояние не проверены."
+          }
+        },
+        {
+          "id": "cfd3691a521434fde66bb677",
+          "dimension": "technical",
+          "component": "product_cve",
+          "edges": [
+            {
+              "id": "e46cd5b9fba3574134aea9dd",
+              "kind": "uses_product",
+              "subject": "equifax",
+              "object": "apache-struts2",
+              "publication_id": "4398f03b9d90d8355c06dcca",
+              "source_url": "https://investor.equifax.com/news-events/press-releases/detail/237/equifax-releases-details-on-cybersecurity-incident",
+              "evidence_hash": "786d706c68bfd875dd49b5a12fad15959cc5f995a58038f2828c92a1d73c2391",
+              "excerpt": "Инцидент Equifax 2017 затронул Equifax. Компания описала эксплуатацию CVE-2017-5638 в Apache Struts 2, использовавшемся в приложении портала споров. Точная установленная версия здесь не приведена.",
+              "status": "confirmed",
+              "confidence": "medium",
+              "basis": "unspecified",
+              "quality": 0.42,
+              "date": "2017-05-13",
+              "date_basis": "observation",
+              "age_days": 3451,
+              "temporal_policy": "decay",
+              "decay": 1.692723515743001e-06,
+              "weight": 7.109438766120604e-07,
+              "defaults_used": [
+                "confidence",
+                "basis"
+              ],
+              "warnings": [
+                "default_confidence",
+                "default_basis"
+              ],
+              "published_day": "2017-09-15",
+              "catalog_added_day": null,
+              "observed_day": "2017-05-13",
+              "event_start_day": null,
+              "event_end_day": null,
+              "collected_at": "2026-10-23T20:36:07+00:00",
+              "reviewed_at": "2026-10-23T20:36:08+00:00",
+              "excluded_reason": null
+            },
+            {
+              "id": "7a2e5b6ed3fc0831a695f676",
+              "kind": "affects_product",
+              "subject": "CVE-2016-3081",
+              "object": "apache-struts2",
+              "publication_id": "d57f43480e319db1f04867d3",
+              "source_url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+              "evidence_hash": "b79c94ab7b9717b354d104054dc22a5d6a22ae9b3b1785874ad165530888c9f9",
+              "excerpt": "CVE-2016-3081 — Apache Struts Command Injection Vulnerability",
+              "status": "needs_review",
+              "confidence": "medium",
+              "basis": "unspecified",
+              "quality": 0.42,
+              "date": "2026-10-08",
+              "date_basis": "catalog_added",
+              "age_days": 16,
+              "temporal_policy": "static_reference",
+              "decay": 1,
+              "weight": 0,
+              "defaults_used": [
+                "confidence",
+                "basis"
+              ],
+              "warnings": [
+                "default_confidence",
+                "default_basis"
+              ],
+              "published_day": null,
+              "catalog_added_day": "2026-10-08",
+              "observed_day": null,
+              "event_start_day": null,
+              "event_end_day": null,
+              "collected_at": "2026-10-24T07:02:56+00:00",
+              "reviewed_at": null,
+              "excluded_reason": "assertion_not_confirmed"
+            },
+            {
+              "id": "kev:d57f43480e319db1f04867d3",
+              "kind": "known_exploited",
+              "subject": "CVE-2016-3081",
+              "object": "apache-struts2",
+              "publication_id": "d57f43480e319db1f04867d3",
+              "source_url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+              "evidence_hash": "b79c94ab7b9717b354d104054dc22a5d6a22ae9b3b1785874ad165530888c9f9",
+              "excerpt": "CVE-2016-3081: Apache / Struts. Apache Struts contains a command injection vulnerability that could allow remote attackers to execute arbitrary code via method:prefix when Dynamic Method Invocation is enabled.\nCISA KEV dateAdded: 2026-10-08. Required action: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+              "status": "confirmed",
+              "confidence": "high",
+              "basis": "government_advisory",
+              "quality": 0.9,
+              "date": "2026-10-08",
+              "date_basis": "catalog_added",
+              "age_days": 16,
+              "temporal_policy": "static_reference",
+              "decay": 1,
+              "weight": 0.9,
+              "defaults_used": [],
+              "warnings": [],
+              "published_day": null,
+              "catalog_added_day": "2026-10-08",
+              "observed_day": "2026-10-08",
+              "event_start_day": null,
+              "event_end_day": null,
+              "collected_at": "2026-10-24T07:02:56+00:00",
+              "reviewed_at": null,
+              "excluded_reason": null
+            }
+          ],
+          "event_groups": [
+            "cve:CVE-2016-3081"
+          ],
+          "multiplier": 0.24,
+          "strength": 0,
+          "max_points": 100,
+          "candidate_points": 0,
+          "contribution": 0,
+          "selected": false,
+          "excluded_reasons": [
+            "assertion_not_confirmed"
+          ],
+          "context": {
+            "product_id": "apache-struts2",
+            "cve": "CVE-2016-3081",
+            "installed_version": null,
+            "version_match": null,
+            "interpretation": "Кандидат технической подверженности; конфигурация и текущее состояние не проверены.",
+            "exploitation_context": "CISA KEV"
+          }
+        },
+        {
+          "id": "ce4ac53cb5710d3fd3c53a0c",
+          "dimension": "technical",
+          "component": "product_cve",
+          "edges": [
+            {
+              "id": "e46cd5b9fba3574134aea9dd",
+              "kind": "uses_product",
+              "subject": "equifax",
+              "object": "apache-struts2",
+              "publication_id": "4398f03b9d90d8355c06dcca",
+              "source_url": "https://investor.equifax.com/news-events/press-releases/detail/237/equifax-releases-details-on-cybersecurity-incident",
+              "evidence_hash": "786d706c68bfd875dd49b5a12fad15959cc5f995a58038f2828c92a1d73c2391",
+              "excerpt": "Инцидент Equifax 2017 затронул Equifax. Компания описала эксплуатацию CVE-2017-5638 в Apache Struts 2, использовавшемся в приложении портала споров. Точная установленная версия здесь не приведена.",
+              "status": "confirmed",
+              "confidence": "medium",
+              "basis": "unspecified",
+              "quality": 0.42,
+              "date": "2017-05-13",
+              "date_basis": "observation",
+              "age_days": 3451,
+              "temporal_policy": "decay",
+              "decay": 1.692723515743001e-06,
+              "weight": 7.109438766120604e-07,
+              "defaults_used": [
+                "confidence",
+                "basis"
+              ],
+              "warnings": [
+                "default_confidence",
+                "default_basis"
+              ],
+              "published_day": "2017-09-15",
+              "catalog_added_day": null,
+              "observed_day": "2017-05-13",
+              "event_start_day": null,
+              "event_end_day": null,
+              "collected_at": "2026-10-23T20:36:07+00:00",
+              "reviewed_at": "2026-10-23T20:36:08+00:00",
+              "excluded_reason": null
+            },
+            {
+              "id": "b6e835ece705a0f2b39de37b",
+              "kind": "affects_product",
+              "subject": "CVE-2017-5638",
+              "object": "apache-struts2",
+              "publication_id": "d400fea74f7620821053742c",
+              "source_url": "https://cwiki.apache.org/confluence/spaces/WW/pages/68717257/S2-045",
+              "evidence_hash": "50602dec56837bcb30d95d20e1b58d2af67ad7e15ecd4aa4e061072e92f78a1e",
+              "excerpt": "Apache Struts 2: бюллетень S2-045 связывает CVE-2017-5638 с версиями 2.3.5–2.3.31 и 2.5–2.5.10 при использовании Jakarta Multipart parser. Исправленные версии: 2.3.32 и 2.5.10.1. Согласно отдельному официальному ответу Apache, исправления выпущены 7 марта 2017 года. Бюллетень не устанавливает точную версию, использовавшуюся Equifax.",
+              "status": "confirmed",
+              "confidence": "high",
+              "basis": "vendor_advisory",
+              "quality": 0.9,
+              "date": "2017-03-07",
+              "date_basis": "observation",
+              "age_days": 3518,
+              "temporal_policy": "static_reference",
+              "decay": 1,
+              "weight": 0.9,
+              "defaults_used": [],
+              "warnings": [],
+              "published_day": null,
+              "catalog_added_day": null,
+              "observed_day": "2017-03-07",
+              "event_start_day": null,
+              "event_end_day": null,
+              "collected_at": "2026-10-24T08:06:48+00:00",
+              "reviewed_at": "2026-10-24T08:06:48+00:00",
+              "excluded_reason": null
+            }
+          ],
+          "event_groups": [
+            "cve:CVE-2017-5638"
+          ],
+          "multiplier": 0.15,
+          "strength": 1.0664158149180905e-07,
+          "max_points": 100,
+          "candidate_points": 1.0664158149180905e-05,
+          "contribution": 0,
+          "selected": false,
+          "excluded_reasons": [
+            "weaker_path_in_component"
+          ],
+          "context": {
+            "product_id": "apache-struts2",
+            "cve": "CVE-2017-5638",
+            "installed_version": null,
+            "version_match": null,
+            "interpretation": "Кандидат технической подверженности; конфигурация и текущее состояние не проверены."
+          }
+        },
+        {
+          "id": "56924c5c761ec8d1c119d713",
+          "dimension": "historical_technical",
+          "component": "confirmed_incident_exploitation",
+          "edges": [
+            {
+              "id": "74be99fb09dc1d0923274afd",
+              "kind": "incident_affects",
+              "subject": "equifax-2017",
+              "object": "equifax",
+              "publication_id": "4398f03b9d90d8355c06dcca",
+              "source_url": "https://investor.equifax.com/news-events/press-releases/detail/237/equifax-releases-details-on-cybersecurity-incident",
+              "evidence_hash": "786d706c68bfd875dd49b5a12fad15959cc5f995a58038f2828c92a1d73c2391",
+              "excerpt": "Инцидент Equifax 2017 затронул Equifax. Компания описала эксплуатацию CVE-2017-5638 в Apache Struts 2, использовавшемся в приложении портала споров. Точная установленная версия здесь не приведена.",
+              "status": "confirmed",
+              "confidence": "high",
+              "basis": "victim_report",
+              "quality": 0.9,
+              "date": "2017-05-13",
+              "date_basis": "event_start",
+              "age_days": 3451,
+              "temporal_policy": "static_reference",
+              "decay": 1,
+              "weight": 0.9,
+              "defaults_used": [],
+              "warnings": [],
+              "published_day": "2017-09-15",
+              "catalog_added_day": null,
+              "observed_day": null,
+              "event_start_day": "2017-05-13",
+              "event_end_day": null,
+              "collected_at": "2026-10-23T20:36:07+00:00",
+              "reviewed_at": "2026-10-23T20:36:08+00:00",
+              "excluded_reason": null
+            },
+            {
+              "id": "83556e3e5879b657917c23be",
+              "kind": "incident_product",
+              "subject": "equifax-2017",
+              "object": "apache-struts2",
+              "publication_id": "4398f03b9d90d8355c06dcca",
+              "source_url": "https://investor.equifax.com/news-events/press-releases/detail/237/equifax-releases-details-on-cybersecurity-incident",
+              "evidence_hash": "786d706c68bfd875dd49b5a12fad15959cc5f995a58038f2828c92a1d73c2391",
+              "excerpt": "Инцидент Equifax 2017 затронул Equifax. Компания описала эксплуатацию CVE-2017-5638 в Apache Struts 2, использовавшемся в приложении портала споров. Точная установленная версия здесь не приведена.",
+              "status": "confirmed",
+              "confidence": "high",
+              "basis": "victim_report",
+              "quality": 0.9,
+              "date": "2017-05-13",
+              "date_basis": "event_start",
+              "age_days": 3451,
+              "temporal_policy": "static_reference",
+              "decay": 1,
+              "weight": 0.9,
+              "defaults_used": [],
+              "warnings": [],
+              "published_day": "2017-09-15",
+              "catalog_added_day": null,
+              "observed_day": null,
+              "event_start_day": "2017-05-13",
+              "event_end_day": null,
+              "collected_at": "2026-10-23T20:36:07+00:00",
+              "reviewed_at": "2026-10-23T20:36:08+00:00",
+              "excluded_reason": null
+            },
+            {
+              "id": "c813264808caf770eb498e4c",
+              "kind": "incident_exploited",
+              "subject": "equifax-2017",
+              "object": "CVE-2017-5638",
+              "publication_id": "4398f03b9d90d8355c06dcca",
+              "source_url": "https://investor.equifax.com/news-events/press-releases/detail/237/equifax-releases-details-on-cybersecurity-incident",
+              "evidence_hash": "786d706c68bfd875dd49b5a12fad15959cc5f995a58038f2828c92a1d73c2391",
+              "excerpt": "Инцидент Equifax 2017 затронул Equifax. Компания описала эксплуатацию CVE-2017-5638 в Apache Struts 2, использовавшемся в приложении портала споров. Точная установленная версия здесь не приведена.",
+              "status": "confirmed",
+              "confidence": "high",
+              "basis": "victim_report",
+              "quality": 0.9,
+              "date": "2017-05-13",
+              "date_basis": "event_start",
+              "age_days": 3451,
+              "temporal_policy": "static_reference",
+              "decay": 1,
+              "weight": 0.9,
+              "defaults_used": [],
+              "warnings": [],
+              "published_day": "2017-09-15",
+              "catalog_added_day": null,
+              "observed_day": null,
+              "event_start_day": "2017-05-13",
+              "event_end_day": null,
+              "collected_at": "2026-10-23T20:36:07+00:00",
+              "reviewed_at": "2026-10-23T20:36:08+00:00",
+              "excluded_reason": null
+            },
+            {
+              "id": "7480a558992ae98d7577372d",
+              "kind": "affects_product",
+              "subject": "CVE-2017-5638",
+              "object": "apache-struts2",
+              "publication_id": "a3908e3f7df746d6f5da6316",
+              "source_url": "https://www.oracle.com/security-alerts/alert-cve-2017-9805.html",
+              "evidence_hash": "1fb78676e93840c388be10d6d5db4c3d7a8317712d9c2c229ecf0cb22fa9e95c",
+              "excerpt": "Oracle связывает CVE-2017-5638 с Apache Struts 2 и инцидентом Equifax. Перечисленные рядом более поздние CVE не приписываются атаке на Equifax.",
+              "status": "confirmed",
+              "confidence": "medium",
+              "basis": "unspecified",
+              "quality": 0.42,
+              "date": null,
+              "date_basis": "unknown",
+              "age_days": null,
+              "temporal_policy": "static_reference",
+              "decay": 1,
+              "weight": 0.42,
+              "defaults_used": [
+                "confidence",
+                "basis"
+              ],
+              "warnings": [
+                "default_confidence",
+                "default_basis"
+              ],
+              "published_day": null,
+              "catalog_added_day": null,
+              "observed_day": null,
+              "event_start_day": null,
+              "event_end_day": null,
+              "collected_at": "2026-10-23T20:36:07+00:00",
+              "reviewed_at": "2026-10-23T20:36:08+00:00",
+              "excluded_reason": null
+            }
+          ],
+          "event_groups": [
+            "event:equifax-2017"
+          ],
+          "multiplier": 1,
+          "strength": 0,
+          "max_points": 100,
+          "candidate_points": 0,
+          "contribution": 0,
+          "selected": false,
+          "excluded_reasons": [
+            "historical_fact_requires_review_metadata"
+          ],
+          "context": {
+            "incident_id": "equifax-2017",
+            "product_id": "apache-struts2",
+            "cve": "CVE-2017-5638",
+            "scope": "historical_fact",
+            "current_vulnerability_established": false,
+            "interpretation": "Подтверждение исторической цепочки эксплуатации; текущее состояние установки не установлено."
+          }
+        },
+        {
+          "id": "7905ec74e74899d6296ae97b",
+          "dimension": "historical_technical",
+          "component": "confirmed_incident_exploitation",
+          "edges": [
+            {
+              "id": "74be99fb09dc1d0923274afd",
+              "kind": "incident_affects",
+              "subject": "equifax-2017",
+              "object": "equifax",
+              "publication_id": "4398f03b9d90d8355c06dcca",
+              "source_url": "https://investor.equifax.com/news-events/press-releases/detail/237/equifax-releases-details-on-cybersecurity-incident",
+              "evidence_hash": "786d706c68bfd875dd49b5a12fad15959cc5f995a58038f2828c92a1d73c2391",
+              "excerpt": "Инцидент Equifax 2017 затронул Equifax. Компания описала эксплуатацию CVE-2017-5638 в Apache Struts 2, использовавшемся в приложении портала споров. Точная установленная версия здесь не приведена.",
+              "status": "confirmed",
+              "confidence": "high",
+              "basis": "victim_report",
+              "quality": 0.9,
+              "date": "2017-05-13",
+              "date_basis": "event_start",
+              "age_days": 3451,
+              "temporal_policy": "static_reference",
+              "decay": 1,
+              "weight": 0.9,
+              "defaults_used": [],
+              "warnings": [],
+              "published_day": "2017-09-15",
+              "catalog_added_day": null,
+              "observed_day": null,
+              "event_start_day": "2017-05-13",
+              "event_end_day": null,
+              "collected_at": "2026-10-23T20:36:07+00:00",
+              "reviewed_at": "2026-10-23T20:36:08+00:00",
+              "excluded_reason": null
+            },
+            {
+              "id": "83556e3e5879b657917c23be",
+              "kind": "incident_product",
+              "subject": "equifax-2017",
+              "object": "apache-struts2",
+              "publication_id": "4398f03b9d90d8355c06dcca",
+              "source_url": "https://investor.equifax.com/news-events/press-releases/detail/237/equifax-releases-details-on-cybersecurity-incident",
+              "evidence_hash": "786d706c68bfd875dd49b5a12fad15959cc5f995a58038f2828c92a1d73c2391",
+              "excerpt": "Инцидент Equifax 2017 затронул Equifax. Компания описала эксплуатацию CVE-2017-5638 в Apache Struts 2, использовавшемся в приложении портала споров. Точная установленная версия здесь не приведена.",
+              "status": "confirmed",
+              "confidence": "high",
+              "basis": "victim_report",
+              "quality": 0.9,
+              "date": "2017-05-13",
+              "date_basis": "event_start",
+              "age_days": 3451,
+              "temporal_policy": "static_reference",
+              "decay": 1,
+              "weight": 0.9,
+              "defaults_used": [],
+              "warnings": [],
+              "published_day": "2017-09-15",
+              "catalog_added_day": null,
+              "observed_day": null,
+              "event_start_day": "2017-05-13",
+              "event_end_day": null,
+              "collected_at": "2026-10-23T20:36:07+00:00",
+              "reviewed_at": "2026-10-23T20:36:08+00:00",
+              "excluded_reason": null
+            },
+            {
+              "id": "c813264808caf770eb498e4c",
+              "kind": "incident_exploited",
+              "subject": "equifax-2017",
+              "object": "CVE-2017-5638",
+              "publication_id": "4398f03b9d90d8355c06dcca",
+              "source_url": "https://investor.equifax.com/news-events/press-releases/detail/237/equifax-releases-details-on-cybersecurity-incident",
+              "evidence_hash": "786d706c68bfd875dd49b5a12fad15959cc5f995a58038f2828c92a1d73c2391",
+              "excerpt": "Инцидент Equifax 2017 затронул Equifax. Компания описала эксплуатацию CVE-2017-5638 в Apache Struts 2, использовавшемся в приложении портала споров. Точная установленная версия здесь не приведена.",
+              "status": "confirmed",
+              "confidence": "high",
+              "basis": "victim_report",
+              "quality": 0.9,
+              "date": "2017-05-13",
+              "date_basis": "event_start",
+              "age_days": 3451,
+              "temporal_policy": "static_reference",
+              "decay": 1,
+              "weight": 0.9,
+              "defaults_used": [],
+              "warnings": [],
+              "published_day": "2017-09-15",
+              "catalog_added_day": null,
+              "observed_day": null,
+              "event_start_day": "2017-05-13",
+              "event_end_day": null,
+              "collected_at": "2026-10-23T20:36:07+00:00",
+              "reviewed_at": "2026-10-23T20:36:08+00:00",
+              "excluded_reason": null
+            },
+            {
+              "id": "b6e835ece705a0f2b39de37b",
+              "kind": "affects_product",
+              "subject": "CVE-2017-5638",
+              "object": "apache-struts2",
+              "publication_id": "d400fea74f7620821053742c",
+              "source_url": "https://cwiki.apache.org/confluence/spaces/WW/pages/68717257/S2-045",
+              "evidence_hash": "50602dec56837bcb30d95d20e1b58d2af67ad7e15ecd4aa4e061072e92f78a1e",
+              "excerpt": "Apache Struts 2: бюллетень S2-045 связывает CVE-2017-5638 с версиями 2.3.5–2.3.31 и 2.5–2.5.10 при использовании Jakarta Multipart parser. Исправленные версии: 2.3.32 и 2.5.10.1. Согласно отдельному официальному ответу Apache, исправления выпущены 7 марта 2017 года. Бюллетень не устанавливает точную версию, использовавшуюся Equifax.",
+              "status": "confirmed",
+              "confidence": "high",
+              "basis": "vendor_advisory",
+              "quality": 0.9,
+              "date": "2017-03-07",
+              "date_basis": "observation",
+              "age_days": 3518,
+              "temporal_policy": "static_reference",
+              "decay": 1,
+              "weight": 0.9,
+              "defaults_used": [],
+              "warnings": [],
+              "published_day": null,
+              "catalog_added_day": null,
+              "observed_day": "2017-03-07",
+              "event_start_day": null,
+              "event_end_day": null,
+              "collected_at": "2026-10-24T08:06:48+00:00",
+              "reviewed_at": "2026-10-24T08:06:48+00:00",
+              "excluded_reason": null
+            }
+          ],
+          "event_groups": [
+            "event:equifax-2017"
+          ],
+          "multiplier": 1,
+          "strength": 0.9,
+          "max_points": 100,
+          "candidate_points": 90.0,
+          "contribution": 90.0,
+          "selected": true,
+          "excluded_reasons": [],
+          "context": {
+            "incident_id": "equifax-2017",
+            "product_id": "apache-struts2",
+            "cve": "CVE-2017-5638",
+            "scope": "historical_fact",
+            "current_vulnerability_established": false,
+            "interpretation": "Подтверждение исторической цепочки эксплуатации; текущее состояние установки не установлено."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "case_id": "ispras-gitlab-2026",
+  "as_of": "2026-10-24T19:13:42+00:00",
+  "horizon_end": "2026-11-23",
+  "hypothesis": "Достаточно ли свежих публичных оснований повысить приоритет проверки обновления конкретного GitLab-сервиса ИСП РАН?",
+  "decision": "conditional_monitoring_candidate",
+  "queue_entry": {
+    "id": "0c45cc10237f82d0f54e18cb",
+    "company_id": "ispras",
+    "company": "ИСП РАН",
+    "product_id": "gitlab",
+    "product": "GitLab",
+    "status": "conditional_monitoring_candidate",
+    "use_assertion_id": "4040dfb2b7ac212d54e5c593",
+    "use_url": "https://gitlab.ispras.ru/explore/projects",
+    "use_age_days": 0,
+    "notice_id": "fb266c528f407e357a6445c1",
+    "notice_url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/",
+    "notice_age_days": 3,
+    "notice_title": "GitLab: критическое исправление CVE-2026-110264 от 21.10.2026",
+    "installed_version": null,
+    "version_match": null,
+    "network_exposure": "internet_reported",
+    "counterevidence": "Наблюдается обычная публичная страница; доступность уязвимого обработчика и установленная версия не установлены.",
+    "missing": [
+      "installed_version_unknown"
+    ],
+    "is_probability": false,
+    "decision": "Проверить актуальность установки и обновление; атака и неустранённая уязвимость не установлены.",
+    "horizon_days": 30,
+    "notice_review_status": "assistant_primary_source_review",
+    "scope_source_urls": [
+      "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/"
+    ],
+    "related_exploitation_reports": []
+  },
+  "monitoring_priority_increased": true,
+  "named_external_target_supported": false,
+  "attack_established_by_this_chain": false,
+  "exploitation_of_this_service_established": false,
+  "is_probability": false,
+  "decision_summary": "Повысить приоритет внутренней проверки версии и обновления; это условная гипотеза мониторинга.",
+  "decision_gates": {
+    "verified_use": true,
+    "verified_vendor_scope": true,
+    "recent_service_observation": true,
+    "recent_notice": true,
+    "affected_installed_version": null,
+    "public_page_observed": true,
+    "vulnerable_handler_reachability": null,
+    "direct_attack_evidence": false
+  },
+  "use_assertion": {
+    "id": "4040dfb2b7ac212d54e5c593",
+    "status": "confirmed",
+    "excerpt": "На обычной публичной странице GitLab ИСП РАН 24 октября 2026 года получен ответ HTTP 200.",
+    "evidence_hash": "9d13126dbb81572ef7daf6bf00c6f0f9c041366893942beb3f7c5d21d46edf3d",
+    "attributes": {
+      "basis": "research_report",
+      "confidence": "high",
+      "network_exposure": "internet_reported",
+      "network_exposure_note": "Наблюдается обычная публичная страница; доступность уязвимого обработчика и установленная версия не установлены.",
+      "note": "Ручное наблюдение сервиса вместе со ссылкой официальной лаборатории. Дата наблюдения не подменяет неизвестную дату публикации описания.",
+      "observed_day": "2026-10-24"
+    },
+    "reviewer": "assistant_source_review",
+    "reviewed_at": "2026-10-24T19:13:42+00:00"
+  },
+  "evidence": [
+    {
+      "publication_id": "04710733d146e3fa09f10e1b",
+      "roles": [
+        "organization_to_service_reference"
+      ],
+      "url": "https://education.at.ispras.ru/hwverification",
+      "title": "ИСП РАН: GitLab в описании стека лаборатории аппаратной верификации",
+      "text": "На официальной странице лаборатории ИСП РАН GitLab указан среди средств управления разработкой, а GitLab CI/CD — среди инструментов DevOps. Раздел открытых проектов ссылается на Utopia EDA по адресу gitlab.ispras.ru/mvg/utopia-eda. Дата публикации страницы не указана. Это основание связи лаборатории с сервисом, а не подтверждение современной установленной версии.",
+      "published_at": null,
+      "collected_at": "2026-10-24T19:13:42+00:00",
+      "content_hash": "15da94a569cc6b243a80be64477c8d58d6fe63c7389c7b548483403dcad9ef7f",
+      "source_id": "manual_ispras_lab_reference",
+      "metadata": {
+        "collection_method": "manual_primary_source_summary",
+        "content_scope": "short_primary_source_summary",
+        "date_precision": "unknown",
+        "independence_group": "ispras",
+        "publication_date_unknown": true,
+        "source_publisher": "ИСП РАН",
+        "source_quote": "DevOps — Docker, GitLab CI/CD (YAML)",
+        "source_reviewed_at": "2026-10-24T19:13:42+00:00",
+        "supporting_url": "https://gitlab.ispras.ru/mvg/utopia-eda",
+        "verification_method": "assistant_primary_source_review"
+      }
+    },
+    {
+      "publication_id": "8916d205ea89776647d4cb41",
+      "roles": [
+        "dated_public_service_observation"
+      ],
+      "url": "https://gitlab.ispras.ru/explore/projects",
+      "title": "Наблюдение публичной страницы GitLab ИСП РАН 24.10.2026",
+      "text": "На обычной публичной странице GitLab ИСП РАН 24 октября 2026 года получен ответ HTTP 200. Заголовок страницы обозначает список проектов GitLab; встроенные метаданные содержат realm=self-managed и deployment_type=self-managed. Значение context_generated_at — 2026-10-24T19:09:54.392Z. Связь сервиса с лабораторией подтверждается ссылкой с официальной образовательной страницы института. Номер установленной версии из проверенного HTML не установлен. Доступность этой страницы не подтверждает достижимость уязвимого обработчика или отсутствие исправления.",
+      "published_at": null,
+      "collected_at": "2026-10-24T19:13:42+00:00",
+      "content_hash": "9d13126dbb81572ef7daf6bf00c6f0f9c041366893942beb3f7c5d21d46edf3d",
+      "source_id": "manual_ispras_service_observation",
+      "metadata": {
+        "collection_method": "manual_public_web_observation",
+        "content_scope": "short_observation_summary",
+        "date_basis": "public_service_observation",
+        "date_precision": "observation",
+        "deployment_type": "self-managed",
+        "http_status": 200,
+        "independence_group": "ispras",
+        "observed_at": "2026-10-24T19:09:54.392+00:00",
+        "observed_day": "2026-10-24",
+        "publication_date_unknown": true,
+        "raw_response_retained": false,
+        "source_publisher": "ИСП РАН",
+        "source_response_sha256": "7ed49816ac84f20ff11b6409b9e5fb3e60b2f5dd7c55313ff5255a5b224ed05e",
+        "source_reviewed_at": "2026-10-24T19:13:42+00:00",
+        "supporting_url": "https://education.at.ispras.ru/hwverification",
+        "verification_method": "ordinary_public_page_and_primary_org_link"
+      }
+    },
+    {
+      "publication_id": "fb266c528f407e357a6445c1",
+      "roles": [
+        "vendor_security_notice"
+      ],
+      "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/",
+      "title": "GitLab: критическое исправление CVE-2026-110264 от 21.10.2026",
+      "text": "Бюллетень разработчика от 21 октября 2026 года сообщает: CVE-2026-110264 затрагивает GitLab CE/EE в явно перечисленных диапазонах версий. При определённых условиях ошибка допускает выполнение кода без авторизации. Разработчик рекомендует срочно обновить самостоятельно управляемые установки. Исправления: 18.11.13, 19.0.10, 19.1.9, 19.2.9, 19.3.6, 19.4.3 и 19.5.1. GitLab.com уже исправлен; для GitLab Dedicated перечислены отдельные защищённые внутренние сборки. Бюллетень содержит два правила обнаружения попыток эксплуатации. Этот материал не сообщает об атаке на ИСП РАН и не подтверждает состояние его установки.",
+      "published_at": null,
+      "collected_at": "2026-10-24T19:13:42+00:00",
+      "content_hash": "5648c7427fa989ab1434c7e04e7849a2a7bb4971ad534df364d982bf816dbbe9",
+      "source_id": "manual_gitlab_security_notice",
+      "metadata": {
+        "collection_method": "manual_primary_source_summary",
+        "content_scope": "short_primary_source_summary",
+        "date_precision": "day",
+        "independence_group": "gitlab_vendor",
+        "publication_day": "2026-10-21",
+        "security_notice": {
+          "affected_ranges": [
+            {
+              "gte": "7.0",
+              "lt": "18.11.13"
+            },
+            {
+              "gte": "19.0",
+              "lt": "19.0.10"
+            },
+            {
+              "gte": "19.1",
+              "lt": "19.1.9"
+            },
+            {
+              "gte": "19.2",
+              "lt": "19.2.9"
+            },
+            {
+              "gte": "19.3",
+              "lt": "19.3.6"
+            },
+            {
+              "gte": "19.4",
+              "lt": "19.4.3"
+            },
+            {
+              "gte": "19.5",
+              "lt": "19.5.1"
+            }
+          ],
+          "conditions": "Область — самостоятельно управляемые GitLab CE/EE. Достижимость уязвимого обработчика и точная версия установки требуют внутренней проверки.",
+          "extraction_status": "assistant_primary_source_review",
+          "fixed_versions": [
+            "18.11.13",
+            "19.0.10",
+            "19.1.9",
+            "19.2.9",
+            "19.3.6",
+            "19.4.3",
+            "19.5.1"
+          ],
+          "product_id": "gitlab",
+          "requires_verified_scope": true,
+          "scope_source_urls": [
+            "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/"
+          ],
+          "scope_updated_day": "2026-10-21"
+        },
+        "source_publisher": "GitLab",
+        "source_reviewed_at": "2026-10-24T19:13:42+00:00",
+        "verification_method": "assistant_primary_source_review"
+      }
+    }
+  ],
+  "source_groups": [
+    "gitlab_vendor",
+    "ispras"
+  ],
+  "next_actions": [
+    "Владельцу системы: сверить фактическую версию с бюллетенем и подтвердить установку исправления.",
+    "Аналитику: отслеживать официальные сообщения о версии, обновлении и применимости CVE.",
+    "Проверять журналы по правилам разработчика только внутри своего разрешённого контура."
+  ],
+  "limitations": [
+    "Номер установленной версии и состояние исправления неизвестны.",
+    "Обычная публичная страница не доказывает достижимость уязвимого обработчика.",
+    "Атака на институт, эксплуатация его сервиса и интерес конкретной группировки не установлены.",
+    "Описание лаборатории недатировано; дата 24.10.2026 относится к отдельному наблюдению сервиса.",
+    "Описание лаборатории и её сервис — одна группа источников, не два независимых подтверждения.",
+    "Наблюдение касается одного публичного сервиса; вывод не переносится на весь институт.",
+    "В кейсе ручные пересказы и проверка ассистентом; независимая экспертиза не заявляется."
+  ]
+}

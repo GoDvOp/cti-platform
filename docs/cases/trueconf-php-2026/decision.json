@@ -1,0 +1,226 @@
+{
+  "case_id": "trueconf-php-2026",
+  "as_of": "2026-10-24T14:46:40+00:00",
+  "horizon_end": "2026-11-23",
+  "hypothesis": "Проверить, достаточно ли оснований включить компанию в очередь возможных внешних целей через TrueConf Server/PHP.",
+  "queue_entry": {
+    "id": "a1b51cebb7cd8955d7b4c37e",
+    "company_id": "roszarubezhneft",
+    "company": "Росзарубежнефть",
+    "product_id": "trueconf-server",
+    "product": "TrueConf Server",
+    "status": "internal_patch_review",
+    "use_assertion_id": "4dfd7e33942a1e8b617784b5",
+    "use_url": "https://trueconf.ru/blog/success-stories/roszarubezhneft-trueconf-server",
+    "use_age_days": 69,
+    "notice_id": "a9711bc45afb1d0b7e91bd6c",
+    "notice_url": "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+    "notice_age_days": 2,
+    "notice_title": "TrueConf Server: обновление PHP-компонента от 22 октября 2026 года",
+    "installed_version": null,
+    "version_match": null,
+    "network_exposure": "closed_network",
+    "counterevidence": "Публикация сообщает о собственном ЦОД и работе в закрытом контуре без внешнего доступа.",
+    "missing": [
+      "installed_version_unknown"
+    ],
+    "is_probability": false,
+    "decision": "Проверить актуальность установки и обновление; атака и неустранённая уязвимость не установлены.",
+    "horizon_days": 30,
+    "notice_review_status": "assistant_primary_source_review",
+    "scope_source_urls": [
+      "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+      "https://trueconf.com/blog/update/trueconf-server-5411-5311-php"
+    ],
+    "related_exploitation_reports": [
+      {
+        "publication_id": "52526a0c6d1ce566fd6d4752",
+        "url": "https://bi.zone/news/bi-zone-zafiksirovala-pervye-popytki-ekspluatatsii-uyazvimostey-php/",
+        "cves": [
+          "CVE-2026-109618",
+          "CVE-2026-109619"
+        ],
+        "qualification": "Источник сообщает о попытках эксплуатации CVE в общем; атака на эту компанию или продукт не установлена."
+      }
+    ]
+  },
+  "decision": "internal_patch_review",
+  "named_external_target_supported": false,
+  "attack_established_by_this_chain": false,
+  "is_probability": false,
+  "evidence": [
+    {
+      "publication_id": "12c4339b24a55c27eb0e601c",
+      "roles": [
+        "security_update_for"
+      ],
+      "url": "https://trueconf.ru/products/changelog.html",
+      "title": "TrueConf Server 5.5.8: исправления PHP, указанные разработчиком",
+      "published_at": null,
+      "collected_at": "2026-10-24T13:16:00+00:00",
+      "content_hash": "d7101a6867b5be28281907e705cd820d966eeef00d34f9e9e4053c214ddca0c1",
+      "source_id": "manual_web_trueconf_update",
+      "metadata": {
+        "collection_method": "manual_primary_source_summary",
+        "content_scope": "analyst_summary",
+        "date_precision": "day",
+        "publication_day": "2026-10-22",
+        "software_update": {
+          "fixed_versions": [
+            "5.5.8"
+          ],
+          "interpretation": "Источник связывает выпущенное обновление с исправлением этих CVE. Состояние установок клиентов не раскрыто; HTML раздела напрямую не архивирован.",
+          "product_id": "trueconf-server",
+          "reference_cves": [
+            "CVE-2026-109618",
+            "CVE-2026-109619"
+          ]
+        },
+        "verification_method": "primary_publisher_search_index_excerpt"
+      }
+    },
+    {
+      "publication_id": "52526a0c6d1ce566fd6d4752",
+      "roles": [
+        "general_exploitation_report"
+      ],
+      "url": "https://bi.zone/news/bi-zone-zafiksirovala-pervye-popytki-ekspluatatsii-uyazvimostey-php/",
+      "title": "BI.ZONE зафиксировала первые попытки эксплуатации уязвимостей PHP: под угрозой 50 тысяч веб‑приложений в России",
+      "published_at": "2026-10-22T06:00:00+00:00",
+      "collected_at": "2026-10-24T13:04:47+00:00",
+      "content_hash": "7087a24e300130655fcd014937729f67d8083d3ecba4b6447e520155a7afaf57",
+      "source_id": "bizone_news",
+      "metadata": {
+        "capture_provenance": "user_run_public_probe_reparsed_offline",
+        "capture_receipt_sha256": "5278f484b26693321948f1b15716ac924e4eff7d8da75c26844dbb89706aec30",
+        "collection_method": "publisher_news",
+        "content_scope": "public_article_text",
+        "date_precision": "timestamp",
+        "discovery_url": "https://bi.zone/news/bi-zone-zafiksirovala-pervye-popytki-ekspluatatsii-uyazvimostey-php/",
+        "independence_group": "bizone",
+        "publication_day": null,
+        "source_role": "research_context"
+      }
+    },
+    {
+      "publication_id": "a9711bc45afb1d0b7e91bd6c",
+      "roles": [
+        "security_notice_for",
+        "selected_security_notice"
+      ],
+      "url": "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+      "title": "TrueConf Server: обновление PHP-компонента от 22 октября 2026 года",
+      "published_at": null,
+      "collected_at": "2026-10-24T12:41:16+00:00",
+      "content_hash": "b419df2ba260d9dccaf3a92b6e802752d2c94d9708c031870d168aedb62460d8",
+      "source_id": "manual_web_trueconf_notice",
+      "metadata": {
+        "collection_method": "manual_primary_source_summary",
+        "content_scope": "analyst_summary",
+        "date_precision": "day",
+        "publication_day": "2026-10-22",
+        "security_notice": {
+          "affected_ranges": [
+            {
+              "lte": "5.5.7"
+            }
+          ],
+          "conditions": "Для веток 5.4 и 5.3 разработчик описывает отдельные меры; конфигурация и доступность установки клиента не проверены.",
+          "extraction_status": "assistant_primary_source_review",
+          "fixed_versions": [
+            "5.5.8",
+            "5.4.11",
+            "5.3.11"
+          ],
+          "product_id": "trueconf-server",
+          "product_name": "TrueConf Server",
+          "scope_source_urls": [
+            "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+            "https://trueconf.com/blog/update/trueconf-server-5411-5311-php"
+          ],
+          "scope_updated_day": "2026-10-23"
+        }
+      }
+    },
+    {
+      "publication_id": "db20e3e16aa73c29085561c0",
+      "roles": [
+        "security_notice_for"
+      ],
+      "url": "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+      "title": "Security Patch for the PHP Service in TrueConf Server",
+      "published_at": "2026-10-21T21:34:38+00:00",
+      "collected_at": "2026-10-24T13:04:49+00:00",
+      "content_hash": "33b522e3dbaa4c1b7601e7c11af04fc99ae1cf3803b6e741eafaf4809b00abf4",
+      "source_id": "trueconf_php_notice",
+      "metadata": {
+        "capture_provenance": "user_run_public_probe_reparsed_offline",
+        "capture_receipt_sha256": "5278f484b26693321948f1b15716ac924e4eff7d8da75c26844dbb89706aec30",
+        "collection_method": "vendor_notice",
+        "content_scope": "public_article_text",
+        "date_precision": "timestamp",
+        "discovery_url": "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+        "independence_group": "trueconf",
+        "publication_day": null,
+        "security_notice": {
+          "affected_ranges": [
+            {
+              "lte": "5.5.7"
+            }
+          ],
+          "conditions": "Требуется проверить ветку продукта, установленную версию, конфигурацию и обновление по исходному бюллетеню.",
+          "date_meaning": "publication",
+          "extraction_status": "parsed_vendor_statement",
+          "fixed_versions": [
+            "5.5.8"
+          ],
+          "product_id": "trueconf-server",
+          "product_name": "TrueConf Server"
+        },
+        "source_role": "vendor_security_notice"
+      }
+    },
+    {
+      "publication_id": "e87b38c5c004bfe5a71e0fac",
+      "roles": [
+        "software_use"
+      ],
+      "url": "https://trueconf.ru/blog/success-stories/roszarubezhneft-trueconf-server",
+      "title": "Росзарубежнефть: TrueConf Server в коммуникационной системе",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:15:35+00:00",
+      "content_hash": "e8559367bb7492d484fafa83641394bb61a2d024b2b87ce9646fb4e79a85a149",
+      "source_id": "manual_web_trueconf_cases",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "content_scope": "verified_source_summary",
+        "independence_group": "trueconf",
+        "network_caveat_source": "https://trueconf.ru/blog/success-stories/roszarubezhneft-trueconf-server",
+        "publication_day": "2026-08-16",
+        "source_reviewed_at": "2026-10-23T20:15:35+00:00",
+        "source_visibility": "public_page"
+      }
+    }
+  ],
+  "use_assertion": {
+    "id": "4dfd7e33942a1e8b617784b5",
+    "status": "confirmed",
+    "evidence_hash": "e8559367bb7492d484fafa83641394bb61a2d024b2b87ce9646fb4e79a85a149",
+    "excerpt": "Росзарубежнефть использует TrueConf Server в собственном контуре по описанию проекта разработчиком. Установленная версия не названа. Публикация сообщает о собственном ЦОД и работе в закрытом контуре без внешнего доступа.",
+    "attributes": {
+      "network_exposure": "closed_network",
+      "network_exposure_note": "Публикация сообщает о собственном ЦОД и работе в закрытом контуре без внешнего доступа.",
+      "note": "Факт относится к описанному проекту; текущая установленная версия неизвестна.",
+      "observed_day": "2026-08-16"
+    }
+  },
+  "confirmed_incident_assertions_elsewhere": [],
+  "decision_gates": {
+    "same_product": true,
+    "recent_use": true,
+    "recent_notice": true,
+    "affected_installed_version": null,
+    "network_exposure": "closed_network",
+    "direct_attack_evidence_in_this_path": false
+  }
+}

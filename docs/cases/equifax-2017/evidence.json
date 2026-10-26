@@ -1,0 +1,210 @@
+{
+  "case_id": "equifax-2017",
+  "prepared_at": "2026-10-24T08:06:48+00:00",
+  "incident_id": "equifax-2017",
+  "company_ids": [
+    "equifax"
+  ],
+  "monitor_target": false,
+  "sources": [
+    {
+      "id": "E1",
+      "publisher": "Equifax",
+      "title": "Equifax Releases Details on Cybersecurity Incident",
+      "url": "https://investor.equifax.com/news-events/press-releases/detail/237/equifax-releases-details-on-cybersecurity-incident",
+      "publication_day": "2017-09-15",
+      "role": "victim_report",
+      "independence_group": "equifax",
+      "limitations": "Предварительные выводы компании на дату публикации.",
+      "checked_at": "2026-10-24T08:06:48+00:00",
+      "verification_method": "web_open_primary_source",
+      "full_page_archive_captured": false
+    },
+    {
+      "id": "E2",
+      "publisher": "Apache Software Foundation",
+      "title": "S2-045",
+      "url": "https://cwiki.apache.org/confluence/spaces/WW/pages/68717257/S2-045",
+      "publication_day": null,
+      "source_updated_day": "2017-03-19",
+      "role": "vendor_advisory",
+      "independence_group": "apache",
+      "limitations": "Дата 19 марта — последнее обновление страницы, а не дата первоначального раскрытия.",
+      "checked_at": "2026-10-24T08:06:48+00:00",
+      "verification_method": "web_open_primary_source",
+      "full_page_archive_captured": false
+    },
+    {
+      "id": "E3",
+      "publisher": "US Department of Justice",
+      "title": "Chinese military personnel charged ... Equifax",
+      "url": "https://www.justice.gov/usao-ndga/pr/chinese-military-personnel-charged-computer-fraud-economic-espionage-and-wire-fraud",
+      "publication_day": "2020-02-10",
+      "role": "legal_allegation",
+      "independence_group": "us_doj",
+      "limitations": "Утверждения обвинения, не установленная проектом виновность.",
+      "checked_at": "2026-10-24T08:06:48+00:00",
+      "verification_method": "web_open_primary_source",
+      "full_page_archive_captured": false
+    },
+    {
+      "id": "E4",
+      "publisher": "US GAO",
+      "title": "GAO-18-559",
+      "url": "https://www.gao.gov/products/gao-18-559",
+      "publication_day": "2018-08-30",
+      "public_release_day": "2018-09-07",
+      "role": "government_review",
+      "independence_group": "us_gao",
+      "limitations": "Часть фактов основана на документах и сведениях Equifax; другой издатель не делает все факты независимыми.",
+      "checked_at": "2026-10-24T08:06:48+00:00",
+      "verification_method": "web_open_primary_source",
+      "full_page_archive_captured": false
+    },
+    {
+      "id": "E5",
+      "publisher": "Apache Software Foundation",
+      "title": "Ответы Apache комитету Палаты представителей США",
+      "url": "https://news.apache.org/foundation/entry/responses-to-questions-from-us",
+      "publication_day": null,
+      "role": "vendor_statement",
+      "independence_group": "apache",
+      "limitations": "Использован для даты выпуска исправления 7 марта 2017 года; не раскрывает версию Equifax.",
+      "checked_at": "2026-10-24T08:06:48+00:00",
+      "verification_method": "web_open_primary_source",
+      "full_page_archive_captured": false
+    }
+  ],
+  "new_publication_result": {
+    "inserted": 1
+  },
+  "metadata_updates": [
+    {
+      "publication_id": "4398f03b9d90d8355c06dcca",
+      "result": "updated"
+    }
+  ],
+  "new_assertion_id": "b6e835ece705a0f2b39de37b",
+  "evidence_records": [
+    {
+      "assertion_id": "74be99fb09dc1d0923274afd",
+      "kind": "incident_affects",
+      "subject": "equifax-2017",
+      "object": "equifax",
+      "status": "confirmed",
+      "attributes": {
+        "basis": "victim_report",
+        "confidence": "high"
+      },
+      "excerpt": "Инцидент Equifax 2017 затронул Equifax. Компания описала эксплуатацию CVE-2017-5638 в Apache Struts 2, использовавшемся в приложении портала споров. Точная установленная версия здесь не приведена.",
+      "publication_id": "4398f03b9d90d8355c06dcca",
+      "evidence_hash": "786d706c68bfd875dd49b5a12fad15959cc5f995a58038f2828c92a1d73c2391",
+      "source_url": "https://investor.equifax.com/news-events/press-releases/detail/237/equifax-releases-details-on-cybersecurity-incident"
+    },
+    {
+      "assertion_id": "83556e3e5879b657917c23be",
+      "kind": "incident_product",
+      "subject": "equifax-2017",
+      "object": "apache-struts2",
+      "status": "confirmed",
+      "attributes": {
+        "basis": "victim_report",
+        "confidence": "high"
+      },
+      "excerpt": "Инцидент Equifax 2017 затронул Equifax. Компания описала эксплуатацию CVE-2017-5638 в Apache Struts 2, использовавшемся в приложении портала споров. Точная установленная версия здесь не приведена.",
+      "publication_id": "4398f03b9d90d8355c06dcca",
+      "evidence_hash": "786d706c68bfd875dd49b5a12fad15959cc5f995a58038f2828c92a1d73c2391",
+      "source_url": "https://investor.equifax.com/news-events/press-releases/detail/237/equifax-releases-details-on-cybersecurity-incident"
+    },
+    {
+      "assertion_id": "b6e835ece705a0f2b39de37b",
+      "kind": "affects_product",
+      "subject": "CVE-2017-5638",
+      "object": "apache-struts2",
+      "status": "confirmed",
+      "attributes": {
+        "affected_ranges": [
+          {
+            "gte": "2.3.5",
+            "lte": "2.3.31"
+          },
+          {
+            "gte": "2.5",
+            "lte": "2.5.10"
+          }
+        ],
+        "basis": "vendor_advisory",
+        "conditions": "Jakarta Multipart parser",
+        "confidence": "high",
+        "fixed_versions": [
+          "2.3.32",
+          "2.5.10.1"
+        ],
+        "note": "observed_day обозначает дату выпуска исправлений по отдельному ответу Apache; не дату первоначальной публикации wiki и не дату атаки. Версия Equifax неизвестна.",
+        "observed_day": "2017-03-07"
+      },
+      "excerpt": "Apache Struts 2: бюллетень S2-045 связывает CVE-2017-5638 с версиями 2.3.5–2.3.31 и 2.5–2.5.10 при использовании Jakarta Multipart parser. Исправленные версии: 2.3.32 и 2.5.10.1. Согласно отдельному официальному ответу Apache, исправления выпущены 7 марта 2017 года. Бюллетень не устанавливает точную версию, использовавшуюся Equifax.",
+      "publication_id": "d400fea74f7620821053742c",
+      "evidence_hash": "50602dec56837bcb30d95d20e1b58d2af67ad7e15ecd4aa4e061072e92f78a1e",
+      "source_url": "https://cwiki.apache.org/confluence/spaces/WW/pages/68717257/S2-045"
+    },
+    {
+      "assertion_id": "c813264808caf770eb498e4c",
+      "kind": "incident_exploited",
+      "subject": "equifax-2017",
+      "object": "CVE-2017-5638",
+      "status": "confirmed",
+      "attributes": {
+        "basis": "victim_report",
+        "confidence": "high"
+      },
+      "excerpt": "Инцидент Equifax 2017 затронул Equifax. Компания описала эксплуатацию CVE-2017-5638 в Apache Struts 2, использовавшемся в приложении портала споров. Точная установленная версия здесь не приведена.",
+      "publication_id": "4398f03b9d90d8355c06dcca",
+      "evidence_hash": "786d706c68bfd875dd49b5a12fad15959cc5f995a58038f2828c92a1d73c2391",
+      "source_url": "https://investor.equifax.com/news-events/press-releases/detail/237/equifax-releases-details-on-cybersecurity-incident"
+    },
+    {
+      "assertion_id": "e46cd5b9fba3574134aea9dd",
+      "kind": "uses_product",
+      "subject": "equifax",
+      "object": "apache-struts2",
+      "status": "confirmed",
+      "attributes": {
+        "note": "Исторический стек из описания атаки; версия неизвестна.",
+        "observed_day": "2017-05-13"
+      },
+      "excerpt": "Инцидент Equifax 2017 затронул Equifax. Компания описала эксплуатацию CVE-2017-5638 в Apache Struts 2, использовавшемся в приложении портала споров. Точная установленная версия здесь не приведена.",
+      "publication_id": "4398f03b9d90d8355c06dcca",
+      "evidence_hash": "786d706c68bfd875dd49b5a12fad15959cc5f995a58038f2828c92a1d73c2391",
+      "source_url": "https://investor.equifax.com/news-events/press-releases/detail/237/equifax-releases-details-on-cybersecurity-incident"
+    },
+    {
+      "assertion_id": "ea3a419093e3d0d2d1919d33",
+      "kind": "attributed_to",
+      "subject": "equifax-2017",
+      "object": "pla54",
+      "status": "confirmed",
+      "attributes": {
+        "attribution_scope": "allegation_in_indictment",
+        "basis": "legal_allegation",
+        "confidence": "high"
+      },
+      "excerpt": "Инцидент Equifax 2017: Минюст США предъявил обвинение четырём предполагаемым участникам PLA 54th Research Institute. Это атрибуция в обвинении, а не установленная этим проектом виновность.",
+      "publication_id": "8090314d6591ffa69e898720",
+      "evidence_hash": "2c124d91d2810a6a428ba0106a32e7fa8a4b4093701f214279ff17e9facefe71",
+      "source_url": "https://www.justice.gov/usao-ndga/pr/chinese-military-personnel-charged-computer-fraud-economic-espionage-and-wire-fraud"
+    }
+  ],
+  "unknowns": [
+    "exact_installed_version_2017",
+    "current_product_use",
+    "current_versions",
+    "current_attack_likelihood"
+  ],
+  "limits": [
+    "Historical case outside Russian-company monitoring list.",
+    "Attribution is allegation_in_indictment; no claim of verdict or direct investigation.",
+    "GAO reports an earlier March access episode separately; it is not automatically attributed to the May-July actors.",
+    "No raw full-page archive captured; hashes refer to local authored summaries, not source pages."
+  ]
+}

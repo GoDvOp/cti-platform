@@ -1,0 +1,27 @@
+{
+  "format": "cti-review-snapshot-v1",
+  "frozen_at": "2026-10-24T19:13:42+00:00",
+  "content_sha256": "c79530b24cc190fa3ea6ad68500491c692bdc4d474045df46986e9941d12a85d",
+  "provenance": "Public source summaries, collected listings/catalogue records, reviews and MITRE reference data. No .env or user configuration included.",
+  "file": "snapshot.json.gz",
+  "counts": {
+    "companies": 1,
+    "products": 1,
+    "knowledge_entities": 0,
+    "publications": 3,
+    "publication_versions": 3,
+    "publication_metadata_updates": 0,
+    "signals": 0,
+    "reviews": 0,
+    "factors": 0,
+    "factor_history": 0,
+    "source_runs": 0,
+    "assertions": 2,
+    "assertion_reviews": 2,
+    "attack_snapshots": 0,
+    "attack_objects": 0,
+    "attack_mappings": 0,
+    "attack_mapping_reviews": 0
+  },
+  "case_id": "ispras-gitlab-2026"
+}

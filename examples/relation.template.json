@@ -1,0 +1,10 @@
+[
+ {
+  "kind": "uses_product",
+  "subject": "rostelecom",
+  "object": "trueconf-server",
+  "publication_id": "ID_СОХРАНЕННОЙ_ПУБЛИКАЦИИ",
+  "excerpt": "Точный фрагмент сохранённого текста с именем компании и продукта",
+  "attributes": {"observed_day": "2026-10-23", "note": "Не заполняйте version без доказательства в тексте"}
+ }
+]

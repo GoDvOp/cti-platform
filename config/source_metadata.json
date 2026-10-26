@@ -1,0 +1,85 @@
+{
+  "manual_web_trueconf": {
+    "name": "Труконф — проверенный бюллетень",
+    "independence_group": "trueconf",
+    "reference_url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories"
+  },
+  "manual_web_trueconf_catalog": {
+    "name": "Труконф — проверенные строки CVE/BDU",
+    "independence_group": "trueconf",
+    "reference_url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories"
+  },
+  "manual_web_trueconf_cases": {
+    "name": "Труконф — проверенные кейсы внедрения",
+    "independence_group": "trueconf",
+    "reference_url": "https://trueconf.ru/company/customers.html"
+  },
+  "manual_web_rostelecom": {
+    "name": "Ростелеком — официальные сообщения",
+    "independence_group": "rostelecom",
+    "reference_url": "https://www.company.rt.ru/"
+  },
+  "manual_web_novabev": {
+    "name": "Novabev Group — официальные сообщения",
+    "independence_group": "novabev",
+    "reference_url": "https://novabev.com/"
+  },
+  "manual_web_equifax": {
+    "name": "Equifax",
+    "independence_group": "equifax"
+  },
+  "manual_web_doj": {
+    "name": "US Department of Justice",
+    "independence_group": "us_doj"
+  },
+  "manual_web_oracle": {
+    "name": "Oracle",
+    "independence_group": "oracle"
+  },
+  "manual_web_bl": {
+    "name": "British Library",
+    "independence_group": "british_library"
+  },
+  "manual_web_singtel": {
+    "name": "Singtel",
+    "independence_group": "singtel"
+  },
+  "manual_web_qualys": {
+    "name": "Qualys",
+    "independence_group": "qualys"
+  },
+  "manual_web_mandiant": {
+    "name": "Mandiant / Google Cloud",
+    "independence_group": "mandiant"
+  },
+  "manual_web_cisa": {
+    "name": "CISA / FBI",
+    "independence_group": "cisa_fbi"
+  },
+  "manual_web_kaspersky": {
+    "name": "Касперский",
+    "independence_group": "kaspersky"
+  },
+  "manual_web_apache": {
+    "name": "Apache Software Foundation — проверенный пересказ S2-045",
+    "reference_url": "https://cwiki.apache.org/confluence/spaces/WW/pages/68717257/S2-045",
+    "independence_group": "apache"
+  },
+  "manual_web_bounty": {
+    "name": "Ручные пересказы публичных программ (разные издатели)",
+    "independence_group": "unknown",
+    "role": "security_program_context"
+  },
+  "manual_web_trueconf_notice": {
+    "name": "Труконф — проверенный пересказ уведомления",
+    "independence_group": "trueconf",
+    "reference_url": "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+    "role": "vendor_security_notice"
+  },
+  "manual_web_trueconf_update": {
+    "name": "TrueConf — пересказ индексируемого журнала изменений",
+    "independence_group": "trueconf",
+    "reference_url": "https://trueconf.ru/products/changelog.html",
+    "role": "vendor_update_reference"
+  }
+}

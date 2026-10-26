@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "browser": "156.0.8078.4",
+  "checks": [
+    {
+      "name": "positive_case_first_in_queue",
+      "status": "passed"
+    },
+    {
+      "name": "desktop_layout_has_no_horizontal_overflow",
+      "status": "passed"
+    },
+    {
+      "name": "company_search_and_empty_state",
+      "status": "passed"
+    },
+    {
+      "name": "source_and_case_navigation",
+      "status": "passed"
+    },
+    {
+      "name": "historical_example_shows_both_real_indices_and_stays_outside_queue",
+      "status": "passed"
+    },
+    {
+      "name": "graph_opens_selected_company",
+      "status": "passed"
+    },
+    {
+      "name": "mobile_layout_and_navigation",
+      "status": "passed"
+    },
+    {
+      "name": "untrusted_evidence_stays_text_and_unsafe_link_is_not_active",
+      "status": "passed"
+    }
+  ],
+  "page_errors": [],
+  "controls": "verified_separately_in_isolated_docker"
+}

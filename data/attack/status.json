@@ -1,0 +1,94 @@
+{
+  "dataset": {
+    "active_counts": {
+      "attack-pattern": 706,
+      "campaign": 57,
+      "intrusion-set": 178,
+      "malware": 747,
+      "tool": 95,
+      "x-mitre-tactic": 15
+    },
+    "bundle_id": "bundle--fc207382-c9d1-4ece-bce2-6ef555c62d0a",
+    "collection_id": "x-mitre-collection--1f5f1533-f617-4ca8-9ab4-6a02367fa019",
+    "collection_modified": "2026-10-13T17:53:10.145Z",
+    "dataset": "enterprise-attack",
+    "imported_at": "2026-10-23T20:50:34+00:00",
+    "reference_url": "https://attack.mitre.org/resources/attack-data-and-tools/",
+    "sha256": "81113ba98afa2928f3dcff62022539f7ce30c315c32e14422f11ff95ce534352",
+    "source_url": "https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack-20.0.json",
+    "total_objects": 26690,
+    "version": "20.0"
+  },
+  "projected_counts": {
+    "Technique": 243,
+    "Malware": 25,
+    "ThreatActor": 2,
+    "Tool": 6,
+    "Tactic": 15
+  },
+  "projected_relationships": 809,
+  "confirmed_mappings": 4,
+  "mappings": [
+    {
+      "evidence_url": "https://attack.mitre.org/software/S0030",
+      "identity_hash": "f9d6f896502d26da33701439881369bfb1fd04d351caa40dec1efa00514785d9",
+      "local_id": "carbanak-malware",
+      "note": "Проверено семейство вредоносного ПО Carbanak S0030 в STIX 20.0; это не группировка Carbanak G0008.",
+      "reviewed_at": "2026-10-23T20:59:32+00:00",
+      "reviewer": "assistant_source_review",
+      "snapshot_sha256": "81113ba98afa2928f3dcff62022539f7ce30c315c32e14422f11ff95ce534352",
+      "status": "confirmed",
+      "stix_id": "malware--72f54d66-675d-4587-9bd3-4ed09f9522e4",
+      "effective_status": "confirmed",
+      "local_name": "Carbanak",
+      "attack_name": "Carbanak",
+      "attack_id": "S0030"
+    },
+    {
+      "evidence_url": "https://attack.mitre.org/software/S0611",
+      "identity_hash": "1e8ffdaf9251e030171462d46d4e053f76b8845ffc503c19f7e86cce269e2e09",
+      "local_id": "clop-ransomware",
+      "note": "Проверены тип malware, семейство Clop и официальный ID S0611; сопоставляется локальное вредоносное ПО CLOP ransomware, а не операция CL0P.",
+      "reviewed_at": "2026-10-23T20:51:00+00:00",
+      "reviewer": "assistant_source_review",
+      "snapshot_sha256": "81113ba98afa2928f3dcff62022539f7ce30c315c32e14422f11ff95ce534352",
+      "status": "confirmed",
+      "stix_id": "malware--cad3ba95-8c89-4146-ab10-08daa813f9de",
+      "effective_status": "confirmed",
+      "local_name": "CLOP ransomware",
+      "attack_name": "Clop",
+      "attack_id": "S0611"
+    },
+    {
+      "evidence_url": "https://attack.mitre.org/groups/G0046",
+      "identity_hash": "e735a798cf6520c4f252e221213d83da254c00678c3a37816bcb01a307bad629",
+      "local_id": "fin7",
+      "note": "Проверены каноническое имя FIN7, тип intrusion-set и профиль G0046 в официальном STIX 20.0; не объединяется с группировкой Carbanak G0008.",
+      "reviewed_at": "2026-10-23T20:59:32+00:00",
+      "reviewer": "assistant_source_review",
+      "snapshot_sha256": "81113ba98afa2928f3dcff62022539f7ce30c315c32e14422f11ff95ce534352",
+      "status": "confirmed",
+      "stix_id": "intrusion-set--3753cc21-2dae-4dfb-8481-d004e74502cc",
+      "effective_status": "confirmed",
+      "local_name": "FIN7",
+      "attack_name": "FIN7",
+      "attack_id": "G0046"
+    },
+    {
+      "evidence_url": "https://attack.mitre.org/groups/G0092",
+      "identity_hash": "4722f379ffcef13b1a6c3dbf605e5ce2c0c88086dfef03b3727add89d9af715b",
+      "local_id": "ta505",
+      "note": "Проверены тип intrusion-set, каноническое имя TA505, ID G0092 и карточка официального STIX 20.0; FIN11 не объединяется.",
+      "reviewed_at": "2026-10-23T20:51:00+00:00",
+      "reviewer": "assistant_source_review",
+      "snapshot_sha256": "81113ba98afa2928f3dcff62022539f7ce30c315c32e14422f11ff95ce534352",
+      "status": "confirmed",
+      "stix_id": "intrusion-set--7eda3dd8-b09b-4705-8090-c2ad9fb8c14d",
+      "effective_status": "confirmed",
+      "local_name": "TA505",
+      "attack_name": "TA505",
+      "attack_id": "G0092"
+    }
+  ],
+  "candidates": []
+}

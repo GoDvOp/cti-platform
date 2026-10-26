@@ -1,0 +1,97 @@
+{
+  "publications": [
+    {
+      "source_id": "manual_web_rostelecom",
+      "url": "https://www.company.rt.ru/projects/elections/elections_news/d470079/",
+      "title": "Ростелеком: использование TrueConf Server в проекте 2024 года",
+      "text": "Ростелеком использовал TrueConf Server во внутреннем контуре для организации видеоконференций в марте 2024 года. Точная установленная версия и текущее состояние из этой публикации неизвестны.",
+      "published_at": null,
+      "collected_at": "2026-10-23T19:44:37+00:00",
+      "is_demo": false,
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": "2024-03-20",
+        "content_scope": "verified_source_summary",
+        "note": "Проверено открытым веб-поиском; не RSS и не сканирование"
+      }
+    },
+    {
+      "source_id": "manual_web_trueconf",
+      "url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories",
+      "title": "TrueConf: CVE-2025-66834 в TrueConf Server",
+      "text": "В бюллетене разработчика уязвимость CVE-2025-66834 указана для TrueConf Server версии 5.5.2.10813. Разработчик описывает CSV-инъекцию при экспорте журнала чата и исправление в 5.5.3.",
+      "published_at": null,
+      "collected_at": "2026-10-23T19:44:37+00:00",
+      "is_demo": false,
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": null,
+        "content_scope": "verified_source_summary",
+        "note": "Проверено открытым веб-поиском; не RSS и не сканирование"
+      }
+    },
+    {
+      "source_id": "manual_web_novabev",
+      "url": "https://novabev.com/about/business/",
+      "title": "Novabev Group: собственная розничная сеть ВинЛаб",
+      "text": "ВинЛаб входит в Novabev Group как собственная розничная сеть. Это связь группы и бренда, а не утверждение о конкретной структуре юридического владения.",
+      "published_at": null,
+      "collected_at": "2026-10-23T19:44:37+00:00",
+      "is_demo": false,
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": null,
+        "content_scope": "verified_source_summary",
+        "note": "Проверено открытым веб-поиском; не RSS и не сканирование"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "kind": "uses_product",
+      "subject": "rostelecom",
+      "object": "trueconf-server",
+      "publication_url": "https://www.company.rt.ru/projects/elections/elections_news/d470079/",
+      "excerpt": "Ростелеком использовал TrueConf Server во внутреннем контуре для организации видеоконференций в марте 2024 года. Точная установленная версия и текущее состояние из этой публикации неизвестны.",
+      "attributes": {
+        "observed_day": "2024-03-20",
+        "note": "Историческое использование. Версия и текущее развёртывание неизвестны.",
+        "basis": "victim_report",
+        "confidence": "medium"
+      },
+      "review_note": "Официальное сообщение Ростелекома подтверждает использование в проекте 2024 года; не подтверждает текущую установленную версию."
+    },
+    {
+      "kind": "affects_product",
+      "subject": "CVE-2025-66834",
+      "object": "trueconf-server",
+      "publication_url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories",
+      "excerpt": "В бюллетене разработчика уязвимость CVE-2025-66834 указана для TrueConf Server версии 5.5.2.10813. Разработчик описывает CSV-инъекцию при экспорте журнала чата и исправление в 5.5.3.",
+      "attributes": {
+        "affected_versions": [
+          "5.5.2.10813"
+        ],
+        "fixed_versions": [
+          "5.5.3"
+        ],
+        "note": "Точная версия по таблице разработчика; применимость к компании отдельно не установлена.",
+        "basis": "vendor_advisory",
+        "confidence": "medium"
+      },
+      "review_note": "Строка официального бюллетеня разработчика связывает CVE, TrueConf Server и точную версию."
+    },
+    {
+      "kind": "part_of",
+      "subject": "winelab",
+      "object": "novabev",
+      "publication_url": "https://novabev.com/about/business/",
+      "excerpt": "ВинЛаб входит в Novabev Group как собственная розничная сеть. Это связь группы и бренда, а не утверждение о конкретной структуре юридического владения.",
+      "attributes": {
+        "note": "Принадлежность розничной сети группе по публичному описанию бизнеса; не юридическая выписка.",
+        "basis": "victim_report",
+        "confidence": "medium"
+      },
+      "review_note": "Публичное описание бизнеса Novabev Group подтверждает собственную розничную сеть ВинЛаб."
+    }
+  ]
+}

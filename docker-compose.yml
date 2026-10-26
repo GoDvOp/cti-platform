@@ -1,0 +1,92 @@
+x-image: &image
+  image: ${CTI_IMAGE:-cti-platform:3.0.0}
+  build: .
+  user: "${CTI_UID:-1000}:${CTI_GID:-1000}"
+  init: true
+  stop_grace_period: 45s
+
+x-runtime: &runtime
+  <<: *image
+  env_file:
+    - path: .env
+      required: false
+  environment:
+    CTI_DB_PATH: /app/data/cti.sqlite3
+    NEO4J_HTTP_URL: http://neo4j:7474
+    CTI_BOOTSTRAP: ${CTI_BOOTSTRAP:-snapshot}
+    CTI_RUNTIME: docker
+  volumes:
+    - ./data:/app/data
+    - ./config:/app/config:ro
+
+services:
+  neo4j:
+    image: neo4j:5.26-community
+    restart: unless-stopped
+    environment:
+      # docker.sh creates a local random password before starting this service.
+      NEO4J_AUTH: "neo4j/${NEO4J_PASSWORD:-}"
+      CTI_GRAPH_PASSWORD: "${NEO4J_PASSWORD:-}"
+      NEO4J_server_memory_heap_initial__size: 256m
+      NEO4J_server_memory_heap_max__size: 512m
+      NEO4J_server_memory_pagecache_size: 256m
+    ports:
+      - "127.0.0.1:${CTI_NEO4J_HTTP_PORT:-7474}:7474"
+      - "127.0.0.1:${CTI_NEO4J_BOLT_PORT:-7687}:7687"
+    volumes:
+      - neo4j_data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "cypher-shell -u neo4j -p \"$${CTI_GRAPH_PASSWORD}\" 'RETURN 1' >/dev/null 2>&1"]
+      interval: 10s
+      timeout: 10s
+      start_period: 30s
+      retries: 20
+  worker:
+    <<: *runtime
+    command: ["worker", "--sync-graph"]
+    restart: unless-stopped
+    depends_on:
+      neo4j:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-m", "app.container", "health"]
+      interval: 30s
+      timeout: 10s
+      start_period: 30s
+      retries: 10
+  cli:
+    <<: *runtime
+    profiles: ["tools"]
+    command: ["status"]
+  workbench:
+    <<: *image
+    command: ["workbench", "--host", "0.0.0.0", "--port", "8765"]
+    restart: unless-stopped
+    environment:
+      CTI_DB_PATH: /app/data/cti.sqlite3
+    volumes:
+      - ./data:/app/data
+      - ./config:/app/config:ro
+      - ./evaluation:/app/evaluation
+    ports:
+      - "127.0.0.1:${CTI_WORKBENCH_PORT:-8766}:8765"
+    depends_on:
+      worker:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "from urllib.request import urlopen; urlopen('http://127.0.0.1:8765/health', timeout=3).read()"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+  review:
+    <<: *image
+    profiles: ["review"]
+    command: ["review"]
+    network_mode: none
+    read_only: true
+    tmpfs:
+      - /tmp
+    volumes:
+      - ./data:/app/data
+volumes:
+  neo4j_data:

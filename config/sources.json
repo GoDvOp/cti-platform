@@ -1,0 +1,270 @@
+[
+  {
+    "id": "securitylab_news",
+    "url": "https://www.securitylab.ru/_Services/Export/RSS/news/",
+    "allowed_hosts": [
+      "www.securitylab.ru",
+      "securitylab.ru"
+    ],
+    "enabled": true,
+    "polling_minutes": 60,
+    "role": "incident_discovery",
+    "independence_group": "securitylab",
+    "reference_url": "https://www.securitylab.ru/rss.php",
+    "kind": "rss",
+    "retry_minutes": 15,
+    "name": "SecurityLab — новости",
+    "freshness_days": 7
+  },
+  {
+    "id": "securitylab_analytics",
+    "url": "https://www.securitylab.ru/_Services/Export/RSS/analytics/",
+    "allowed_hosts": [
+      "www.securitylab.ru",
+      "securitylab.ru"
+    ],
+    "enabled": true,
+    "polling_minutes": 120,
+    "role": "research_context",
+    "independence_group": "securitylab",
+    "reference_url": "https://www.securitylab.ru/rss.php",
+    "kind": "rss",
+    "retry_minutes": 15,
+    "name": "SecurityLab — аналитика",
+    "freshness_days": 30
+  },
+  {
+    "id": "securitylab_vulnerabilities",
+    "kind": "rss",
+    "url": "https://www.securitylab.ru/_Services/Export/RSS/vulnerabilities/",
+    "allowed_hosts": [
+      "www.securitylab.ru",
+      "securitylab.ru"
+    ],
+    "enabled": false,
+    "polling_minutes": 180,
+    "retry_minutes": 15,
+    "role": "vulnerability_context",
+    "independence_group": "securitylab",
+    "reference_url": "https://www.securitylab.ru/rss.php",
+    "name": "SecurityLab — уязвимости",
+    "freshness_days": 30,
+    "freshness_mode": "archive",
+    "notes": "Отключён от регулярного сбора: последние записи раздела датированы февралем 2022 года (проверка 24.10.2026). Старые данные сохранены как архив."
+  },
+  {
+    "id": "securelist_research",
+    "kind": "securelist_listing",
+    "url": "https://securelist.ru/",
+    "allowed_hosts": [
+      "securelist.ru",
+      "www.securelist.ru"
+    ],
+    "enabled": true,
+    "polling_minutes": 360,
+    "retry_minutes": 30,
+    "max_items": 30,
+    "role": "research_context",
+    "independence_group": "kaspersky",
+    "reference_url": "https://securelist.ru/",
+    "notes": "Публичный список анонсов; до пяти страниц материалов за проход только для явной даты публикации из метаданных. RSS /feed не используется из-за robots.txt.",
+    "name": "Securelist — исследования Касперского",
+    "freshness_days": 30,
+    "max_date_documents": 5
+  },
+  {
+    "id": "nckci_advisories",
+    "kind": "nckci_listing",
+    "url": "https://www.cert.gov.ru/materialy/uyazvimosti/",
+    "allowed_hosts": [
+      "www.cert.gov.ru",
+      "cert.gov.ru"
+    ],
+    "enabled": false,
+    "polling_minutes": 360,
+    "retry_minutes": 30,
+    "max_items": 30,
+    "max_json_documents": 2,
+    "role": "vulnerability_context",
+    "independence_group": "nckci",
+    "reference_url": "https://www.cert.gov.ru/",
+    "notes": "Список уведомлений; не более двух карточек с JSON и двух явных .json за проход. PDF не загружаются.",
+    "name": "НКЦКИ — уведомления об уязвимостях",
+    "freshness_days": 30,
+    "disabled_reason": "Отключён по запросу пользователя: TLS-ошибка"
+  },
+  {
+    "id": "trueconf_advisories",
+    "kind": "vendor_advisories",
+    "name": "Труконф — бюллетень CVE/BDU",
+    "url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories",
+    "allowed_hosts": [
+      "trueconf.com",
+      "www.trueconf.com"
+    ],
+    "enabled": true,
+    "polling_minutes": 720,
+    "retry_minutes": 60,
+    "max_items": 100,
+    "role": "vulnerability_context",
+    "independence_group": "trueconf",
+    "reference_url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories",
+    "notes": "Официальный сайт российского разработчика; только строки опубликованной таблицы, без эксплойтов.",
+    "freshness_days": 90,
+    "freshness_mode": "reference_catalog"
+  },
+  {
+    "id": "trueconf_case_sibur",
+    "kind": "vendor_case",
+    "name": "Труконф — кейс СИБУР",
+    "url": "https://trueconf.ru/blog/success-stories/sibur-trueconf",
+    "allowed_hosts": [
+      "trueconf.ru",
+      "www.trueconf.ru"
+    ],
+    "enabled": true,
+    "polling_minutes": 1440,
+    "retry_minutes": 60,
+    "role": "technology_usage_context",
+    "independence_group": "trueconf",
+    "reference_url": "https://trueconf.ru/blog/success-stories/sibur-trueconf",
+    "freshness_days": 365,
+    "freshness_mode": "historical_context"
+  },
+  {
+    "id": "trueconf_case_roszarubezhneft",
+    "kind": "vendor_case",
+    "name": "Труконф — кейс Росзарубежнефть",
+    "url": "https://trueconf.ru/blog/success-stories/roszarubezhneft-trueconf-server",
+    "allowed_hosts": [
+      "trueconf.ru",
+      "www.trueconf.ru"
+    ],
+    "enabled": false,
+    "polling_minutes": 1440,
+    "retry_minutes": 60,
+    "role": "technology_usage_context",
+    "independence_group": "trueconf",
+    "reference_url": "https://trueconf.ru/blog/success-stories/roszarubezhneft-trueconf-server",
+    "freshness_days": 365,
+    "freshness_mode": "historical_context",
+    "disabled_reason": "Отключён по запросу пользователя: таймаут получения страницы; проверенный исторический пересказ сохранён."
+  },
+  {
+    "id": "cisa_kev",
+    "kind": "cisa_kev",
+    "name": "CISA — Known Exploited Vulnerabilities",
+    "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json",
+    "allowed_hosts": [
+      "raw.githubusercontent.com"
+    ],
+    "enabled": true,
+    "polling_minutes": 360,
+    "retry_minutes": 60,
+    "max_items": 100,
+    "freshness_days": 30,
+    "role": "vulnerability_context",
+    "independence_group": "cisa",
+    "reference_url": "https://github.com/cisagov/kev-data",
+    "notes": "Официальное зеркало CISA KEV. Не более 100 последних добавлений; dateAdded означает включение в каталог, а не дату атаки или раскрытия CVE."
+  },
+  {
+    "id": "standoff_programs",
+    "kind": "bounty_listing",
+    "name": "Standoff Bug Bounty — публичные программы",
+    "url": "https://bugbounty.standoff365.com/en-US/programs/",
+    "allowed_hosts": [
+      "bugbounty.standoff365.com"
+    ],
+    "platform": "Standoff Bug Bounty",
+    "program_path": "/(?:en-US/|ru-RU/)?programs/[^/]+/?",
+    "enabled": true,
+    "polling_minutes": 720,
+    "retry_minutes": 60,
+    "max_items": 25,
+    "freshness_days": 30,
+    "freshness_mode": "reference_catalog",
+    "role": "security_program_context",
+    "independence_group": "positive-technologies",
+    "notes": "Только карточки открытого каталога. Дата наблюдения не дата запуска; число отчётов и вознаграждения не являются признаками атак.",
+    "program_company_map": {
+      "https://bugbounty.standoff365.com/en-US/programs/cloud_ru": "Cloud.ru"
+    }
+  },
+  {
+    "id": "bizone_bounty_zvuk",
+    "kind": "bounty_program",
+    "name": "BI.ZONE Bug Bounty — публичная программа Звук",
+    "url": "https://bugbounty.bi.zone/companies/zvuk/main",
+    "allowed_hosts": [
+      "bugbounty.bi.zone"
+    ],
+    "platform": "BI.ZONE Bug Bounty",
+    "company_name": "Звук",
+    "enabled": false,
+    "polling_minutes": 1440,
+    "retry_minutes": 120,
+    "freshness_days": 30,
+    "freshness_mode": "reference_catalog",
+    "role": "security_program_context",
+    "independence_group": "bizone",
+    "notes": "Одна открытая страница программы. Каталог companies без серверного содержимого не выдаётся за успешно собранный. Без входа и скрытых API.",
+    "disabled_reason": "Проверено 24.10.2026: публичный HTTP-ответ содержит только JavaScript-оболочку без данных программы. Регулярно собираются доступные новости BI.ZONE; ручной пересказ программы отдельно помечен."
+  },
+  {
+    "id": "bizone_news",
+    "kind": "publisher_news",
+    "name": "BI.ZONE — новости, включая Bug Bounty",
+    "url": "https://bi.zone/news/",
+    "allowed_hosts": [
+      "bi.zone"
+    ],
+    "article_path": "/news/[^/]+/?",
+    "enabled": true,
+    "polling_minutes": 360,
+    "retry_minutes": 60,
+    "max_items": 20,
+    "max_article_documents": 3,
+    "freshness_days": 30,
+    "role": "research_context",
+    "independence_group": "bizone"
+  },
+  {
+    "id": "pt_standoff_news",
+    "kind": "publisher_news",
+    "name": "Positive Technologies — новости Standoff и исследований",
+    "url": "https://ptsecurity.com/about/news/",
+    "allowed_hosts": [
+      "ptsecurity.com",
+      "www.ptsecurity.com"
+    ],
+    "article_path": "/about/news/[^/]+/?",
+    "enabled": false,
+    "polling_minutes": 360,
+    "retry_minutes": 60,
+    "max_items": 20,
+    "max_article_documents": 3,
+    "freshness_days": 30,
+    "role": "research_context",
+    "independence_group": "positive-technologies",
+    "disabled_reason": "Проверено 24.10.2026: TLS-ошибка. Каталог Standoff работает отдельным источником; проверка сертификатов не отключается."
+  },
+  {
+    "id": "trueconf_php_notice",
+    "kind": "vendor_notice",
+    "name": "TrueConf — уведомление об обновлении PHP-компонента",
+    "url": "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+    "allowed_hosts": [
+      "trueconf.com",
+      "www.trueconf.com"
+    ],
+    "product_id": "trueconf-server",
+    "product_name": "TrueConf Server",
+    "enabled": true,
+    "polling_minutes": 720,
+    "retry_minutes": 60,
+    "freshness_days": 30,
+    "role": "vendor_security_notice",
+    "independence_group": "trueconf"
+  }
+]

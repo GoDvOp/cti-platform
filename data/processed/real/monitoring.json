@@ -1,0 +1,1093 @@
+{
+  "as_of": "2026-10-24T14:46:40+00:00",
+  "method_version": "conditional-monitoring-v1.1",
+  "programs": [
+    {
+      "id": "real:bounty:27775cd12f59473cf7076e03",
+      "properties": {
+        "name": "Cloud․ru",
+        "url": "https://bugbounty.standoff365.com/en-US/programs/cloud_ru",
+        "platform": "Standoff Bug Bounty",
+        "observed_at": "2026-10-24T13:04:38+00:00",
+        "is_demo": false,
+        "interpretation": "Публичная программа исследований; не признак атаки или уязвимости компании."
+      }
+    },
+    {
+      "id": "real:bounty:b12ffdeea6dea7f0e66821ad",
+      "properties": {
+        "name": "PT Application Inspector",
+        "url": "https://bugbounty.standoff365.com/en-US/programs/pt_ai",
+        "platform": "Standoff Bug Bounty",
+        "observed_at": "2026-10-24T13:04:38+00:00",
+        "is_demo": false,
+        "interpretation": "Публичная программа исследований; не признак атаки или уязвимости компании."
+      }
+    },
+    {
+      "id": "real:bounty:ba55ff40a4c7cda79946c8b4",
+      "properties": {
+        "name": "Логика Молока",
+        "url": "https://bugbounty.standoff365.com/en-US/programs/logika_moloka",
+        "platform": "Standoff Bug Bounty",
+        "observed_at": "2026-10-24T13:04:38+00:00",
+        "is_demo": false,
+        "interpretation": "Публичная программа исследований; не признак атаки или уязвимости компании."
+      }
+    },
+    {
+      "id": "real:bounty:6a44c82c515c1dddc130c4df",
+      "properties": {
+        "name": "MyReviews",
+        "url": "https://bugbounty.standoff365.com/en-US/programs/MyReviews",
+        "platform": "Standoff Bug Bounty",
+        "observed_at": "2026-10-24T13:04:38+00:00",
+        "is_demo": false,
+        "interpretation": "Публичная программа исследований; не признак атаки или уязвимости компании."
+      }
+    },
+    {
+      "id": "real:bounty:3e5e450e731a1dcfe6f14dbe",
+      "properties": {
+        "name": "PT Container Security",
+        "url": "https://bugbounty.standoff365.com/en-US/programs/pt_cs",
+        "platform": "Standoff Bug Bounty",
+        "observed_at": "2026-10-24T13:04:38+00:00",
+        "is_demo": false,
+        "interpretation": "Публичная программа исследований; не признак атаки или уязвимости компании."
+      }
+    },
+    {
+      "id": "real:bounty:069fe3132fe95d9511a69374",
+      "properties": {
+        "name": "PT Data Security",
+        "url": "https://bugbounty.standoff365.com/en-US/programs/pt_ds",
+        "platform": "Standoff Bug Bounty",
+        "observed_at": "2026-10-24T13:04:38+00:00",
+        "is_demo": false,
+        "interpretation": "Публичная программа исследований; не признак атаки или уязвимости компании."
+      }
+    },
+    {
+      "id": "real:bounty:a0830a879ad4feb21dd37774",
+      "properties": {
+        "name": "Центральный Университет",
+        "url": "https://bugbounty.standoff365.com/en-US/programs/cu",
+        "platform": "Standoff Bug Bounty",
+        "observed_at": "2026-10-24T13:04:38+00:00",
+        "is_demo": false,
+        "interpretation": "Публичная программа исследований; не признак атаки или уязвимости компании."
+      }
+    },
+    {
+      "id": "real:bounty:67ba42d434a06c6d14a32323",
+      "properties": {
+        "name": "Flowwow",
+        "url": "https://bugbounty.standoff365.com/en-US/programs/flowwow",
+        "platform": "Standoff Bug Bounty",
+        "observed_at": "2026-10-24T13:04:38+00:00",
+        "is_demo": false,
+        "interpretation": "Публичная программа исследований; не признак атаки или уязвимости компании."
+      }
+    },
+    {
+      "id": "real:bounty:7c18fd4794a790349f515ca3",
+      "properties": {
+        "name": "ЕПГУ-Выборы",
+        "url": "https://bugbounty.standoff365.com/en-US/programs/epgu",
+        "platform": "Standoff Bug Bounty",
+        "observed_at": "2026-10-24T13:04:38+00:00",
+        "is_demo": false,
+        "interpretation": "Публичная программа исследований; не признак атаки или уязвимости компании."
+      }
+    },
+    {
+      "id": "real:bounty:ce85da362dcbf57f18999bfc",
+      "properties": {
+        "name": "PT NGFW",
+        "url": "https://bugbounty.standoff365.com/en-US/programs/pt_ngfw",
+        "platform": "Standoff Bug Bounty",
+        "observed_at": "2026-10-24T13:04:38+00:00",
+        "is_demo": false,
+        "interpretation": "Публичная программа исследований; не признак атаки или уязвимости компании."
+      }
+    },
+    {
+      "id": "real:bounty:6a4143e2a277a20bd263c8b4",
+      "properties": {
+        "name": "MaxPatrol O2",
+        "url": "https://bugbounty.standoff365.com/en-US/programs/mx_o2",
+        "platform": "Standoff Bug Bounty",
+        "observed_at": "2026-10-24T13:04:38+00:00",
+        "is_demo": false,
+        "interpretation": "Публичная программа исследований; не признак атаки или уязвимости компании."
+      }
+    },
+    {
+      "id": "real:bounty:3a98714389fd374416ce99f5",
+      "properties": {
+        "name": "AnyQuery",
+        "url": "https://bugbounty.standoff365.com/en-US/programs/anyquery",
+        "platform": "Standoff Bug Bounty",
+        "observed_at": "2026-10-24T13:04:38+00:00",
+        "is_demo": false,
+        "interpretation": "Публичная программа исследований; не признак атаки или уязвимости компании."
+      }
+    },
+    {
+      "id": "real:bounty:7e9325cb6d986e1692247070",
+      "properties": {
+        "name": "Т-БКИ",
+        "url": "https://bugbounty.standoff365.com/en-US/programs/tbki",
+        "platform": "Standoff Bug Bounty",
+        "observed_at": "2026-10-24T13:04:38+00:00",
+        "is_demo": false,
+        "interpretation": "Публичная программа исследований; не признак атаки или уязвимости компании."
+      }
+    },
+    {
+      "id": "real:bounty:5dcfb9a671b69661ae01a935",
+      "properties": {
+        "name": "Jet Infosystems (NTEs)",
+        "url": "https://bugbounty.standoff365.com/en-US/programs/jet_ue",
+        "platform": "Standoff Bug Bounty",
+        "observed_at": "2026-10-24T13:04:38+00:00",
+        "is_demo": false,
+        "interpretation": "Публичная программа исследований; не признак атаки или уязвимости компании."
+      }
+    },
+    {
+      "id": "real:bounty:9121a986f30252f0ae30401d",
+      "properties": {
+        "name": "ROWI",
+        "url": "https://bugbounty.standoff365.com/en-US/programs/rowi",
+        "platform": "Standoff Bug Bounty",
+        "observed_at": "2026-10-24T13:04:38+00:00",
+        "is_demo": false,
+        "interpretation": "Публичная программа исследований; не признак атаки или уязвимости компании."
+      }
+    },
+    {
+      "id": "real:bounty:d66da8171217fd523d48a26f",
+      "properties": {
+        "name": "MaxPatrol VM",
+        "url": "https://bugbounty.standoff365.com/en-US/programs/mx_vm",
+        "platform": "Standoff Bug Bounty",
+        "observed_at": "2026-10-24T13:04:38+00:00",
+        "is_demo": false,
+        "interpretation": "Публичная программа исследований; не признак атаки или уязвимости компании."
+      }
+    },
+    {
+      "id": "real:bounty:57709db94c828583455c3fef",
+      "properties": {
+        "name": "PT Application Firewall",
+        "url": "https://bugbounty.standoff365.com/en-US/programs/pt_af",
+        "platform": "Standoff Bug Bounty",
+        "observed_at": "2026-10-24T13:04:38+00:00",
+        "is_demo": false,
+        "interpretation": "Публичная программа исследований; не признак атаки или уязвимости компании."
+      }
+    },
+    {
+      "id": "real:bounty:dcc3871fcffb59313becb6ac",
+      "properties": {
+        "name": "PT Sandbox",
+        "url": "https://bugbounty.standoff365.com/en-US/programs/pt_sandbox",
+        "platform": "Standoff Bug Bounty",
+        "observed_at": "2026-10-24T13:04:38+00:00",
+        "is_demo": false,
+        "interpretation": "Публичная программа исследований; не признак атаки или уязвимости компании."
+      }
+    },
+    {
+      "id": "real:bounty:6a697988f37e0b622d94423d",
+      "properties": {
+        "name": "Сбер2B ЭДО",
+        "url": "https://bugbounty.standoff365.com/en-US/programs/sber2b_edo",
+        "platform": "Standoff Bug Bounty",
+        "observed_at": "2026-10-24T13:04:38+00:00",
+        "is_demo": false,
+        "interpretation": "Публичная программа исследований; не признак атаки или уязвимости компании."
+      }
+    },
+    {
+      "id": "real:bounty:4852b69a6491148af8fca895",
+      "properties": {
+        "name": "Setka",
+        "url": "https://bugbounty.standoff365.com/en-US/programs/hh_setka",
+        "platform": "Standoff Bug Bounty",
+        "observed_at": "2026-10-24T13:04:38+00:00",
+        "is_demo": false,
+        "interpretation": "Публичная программа исследований; не признак атаки или уязвимости компании."
+      }
+    },
+    {
+      "id": "real:bounty:6ae050f69d55dd4c35424a4e",
+      "properties": {
+        "name": "Звук",
+        "url": "https://bugbounty.bi.zone/companies/zvuk/main",
+        "platform": "BI.ZONE Bug Bounty",
+        "observed_at": "2026-10-24T12:41:16+00:00",
+        "is_demo": false,
+        "interpretation": "Публичная программа исследований; не признак атаки или уязвимости компании."
+      }
+    },
+    {
+      "id": "real:bounty:f3dd1e8f76ff0e0e1912ab58",
+      "properties": {
+        "name": "Совкомбанк",
+        "url": "https://sovcombank.ru/articles/novosti-kompanii/sovkombank-zapuskaet-programmu-poiska-uyazvimostei-na-bi-zone-bug-bounty",
+        "platform": "BI.ZONE Bug Bounty",
+        "observed_at": "2026-10-24T12:41:16+00:00",
+        "is_demo": false,
+        "interpretation": "Публичная программа исследований; не признак атаки или уязвимости компании."
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "research:5ee4a0b779fd37b872da9bd2",
+      "subject": "12c4339b24a55c27eb0e601c",
+      "subject_label": "Publication",
+      "relation": "SECURITY_UPDATE_FOR",
+      "object": "real:trueconf-server",
+      "object_label": "Product",
+      "properties": {
+        "publication_id": "12c4339b24a55c27eb0e601c",
+        "evidence_url": "https://trueconf.ru/products/changelog.html",
+        "evidence_hash": "d7101a6867b5be28281907e705cd820d966eeef00d34f9e9e4053c214ddca0c1",
+        "status": "vendor_update_reference",
+        "caption": "Описание обновления продукта",
+        "reference_cves": [
+          "CVE-2026-109618",
+          "CVE-2026-109619"
+        ],
+        "fixed_versions": [
+          "5.5.8"
+        ],
+        "verification_method": "primary_publisher_search_index_excerpt",
+        "interpretation": "Источник связывает выпущенное обновление с исправлением этих CVE. Состояние установок клиентов не раскрыто; HTML раздела напрямую не архивирован.",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:54b68986c3a0edbd4e1986a2",
+      "subject": "db20e3e16aa73c29085561c0",
+      "subject_label": "Publication",
+      "relation": "SECURITY_NOTICE_FOR",
+      "object": "real:trueconf-server",
+      "object_label": "Product",
+      "properties": {
+        "publication_id": "db20e3e16aa73c29085561c0",
+        "evidence_url": "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+        "evidence_hash": "33b522e3dbaa4c1b7601e7c11af04fc99ae1cf3803b6e741eafaf4809b00abf4",
+        "status": "parsed_vendor_statement",
+        "caption": "Уведомление об обновлении",
+        "publication_day": "2026-10-21",
+        "affected_ranges_json": "[{\"lte\": \"5.5.7\"}]",
+        "fixed_versions": [
+          "5.5.8"
+        ],
+        "scope_source_urls": [
+          "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server"
+        ],
+        "interpretation": "Область бюллетеня по словам разработчика; применимость к конкретной установке не подтверждена.",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:86c715302aebc871cf9acf8c",
+      "subject": "0edf6de17abe81ddb1312375",
+      "subject_label": "Publication",
+      "relation": "DESCRIBES_PROGRAM",
+      "object": "real:bounty:27775cd12f59473cf7076e03",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "0edf6de17abe81ddb1312375",
+        "evidence_url": "https://bugbounty.standoff365.com/en-US/programs/cloud_ru",
+        "evidence_hash": "1aa94c0e5f52846891b532835023f628f4f6c9bc590259e20c023b52a88c98dd",
+        "status": "public_program_record",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:b9c1a52c758c6c453b89a807",
+      "subject": "cloud-ru",
+      "subject_label": "Company",
+      "relation": "HAS_PUBLIC_BUG_BOUNTY",
+      "object": "real:bounty:27775cd12f59473cf7076e03",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "0edf6de17abe81ddb1312375",
+        "evidence_url": "https://bugbounty.standoff365.com/en-US/programs/cloud_ru",
+        "evidence_hash": "1aa94c0e5f52846891b532835023f628f4f6c9bc590259e20c023b52a88c98dd",
+        "status": "reported_program_participation",
+        "caption": "Публичная программа bug bounty",
+        "interpretation": "Совпадение явного имени организации; участие в bug bounty не повышает индекс интереса атакующих.",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:b4d8b1dd493b978836617888",
+      "subject": "1407b6fb8ca9bb9145c9c3dd",
+      "subject_label": "Publication",
+      "relation": "DESCRIBES_PROGRAM",
+      "object": "real:bounty:b12ffdeea6dea7f0e66821ad",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "1407b6fb8ca9bb9145c9c3dd",
+        "evidence_url": "https://bugbounty.standoff365.com/en-US/programs/pt_ai",
+        "evidence_hash": "00117ee233841b701072b817faaf2028f17bbb94e2716319d34e0d188142a6e3",
+        "status": "public_program_record",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:8d7f9464ce2048716018b9f8",
+      "subject": "1a009641ad2971591dfd6eed",
+      "subject_label": "Publication",
+      "relation": "DESCRIBES_PROGRAM",
+      "object": "real:bounty:ba55ff40a4c7cda79946c8b4",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "1a009641ad2971591dfd6eed",
+        "evidence_url": "https://bugbounty.standoff365.com/en-US/programs/logika_moloka",
+        "evidence_hash": "44992b7c9287846b9fcd9bcc154b69c7a0a3fadb02e7f88aac7dd59bcc70ff0a",
+        "status": "public_program_record",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:6b74e73384fce7642ab355db",
+      "subject": "1ad8506c2aa025c1b18ba768",
+      "subject_label": "Publication",
+      "relation": "DESCRIBES_PROGRAM",
+      "object": "real:bounty:6a44c82c515c1dddc130c4df",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "1ad8506c2aa025c1b18ba768",
+        "evidence_url": "https://bugbounty.standoff365.com/en-US/programs/MyReviews",
+        "evidence_hash": "87186e8d1fe41bfa5cf0756a74512df64e748fe04f082475d2df2c389d4595ae",
+        "status": "public_program_record",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:1345646b9b51a57f5d999fdd",
+      "subject": "2dd36e0a6ba3386da2b38183",
+      "subject_label": "Publication",
+      "relation": "DESCRIBES_PROGRAM",
+      "object": "real:bounty:3e5e450e731a1dcfe6f14dbe",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "2dd36e0a6ba3386da2b38183",
+        "evidence_url": "https://bugbounty.standoff365.com/en-US/programs/pt_cs",
+        "evidence_hash": "aafc72d2b8ba8eb93566bd778275ee07c49c4902ce08a75e3de153b0b093cc93",
+        "status": "public_program_record",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:c409192da49c2134c954124d",
+      "subject": "324a59175e0939bcac857a7b",
+      "subject_label": "Publication",
+      "relation": "DESCRIBES_PROGRAM",
+      "object": "real:bounty:069fe3132fe95d9511a69374",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "324a59175e0939bcac857a7b",
+        "evidence_url": "https://bugbounty.standoff365.com/en-US/programs/pt_ds",
+        "evidence_hash": "1f907ae13800c8a6b53020ed7a017f4d8ec9fc7e8ffb2914119bca71b70d7479",
+        "status": "public_program_record",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:b6db9f7de821ef0921838ad5",
+      "subject": "394dfe49d5b4cd3e9140caee",
+      "subject_label": "Publication",
+      "relation": "DESCRIBES_PROGRAM",
+      "object": "real:bounty:a0830a879ad4feb21dd37774",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "394dfe49d5b4cd3e9140caee",
+        "evidence_url": "https://bugbounty.standoff365.com/en-US/programs/cu",
+        "evidence_hash": "82bfb60fd59471082f697b142c9fe0c089b3cbd48309e92bd0cba645e0f4dcc5",
+        "status": "public_program_record",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:06b0d48650d0e30ab37575e1",
+      "subject": "51c0f9fea98c0d9a4993c612",
+      "subject_label": "Publication",
+      "relation": "DESCRIBES_PROGRAM",
+      "object": "real:bounty:67ba42d434a06c6d14a32323",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "51c0f9fea98c0d9a4993c612",
+        "evidence_url": "https://bugbounty.standoff365.com/en-US/programs/flowwow",
+        "evidence_hash": "864d56aafc2edf16b8090105212abf58ee362b31201f767ea00b0527cf8ca386",
+        "status": "public_program_record",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:1fd1def853d880ba54dacef3",
+      "subject": "62abe804df16bceb1fad2fed",
+      "subject_label": "Publication",
+      "relation": "DESCRIBES_PROGRAM",
+      "object": "real:bounty:7c18fd4794a790349f515ca3",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "62abe804df16bceb1fad2fed",
+        "evidence_url": "https://bugbounty.standoff365.com/en-US/programs/epgu",
+        "evidence_hash": "f9357b7fdb4152ccf39b4df27db55a353badf726893b8c8814ef7990b55259ad",
+        "status": "public_program_record",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:68720dd5c874c66090f91af7",
+      "subject": "6aaf48a375209e9b70d30f3c",
+      "subject_label": "Publication",
+      "relation": "DESCRIBES_PROGRAM",
+      "object": "real:bounty:ce85da362dcbf57f18999bfc",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "6aaf48a375209e9b70d30f3c",
+        "evidence_url": "https://bugbounty.standoff365.com/en-US/programs/pt_ngfw",
+        "evidence_hash": "d58b098ed2fcb9e75d2f5eadb9f521bb5a671692026fe14ccbafc66eaeb296d2",
+        "status": "public_program_record",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:5cf4ec13f5da465d4b32e099",
+      "subject": "79828db9cff0c2bf36f52733",
+      "subject_label": "Publication",
+      "relation": "DESCRIBES_PROGRAM",
+      "object": "real:bounty:6a4143e2a277a20bd263c8b4",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "79828db9cff0c2bf36f52733",
+        "evidence_url": "https://bugbounty.standoff365.com/en-US/programs/mx_o2",
+        "evidence_hash": "16501e4c88033f63852b7f86676b1df29ab31e17754786a1c001d80c43697400",
+        "status": "public_program_record",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:a330d777ebca92be9f2532a1",
+      "subject": "965401654b62db095498eb10",
+      "subject_label": "Publication",
+      "relation": "DESCRIBES_PROGRAM",
+      "object": "real:bounty:3a98714389fd374416ce99f5",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "965401654b62db095498eb10",
+        "evidence_url": "https://bugbounty.standoff365.com/en-US/programs/anyquery",
+        "evidence_hash": "90888dd71026c5e8c67408bf8fa7b61b771b68b15ff6072a4308dfaaa6570317",
+        "status": "public_program_record",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:c25e4e4fcc3c7da78270c0bf",
+      "subject": "a4b34ada64156a8f6d5d8b31",
+      "subject_label": "Publication",
+      "relation": "DESCRIBES_PROGRAM",
+      "object": "real:bounty:7e9325cb6d986e1692247070",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "a4b34ada64156a8f6d5d8b31",
+        "evidence_url": "https://bugbounty.standoff365.com/en-US/programs/tbki",
+        "evidence_hash": "c07b79326c169edc430ab5b6aea2bc7f571cbef658b44c8ab055e14eeddb8964",
+        "status": "public_program_record",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:0b2a4a338e3edc94cdac784e",
+      "subject": "b2dd1e9fdc2d428e9f6039ef",
+      "subject_label": "Publication",
+      "relation": "DESCRIBES_PROGRAM",
+      "object": "real:bounty:5dcfb9a671b69661ae01a935",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "b2dd1e9fdc2d428e9f6039ef",
+        "evidence_url": "https://bugbounty.standoff365.com/en-US/programs/jet_ue",
+        "evidence_hash": "5abcc4ec52ae4f5660c50ab1dcdd935162e88097d1252dc7caa9215cc60ae5a9",
+        "status": "public_program_record",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:1f6b5ec7bf08ea55c2367fdf",
+      "subject": "b4a1ec7f0bc0434676e4f70c",
+      "subject_label": "Publication",
+      "relation": "DESCRIBES_PROGRAM",
+      "object": "real:bounty:9121a986f30252f0ae30401d",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "b4a1ec7f0bc0434676e4f70c",
+        "evidence_url": "https://bugbounty.standoff365.com/en-US/programs/rowi",
+        "evidence_hash": "6eac33f1913c6274c0062855bc5489e33d33721a1ea88191f8214cb2673fb38b",
+        "status": "public_program_record",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:ad1d5573bae6278a5cd0d3d5",
+      "subject": "b792122f3023168b2a1755b6",
+      "subject_label": "Publication",
+      "relation": "DESCRIBES_PROGRAM",
+      "object": "real:bounty:d66da8171217fd523d48a26f",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "b792122f3023168b2a1755b6",
+        "evidence_url": "https://bugbounty.standoff365.com/en-US/programs/mx_vm",
+        "evidence_hash": "7e2d436eb99d33e0b67b5c8beacb0f47e789cecb67524db26870e4c186d47370",
+        "status": "public_program_record",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:7f96992dc9bf8576df2499b5",
+      "subject": "d472642ff0a5c14d9ad748be",
+      "subject_label": "Publication",
+      "relation": "DESCRIBES_PROGRAM",
+      "object": "real:bounty:57709db94c828583455c3fef",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "d472642ff0a5c14d9ad748be",
+        "evidence_url": "https://bugbounty.standoff365.com/en-US/programs/pt_af",
+        "evidence_hash": "e22654b57740fb16ad043e78d740cc685a1eeca4430be747650b43153b03e78a",
+        "status": "public_program_record",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:36fc6f02891f00aa32b43b66",
+      "subject": "ded9537cdf1370d4cc1de4fc",
+      "subject_label": "Publication",
+      "relation": "DESCRIBES_PROGRAM",
+      "object": "real:bounty:dcc3871fcffb59313becb6ac",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "ded9537cdf1370d4cc1de4fc",
+        "evidence_url": "https://bugbounty.standoff365.com/en-US/programs/pt_sandbox",
+        "evidence_hash": "4ff444f8c1c8a7e02b68027a454a43ab6d23a403c4247f4ea09504a55cfeaa5d",
+        "status": "public_program_record",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:c253608fbf7c893dc189b765",
+      "subject": "ea5e6314b50963c3163a7ef0",
+      "subject_label": "Publication",
+      "relation": "DESCRIBES_PROGRAM",
+      "object": "real:bounty:6a697988f37e0b622d94423d",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "ea5e6314b50963c3163a7ef0",
+        "evidence_url": "https://bugbounty.standoff365.com/en-US/programs/sber2b_edo",
+        "evidence_hash": "afe847b0b175ce0a3cb66aff010736109b69879aa02870b3fc6a593b33aa5038",
+        "status": "public_program_record",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:665537db7f4800baa638bff3",
+      "subject": "f7f4fd90098db4fa5ba9f7af",
+      "subject_label": "Publication",
+      "relation": "DESCRIBES_PROGRAM",
+      "object": "real:bounty:4852b69a6491148af8fca895",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "f7f4fd90098db4fa5ba9f7af",
+        "evidence_url": "https://bugbounty.standoff365.com/en-US/programs/hh_setka",
+        "evidence_hash": "87b5e4abcd4ed504c8930de9ef844fc9e8f13f627e0128004c6b1d6157888293",
+        "status": "public_program_record",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:5cd9c77bc83fa56edd8fa215",
+      "subject": "4eaa46a813c8c23908fd70e9",
+      "subject_label": "Publication",
+      "relation": "DESCRIBES_PROGRAM",
+      "object": "real:bounty:27775cd12f59473cf7076e03",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "4eaa46a813c8c23908fd70e9",
+        "evidence_url": "https://bugbounty.standoff365.com/en-US/programs/cloud_ru",
+        "evidence_hash": "c5eb9d1fb04253aecd577763c089c332db9b806ed00f22fbc18d187e95e74f62",
+        "status": "public_program_record",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:642ff2dd37900a0d1e5b972d",
+      "subject": "cloud-ru",
+      "subject_label": "Company",
+      "relation": "HAS_PUBLIC_BUG_BOUNTY",
+      "object": "real:bounty:27775cd12f59473cf7076e03",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "4eaa46a813c8c23908fd70e9",
+        "evidence_url": "https://bugbounty.standoff365.com/en-US/programs/cloud_ru",
+        "evidence_hash": "c5eb9d1fb04253aecd577763c089c332db9b806ed00f22fbc18d187e95e74f62",
+        "status": "reported_program_participation",
+        "caption": "Публичная программа bug bounty",
+        "interpretation": "Совпадение явного имени организации; участие в bug bounty не повышает индекс интереса атакующих.",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:f39fa38edf1f708fddf53f58",
+      "subject": "4ee6d4e8ddca1bd44d7e29e2",
+      "subject_label": "Publication",
+      "relation": "DESCRIBES_PROGRAM",
+      "object": "real:bounty:6ae050f69d55dd4c35424a4e",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "4ee6d4e8ddca1bd44d7e29e2",
+        "evidence_url": "https://bugbounty.bi.zone/companies/zvuk/main",
+        "evidence_hash": "2e0d5fba15d4793310a0b0c0f06bcd0bd83121313e7024b87845574e28808236",
+        "status": "public_program_record",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:1c5bde69529040dee7dd04d9",
+      "subject": "zvuk",
+      "subject_label": "Company",
+      "relation": "HAS_PUBLIC_BUG_BOUNTY",
+      "object": "real:bounty:6ae050f69d55dd4c35424a4e",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "4ee6d4e8ddca1bd44d7e29e2",
+        "evidence_url": "https://bugbounty.bi.zone/companies/zvuk/main",
+        "evidence_hash": "2e0d5fba15d4793310a0b0c0f06bcd0bd83121313e7024b87845574e28808236",
+        "status": "reported_program_participation",
+        "caption": "Публичная программа bug bounty",
+        "interpretation": "Совпадение явного имени организации; участие в bug bounty не повышает индекс интереса атакующих.",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:a18e88e273452a8eaefe0c00",
+      "subject": "a9711bc45afb1d0b7e91bd6c",
+      "subject_label": "Publication",
+      "relation": "SECURITY_NOTICE_FOR",
+      "object": "real:trueconf-server",
+      "object_label": "Product",
+      "properties": {
+        "publication_id": "a9711bc45afb1d0b7e91bd6c",
+        "evidence_url": "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+        "evidence_hash": "b419df2ba260d9dccaf3a92b6e802752d2c94d9708c031870d168aedb62460d8",
+        "status": "parsed_vendor_statement",
+        "caption": "Уведомление об обновлении",
+        "publication_day": "2026-10-22",
+        "affected_ranges_json": "[{\"lte\": \"5.5.7\"}]",
+        "fixed_versions": [
+          "5.5.8",
+          "5.4.11",
+          "5.3.11"
+        ],
+        "scope_source_urls": [
+          "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+          "https://trueconf.com/blog/update/trueconf-server-5411-5311-php"
+        ],
+        "interpretation": "Область бюллетеня по словам разработчика; применимость к конкретной установке не подтверждена.",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:ecef3d0cfb11be4ad019ac41",
+      "subject": "bf8850cc281e8aafef910c36",
+      "subject_label": "Publication",
+      "relation": "DESCRIBES_PROGRAM",
+      "object": "real:bounty:f3dd1e8f76ff0e0e1912ab58",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "bf8850cc281e8aafef910c36",
+        "evidence_url": "https://sovcombank.ru/articles/novosti-kompanii/sovkombank-zapuskaet-programmu-poiska-uyazvimostei-na-bi-zone-bug-bounty",
+        "evidence_hash": "c48e895788f60e1412077a0482be91a26296cb6772b4a73e49f78b41cb786eb3",
+        "status": "public_program_record",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:cd7a304df3f5798fc2f1c589",
+      "subject": "sovcombank",
+      "subject_label": "Company",
+      "relation": "HAS_PUBLIC_BUG_BOUNTY",
+      "object": "real:bounty:f3dd1e8f76ff0e0e1912ab58",
+      "object_label": "BugBountyProgram",
+      "properties": {
+        "publication_id": "bf8850cc281e8aafef910c36",
+        "evidence_url": "https://sovcombank.ru/articles/novosti-kompanii/sovkombank-zapuskaet-programmu-poiska-uyazvimostei-na-bi-zone-bug-bounty",
+        "evidence_hash": "c48e895788f60e1412077a0482be91a26296cb6772b4a73e49f78b41cb786eb3",
+        "status": "reported_program_participation",
+        "caption": "Публичная программа bug bounty",
+        "interpretation": "Совпадение явного имени организации; участие в bug bounty не повышает индекс интереса атакующих.",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    },
+    {
+      "id": "research:8a0f33d3b3e936e9c1813b24",
+      "subject": "roszarubezhneft",
+      "subject_label": "Company",
+      "relation": "MONITORING_HYPOTHESIS",
+      "object": "a9711bc45afb1d0b7e91bd6c",
+      "object_label": "Publication",
+      "properties": {
+        "status": "internal_patch_review",
+        "caption": "Условная проверка обновления",
+        "use_assertion_id": "real:4dfd7e33942a1e8b617784b5",
+        "use_evidence_url": "https://trueconf.ru/blog/success-stories/roszarubezhneft-trueconf-server",
+        "notice_evidence_url": "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+        "network_exposure": "closed_network",
+        "counterevidence": "Публикация сообщает о собственном ЦОД и работе в закрытом контуре без внешнего доступа.",
+        "missing": [
+          "installed_version_unknown"
+        ],
+        "related_report_ids": [
+          "52526a0c6d1ce566fd6d4752"
+        ],
+        "related_cves": [
+          "CVE-2026-109618",
+          "CVE-2026-109619"
+        ],
+        "horizon_days": 30,
+        "is_probability": false,
+        "interpretation": "Проверить актуальность установки и обновление; атака и неустранённая уязвимость не установлены.",
+        "cti_managed": "research-context-v1",
+        "is_demo": false,
+        "weight_role": "research_context_only"
+      }
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "a1b51cebb7cd8955d7b4c37e",
+      "company_id": "roszarubezhneft",
+      "company": "Росзарубежнефть",
+      "product_id": "trueconf-server",
+      "product": "TrueConf Server",
+      "status": "internal_patch_review",
+      "use_assertion_id": "4dfd7e33942a1e8b617784b5",
+      "use_url": "https://trueconf.ru/blog/success-stories/roszarubezhneft-trueconf-server",
+      "use_age_days": 69,
+      "notice_id": "a9711bc45afb1d0b7e91bd6c",
+      "notice_url": "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+      "notice_age_days": 2,
+      "notice_title": "TrueConf Server: обновление PHP-компонента от 22 октября 2026 года",
+      "installed_version": null,
+      "version_match": null,
+      "network_exposure": "closed_network",
+      "counterevidence": "Публикация сообщает о собственном ЦОД и работе в закрытом контуре без внешнего доступа.",
+      "missing": [
+        "installed_version_unknown"
+      ],
+      "is_probability": false,
+      "decision": "Проверить актуальность установки и обновление; атака и неустранённая уязвимость не установлены.",
+      "horizon_days": 30,
+      "notice_review_status": "assistant_primary_source_review",
+      "scope_source_urls": [
+        "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+        "https://trueconf.com/blog/update/trueconf-server-5411-5311-php"
+      ],
+      "related_exploitation_reports": [
+        {
+          "publication_id": "52526a0c6d1ce566fd6d4752",
+          "url": "https://bi.zone/news/bi-zone-zafiksirovala-pervye-popytki-ekspluatatsii-uyazvimostey-php/",
+          "cves": [
+            "CVE-2026-109618",
+            "CVE-2026-109619"
+          ],
+          "qualification": "Источник сообщает о попытках эксплуатации CVE в общем; атака на эту компанию или продукт не установлена."
+        }
+      ]
+    },
+    {
+      "id": "35ec91cc0dde319ddd92c174",
+      "company_id": "rostelecom",
+      "company": "ПАО Ростелеком",
+      "product_id": "trueconf-server",
+      "product": "TrueConf Server",
+      "status": "insufficient_current_evidence",
+      "use_assertion_id": "388c569747b7a7bcb653a2ce",
+      "use_url": "https://www.company.rt.ru/projects/elections/elections_news/d470079/",
+      "use_age_days": 948,
+      "notice_id": "a9711bc45afb1d0b7e91bd6c",
+      "notice_url": "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+      "notice_age_days": 2,
+      "notice_title": "TrueConf Server: обновление PHP-компонента от 22 октября 2026 года",
+      "installed_version": null,
+      "version_match": null,
+      "network_exposure": "unknown",
+      "counterevidence": null,
+      "missing": [
+        "installed_version_unknown",
+        "network_exposure_unknown",
+        "use_evidence_older_than_180_days"
+      ],
+      "is_probability": false,
+      "decision": "Проверить актуальность установки и обновление; атака и неустранённая уязвимость не установлены.",
+      "horizon_days": 30,
+      "notice_review_status": "assistant_primary_source_review",
+      "scope_source_urls": [
+        "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+        "https://trueconf.com/blog/update/trueconf-server-5411-5311-php"
+      ],
+      "related_exploitation_reports": [
+        {
+          "publication_id": "52526a0c6d1ce566fd6d4752",
+          "url": "https://bi.zone/news/bi-zone-zafiksirovala-pervye-popytki-ekspluatatsii-uyazvimostey-php/",
+          "cves": [
+            "CVE-2026-109618",
+            "CVE-2026-109619"
+          ],
+          "qualification": "Источник сообщает о попытках эксплуатации CVE в общем; атака на эту компанию или продукт не установлена."
+        }
+      ]
+    },
+    {
+      "id": "f259dd05d3163be8f582a493",
+      "company_id": "askon",
+      "company": "АСКОН",
+      "product_id": "trueconf-server",
+      "product": "TrueConf Server",
+      "status": "insufficient_current_evidence",
+      "use_assertion_id": "e03a9c1f8d86868af16f453d",
+      "use_url": "https://trueconf.ru/company/customers.html",
+      "use_age_days": null,
+      "notice_id": "a9711bc45afb1d0b7e91bd6c",
+      "notice_url": "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+      "notice_age_days": 2,
+      "notice_title": "TrueConf Server: обновление PHP-компонента от 22 октября 2026 года",
+      "installed_version": null,
+      "version_match": null,
+      "network_exposure": "unknown",
+      "counterevidence": null,
+      "missing": [
+        "installed_version_unknown",
+        "network_exposure_unknown",
+        "use_date_unknown"
+      ],
+      "is_probability": false,
+      "decision": "Проверить актуальность установки и обновление; атака и неустранённая уязвимость не установлены.",
+      "horizon_days": 30,
+      "notice_review_status": "assistant_primary_source_review",
+      "scope_source_urls": [
+        "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+        "https://trueconf.com/blog/update/trueconf-server-5411-5311-php"
+      ],
+      "related_exploitation_reports": [
+        {
+          "publication_id": "52526a0c6d1ce566fd6d4752",
+          "url": "https://bi.zone/news/bi-zone-zafiksirovala-pervye-popytki-ekspluatatsii-uyazvimostey-php/",
+          "cves": [
+            "CVE-2026-109618",
+            "CVE-2026-109619"
+          ],
+          "qualification": "Источник сообщает о попытках эксплуатации CVE в общем; атака на эту компанию или продукт не установлена."
+        }
+      ]
+    },
+    {
+      "id": "c3e4a278957b5fd7733325fa",
+      "company_id": "government-mo",
+      "company": "Правительство Московской области",
+      "product_id": "trueconf-server",
+      "product": "TrueConf Server",
+      "status": "insufficient_current_evidence",
+      "use_assertion_id": "53b2fcccf3d0f8961fa91793",
+      "use_url": "https://trueconf.ru/company/customers.html",
+      "use_age_days": null,
+      "notice_id": "a9711bc45afb1d0b7e91bd6c",
+      "notice_url": "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+      "notice_age_days": 2,
+      "notice_title": "TrueConf Server: обновление PHP-компонента от 22 октября 2026 года",
+      "installed_version": null,
+      "version_match": null,
+      "network_exposure": "unknown",
+      "counterevidence": null,
+      "missing": [
+        "installed_version_unknown",
+        "network_exposure_unknown",
+        "use_date_unknown"
+      ],
+      "is_probability": false,
+      "decision": "Проверить актуальность установки и обновление; атака и неустранённая уязвимость не установлены.",
+      "horizon_days": 30,
+      "notice_review_status": "assistant_primary_source_review",
+      "scope_source_urls": [
+        "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+        "https://trueconf.com/blog/update/trueconf-server-5411-5311-php"
+      ],
+      "related_exploitation_reports": [
+        {
+          "publication_id": "52526a0c6d1ce566fd6d4752",
+          "url": "https://bi.zone/news/bi-zone-zafiksirovala-pervye-popytki-ekspluatatsii-uyazvimostey-php/",
+          "cves": [
+            "CVE-2026-109618",
+            "CVE-2026-109619"
+          ],
+          "qualification": "Источник сообщает о попытках эксплуатации CVE в общем; атака на эту компанию или продукт не установлена."
+        }
+      ]
+    },
+    {
+      "id": "ededde5daa9e692fa43271df",
+      "company_id": "ingosstrakh",
+      "company": "Ингосстрах",
+      "product_id": "trueconf-server",
+      "product": "TrueConf Server",
+      "status": "insufficient_current_evidence",
+      "use_assertion_id": "7d6247ceb590a733e3d888a0",
+      "use_url": "https://trueconf.ru/blog/wp-content/uploads/2022/06/ingosstakh.pdf",
+      "use_age_days": null,
+      "notice_id": "a9711bc45afb1d0b7e91bd6c",
+      "notice_url": "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+      "notice_age_days": 2,
+      "notice_title": "TrueConf Server: обновление PHP-компонента от 22 октября 2026 года",
+      "installed_version": null,
+      "version_match": null,
+      "network_exposure": "unknown",
+      "counterevidence": null,
+      "missing": [
+        "installed_version_unknown",
+        "network_exposure_unknown",
+        "use_date_unknown"
+      ],
+      "is_probability": false,
+      "decision": "Проверить актуальность установки и обновление; атака и неустранённая уязвимость не установлены.",
+      "horizon_days": 30,
+      "notice_review_status": "assistant_primary_source_review",
+      "scope_source_urls": [
+        "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+        "https://trueconf.com/blog/update/trueconf-server-5411-5311-php"
+      ],
+      "related_exploitation_reports": [
+        {
+          "publication_id": "52526a0c6d1ce566fd6d4752",
+          "url": "https://bi.zone/news/bi-zone-zafiksirovala-pervye-popytki-ekspluatatsii-uyazvimostey-php/",
+          "cves": [
+            "CVE-2026-109618",
+            "CVE-2026-109619"
+          ],
+          "qualification": "Источник сообщает о попытках эксплуатации CVE в общем; атака на эту компанию или продукт не установлена."
+        }
+      ]
+    },
+    {
+      "id": "9893b948464cf8a902f57635",
+      "company_id": "rosatom-engineering",
+      "company": "Инжиниринговый дивизион Росатома",
+      "product_id": "trueconf-server",
+      "product": "TrueConf Server",
+      "status": "insufficient_current_evidence",
+      "use_assertion_id": "7c36faf4f017dee84fa28d6b",
+      "use_url": "https://trueconf.ru/blog/wp-content/uploads/2023/06/id-rosatom-ru.pdf",
+      "use_age_days": null,
+      "notice_id": "a9711bc45afb1d0b7e91bd6c",
+      "notice_url": "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+      "notice_age_days": 2,
+      "notice_title": "TrueConf Server: обновление PHP-компонента от 22 октября 2026 года",
+      "installed_version": null,
+      "version_match": null,
+      "network_exposure": "unknown",
+      "counterevidence": null,
+      "missing": [
+        "installed_version_unknown",
+        "network_exposure_unknown",
+        "use_date_unknown"
+      ],
+      "is_probability": false,
+      "decision": "Проверить актуальность установки и обновление; атака и неустранённая уязвимость не установлены.",
+      "horizon_days": 30,
+      "notice_review_status": "assistant_primary_source_review",
+      "scope_source_urls": [
+        "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+        "https://trueconf.com/blog/update/trueconf-server-5411-5311-php"
+      ],
+      "related_exploitation_reports": [
+        {
+          "publication_id": "52526a0c6d1ce566fd6d4752",
+          "url": "https://bi.zone/news/bi-zone-zafiksirovala-pervye-popytki-ekspluatatsii-uyazvimostey-php/",
+          "cves": [
+            "CVE-2026-109618",
+            "CVE-2026-109619"
+          ],
+          "qualification": "Источник сообщает о попытках эксплуатации CVE в общем; атака на эту компанию или продукт не установлена."
+        }
+      ]
+    }
+  ],
+  "interpretation": "Очередь пассивной проверки условных гипотез. Bug bounty не создаёт угрозу; техническая применимость не устанавливает интерес злоумышленников."
+}

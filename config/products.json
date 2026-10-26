@@ -1,0 +1,69 @@
+[
+  {
+    "id": "trueconf-server",
+    "name": "TrueConf Server",
+    "vendor": "Труконф",
+    "aliases": [
+      "Труконф Сервер"
+    ],
+    "is_demo": false
+  },
+  {
+    "id": "trueconf-client",
+    "name": "TrueConf Client",
+    "vendor": "Труконф",
+    "aliases": [
+      "TrueConf для Windows"
+    ],
+    "is_demo": false
+  },
+  {
+    "id": "1c-enterprise",
+    "name": "1С:Предприятие",
+    "vendor": "1С",
+    "aliases": [
+      "1C:Enterprise",
+      "1С:Предприятие 8"
+    ],
+    "is_demo": false
+  },
+  {
+    "id": "bitrix-site-manager",
+    "name": "1С-Битрикс: Управление сайтом",
+    "vendor": "1С-Битрикс",
+    "aliases": [
+      "Bitrix Site Manager"
+    ],
+    "is_demo": false
+  },
+  {
+    "id": "gitlab",
+    "name": "GitLab",
+    "vendor": "GitLab",
+    "aliases": [],
+    "is_demo": false
+  },
+  {
+    "id": "trueconf-enterprise",
+    "name": "TrueConf Enterprise",
+    "vendor": "Труконф",
+    "aliases": [],
+    "is_demo": false
+  },
+  {
+    "id": "trueconf-room",
+    "name": "TrueConf Room",
+    "vendor": "Труконф",
+    "aliases": [],
+    "is_demo": false
+  },
+  {
+    "id": "1c-holding",
+    "name": "1С:Управление холдингом",
+    "vendor": "1С",
+    "aliases": [
+      "1C:Управление холдингом"
+    ],
+    "is_demo": false
+  }
+]

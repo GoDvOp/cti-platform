@@ -1,0 +1,23 @@
+{
+  "status": "imported",
+  "version": "20.0",
+  "collection_id": "x-mitre-collection--1f5f1533-f617-4ca8-9ab4-6a02367fa019",
+  "collection_modified": "2026-10-13T17:53:10.145Z",
+  "bundle_id": "bundle--fc207382-c9d1-4ece-bce2-6ef555c62d0a",
+  "total_objects": 26690,
+  "sha256": "81113ba98afa2928f3dcff62022539f7ce30c315c32e14422f11ff95ce534352",
+  "imported_at": "2026-10-23T20:50:34+00:00",
+  "source_url": "https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack-20.0.json",
+  "reference_url": "https://attack.mitre.org/resources/attack-data-and-tools/",
+  "dataset": "enterprise-attack",
+  "active_counts": {
+    "campaign": 57,
+    "intrusion-set": 178,
+    "malware": 747,
+    "tool": 95,
+    "attack-pattern": 706,
+    "x-mitre-tactic": 15
+  },
+  "retrieval_method": "GitHub connector fetch_blob",
+  "github_blob_sha": "b39ce73c609d0f028841546e042ec16ffd7fe63f"
+}

@@ -1,0 +1,174 @@
+{
+  "case_id": "novabev-2025",
+  "prepared_at": "2026-10-24T07:46:33+00:00",
+  "event_day": "2025-07-14",
+  "company_ids": [
+    "novabev",
+    "winelab"
+  ],
+  "incident_id": "novabev-2025",
+  "source_independence_groups": 1,
+  "sources": [
+    {
+      "id": "S1",
+      "publication_day": "2025-07-16",
+      "title": "Первоначальное заявление об инциденте",
+      "url": "https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/",
+      "scope": "historical_incident",
+      "assessment": "Сообщение потерпевшей стороны; не независимая техническая экспертиза.",
+      "publisher": "Novabev Group",
+      "independence_group": "novabev_official",
+      "checked_at": "2026-10-24T07:46:33+00:00",
+      "verification_method": "indexed_primary_source_text",
+      "direct_page_fetch": "failed_502_or_timeout",
+      "full_page_archive_captured": false
+    },
+    {
+      "id": "S2",
+      "publication_day": "2025-07-22",
+      "title": "Восстановление работы",
+      "url": "https://novabev.com/en/press-room/lenta/novabev-group-and-winelab-are-gradually-restoring-operations-following-the-cyberattack/",
+      "scope": "recovery_update",
+      "assessment": "Последующее сообщение того же издателя; подтверждает заявленный ход восстановления.",
+      "publisher": "Novabev Group",
+      "independence_group": "novabev_official",
+      "checked_at": "2026-10-24T07:46:33+00:00",
+      "verification_method": "indexed_primary_source_text",
+      "direct_page_fetch": "failed_502_or_timeout",
+      "full_page_archive_captured": false
+    },
+    {
+      "id": "S3",
+      "publication_day": "2025-08-18",
+      "title": "Модернизация киберзащиты",
+      "url": "https://novabev.com/en/press-room/lenta/novabev-group-has-begun-modernizing-its-cybersecurity-system/",
+      "scope": "recovery_update",
+      "assessment": "Добавляет сообщение о требовании выкупа за расшифровку; семейство ПО не установлено.",
+      "publisher": "Novabev Group",
+      "independence_group": "novabev_official",
+      "checked_at": "2026-10-24T07:46:33+00:00",
+      "verification_method": "indexed_primary_source_text",
+      "direct_page_fetch": "failed_502_or_timeout",
+      "full_page_archive_captured": false
+    },
+    {
+      "id": "S4",
+      "publication_day": "2026-10-08",
+      "title": "Операционные результаты за девять месяцев 2026 года",
+      "url": "https://novabev.com/press-room/lenta/operating-results-9m-2026/",
+      "scope": "business_followup",
+      "assessment": "Ретроспективное упоминание влияния инцидента на сравнение продаж; не новая атака.",
+      "publisher": "Novabev Group",
+      "independence_group": "novabev_official",
+      "checked_at": "2026-10-24T07:46:33+00:00",
+      "verification_method": "indexed_primary_source_text",
+      "direct_page_fetch": "failed_502_or_timeout",
+      "full_page_archive_captured": false
+    }
+  ],
+  "metadata_updates": [
+    {
+      "publication_id": "e77e2d2008b7be95fb1b6487",
+      "source_id": "S1",
+      "result": "updated"
+    },
+    {
+      "publication_id": "2c2d4a8b9cba7d1ed6584f25",
+      "source_id": "S1",
+      "result": "updated"
+    },
+    {
+      "publication_id": "5a4f2e808c4db46eb551315b",
+      "source_id": "S2",
+      "result": "updated"
+    },
+    {
+      "publication_id": "e16f2c58cb6657ae24c861f7",
+      "source_id": "S3",
+      "result": "updated"
+    }
+  ],
+  "new_publication_result": {
+    "inserted": 1
+  },
+  "evidence_records": [
+    {
+      "publication_id": "3f7053c03571c746f90cd465",
+      "url": "https://novabev.com/press-room/lenta/operating-results-9m-2026/",
+      "content_hash": "7d5f23d9ba1d34cc2e4790cdafe3db446602e667711b44e2dfe9f76c235b062d",
+      "collected_at": "2026-10-24T07:46:33+00:00"
+    },
+    {
+      "publication_id": "e77e2d2008b7be95fb1b6487",
+      "url": "https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/",
+      "content_hash": "01e18a376ab63edfd579fec1b5d0e2790277ca130c2f865d1f4225338bb6be59",
+      "collected_at": "2026-10-23T20:36:07+00:00"
+    },
+    {
+      "publication_id": "05c99685d0b93186bfe9224e",
+      "url": "https://novabev.com/about/business/",
+      "content_hash": "3a13e783f31a7a54a16e65e0628821aca99f0c5abcf4588e183e17d49ba7877b",
+      "collected_at": "2026-10-23T19:44:37+00:00"
+    },
+    {
+      "publication_id": "2c2d4a8b9cba7d1ed6584f25",
+      "url": "https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/",
+      "content_hash": "dd1020784bc0cf670170eb089778103bde3a85c06cdcd10980e2e0a980d7774b",
+      "collected_at": "2026-10-23T18:21:15+00:00"
+    },
+    {
+      "publication_id": "5a4f2e808c4db46eb551315b",
+      "url": "https://novabev.com/press-room/lenta/novabev-group-and-winelab-are-gradually-restoring-operations-following-the-cyberattack/",
+      "content_hash": "2a7517240ac9501b51eb9e6abb1a3e0f5bffce2ab9b4fec20cb7d01a8cf6c55f",
+      "collected_at": "2026-10-23T18:21:15+00:00"
+    },
+    {
+      "publication_id": "e16f2c58cb6657ae24c861f7",
+      "url": "https://novabev.com/en/press-room/lenta/novabev-group-has-begun-modernizing-its-cybersecurity-system/",
+      "content_hash": "ede42a698ddf684a41db5a4a2426f014b517165903587943c55356462e3eda4a",
+      "collected_at": "2026-10-23T18:21:15+00:00"
+    }
+  ],
+  "reviewed_assertions": [
+    {
+      "id": "217bbb4c412d79203dbe034d",
+      "kind": "part_of",
+      "subject": "winelab",
+      "object": "novabev",
+      "evidence_url": "https://novabev.com/about/business/",
+      "evidence_hash": "3a13e783f31a7a54a16e65e0628821aca99f0c5abcf4588e183e17d49ba7877b",
+      "status": "confirmed"
+    },
+    {
+      "id": "8dcab9b43e5e3dfd3fa065cd",
+      "kind": "incident_affects",
+      "subject": "novabev-2025",
+      "object": "novabev",
+      "evidence_url": "https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/",
+      "evidence_hash": "01e18a376ab63edfd579fec1b5d0e2790277ca130c2f865d1f4225338bb6be59",
+      "status": "confirmed"
+    },
+    {
+      "id": "9c12403a6f20aa754a0fc5a1",
+      "kind": "incident_affects",
+      "subject": "novabev-2025",
+      "object": "winelab",
+      "evidence_url": "https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/",
+      "evidence_hash": "01e18a376ab63edfd579fec1b5d0e2790277ca130c2f865d1f4225338bb6be59",
+      "status": "confirmed"
+    }
+  ],
+  "unknowns": [
+    "threat_actor",
+    "initial_access",
+    "exploited_cve",
+    "malware_family",
+    "deployed_product_versions",
+    "data_exfiltration"
+  ],
+  "limits": [
+    "No live full-page archival capture; current recheck uses indexed official source texts.",
+    "All four selected statements belong to the same publisher and do not provide independent corroboration.",
+    "No claim of an exhaustive search for fresh targeting or darkweb activity."
+  ]
+}

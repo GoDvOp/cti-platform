@@ -1,0 +1,9 @@
+.env*
+!.env.example
+.venv
+.git
+**/__pycache__
+data/**
+!data/review_snapshot.json.gz
+!data/submission_manifest.json
+*.zip

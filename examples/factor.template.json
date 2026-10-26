@@ -1,0 +1,9 @@
+{
+ "score": 75,
+ "reason": "Замените на проверяемое обоснование и альтернативные объяснения",
+ "reviewer": "Имя аналитика",
+ "evidence_ids": ["ID_ПУБЛИКАЦИИ_ИЗ_SIGNALS_ИЛИ_REPORT_JSON"],
+ "evidence_hashes": {"ID_ПУБЛИКАЦИИ_ИЗ_SIGNALS_ИЛИ_REPORT_JSON": "ЕЁ_CONTENT_HASH"},
+ "observed_at": "2026-10-23T00:00:00+00:00",
+ "confidence": "medium"
+}

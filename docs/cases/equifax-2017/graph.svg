@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="540" viewBox="0 0 1100 540" role="img" aria-labelledby="title desc">
+<title id="title">Equifax: исторический инцидент, Struts и CVE</title><desc id="desc">Стрелка от PLA 54th Research Institute к Equifax обозначает атрибуцию из обвинения. Инцидент связан с компанией и CVE-2017-5638. CVE затрагивает Apache Struts 2. Точная версия Equifax неизвестна.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#53647b"/></marker></defs>
+<rect width="1100" height="540" rx="16" fill="#f5f7fb"/>
+<g stroke="#53647b" stroke-width="2" fill="none" marker-end="url(#a)"><path d="M550 122 L550 230"/><path d="M700 82 L825 82"/><path d="M275 145 L410 245" stroke-dasharray="7 5"/><path d="M700 280 L825 360"/><path d="M950 122 L950 325"/><path d="M275 390 L410 285"/></g>
+<g font-family="DejaVu Sans,sans-serif" text-anchor="middle">
+<rect x="400" y="42" width="300" height="80" rx="12" fill="#f5e3e2" stroke="#bf6962"/><text x="550" y="74" font-size="19" fill="#5d302d">Инцидент Equifax 2017</text><text x="550" y="101" font-size="13" fill="#5d302d">Май–июль · источник E1</text>
+<rect x="825" y="42" width="250" height="80" rx="12" fill="#fbe5ce" stroke="#c5914f"/><text x="950" y="77" font-size="19" fill="#68431c">CVE-2017-5638</text><text x="950" y="102" font-size="13" fill="#68431c">Диапазоны по Apache, E2</text>
+<rect x="25" y="80" width="250" height="80" rx="12" fill="#e9def6" stroke="#9375ad"/><text x="150" y="111" font-size="17" fill="#52346a">PLA 54th Research</text><text x="150" y="135" font-size="17" fill="#52346a">Institute</text>
+<rect x="400" y="230" width="300" height="80" rx="12" fill="#dfeafa" stroke="#5883b7"/><text x="550" y="265" font-size="23" fill="#193e68">Equifax</text><text x="550" y="291" font-size="13" fill="#193e68">Исторический кейс, не текущая цель</text>
+<rect x="825" y="325" width="250" height="85" rx="12" fill="#e1eed8" stroke="#7b9b59"/><text x="950" y="360" font-size="20" fill="#375721">Apache Struts 2</text><text x="950" y="387" font-size="13" fill="#375721">Версия Equifax неизвестна</text>
+<rect x="25" y="360" width="250" height="70" rx="12" fill="#e7e9ed" stroke="#8b94a1"/><text x="150" y="402" font-size="17" fill="#3f4b5a">Финансовые услуги</text>
+<g font-size="13" fill="#3f4b5a"><text x="598" y="178">Затронул</text><text x="762" y="61">Эксплуатировалась</text><text x="979" y="228">Затрагивает</text><text x="786" y="315">Использовала</text><text x="310" y="185">Атрибуция по обвинению E3</text><text x="295" y="350">Включает компанию</text></g>
+<text x="550" y="474" font-size="15" fill="#795026">Прямое утверждение PLA → CVE не добавлено: основания проверяются через инцидент</text><text x="550" y="510" font-size="13" fill="#53647b">Срез 24.10.2026 · атрибуция не означает приговор · текущий программный стек не установлен</text>
+</g></svg>

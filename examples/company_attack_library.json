@@ -1,0 +1,174 @@
+{
+  "version": "1.7",
+  "provenance": "Краткий авторский пересказ первичного сообщения Минюста США 01.08.2018; исторический пример вне рейтинга текущих целей.",
+  "companies": [
+    {
+      "id": "chipotle",
+      "name": "Chipotle Mexican Grill",
+      "aliases": [],
+      "domains": [],
+      "sector": "общественное питание",
+      "country": "US",
+      "entity_type": "historical_case",
+      "monitor_target": false,
+      "is_demo": false
+    },
+    {
+      "id": "chilis",
+      "name": "Chili’s",
+      "aliases": [],
+      "domains": [],
+      "sector": "общественное питание",
+      "country": "US",
+      "entity_type": "historical_case",
+      "monitor_target": false,
+      "is_demo": false
+    },
+    {
+      "id": "arbys",
+      "name": "Arby’s",
+      "aliases": [],
+      "domains": [],
+      "sector": "общественное питание",
+      "country": "US",
+      "entity_type": "historical_case",
+      "monitor_target": false,
+      "is_demo": false
+    }
+  ],
+  "products": [],
+  "entities": [
+    {
+      "id": "fin7",
+      "name": "FIN7",
+      "entity_type": "ThreatActor",
+      "aliases": [],
+      "is_demo": false,
+      "note": "Не объединяется с отдельным кластером Carbanak G0008; сопоставление с G0046 проверяется отдельно."
+    },
+    {
+      "id": "carbanak-malware",
+      "name": "Carbanak",
+      "entity_type": "Malware",
+      "aliases": [],
+      "is_demo": false,
+      "note": "Вредоносное ПО, не одноимённая группировка."
+    },
+    {
+      "id": "fin7-retail-2018",
+      "name": "Кампания FIN7 2015–2018",
+      "entity_type": "Incident",
+      "incident_type": "campaign",
+      "date_precision": "year_range",
+      "aliases": [],
+      "is_demo": false,
+      "note": "Период активности по сообщению 01.08.2018, с 2015 года; даты отдельных вторжений здесь не установлены."
+    }
+  ],
+  "publications": [
+    {
+      "key": "doj-fin7-2018",
+      "source_id": "manual_web_doj",
+      "url": "https://www.justice.gov/archives/opa/pr/three-members-notorious-international-cybercrime-group-fin7-custody-role-attacking-over-100",
+      "title": "Минюст США: кампания FIN7 и пострадавшие сети общепита",
+      "text": "Кампания FIN7 2015–2018: сообщение Минюста США от 1 августа 2018 года относит атаки на Chipotle Mexican Grill, Chili’s и Arby’s к FIN7. В описании схемы указано использование модифицированного вредоносного ПО Carbanak. Это сведения о кампании в опубликованном обвинении; точная CVE, версия ПО и одинаковая цепочка атаки для всех компаний не установлены.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:59:31+00:00",
+      "external_id": "company-attack-library:fin7-2018",
+      "is_demo": false,
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": "2018-08-01",
+        "date_precision": "day",
+        "content_scope": "reviewed_historical_summary",
+        "note": "Краткий пересказ первичного сообщения; атрибуция в обвинении, без переноса техник на каждую компанию."
+      }
+    }
+  ],
+  "claims": [
+    {
+      "publication_key": "doj-fin7-2018",
+      "kind": "incident_affects",
+      "subject": "fin7-retail-2018",
+      "object": "chipotle",
+      "excerpt": "Кампания FIN7 2015–2018: сообщение Минюста США от 1 августа 2018 года относит атаки на Chipotle Mexican Grill, Chili’s и Arby’s к FIN7. В описании схемы указано использование модифицированного вредоносного ПО Carbanak. Это сведения о кампании в опубликованном обвинении; точная CVE, версия ПО и одинаковая цепочка атаки для всех компаний не установлены.",
+      "attributes": {
+        "basis": "legal_allegation",
+        "confidence": "high",
+        "attribution_scope": "campaign_allegation_as_of_2018-08-01",
+        "note": "Подтверждено соответствие источнику, без утверждения об одинаковой цепочке атаки для каждой компании."
+      },
+      "review_note": "Проверены названия компаний, FIN7 и описание Carbanak в первичном сообщении Минюста США 01.08.2018. Сохранены ограничения опубликованного обвинения."
+    },
+    {
+      "publication_key": "doj-fin7-2018",
+      "kind": "incident_affects",
+      "subject": "fin7-retail-2018",
+      "object": "chilis",
+      "excerpt": "Кампания FIN7 2015–2018: сообщение Минюста США от 1 августа 2018 года относит атаки на Chipotle Mexican Grill, Chili’s и Arby’s к FIN7. В описании схемы указано использование модифицированного вредоносного ПО Carbanak. Это сведения о кампании в опубликованном обвинении; точная CVE, версия ПО и одинаковая цепочка атаки для всех компаний не установлены.",
+      "attributes": {
+        "basis": "legal_allegation",
+        "confidence": "high",
+        "attribution_scope": "campaign_allegation_as_of_2018-08-01",
+        "note": "Подтверждено соответствие источнику, без утверждения об одинаковой цепочке атаки для каждой компании."
+      },
+      "review_note": "Проверены названия компаний, FIN7 и описание Carbanak в первичном сообщении Минюста США 01.08.2018. Сохранены ограничения опубликованного обвинения."
+    },
+    {
+      "publication_key": "doj-fin7-2018",
+      "kind": "incident_affects",
+      "subject": "fin7-retail-2018",
+      "object": "arbys",
+      "excerpt": "Кампания FIN7 2015–2018: сообщение Минюста США от 1 августа 2018 года относит атаки на Chipotle Mexican Grill, Chili’s и Arby’s к FIN7. В описании схемы указано использование модифицированного вредоносного ПО Carbanak. Это сведения о кампании в опубликованном обвинении; точная CVE, версия ПО и одинаковая цепочка атаки для всех компаний не установлены.",
+      "attributes": {
+        "basis": "legal_allegation",
+        "confidence": "high",
+        "attribution_scope": "campaign_allegation_as_of_2018-08-01",
+        "note": "Подтверждено соответствие источнику, без утверждения об одинаковой цепочке атаки для каждой компании."
+      },
+      "review_note": "Проверены названия компаний, FIN7 и описание Carbanak в первичном сообщении Минюста США 01.08.2018. Сохранены ограничения опубликованного обвинения."
+    },
+    {
+      "publication_key": "doj-fin7-2018",
+      "kind": "attributed_to",
+      "subject": "fin7-retail-2018",
+      "object": "fin7",
+      "excerpt": "Кампания FIN7 2015–2018: сообщение Минюста США от 1 августа 2018 года относит атаки на Chipotle Mexican Grill, Chili’s и Arby’s к FIN7. В описании схемы указано использование модифицированного вредоносного ПО Carbanak. Это сведения о кампании в опубликованном обвинении; точная CVE, версия ПО и одинаковая цепочка атаки для всех компаний не установлены.",
+      "attributes": {
+        "basis": "legal_allegation",
+        "confidence": "high",
+        "attribution_scope": "campaign_allegation_as_of_2018-08-01",
+        "note": "Подтверждено соответствие источнику, без утверждения об одинаковой цепочке атаки для каждой компании."
+      },
+      "review_note": "Проверены названия компаний, FIN7 и описание Carbanak в первичном сообщении Минюста США 01.08.2018. Сохранены ограничения опубликованного обвинения."
+    },
+    {
+      "publication_key": "doj-fin7-2018",
+      "kind": "incident_malware",
+      "subject": "fin7-retail-2018",
+      "object": "carbanak-malware",
+      "excerpt": "Кампания FIN7 2015–2018: сообщение Минюста США от 1 августа 2018 года относит атаки на Chipotle Mexican Grill, Chili’s и Arby’s к FIN7. В описании схемы указано использование модифицированного вредоносного ПО Carbanak. Это сведения о кампании в опубликованном обвинении; точная CVE, версия ПО и одинаковая цепочка атаки для всех компаний не установлены.",
+      "attributes": {
+        "basis": "legal_allegation",
+        "confidence": "high",
+        "attribution_scope": "campaign_allegation_as_of_2018-08-01",
+        "note": "Подтверждено соответствие источнику, без утверждения об одинаковой цепочке атаки для каждой компании."
+      },
+      "review_note": "Проверены названия компаний, FIN7 и описание Carbanak в первичном сообщении Минюста США 01.08.2018. Сохранены ограничения опубликованного обвинения."
+    },
+    {
+      "publication_key": "doj-fin7-2018",
+      "kind": "actor_uses_malware",
+      "subject": "fin7",
+      "object": "carbanak-malware",
+      "excerpt": "Кампания FIN7 2015–2018: сообщение Минюста США от 1 августа 2018 года относит атаки на Chipotle Mexican Grill, Chili’s и Arby’s к FIN7. В описании схемы указано использование модифицированного вредоносного ПО Carbanak. Это сведения о кампании в опубликованном обвинении; точная CVE, версия ПО и одинаковая цепочка атаки для всех компаний не установлены.",
+      "attributes": {
+        "basis": "legal_allegation",
+        "confidence": "high",
+        "attribution_scope": "campaign_allegation_as_of_2018-08-01",
+        "note": "Подтверждено соответствие источнику, без утверждения об одинаковой цепочке атаки для каждой компании."
+      },
+      "review_note": "Проверены названия компаний, FIN7 и описание Carbanak в первичном сообщении Минюста США 01.08.2018. Сохранены ограничения опубликованного обвинения."
+    }
+  ]
+}

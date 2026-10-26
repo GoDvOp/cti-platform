@@ -1,0 +1,422 @@
+{
+  "type": "bundle",
+  "id": "bundle--00000000-0000-4000-8000-000000000100",
+  "objects": [
+    {
+      "type": "x-mitre-collection",
+      "id": "x-mitre-collection--00000000-0000-4000-8000-000000000099",
+      "name": "Enterprise ATT&CK",
+      "x_mitre_version": "1.0",
+      "created": "2026-01-01T00:00:00Z",
+      "modified": "2026-01-01T00:00:00Z",
+      "x_mitre_contents": [
+        {
+          "object_ref": "intrusion-set--00000000-0000-4000-8000-000000000001",
+          "object_modified": "2026-01-01T00:00:00Z"
+        },
+        {
+          "object_ref": "intrusion-set--00000000-0000-4000-8000-000000000002",
+          "object_modified": "2026-01-01T00:00:00Z"
+        },
+        {
+          "object_ref": "malware--00000000-0000-4000-8000-000000000003",
+          "object_modified": "2026-01-01T00:00:00Z"
+        },
+        {
+          "object_ref": "tool--00000000-0000-4000-8000-000000000004",
+          "object_modified": "2026-01-01T00:00:00Z"
+        },
+        {
+          "object_ref": "attack-pattern--00000000-0000-4000-8000-000000000005",
+          "object_modified": "2026-01-01T00:00:00Z"
+        },
+        {
+          "object_ref": "attack-pattern--00000000-0000-4000-8000-000000000006",
+          "object_modified": "2026-01-01T00:00:00Z"
+        },
+        {
+          "object_ref": "x-mitre-tactic--00000000-0000-4000-8000-000000000007",
+          "object_modified": "2026-01-01T00:00:00Z"
+        },
+        {
+          "object_ref": "attack-pattern--00000000-0000-4000-8000-000000000008",
+          "object_modified": "2026-01-01T00:00:00Z"
+        },
+        {
+          "object_ref": "attack-pattern--00000000-0000-4000-8000-000000000009",
+          "object_modified": "2026-01-01T00:00:00Z"
+        },
+        {
+          "object_ref": "campaign--00000000-0000-4000-8000-000000000010",
+          "object_modified": "2026-01-01T00:00:00Z"
+        },
+        {
+          "object_ref": "relationship--00000000-0000-4000-8000-000000000020",
+          "object_modified": "2026-01-01T00:00:00Z"
+        },
+        {
+          "object_ref": "relationship--00000000-0000-4000-8000-000000000021",
+          "object_modified": "2026-01-01T00:00:00Z"
+        },
+        {
+          "object_ref": "relationship--00000000-0000-4000-8000-000000000022",
+          "object_modified": "2026-01-01T00:00:00Z"
+        },
+        {
+          "object_ref": "relationship--00000000-0000-4000-8000-000000000023",
+          "object_modified": "2026-01-01T00:00:00Z"
+        },
+        {
+          "object_ref": "relationship--00000000-0000-4000-8000-000000000024",
+          "object_modified": "2026-01-01T00:00:00Z"
+        },
+        {
+          "object_ref": "relationship--00000000-0000-4000-8000-000000000025",
+          "object_modified": "2026-01-01T00:00:00Z"
+        },
+        {
+          "object_ref": "relationship--00000000-0000-4000-8000-000000000026",
+          "object_modified": "2026-01-01T00:00:00Z"
+        },
+        {
+          "object_ref": "relationship--00000000-0000-4000-8000-000000000027",
+          "object_modified": "2026-01-01T00:00:00Z"
+        },
+        {
+          "object_ref": "relationship--00000000-0000-4000-8000-000000000028",
+          "object_modified": "2026-01-01T00:00:00Z"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--00000000-0000-4000-8000-000000000001",
+      "name": "Test Group",
+      "created": "2026-01-01T00:00:00Z",
+      "modified": "2026-01-01T00:00:00Z",
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "G9991",
+          "url": "https://attack.mitre.org/"
+        }
+      ],
+      "aliases": [
+        "Shared Alias"
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--00000000-0000-4000-8000-000000000002",
+      "name": "Other Group",
+      "created": "2026-01-01T00:00:00Z",
+      "modified": "2026-01-01T00:00:00Z",
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "G9992",
+          "url": "https://attack.mitre.org/"
+        }
+      ],
+      "aliases": [
+        "Shared Alias"
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--00000000-0000-4000-8000-000000000003",
+      "name": "Test Malware",
+      "created": "2026-01-01T00:00:00Z",
+      "modified": "2026-01-01T00:00:00Z",
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "S9991",
+          "url": "https://attack.mitre.org/"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--00000000-0000-4000-8000-000000000004",
+      "name": "Test Tool",
+      "created": "2026-01-01T00:00:00Z",
+      "modified": "2026-01-01T00:00:00Z",
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "S9992",
+          "url": "https://attack.mitre.org/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--00000000-0000-4000-8000-000000000005",
+      "name": "Test Technique",
+      "created": "2026-01-01T00:00:00Z",
+      "modified": "2026-01-01T00:00:00Z",
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T9991",
+          "url": "https://attack.mitre.org/"
+        }
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--00000000-0000-4000-8000-000000000006",
+      "name": "Test Subtechnique",
+      "created": "2026-01-01T00:00:00Z",
+      "modified": "2026-01-01T00:00:00Z",
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T9991.001",
+          "url": "https://attack.mitre.org/"
+        }
+      ],
+      "x_mitre_is_subtechnique": true
+    },
+    {
+      "type": "x-mitre-tactic",
+      "id": "x-mitre-tactic--00000000-0000-4000-8000-000000000007",
+      "name": "Execution",
+      "created": "2026-01-01T00:00:00Z",
+      "modified": "2026-01-01T00:00:00Z",
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "TA9991",
+          "url": "https://attack.mitre.org/"
+        }
+      ],
+      "x_mitre_shortname": "execution"
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--00000000-0000-4000-8000-000000000008",
+      "name": "Revoked Technique",
+      "created": "2026-01-01T00:00:00Z",
+      "modified": "2026-01-01T00:00:00Z",
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T9992",
+          "url": "https://attack.mitre.org/"
+        }
+      ],
+      "revoked": true
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--00000000-0000-4000-8000-000000000009",
+      "name": "Deprecated Technique",
+      "created": "2026-01-01T00:00:00Z",
+      "modified": "2026-01-01T00:00:00Z",
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T9993",
+          "url": "https://attack.mitre.org/"
+        }
+      ],
+      "x_mitre_deprecated": true
+    },
+    {
+      "type": "campaign",
+      "id": "campaign--00000000-0000-4000-8000-000000000010",
+      "name": "Fictional campaign",
+      "created": "2026-01-01T00:00:00Z",
+      "modified": "2026-01-01T00:00:00Z",
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "C9991",
+          "url": "https://attack.mitre.org/"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--00000000-0000-4000-8000-000000000020",
+      "source_ref": "intrusion-set--00000000-0000-4000-8000-000000000001",
+      "target_ref": "malware--00000000-0000-4000-8000-000000000003",
+      "relationship_type": "uses",
+      "description": "Fictional evidence",
+      "created": "2026-01-01T00:00:00Z",
+      "modified": "2026-01-01T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "test source",
+          "url": "https://example.org/research"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--00000000-0000-4000-8000-000000000021",
+      "source_ref": "intrusion-set--00000000-0000-4000-8000-000000000001",
+      "target_ref": "tool--00000000-0000-4000-8000-000000000004",
+      "relationship_type": "uses",
+      "description": "Fictional evidence",
+      "created": "2026-01-01T00:00:00Z",
+      "modified": "2026-01-01T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "test source",
+          "url": "https://example.org/research"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--00000000-0000-4000-8000-000000000022",
+      "source_ref": "intrusion-set--00000000-0000-4000-8000-000000000001",
+      "target_ref": "attack-pattern--00000000-0000-4000-8000-000000000006",
+      "relationship_type": "uses",
+      "description": "Fictional evidence",
+      "created": "2026-01-01T00:00:00Z",
+      "modified": "2026-01-01T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "test source",
+          "url": "https://example.org/research"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--00000000-0000-4000-8000-000000000023",
+      "source_ref": "malware--00000000-0000-4000-8000-000000000003",
+      "target_ref": "attack-pattern--00000000-0000-4000-8000-000000000005",
+      "relationship_type": "uses",
+      "description": "Fictional evidence",
+      "created": "2026-01-01T00:00:00Z",
+      "modified": "2026-01-01T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "test source",
+          "url": "https://example.org/research"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--00000000-0000-4000-8000-000000000024",
+      "source_ref": "tool--00000000-0000-4000-8000-000000000004",
+      "target_ref": "attack-pattern--00000000-0000-4000-8000-000000000005",
+      "relationship_type": "uses",
+      "description": "Fictional evidence",
+      "created": "2026-01-01T00:00:00Z",
+      "modified": "2026-01-01T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "test source",
+          "url": "https://example.org/research"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--00000000-0000-4000-8000-000000000025",
+      "source_ref": "attack-pattern--00000000-0000-4000-8000-000000000006",
+      "target_ref": "attack-pattern--00000000-0000-4000-8000-000000000005",
+      "relationship_type": "subtechnique-of",
+      "description": "Fictional evidence",
+      "created": "2026-01-01T00:00:00Z",
+      "modified": "2026-01-01T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "test source",
+          "url": "https://example.org/research"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--00000000-0000-4000-8000-000000000026",
+      "source_ref": "intrusion-set--00000000-0000-4000-8000-000000000001",
+      "target_ref": "attack-pattern--00000000-0000-4000-8000-000000000008",
+      "relationship_type": "uses",
+      "description": "Fictional evidence",
+      "created": "2026-01-01T00:00:00Z",
+      "modified": "2026-01-01T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "test source",
+          "url": "https://example.org/research"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--00000000-0000-4000-8000-000000000027",
+      "source_ref": "intrusion-set--00000000-0000-4000-8000-000000000001",
+      "target_ref": "attack-pattern--00000000-0000-4000-8000-000000000009",
+      "relationship_type": "uses",
+      "description": "Fictional evidence",
+      "created": "2026-01-01T00:00:00Z",
+      "modified": "2026-01-01T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "test source",
+          "url": "https://example.org/research"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--00000000-0000-4000-8000-000000000028",
+      "source_ref": "campaign--00000000-0000-4000-8000-000000000010",
+      "target_ref": "intrusion-set--00000000-0000-4000-8000-000000000001",
+      "relationship_type": "attributed-to",
+      "description": "Fictional evidence",
+      "created": "2026-01-01T00:00:00Z",
+      "modified": "2026-01-01T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "test source",
+          "url": "https://example.org/research"
+        }
+      ]
+    }
+  ]
+}

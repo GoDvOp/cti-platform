@@ -1,0 +1,9 @@
+[project]
+name = "cti-intern-platform"
+version = "3.0.0"
+description = "Passive CTI collection, analyst review and explainable monitoring priority"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.ruff]
+line-length = 120

@@ -1,0 +1,91 @@
+{
+  "status": "passed",
+  "project_version": "3.0.0",
+  "model_version": "weighted-graph-v3",
+  "as_of": "2026-10-24T14:46:40+00:00",
+  "snapshot_sha256": "3d52fcf47ca50a9ef55a5a6d78cc5c5d17b7f6514d2d42d2fc8194e4e76acea7",
+  "checks": [
+    {
+      "name": "snapshot_manifest_and_configuration",
+      "status": "passed"
+    },
+    {
+      "name": "frozen_report_uses_current_model",
+      "status": "passed"
+    },
+    {
+      "name": "case_evidence_matches_snapshot",
+      "status": "passed"
+    },
+    {
+      "name": "closed_network_case_does_not_invent_external_target",
+      "status": "passed"
+    },
+    {
+      "name": "case_scores_use_current_model_and_fixed_date",
+      "status": "passed"
+    },
+    {
+      "name": "historical_fact_is_separate_from_current_applicability",
+      "status": "passed"
+    },
+    {
+      "name": "extraction_inputs_belong_to_snapshot",
+      "status": "passed"
+    },
+    {
+      "name": "extraction_catalogs_match_snapshot",
+      "status": "passed"
+    },
+    {
+      "name": "extractor_code_matches_frozen_predictions",
+      "status": "passed"
+    },
+    {
+      "name": "no_fabricated_human_metrics",
+      "status": "passed"
+    },
+    {
+      "name": "original_review_inputs_unchanged",
+      "status": "passed"
+    },
+    {
+      "name": "release_version_and_snapshot",
+      "status": "passed"
+    },
+    {
+      "name": "public_summaries_use_current_version_and_counts",
+      "status": "passed"
+    },
+    {
+      "name": "additional_case_has_separate_snapshot",
+      "status": "passed"
+    },
+    {
+      "name": "positive_case_preserves_unknown_version_and_attack",
+      "status": "passed"
+    },
+    {
+      "name": "real_browser_acceptance",
+      "status": "passed"
+    },
+    {
+      "name": "clean_archive_docker_acceptance",
+      "status": "passed"
+    },
+    {
+      "name": "docker_receipt_matches_runtime_files",
+      "status": "passed"
+    },
+    {
+      "name": "final_report_case.html",
+      "status": "passed"
+    },
+    {
+      "name": "final_report_case.pdf",
+      "status": "passed"
+    }
+  ],
+  "human_extraction_review": "awaiting_human_labels",
+  "author_pending": true
+}

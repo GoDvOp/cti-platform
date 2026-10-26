@@ -1,0 +1,44 @@
+{
+  "model_version": "weighted-graph-v3",
+  "confidence": {
+    "high": 1.0,
+    "medium": 0.7,
+    "low": 0.4
+  },
+  "default_confidence": "medium",
+  "basis": {
+    "victim_report": 0.9,
+    "research_report": 0.85,
+    "vendor_advisory": 0.9,
+    "government_advisory": 0.9,
+    "legal_allegation": 0.65,
+    "attacker_claim": 0.3,
+    "unspecified": 0.6
+  },
+  "signal_status": {
+    "unresolved": 0.4,
+    "corroborated": 0.7,
+    "confirmed": 1.0
+  },
+  "half_life_days": {
+    "interest": 90,
+    "technical": 180
+  },
+  "interest_caps": {
+    "direct_signal": 60,
+    "incident_history": 20,
+    "sector_activity": 20
+  },
+  "technical_cap": 100,
+  "unknown_version_multiplier": 0.25,
+  "technical_base_multiplier": 0.6,
+  "exploitation_bonus_multiplier": 0.4,
+  "notes": "Экспертные коэффициенты, не вероятности. Текущая применимость отделена от подтверждённой исторической эксплуатации. Для событий используется завершение периода либо начало; для использования ПО — наблюдение, дата публикации отмечается как приближение. Статические факты CVE не затухают. В компоненте учитывается максимум, не сумма путей.",
+  "temporal_policy": {
+    "affects_product": "static_reference",
+    "actor_exploits": "static_reference",
+    "incident_exploited": "static_reference",
+    "known_exploited": "static_reference"
+  },
+  "include_incident_exploitation": true
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel><title>Учебный RSS, не реальные события</title>
+<item><guid>demo-rss-1</guid><title>Учебное объявление</title><link>https://feed.example/post/1</link>
+<description><![CDATA[<p>Продаётся доступ к alpha.example; заявление не проверено.</p>]]></description>
+<pubDate>Thu, 22 Oct 2026 10:00:00 +0000</pubDate><author>учебный автор</author></item>
+</channel></rss>

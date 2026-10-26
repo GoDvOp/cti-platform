@@ -1,0 +1,100 @@
+{
+  "project_version": "3.0.0",
+  "execution": "real_docker_clean_archive",
+  "started_at": "2026-10-25T09:53:13.345035+00:00",
+  "checks": [
+    {
+      "name": "archive_excludes_local_env_and_working_database",
+      "status": "passed"
+    },
+    {
+      "name": "offline_review_real_container",
+      "status": "passed",
+      "publications": 374
+    },
+    {
+      "name": "offline_container_has_no_network_or_credentials",
+      "status": "passed"
+    },
+    {
+      "name": "offline_repeat_is_reproducible",
+      "status": "passed"
+    },
+    {
+      "name": "all_core_services_healthy",
+      "status": "passed"
+    },
+    {
+      "name": "workbench_has_positive_case_and_docker_state",
+      "status": "passed"
+    },
+    {
+      "name": "workbench_receives_no_service_credentials",
+      "status": "passed"
+    },
+    {
+      "name": "v3_example_and_quality_warnings_are_preserved",
+      "status": "passed"
+    },
+    {
+      "name": "docker_worker_acknowledges_panel_pause",
+      "status": "passed"
+    },
+    {
+      "name": "docker_worker_acknowledges_panel_resume",
+      "status": "passed"
+    },
+    {
+      "name": "docker_panel_refresh_request_is_accepted",
+      "status": "passed"
+    },
+    {
+      "name": "worker_graph_matches_sqlite",
+      "status": "passed",
+      "counts": {
+        "nodes": 1054,
+        "relationships": 2540,
+        "overview_relationships": 116
+      }
+    },
+    {
+      "name": "new_database_restored_from_public_snapshot",
+      "status": "passed"
+    },
+    {
+      "name": "generated_env_is_private",
+      "status": "passed"
+    },
+    {
+      "name": "data_and_password_survive_container_recreation",
+      "status": "passed"
+    },
+    {
+      "name": "live_graph_audit_after_recreation",
+      "status": "passed",
+      "checks": 9,
+      "repeat_unchanged": true
+    },
+    {
+      "name": "container_unit_tests",
+      "status": "passed",
+      "count": 339,
+      "skipped": 2
+    },
+    {
+      "name": "container_cli_smoke",
+      "status": "passed"
+    },
+    {
+      "name": "stop_removes_workbench_listener",
+      "status": "passed"
+    }
+  ],
+  "runtime_input_sha256": "8cafa5b64a8bad5125fca7db7c9db9b12e9a6a2ab3efa0facc604bd64fc5e94d",
+  "docker_engine": "29.9.1",
+  "docker_compose": "2.40.3-3",
+  "python_container": "Python 3.13.17",
+  "status": "passed",
+  "isolated_resource_cleanup": "passed",
+  "finished_at": "2026-10-25T09:55:55.145858+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "host_unit_tests": 339,
+  "container_unit_tests": 339,
+  "container_skipped": 2,
+  "docker_checks": 19,
+  "browser_checks": 8,
+  "offline_cli_smoke": "passed",
+  "internal_html_links": {
+    "checked": 67,
+    "broken": 0
+  },
+  "author_pending": true
+}

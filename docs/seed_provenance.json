@@ -1,0 +1,25 @@
+{
+  "collection_method": "Открытый веб-поиск ассистента; затем локальный JSONL-импорт. Это не результат RSS-сборщика. Сохранены краткие авторские пересказы, а не полные страницы.",
+  "collected_at": "2026-10-23T18:21:15+00:00",
+  "date_precision": "В исходных страницах известен день, но точное время и часовой пояс не установлены. published_at оставлен null. Дата события не подменяет дату публикации.",
+  "sources": [
+    {
+      "url": "https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/",
+      "publication_day": "2025-07-16",
+      "independence_group": "novabev_official",
+      "event_group": "novabev-2025-07-14"
+    },
+    {
+      "url": "https://novabev.com/press-room/lenta/novabev-group-and-winelab-are-gradually-restoring-operations-following-the-cyberattack/",
+      "publication_day": "2025-07-22",
+      "independence_group": "novabev_official",
+      "event_group": "novabev-2025-07-14"
+    },
+    {
+      "url": "https://novabev.com/en/press-room/lenta/novabev-group-has-begun-modernizing-its-cybersecurity-system/",
+      "publication_day": "2025-08-18",
+      "independence_group": "novabev_official",
+      "event_group": "novabev-2025-07-14"
+    }
+  ]
+}

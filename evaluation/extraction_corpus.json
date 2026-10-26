@@ -1,0 +1,1189 @@
+{
+  "format": "cti-extraction-corpus-v1",
+  "as_of": "2026-10-24T14:46:40+00:00",
+  "sampling": {
+    "method": "predeclared_source_quotas_then_sha256_order",
+    "seed": "extraction-review-20261024",
+    "quotas": {
+      "securitylab_news": 6,
+      "securitylab_analytics": 3,
+      "securelist_research": 2,
+      "trueconf_advisories": 5,
+      "cisa_kev": 5,
+      "bizone_news": 3,
+      "standoff_programs": 2,
+      "trueconf_php_notice": 1,
+      "manual_web_trueconf_cases": 3
+    },
+    "excluded_prior_pilot_urls": 25,
+    "excluded_prior_pilot_ids": 30,
+    "catalog_entry_identity": "publication_id_and_content_hash; catalogue URL may repeat",
+    "prediction_based_selection": false,
+    "unseen_development_holdout": false
+  },
+  "limitations": [
+    "Оцениваются сохранённые тексты и каталог, а не весь интернет или HTML-парсер.",
+    "Часть входов — краткие пересказы; они помечены в форме.",
+    "Материалы могли использоваться при разработке; это не скрытый holdout.",
+    "Человеческая независимость декларируется рецензентом, а не устанавливается программой."
+  ],
+  "companies": [
+    {
+      "aliases": [
+        "Фирма «1С»"
+      ],
+      "country": "RU",
+      "domains": [],
+      "entity_type": "technology_vendor",
+      "id": "1c-vendor",
+      "monitor_target": false,
+      "name": "Фирма 1С",
+      "reference_url": "https://www.company.rt.ru/press/REGIONALNEWS/d457564/",
+      "sector": "разработка ПО"
+    },
+    {
+      "aliases": [
+        "Аэрофлот",
+        "Aeroflot"
+      ],
+      "country": "RU",
+      "domains": [
+        "aeroflot.ru"
+      ],
+      "id": "aeroflot",
+      "name": "ПАО Аэрофлот",
+      "reference_url": "https://www.aeroflot.ru/",
+      "sector": "авиационный транспорт"
+    },
+    {
+      "aliases": [],
+      "country": "US",
+      "domains": [],
+      "entity_type": "historical_case",
+      "id": "arbys",
+      "is_demo": false,
+      "monitor_target": false,
+      "name": "Arby’s",
+      "sector": "общественное питание"
+    },
+    {
+      "aliases": [
+        "Аскон"
+      ],
+      "country": "RU",
+      "domains": [],
+      "id": "askon",
+      "name": "АСКОН",
+      "reference_url": "https://trueconf.ru/company/customers.html",
+      "sector": "разработка ПО"
+    },
+    {
+      "aliases": [],
+      "country": "GB",
+      "domains": [],
+      "entity_type": "historical_case",
+      "id": "british-library",
+      "is_demo": false,
+      "monitor_target": false,
+      "name": "British Library",
+      "sector": "культура и библиотеки"
+    },
+    {
+      "aliases": [],
+      "country": "US",
+      "domains": [],
+      "entity_type": "historical_case",
+      "id": "chilis",
+      "is_demo": false,
+      "monitor_target": false,
+      "name": "Chili’s",
+      "sector": "общественное питание"
+    },
+    {
+      "aliases": [],
+      "country": "US",
+      "domains": [],
+      "entity_type": "historical_case",
+      "id": "chipotle",
+      "is_demo": false,
+      "monitor_target": false,
+      "name": "Chipotle Mexican Grill",
+      "sector": "общественное питание"
+    },
+    {
+      "aliases": [
+        "Cloud․ru",
+        "Клауд.ру"
+      ],
+      "country": "RU",
+      "domains": [],
+      "id": "cloud-ru",
+      "monitor_target": true,
+      "name": "Cloud.ru",
+      "reference_url": "https://bugbounty.standoff365.com/en-US/programs/cloud_ru",
+      "sector": "облачные сервисы"
+    },
+    {
+      "aliases": [],
+      "country": "US",
+      "domains": [],
+      "entity_type": "historical_case",
+      "id": "equifax",
+      "is_demo": false,
+      "monitor_target": false,
+      "name": "Equifax",
+      "sector": "финансовые услуги"
+    },
+    {
+      "aliases": [],
+      "country": "RU",
+      "domains": [],
+      "entity_type": "public_authority",
+      "id": "government-mo",
+      "name": "Правительство Московской области",
+      "reference_url": "https://trueconf.ru/company/customers.html",
+      "sector": "государственное управление"
+    },
+    {
+      "aliases": [
+        "СПАО Ингосстрах"
+      ],
+      "country": "RU",
+      "domains": [],
+      "id": "ingosstrakh",
+      "name": "Ингосстрах",
+      "reference_url": "https://trueconf.ru/blog/wp-content/uploads/2022/06/ingosstakh.pdf",
+      "sector": "страхование"
+    },
+    {
+      "aliases": [],
+      "country": "RU",
+      "domains": [],
+      "id": "metalloinvest",
+      "name": "Металлоинвест",
+      "reference_url": "https://trueconf.ru/company/customers.html",
+      "sector": "металлургия"
+    },
+    {
+      "aliases": [
+        "Novabev",
+        "Новабев"
+      ],
+      "country": "RU",
+      "domains": [
+        "novabev.com"
+      ],
+      "id": "novabev",
+      "name": "Novabev Group",
+      "reference_url": "https://novabev.com/",
+      "sector": "производство и дистрибуция напитков"
+    },
+    {
+      "aliases": [
+        "ОТЭКО Групп"
+      ],
+      "country": "RU",
+      "domains": [],
+      "id": "oteko",
+      "name": "ОТЭКО",
+      "reference_url": "https://trueconf.ru/company/customers.html",
+      "sector": "портовая логистика"
+    },
+    {
+      "aliases": [],
+      "country": "US",
+      "domains": [],
+      "entity_type": "historical_case",
+      "id": "qualys",
+      "is_demo": false,
+      "monitor_target": false,
+      "name": "Qualys",
+      "sector": "кибербезопасность"
+    },
+    {
+      "aliases": [
+        "Госкорпорация Росатом"
+      ],
+      "country": "RU",
+      "domains": [],
+      "entity_type": "group",
+      "id": "rosatom",
+      "name": "Росатом",
+      "reference_url": "https://trueconf.ru/blog/wp-content/uploads/2023/06/id-rosatom-ru.pdf",
+      "sector": "атомная энергетика"
+    },
+    {
+      "aliases": [
+        "Инжиниринговый дивизион Госкорпорации «Росатом»"
+      ],
+      "country": "RU",
+      "domains": [],
+      "entity_type": "division",
+      "id": "rosatom-engineering",
+      "name": "Инжиниринговый дивизион Росатома",
+      "reference_url": "https://trueconf.ru/blog/wp-content/uploads/2023/06/id-rosatom-ru.pdf",
+      "sector": "атомная энергетика"
+    },
+    {
+      "aliases": [
+        "Ростелеком",
+        "Rostelecom"
+      ],
+      "country": "RU",
+      "domains": [
+        "rt.ru",
+        "company.rt.ru"
+      ],
+      "id": "rostelecom",
+      "name": "ПАО Ростелеком",
+      "reference_url": "https://www.company.rt.ru/",
+      "sector": "телекоммуникации"
+    },
+    {
+      "aliases": [],
+      "country": "RU",
+      "domains": [],
+      "id": "roszarubezhneft",
+      "name": "Росзарубежнефть",
+      "reference_url": "https://trueconf.ru/blog/success-stories/roszarubezhneft-trueconf-server",
+      "sector": "нефтегазовая отрасль"
+    },
+    {
+      "aliases": [
+        "Сибур"
+      ],
+      "country": "RU",
+      "domains": [],
+      "entity_type": "group",
+      "id": "sibur",
+      "name": "СИБУР",
+      "reference_url": "https://trueconf.ru/blog/success-stories/sibur-trueconf",
+      "sector": "нефтехимия"
+    },
+    {
+      "aliases": [],
+      "country": "SG",
+      "domains": [],
+      "entity_type": "historical_case",
+      "id": "singtel",
+      "is_demo": false,
+      "monitor_target": false,
+      "name": "Singtel",
+      "sector": "телекоммуникации"
+    },
+    {
+      "aliases": [],
+      "country": "RU",
+      "domains": [],
+      "id": "sovcombank",
+      "monitor_target": true,
+      "name": "Совкомбанк",
+      "reference_url": "https://sovcombank.ru/",
+      "sector": "финансовые услуги"
+    },
+    {
+      "aliases": [
+        "Winelab"
+      ],
+      "country": "RU",
+      "domains": [
+        "winelab.ru"
+      ],
+      "id": "winelab",
+      "name": "ВинЛаб",
+      "reference_url": "https://www.winelab.ru/",
+      "sector": "розничная торговля"
+    },
+    {
+      "aliases": [
+        "Yandex"
+      ],
+      "country": "RU",
+      "domains": [
+        "yandex.ru"
+      ],
+      "id": "yandex",
+      "name": "Яндекс",
+      "reference_url": "https://yandex.ru/company/",
+      "sector": "интернет-сервисы"
+    },
+    {
+      "aliases": [],
+      "country": "RU",
+      "domains": [],
+      "id": "zvuk",
+      "monitor_target": true,
+      "name": "Звук",
+      "reference_url": "https://bugbounty.bi.zone/companies/zvuk/main",
+      "sector": "цифровые сервисы"
+    }
+  ],
+  "products": [
+    {
+      "aliases": [
+        "1C:Enterprise",
+        "1С:Предприятие 8"
+      ],
+      "id": "1c-enterprise",
+      "is_demo": false,
+      "name": "1С:Предприятие",
+      "vendor": "1С"
+    },
+    {
+      "aliases": [
+        "1C:Управление холдингом"
+      ],
+      "id": "1c-holding",
+      "is_demo": false,
+      "name": "1С:Управление холдингом",
+      "vendor": "1С"
+    },
+    {
+      "aliases": [],
+      "id": "accellion-fta",
+      "is_demo": false,
+      "name": "Accellion FTA",
+      "vendor": "Accellion"
+    },
+    {
+      "aliases": [
+        "Apache Struts"
+      ],
+      "id": "apache-struts2",
+      "is_demo": false,
+      "name": "Apache Struts 2",
+      "vendor": "Apache Software Foundation"
+    },
+    {
+      "aliases": [
+        "Bitrix Site Manager"
+      ],
+      "id": "bitrix-site-manager",
+      "is_demo": false,
+      "name": "1С-Битрикс: Управление сайтом",
+      "vendor": "1С-Битрикс"
+    },
+    {
+      "aliases": [],
+      "id": "gitlab",
+      "is_demo": false,
+      "name": "GitLab",
+      "vendor": "GitLab"
+    },
+    {
+      "aliases": [],
+      "id": "moveit-transfer",
+      "is_demo": false,
+      "name": "MOVEit Transfer",
+      "vendor": "Progress Software"
+    },
+    {
+      "aliases": [
+        "TrueConf для Windows"
+      ],
+      "id": "trueconf-client",
+      "is_demo": false,
+      "name": "TrueConf Client",
+      "vendor": "Труконф"
+    },
+    {
+      "aliases": [],
+      "id": "trueconf-enterprise",
+      "is_demo": false,
+      "name": "TrueConf Enterprise",
+      "vendor": "Труконф"
+    },
+    {
+      "aliases": [],
+      "id": "trueconf-room",
+      "is_demo": false,
+      "name": "TrueConf Room",
+      "vendor": "Труконф"
+    },
+    {
+      "aliases": [
+        "Труконф Сервер"
+      ],
+      "id": "trueconf-server",
+      "is_demo": false,
+      "name": "TrueConf Server",
+      "vendor": "Труконф"
+    }
+  ],
+  "records": [
+    {
+      "sample_id": 1,
+      "publication_id": "c690b07aef6abc23c99dec41",
+      "content_hash": "3c340510bea3d8cb05ee64309fc1cf4cbfcb0cf1efacec8baefb884c12002b1c",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T07:02:39+00:00",
+        "external_id": "vendor-table:BDU:2026-03092",
+        "is_demo": false,
+        "metadata": {
+          "collection_method": "vendor_table",
+          "content_scope": "advisory_table_row",
+          "date_precision": "unknown",
+          "independence_group": "trueconf",
+          "vendor_record": {
+            "attributes": {
+              "affected_version_text": "Windows <5.5.2.11029; Linux <5.5.2.11041; Windows <5.4.8.10015; Linux <5.4.8.10016"
+            },
+            "identifier": "BDU:2026-03092",
+            "product_id": "trueconf-server"
+          }
+        },
+        "published_at": null,
+        "source_id": "trueconf_advisories",
+        "text": "BDU:2026-03092: TrueConf Server; затронутые версии по таблице: Windows <5.5.2.11029; Linux <5.5.2.11041; Windows <5.4.8.10015; Linux <5.4.8.10016.",
+        "title": "BDU:2026-03092 — TrueConf Server",
+        "url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories"
+      }
+    },
+    {
+      "sample_id": 2,
+      "publication_id": "be630b1e252974c75f9bb0f4",
+      "content_hash": "db786e367dc617169487976afabc847798f8d25e550c3f5673fb37cb7aefcdd0",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T07:02:39+00:00",
+        "external_id": "vendor-table:CVE-2025-66824",
+        "is_demo": false,
+        "metadata": {
+          "collection_method": "vendor_table",
+          "content_scope": "advisory_table_row",
+          "date_precision": "unknown",
+          "independence_group": "trueconf",
+          "vendor_record": {
+            "attributes": {
+              "affected_version_text": "5.5.2.10813",
+              "affected_versions": [
+                "5.5.2.10813"
+              ]
+            },
+            "identifier": "CVE-2025-66824",
+            "product_id": "trueconf-server"
+          }
+        },
+        "published_at": null,
+        "source_id": "trueconf_advisories",
+        "text": "CVE-2025-66824: TrueConf Server; затронутые версии по таблице: 5.5.2.10813.",
+        "title": "CVE-2025-66824 — TrueConf Server",
+        "url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories"
+      }
+    },
+    {
+      "sample_id": 3,
+      "publication_id": "88d0bf59f57957d8ef9f6362",
+      "content_hash": "9a7a5cf5dd0188573f47a1d809bb2d989b2805f3f69c0243eb5ed14f1499f5b5",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:36+00:00",
+        "external_id": "https://www.securitylab.ru/news/579000.php",
+        "is_demo": false,
+        "metadata": {},
+        "published_at": "2026-10-20T17:37:44+00:00",
+        "source_id": "securitylab_news",
+        "text": "Сами распределили роли, вычислили крепость и после десятков поражений нашли способ победить.",
+        "title": "ИИ-агенты прошли Minecraft без людей: 605 смертей, 27 часов упорства и убитый Дракон Края",
+        "url": "https://www.securitylab.ru/news/579000.php"
+      }
+    },
+    {
+      "sample_id": 4,
+      "publication_id": "d66e068227a08a11a6628d61",
+      "content_hash": "6776741063828c4fe78b88a65e9985c93c00568f7116b78f0438fc7f14e80e4e",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T07:02:56+00:00",
+        "external_id": "CVE-2026-86060",
+        "is_demo": false,
+        "metadata": {
+          "catalog_added_day": "2026-09-10",
+          "catalog_released_at": "2026-10-23T19:30:18+00:00",
+          "catalog_sha256": "97a6e54bc74c651ab3c55657191db9adec6c63b05ca54e4205327cfd97a8fb70",
+          "catalog_version": "2026.10.23",
+          "collection_method": "cisa_kev_json",
+          "content_scope": "catalog_record",
+          "date_precision": "day",
+          "interpretation": "Включение в KEV не доказывает атаку на компанию из нашей выборки.",
+          "known_ransomware_campaign_use": "Unknown",
+          "notes": "https://mikrotik.com/supportsec/september-2026-vulnerability ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-86060",
+          "source_role": "vulnerability_context"
+        },
+        "published_at": null,
+        "source_id": "cisa_kev",
+        "text": "CVE-2026-86060: MikroTik / RouterOS. MikroTik RouterOS contains an improper neutralization of argument delimiters in a command vulnerability which allows an attacker to change the trusted RouterOS policy mask, leading to privilege escalation.\nCISA KEV dateAdded: 2026-09-10. Required action: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "title": "CVE-2026-86060 — MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability",
+        "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json"
+      }
+    },
+    {
+      "sample_id": 5,
+      "publication_id": "e87b38c5c004bfe5a71e0fac",
+      "content_hash": "e8559367bb7492d484fafa83641394bb61a2d024b2b87ce9646fb4e79a85a149",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T20:15:35+00:00",
+        "external_id": "research-library:roszarubezhneft-server",
+        "is_demo": false,
+        "metadata": {
+          "collection_method": "manual_web_summary",
+          "content_scope": "verified_source_summary",
+          "independence_group": "trueconf",
+          "network_caveat_source": "https://trueconf.ru/blog/success-stories/roszarubezhneft-trueconf-server",
+          "publication_day": "2026-08-16",
+          "source_reviewed_at": "2026-10-23T20:15:35+00:00",
+          "source_visibility": "public_page"
+        },
+        "published_at": null,
+        "source_id": "manual_web_trueconf_cases",
+        "text": "Росзарубежнефть использует TrueConf Server в собственном контуре по описанию проекта разработчиком. Установленная версия не названа. Публикация сообщает о собственном ЦОД и работе в закрытом контуре без внешнего доступа.",
+        "title": "Росзарубежнефть: TrueConf Server в коммуникационной системе",
+        "url": "https://trueconf.ru/blog/success-stories/roszarubezhneft-trueconf-server"
+      }
+    },
+    {
+      "sample_id": 6,
+      "publication_id": "5a64bf339ccf95a0de7864c0",
+      "content_hash": "45170093868771f7a488cd96e3b22d83056a67ee22d18faef2e53f95ef2d8865",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T07:02:56+00:00",
+        "external_id": "CVE-2026-102489",
+        "is_demo": false,
+        "metadata": {
+          "catalog_added_day": "2026-10-02",
+          "catalog_released_at": "2026-10-23T19:30:18+00:00",
+          "catalog_sha256": "97a6e54bc74c651ab3c55657191db9adec6c63b05ca54e4205327cfd97a8fb70",
+          "catalog_version": "2026.10.23",
+          "collection_method": "cisa_kev_json",
+          "content_scope": "catalog_record",
+          "date_precision": "day",
+          "interpretation": "Включение в KEV не доказывает атаку на компанию из нашей выборки.",
+          "known_ransomware_campaign_use": "Unknown",
+          "notes": "https://zammad.com/en/product/releases/ ; https://community.zammad.org/t/take-care-local-privilege-escalation-cve-2026-102490-is-reported-as-being-actively-exploited/21297/2 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-102489",
+          "source_role": "vulnerability_context"
+        },
+        "published_at": null,
+        "source_id": "cisa_kev",
+        "text": "CVE-2026-102489: Zammad GmbH / Zammad. Zammad GmbH Zammad contains a session fixation vulnerability that can lead to remote code execution as the zammad user. This vulnerability can be chained with CVE-2026-102490.\nCISA KEV dateAdded: 2026-10-02. Required action: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "title": "CVE-2026-102489 — Zammad GmbH Zammad Session Fixation Vulnerability",
+        "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json"
+      }
+    },
+    {
+      "sample_id": 7,
+      "publication_id": "6aaf48a375209e9b70d30f3c",
+      "content_hash": "d58b098ed2fcb9e75d2f5eadb9f521bb5a671692026fe14ccbafc66eaeb296d2",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T13:04:38+00:00",
+        "external_id": "https://bugbounty.standoff365.com/en-US/programs/pt_ngfw",
+        "is_demo": false,
+        "metadata": {
+          "bug_bounty_program": {
+            "company_name": null,
+            "name": "PT NGFW",
+            "platform": "Standoff Bug Bounty",
+            "url": "https://bugbounty.standoff365.com/en-US/programs/pt_ngfw"
+          },
+          "capture_provenance": "user_run_public_probe_reparsed_offline",
+          "capture_receipt_sha256": "5278f484b26693321948f1b15716ac924e4eff7d8da75c26844dbb89706aec30",
+          "collection_method": "bounty_listing",
+          "content_scope": "public_program_card",
+          "date_precision": "unknown",
+          "discovery_url": "https://bugbounty.standoff365.com/en-US/programs/",
+          "independence_group": "positive-technologies",
+          "publication_day": null,
+          "signal_scope": "research_program",
+          "source_role": "security_program_context"
+        },
+        "published_at": null,
+        "source_id": "standoff_programs",
+        "text": "PT NGFW",
+        "title": "PT NGFW",
+        "url": "https://bugbounty.standoff365.com/en-US/programs/pt_ngfw"
+      }
+    },
+    {
+      "sample_id": 8,
+      "publication_id": "134eaa36968c3e6e4648d552",
+      "content_hash": "62ed9a1d5abe52fab564490c2e7942ec091b49e80c45ca9cda7b04c607bd6b36",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T14:36:30+00:00",
+        "external_id": "https://www.securitylab.ru/news/579133.php",
+        "is_demo": false,
+        "metadata": {},
+        "published_at": "2026-10-24T09:05:28+00:00",
+        "source_id": "securitylab_news",
+        "text": "Новое ведомство готовит кибератаки, подмену компонентов и другие тайные сценарии.",
+        "title": "Пентагон открывает офис технологических диверсий. Чужое оружие хотят ломать ещё до войны",
+        "url": "https://www.securitylab.ru/news/579133.php"
+      }
+    },
+    {
+      "sample_id": 9,
+      "publication_id": "2d9ebde7c079b7228a49d5e1",
+      "content_hash": "f11056d5a5dfcf1b98094777b672ab4d9f498b057bfde10773a0756a0beeb7c4",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T07:02:39+00:00",
+        "external_id": "vendor-table:CVE-2017-20120",
+        "is_demo": false,
+        "metadata": {
+          "collection_method": "vendor_table",
+          "content_scope": "advisory_table_row",
+          "date_precision": "unknown",
+          "independence_group": "trueconf",
+          "vendor_record": {
+            "attributes": {
+              "affected_version_text": "4.3.7",
+              "affected_versions": [
+                "4.3.7"
+              ]
+            },
+            "identifier": "CVE-2017-20120",
+            "product_id": "trueconf-server"
+          }
+        },
+        "published_at": null,
+        "source_id": "trueconf_advisories",
+        "text": "CVE-2017-20120: TrueConf Server; затронутые версии по таблице: 4.3.7.",
+        "title": "CVE-2017-20120 — TrueConf Server",
+        "url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories"
+      }
+    },
+    {
+      "sample_id": 10,
+      "publication_id": "f0502e6e28f7ec34c73a6b56",
+      "content_hash": "d7ccfbdc0339588b66ad5e70605ba25a14ed76d476fb93d7f4be90d495af3551",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:39+00:00",
+        "external_id": "https://www.securitylab.ru/analytics/578670.php",
+        "is_demo": false,
+        "metadata": {},
+        "published_at": "2026-10-14T06:48:00+00:00",
+        "source_id": "securitylab_analytics",
+        "text": "У CDN нет универсального победителя. Один лучше подходит для видео, другой для интернет-магазина, третий для критичной инфраструктуры. В статье разбираем, какие параметры действительно важны и как сравнивать провайдеров без маркетинговых ловушек.",
+        "title": "Как сравнивать CDN правильно. TTFB, p95, кеш, DDoS и реальная цена",
+        "url": "https://www.securitylab.ru/analytics/578670.php"
+      }
+    },
+    {
+      "sample_id": 11,
+      "publication_id": "ccbf0b60c1bb8598ac1ebb8c",
+      "content_hash": "1b5fca83cc57fcce4fa170e47598968af3497ba37a7e472fedd002b16b2e28ab",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T07:02:39+00:00",
+        "external_id": "vendor-table:CVE-2025-66835",
+        "is_demo": false,
+        "metadata": {
+          "collection_method": "vendor_table",
+          "content_scope": "advisory_table_row",
+          "date_precision": "unknown",
+          "independence_group": "trueconf",
+          "vendor_record": {
+            "attributes": {
+              "affected_version_text": "8.5.2",
+              "affected_versions": [
+                "8.5.2"
+              ]
+            },
+            "identifier": "CVE-2025-66835",
+            "product_id": "trueconf-client"
+          }
+        },
+        "published_at": null,
+        "source_id": "trueconf_advisories",
+        "text": "CVE-2025-66835: TrueConf Client; затронутые версии по таблице: 8.5.2.",
+        "title": "CVE-2025-66835 — TrueConf Client",
+        "url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories"
+      }
+    },
+    {
+      "sample_id": 12,
+      "publication_id": "3ff2a72d1d7ed85adb3c5694",
+      "content_hash": "092fffb6045780041ec583a17ea5c6a13a81fcee81cd099a0de47c9d8353b042",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T13:04:42+00:00",
+        "external_id": "https://bi.zone/news/integrirovali-bi-zone-mail-security-s-bi-zone-sandbox/",
+        "is_demo": false,
+        "metadata": {
+          "capture_provenance": "user_run_public_probe_reparsed_offline",
+          "capture_receipt_sha256": "5278f484b26693321948f1b15716ac924e4eff7d8da75c26844dbb89706aec30",
+          "collection_method": "publisher_news",
+          "content_scope": "title_only",
+          "date_precision": "day",
+          "discovery_url": "https://bi.zone/news/",
+          "independence_group": "bizone",
+          "publication_day": "2026-10-15",
+          "source_role": "research_context"
+        },
+        "published_at": null,
+        "source_id": "bizone_news",
+        "text": "Интегрировали BI.ZONE Mail Security с BI.ZONE Sandbox",
+        "title": "Интегрировали BI.ZONE Mail Security с BI.ZONE Sandbox",
+        "url": "https://bi.zone/news/integrirovali-bi-zone-mail-security-s-bi-zone-sandbox/"
+      }
+    },
+    {
+      "sample_id": 13,
+      "publication_id": "b113f26120c3ecaa6c2c4474",
+      "content_hash": "bcb7bd439ea7f3d37857e2920ca585c1fc8b6d556c2c9b437ec0d8bb25f23a4b",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T07:02:56+00:00",
+        "external_id": "CVE-2026-102490",
+        "is_demo": false,
+        "metadata": {
+          "catalog_added_day": "2026-10-02",
+          "catalog_released_at": "2026-10-23T19:30:18+00:00",
+          "catalog_sha256": "97a6e54bc74c651ab3c55657191db9adec6c63b05ca54e4205327cfd97a8fb70",
+          "catalog_version": "2026.10.23",
+          "collection_method": "cisa_kev_json",
+          "content_scope": "catalog_record",
+          "date_precision": "day",
+          "interpretation": "Включение в KEV не доказывает атаку на компанию из нашей выборки.",
+          "known_ransomware_campaign_use": "Unknown",
+          "notes": "https://zammad.com/en/product/releases/ ; https://community.zammad.org/t/take-care-local-privilege-escalation-cve-2026-102490-is-reported-as-being-actively-exploited/21297/2 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-102490",
+          "source_role": "vulnerability_context"
+        },
+        "published_at": null,
+        "source_id": "cisa_kev",
+        "text": "CVE-2026-102490: Zammad GmbH / Zammad. Zammad GmbH Zammad contains an improper privilege management vulnerability that can allow the local zammad user to escalate privileges to root. This vulnerability can be chained with CVE-2026-102489.\nCISA KEV dateAdded: 2026-10-02. Required action: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "title": "CVE-2026-102490 — Zammad GmbH Zammad Improper Privilege Management Vulnerability",
+        "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json"
+      }
+    },
+    {
+      "sample_id": 14,
+      "publication_id": "cadaaaff21f6b34252b2827c",
+      "content_hash": "f73949f89f1474e58ad7b5179d920231d9f3c04429667abda5862ee722e3c329",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:39+00:00",
+        "external_id": "https://www.securitylab.ru/analytics/558483.php",
+        "is_demo": false,
+        "metadata": {},
+        "published_at": "2026-10-08T20:10:00+00:00",
+        "source_id": "securitylab_analytics",
+        "text": "Как современный VPN помогает минимизировать любопытные взгляды.",
+        "title": "VPN в России в 2026 году. Что можно и за что штрафуют",
+        "url": "https://www.securitylab.ru/analytics/558483.php"
+      }
+    },
+    {
+      "sample_id": 15,
+      "publication_id": "4e3a47d6de5c06a702afc353",
+      "content_hash": "00e49a2c99ead271b1cd0d95bc0cea24ab97469cb609b96dd1e7fac8ee572c9f",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T20:15:35+00:00",
+        "external_id": "research-library:ingosstrakh-server",
+        "is_demo": false,
+        "metadata": {
+          "collection_method": "manual_web_summary",
+          "content_scope": "verified_source_summary",
+          "independence_group": "trueconf",
+          "publication_day": null,
+          "source_reviewed_at": "2026-10-23T20:15:35+00:00",
+          "source_visibility": "indexed_pdf_excerpt"
+        },
+        "published_at": null,
+        "source_id": "manual_web_trueconf_cases",
+        "text": "Ингосстрах использует TrueConf Server как платформу видеосвязи для IngoMobile по описанию кейса поставщика. Версия не указана.",
+        "title": "Ингосстрах: платформа видеосвязи в IngoMobile",
+        "url": "https://trueconf.ru/blog/wp-content/uploads/2022/06/ingosstakh.pdf"
+      }
+    },
+    {
+      "sample_id": 16,
+      "publication_id": "2c5c21108de221c321a5a50d",
+      "content_hash": "e8942c5e17094fb21b9a802d89ab4d1c4e3a85c48e37d6a2c03d65574b9b61e8",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T07:02:39+00:00",
+        "external_id": "vendor-table:CVE-2017-20117",
+        "is_demo": false,
+        "metadata": {
+          "collection_method": "vendor_table",
+          "content_scope": "advisory_table_row",
+          "date_precision": "unknown",
+          "independence_group": "trueconf",
+          "vendor_record": {
+            "attributes": {
+              "affected_version_text": "4.3.7",
+              "affected_versions": [
+                "4.3.7"
+              ]
+            },
+            "identifier": "CVE-2017-20117",
+            "product_id": "trueconf-server"
+          }
+        },
+        "published_at": null,
+        "source_id": "trueconf_advisories",
+        "text": "CVE-2017-20117: TrueConf Server; затронутые версии по таблице: 4.3.7.",
+        "title": "CVE-2017-20117 — TrueConf Server",
+        "url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories"
+      }
+    },
+    {
+      "sample_id": 17,
+      "publication_id": "01981e8ae646170bcc2bbe4c",
+      "content_hash": "891b2df1d7fc3b251d6302a1fd6e9b7c41b42979a56166403861d17921ef67c6",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:39+00:00",
+        "external_id": "https://www.securitylab.ru/analytics/573557.php",
+        "is_demo": false,
+        "metadata": {},
+        "published_at": "2026-10-13T06:52:00+00:00",
+        "source_id": "securitylab_analytics",
+        "text": "Вход с подтверждением, согласия, самозапрет, восстановление доступа и другие частые запросы.",
+        "title": "Госуслуги от и до: как настроить безопасность своего аккаунта и вернуть его в случае взлома",
+        "url": "https://www.securitylab.ru/analytics/573557.php"
+      }
+    },
+    {
+      "sample_id": 18,
+      "publication_id": "5f56cccbd9b2fff78e0c69da",
+      "content_hash": "1ff6d85439bffbde28db3b5d8313ab3dd5d3c693c4559dca6c3bf63345ec9de4",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:36+00:00",
+        "external_id": "https://www.securitylab.ru/news/579045.php",
+        "is_demo": false,
+        "metadata": {},
+        "published_at": "2026-10-22T04:35:01+00:00",
+        "source_id": "securitylab_news",
+        "text": "Обычный домашний медиасервер может незаметно превратиться в источник дохода для киберпреступников.",
+        "title": "Четыре уязвимости Plex объединили в RCE без пароля. Под угрозой почти 100 тысяч серверов",
+        "url": "https://www.securitylab.ru/news/579045.php"
+      }
+    },
+    {
+      "sample_id": 19,
+      "publication_id": "58ee99b65b9b064a5a359ad1",
+      "content_hash": "518e43654f6d38da0e72387bf43c4654bdffe41fa43a98c85144f6aafa4dbd7d",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T20:15:35+00:00",
+        "external_id": "research-library:oteko-enterprise",
+        "is_demo": false,
+        "metadata": {
+          "collection_method": "manual_web_summary",
+          "content_scope": "verified_source_summary",
+          "independence_group": "trueconf",
+          "publication_day": null,
+          "source_reviewed_at": "2026-10-23T20:15:35+00:00",
+          "source_visibility": "public_page"
+        },
+        "published_at": null,
+        "source_id": "manual_web_trueconf_cases",
+        "text": "ОТЭКО использует TrueConf Enterprise согласно карточке проекта разработчика. Версия и дата инвентаризации неизвестны.",
+        "title": "ОТЭКО: публичный кейс внедрения",
+        "url": "https://trueconf.ru/company/customers.html"
+      }
+    },
+    {
+      "sample_id": 20,
+      "publication_id": "059c056f1f665a79798e65e9",
+      "content_hash": "0aab7907b95fc84fe8fddcc1a7137609b031bb7abb770501f2a4fd54c2822277",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:36+00:00",
+        "external_id": "https://www.securitylab.ru/news/578975.php",
+        "is_demo": false,
+        "metadata": {},
+        "published_at": "2026-10-20T11:03:56+00:00",
+        "source_id": "securitylab_news",
+        "text": "ИИ нашёл неожиданную лазейку в вычислениях.",
+        "title": "Программисты больше не нужны для оптимизации? ИИ Maxwell ускоряет код в 38 раз",
+        "url": "https://www.securitylab.ru/news/578975.php"
+      }
+    },
+    {
+      "sample_id": 21,
+      "publication_id": "db20e3e16aa73c29085561c0",
+      "content_hash": "33b522e3dbaa4c1b7601e7c11af04fc99ae1cf3803b6e741eafaf4809b00abf4",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T13:04:49+00:00",
+        "external_id": "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+        "is_demo": false,
+        "metadata": {
+          "capture_provenance": "user_run_public_probe_reparsed_offline",
+          "capture_receipt_sha256": "5278f484b26693321948f1b15716ac924e4eff7d8da75c26844dbb89706aec30",
+          "collection_method": "vendor_notice",
+          "content_scope": "public_article_text",
+          "date_precision": "timestamp",
+          "discovery_url": "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server",
+          "independence_group": "trueconf",
+          "publication_day": null,
+          "security_notice": {
+            "affected_ranges": [
+              {
+                "lte": "5.5.7"
+              }
+            ],
+            "conditions": "Требуется проверить ветку продукта, установленную версию, конфигурацию и обновление по исходному бюллетеню.",
+            "date_meaning": "publication",
+            "extraction_status": "parsed_vendor_statement",
+            "fixed_versions": [
+              "5.5.8"
+            ],
+            "product_id": "trueconf-server",
+            "product_name": "TrueConf Server"
+          },
+          "source_role": "vendor_security_notice"
+        },
+        "published_at": "2026-10-21T21:34:38+00:00",
+        "source_id": "trueconf_php_notice",
+        "text": "Due to the discovery of critical vulnerabilities in the PHP module used by the TrueConf Server web service (all versions up to and including 5.5.7), we strongly recommend upgrading to TrueConf Server 5.5.8 . Installing this update is sufficient to protect against the PHP2Shell vulnerability — no additional steps are required.\nIf you are running TrueConf Server 5.4.x or 5.3.x , follow the instructions below to protect your system against PHP2Shell. The required changes must be applied to the physical or virtual machine running the TrueConf Web Manager service on Windows or the trueconf-php service on Linux.\nThe release of updated TrueConf Server versions 5.4 and 5.3 featuring a new PHP version will be announced separately in the near future.\nRecommendations for Windows Server\n1. Set memory_limit=-1 in the C:\\Program Files\\TrueConf Server\\php\\php.ini file.\n2. Add the following new line to the [Session] section in the C:\\Program Files\\TrueConf Server\\php\\php.ini file:\n3. Add the following lines to the C:\\Program Files\\TrueConf Server\\httpconf\\opt\\rewrite.conf file (if the file does not exist, it must be created):\n4. Run the following commands:\nRecommendations for Linux\n1. Set memory_limit=-1 in the /opt/trueconf/server/etc/php/php.ini file.\n2. Add the following new line to the [Session] section in the /opt/trueconf/server/etc/php/php.ini file:\n3. Add the following lines to the /opt/trueconf/server/etc/backend/opt/rewrite.conf file (if the file does not exist, it must be created):\nLev Yakupov",
+        "title": "Security Patch for the PHP Service in TrueConf Server",
+        "url": "https://trueconf.com/blog/news/security-patch-for-the-php-service-in-trueconf-server"
+      }
+    },
+    {
+      "sample_id": 22,
+      "publication_id": "b792122f3023168b2a1755b6",
+      "content_hash": "7e2d436eb99d33e0b67b5c8beacb0f47e789cecb67524db26870e4c186d47370",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T13:04:38+00:00",
+        "external_id": "https://bugbounty.standoff365.com/en-US/programs/mx_vm",
+        "is_demo": false,
+        "metadata": {
+          "bug_bounty_program": {
+            "company_name": null,
+            "name": "MaxPatrol VM",
+            "platform": "Standoff Bug Bounty",
+            "url": "https://bugbounty.standoff365.com/en-US/programs/mx_vm"
+          },
+          "capture_provenance": "user_run_public_probe_reparsed_offline",
+          "capture_receipt_sha256": "5278f484b26693321948f1b15716ac924e4eff7d8da75c26844dbb89706aec30",
+          "collection_method": "bounty_listing",
+          "content_scope": "public_program_card",
+          "date_precision": "unknown",
+          "discovery_url": "https://bugbounty.standoff365.com/en-US/programs/",
+          "independence_group": "positive-technologies",
+          "publication_day": null,
+          "signal_scope": "research_program",
+          "source_role": "security_program_context"
+        },
+        "published_at": null,
+        "source_id": "standoff_programs",
+        "text": "MaxPatrol VM",
+        "title": "MaxPatrol VM",
+        "url": "https://bugbounty.standoff365.com/en-US/programs/mx_vm"
+      }
+    },
+    {
+      "sample_id": 23,
+      "publication_id": "3d5bc63b2c3e5229e9da8dd6",
+      "content_hash": "58fc0fdc2aabc3babdcda38515511517e06b420364d5e5037e20f3bf4ffeed02",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T07:02:56+00:00",
+        "external_id": "CVE-2026-60004",
+        "is_demo": false,
+        "metadata": {
+          "catalog_added_day": "2026-08-25",
+          "catalog_released_at": "2026-10-23T19:30:18+00:00",
+          "catalog_sha256": "97a6e54bc74c651ab3c55657191db9adec6c63b05ca54e4205327cfd97a8fb70",
+          "catalog_version": "2026.10.23",
+          "collection_method": "cisa_kev_json",
+          "content_scope": "catalog_record",
+          "date_precision": "day",
+          "interpretation": "Включение в KEV не доказывает атаку на компанию из нашей выборки.",
+          "known_ransomware_campaign_use": "Unknown",
+          "notes": "https://github.com/go-gitea/gitea/security/advisories/GHSA-rcr6-4jqh-j84m ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-60004",
+          "source_role": "vulnerability_context"
+        },
+        "published_at": null,
+        "source_id": "cisa_kev",
+        "text": "CVE-2026-60004: Gitea / Gitea. Gitea contains a code injection vulnerability that allows an attacker with repository write access to send a malicious patch to the diffpatch API endpoint to plant an executable Git hook and run shell commands as the Gitea service account.\nCISA KEV dateAdded: 2026-08-25. Required action: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "title": "CVE-2026-60004 — Gitea Code Injection Vulnerability",
+        "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json"
+      }
+    },
+    {
+      "sample_id": 24,
+      "publication_id": "9da9184aaf5fbebcbe5fca3c",
+      "content_hash": "fffb7b4c1c5ede99060c1d54b4ef9cc5490d30671da76beb95e349205e1f25c3",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:53+00:00",
+        "external_id": "https://securelist.ru/tr/hacking-cat/117062/",
+        "is_demo": false,
+        "metadata": {
+          "collection_method": "public_listing",
+          "content_scope": "title_only",
+          "date_checked_at": "2026-10-24T06:58:44+00:00",
+          "date_precision": "day",
+          "date_source_method": "manual_web_verification",
+          "date_source_url": "https://securelist.ru/tr/hacking-cat/117062/",
+          "discovery_url": "https://securelist.ru/",
+          "publication_day": "2026-09-11",
+          "source_role": "research_context"
+        },
+        "published_at": null,
+        "source_id": "securelist_research",
+        "text": "Распутывая клубок: разбираем инструментарий группировки Hacking Cat",
+        "title": "Распутывая клубок: разбираем инструментарий группировки Hacking Cat",
+        "url": "https://securelist.ru/tr/hacking-cat/117062/"
+      }
+    },
+    {
+      "sample_id": 25,
+      "publication_id": "944ca2f700982c88435d4287",
+      "content_hash": "250dbcdf0cf80fd895c12f529033fd89ca6658f9f147fa734257077f06c836eb",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T07:02:56+00:00",
+        "external_id": "CVE-2026-18556",
+        "is_demo": false,
+        "metadata": {
+          "catalog_added_day": "2026-08-04",
+          "catalog_released_at": "2026-10-23T19:30:18+00:00",
+          "catalog_sha256": "97a6e54bc74c651ab3c55657191db9adec6c63b05ca54e4205327cfd97a8fb70",
+          "catalog_version": "2026.10.23",
+          "collection_method": "cisa_kev_json",
+          "content_scope": "catalog_record",
+          "date_precision": "day",
+          "interpretation": "Включение в KEV не доказывает атаку на компанию из нашей выборки.",
+          "known_ransomware_campaign_use": "Unknown",
+          "notes": "https://uptime.n-able.com/ ; https://status.n-able.com/2026/08/02/n-central-2026-3-hotfix-1-mitigation-for-cve-2026-18577/ ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-18556",
+          "source_role": "vulnerability_context"
+        },
+        "published_at": null,
+        "source_id": "cisa_kev",
+        "text": "CVE-2026-18556: N-able / N-central. N-able N-central contains an authentication bypass using an alternate path or channel that allows for authentication bypass.\nCISA KEV dateAdded: 2026-08-04. Required action: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "title": "CVE-2026-18556 — N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+        "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json"
+      }
+    },
+    {
+      "sample_id": 26,
+      "publication_id": "329549309c01fe8f7035fa2d",
+      "content_hash": "864233929b6e3ecc0acc2137e2db3b0530cb5ba6c1cb9bb3158caab96f5cffa4",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T07:02:22+00:00",
+        "external_id": "https://www.securitylab.ru/news/579148.php",
+        "is_demo": false,
+        "metadata": {},
+        "published_at": "2026-10-24T05:07:16+00:00",
+        "source_id": "securitylab_news",
+        "text": "Набор планируют открыть уже в январе 2027 года.",
+        "title": "Мозг, ИИ и нейроинтерфейсы в одном дипломе. 7 вузов запускают общую магистратуру будущего",
+        "url": "https://www.securitylab.ru/news/579148.php"
+      }
+    },
+    {
+      "sample_id": 27,
+      "publication_id": "9a7ffc5220dc29379e90801a",
+      "content_hash": "72dd4615941a4ac52879b740e61070f10aed87485b473343e440af69e19cd1f8",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T13:04:42+00:00",
+        "external_id": "https://bi.zone/news/bi-zone-pam-i-red-adm-podtverdili-sovmestimost/",
+        "is_demo": false,
+        "metadata": {
+          "capture_provenance": "user_run_public_probe_reparsed_offline",
+          "capture_receipt_sha256": "5278f484b26693321948f1b15716ac924e4eff7d8da75c26844dbb89706aec30",
+          "collection_method": "publisher_news",
+          "content_scope": "title_only",
+          "date_precision": "day",
+          "discovery_url": "https://bi.zone/news/",
+          "independence_group": "bizone",
+          "publication_day": "2026-10-16",
+          "source_role": "research_context"
+        },
+        "published_at": null,
+        "source_id": "bizone_news",
+        "text": "BI.ZONE PAM и РЕД АДМ подтвердили совместимость",
+        "title": "BI.ZONE PAM и РЕД АДМ подтвердили совместимость",
+        "url": "https://bi.zone/news/bi-zone-pam-i-red-adm-podtverdili-sovmestimost/"
+      }
+    },
+    {
+      "sample_id": 28,
+      "publication_id": "4769c29945e44d92343090d2",
+      "content_hash": "4a3227ba228f89fab5afc345b3d61988e1bbbf9d166e997184996d07ec5792f9",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T13:04:42+00:00",
+        "external_id": "https://bi.zone/news/kriticheskaya-uyazvimost-v-gitlab-pozvolyaet-udalenno-vypolnyat-komandy-na-servere/",
+        "is_demo": false,
+        "metadata": {
+          "capture_provenance": "user_run_public_probe_reparsed_offline",
+          "capture_receipt_sha256": "5278f484b26693321948f1b15716ac924e4eff7d8da75c26844dbb89706aec30",
+          "collection_method": "publisher_news",
+          "content_scope": "title_only",
+          "date_precision": "day",
+          "discovery_url": "https://bi.zone/news/",
+          "independence_group": "bizone",
+          "publication_day": "2026-10-14",
+          "source_role": "research_context"
+        },
+        "published_at": null,
+        "source_id": "bizone_news",
+        "text": "Критическая уязвимость в GitLab позволяет удаленно выполнять команды на сервере",
+        "title": "Критическая уязвимость в GitLab позволяет удаленно выполнять команды на сервере",
+        "url": "https://bi.zone/news/kriticheskaya-uyazvimost-v-gitlab-pozvolyaet-udalenno-vypolnyat-komandy-na-servere/"
+      }
+    },
+    {
+      "sample_id": 29,
+      "publication_id": "58790fb8064f609c99fcd803",
+      "content_hash": "bdf3fdee000379accf42401499d0a4fa7097939041ffb144e8469ce1e51b8d01",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:36+00:00",
+        "external_id": "https://www.securitylab.ru/news/579147.php",
+        "is_demo": false,
+        "metadata": {},
+        "published_at": "2026-10-23T15:46:22+00:00",
+        "source_id": "securitylab_news",
+        "text": "Для захвата полного контроля злоумышленникам достаточно учётной записи с минимальными правами.",
+        "title": "9,9 из 10. Хакеры уже атакуют VeloCloud через критическую SQL-инъекцию",
+        "url": "https://www.securitylab.ru/news/579147.php"
+      }
+    },
+    {
+      "sample_id": 30,
+      "publication_id": "43ac04cbd8f9e9e0dddd1326",
+      "content_hash": "b05d67097d6c8eed91b92680876354e23b3878dcb4527ba6a06fc19033020917",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:53+00:00",
+        "external_id": "https://securelist.ru/compromise-assessment-findings-2025/116234/",
+        "is_demo": false,
+        "metadata": {
+          "collection_method": "public_listing",
+          "content_scope": "title_only",
+          "date_checked_at": "2026-10-24T06:58:44+00:00",
+          "date_precision": "day",
+          "date_source_method": "manual_web_verification",
+          "date_source_url": "https://securelist.ru/compromise-assessment-findings-2025/116234/",
+          "discovery_url": "https://securelist.ru/",
+          "publication_day": "2026-07-02",
+          "source_role": "research_context"
+        },
+        "published_at": null,
+        "source_id": "securelist_research",
+        "text": "Незамеченные инциденты, устойчивые угрозы и проблемы реагирования: анализ проектов Kaspersky Compromise Assessment",
+        "title": "Незамеченные инциденты, устойчивые угрозы и проблемы реагирования: анализ проектов Kaspersky Compromise Assessment",
+        "url": "https://securelist.ru/compromise-assessment-findings-2025/116234/"
+      }
+    }
+  ],
+  "corpus_id": "41a838a3e2e74fad2ff9dfdd40c8366fa13bfc343ba39de24b5c624bd9808328"
+}

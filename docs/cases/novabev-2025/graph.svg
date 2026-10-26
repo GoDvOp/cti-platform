@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="490" viewBox="0 0 1000 490" role="img" aria-labelledby="title desc">
+<title id="title">Кейс Novabev: один инцидент, две организации</title>
+<desc id="desc">Инцидент 14 июля 2025 года затронул Novabev Group и ВинЛаб. ВинЛаб входит в Novabev Group. Группировка, ПО и CVE не установлены.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#53647b"/></marker></defs>
+<rect width="1000" height="490" rx="16" fill="#f5f7fb"/>
+<g fill="none" stroke="#53647b" stroke-width="2" marker-end="url(#arrow)">
+<path d="M440 114 L265 202"/><path d="M560 114 L735 202"/>
+<path d="M625 240 L375 240"/>
+<path d="M205 374 L235 278"/><path d="M795 374 L765 278"/>
+</g>
+<g font-family="DejaVu Sans, sans-serif" text-anchor="middle">
+<rect x="330" y="40" width="340" height="76" rx="13" fill="#f5e3e2" stroke="#bf6962"/>
+<text x="500" y="70" font-size="18" fill="#5d302d">Один инцидент · 14.07.2025</text>
+<text x="500" y="96" font-size="13" fill="#5d302d">novabev-2025 · основание S1</text>
+<rect x="125" y="203" width="250" height="75" rx="13" fill="#dfeafa" stroke="#5883b7"/>
+<text x="250" y="235" font-size="20" fill="#193e68">Novabev Group</text><text x="250" y="259" font-size="13" fill="#193e68">Индекс: 0,493 · исторический</text>
+<rect x="625" y="203" width="250" height="75" rx="13" fill="#dfeafa" stroke="#5883b7"/>
+<text x="750" y="235" font-size="20" fill="#193e68">ВинЛаб</text><text x="750" y="259" font-size="13" fill="#193e68">Индекс: 0,493 · исторический</text>
+<rect x="65" y="375" width="290" height="65" rx="13" fill="#e7e9ed" stroke="#8b94a1"/>
+<text x="210" y="402" font-size="15" fill="#3f4b5a">Производство и дистрибуция</text><text x="210" y="424" font-size="15" fill="#3f4b5a">напитков · каталог</text>
+<rect x="650" y="375" width="290" height="65" rx="13" fill="#e7e9ed" stroke="#8b94a1"/>
+<text x="795" y="414" font-size="16" fill="#3f4b5a">Розничная торговля · каталог</text>
+<g font-size="13" fill="#3f4b5a"><text x="305" y="151">Затронул</text><text x="695" y="151">Затронул</text><text x="500" y="226">Входит в группу</text><text x="136" y="332">Включает компанию</text><text x="865" y="332">Включает компанию</text></g>
+<text x="500" y="326" font-size="14" fill="#795026">Группировка, CVE и программный стек не установлены</text>
+<text x="500" y="471" font-size="12" fill="#53647b">Срез 24.10.2026 · баллы не являются вероятностью атаки · технический индекс неизвестен</text>
+</g></svg>

@@ -1,0 +1,766 @@
+{
+  "model_version": "weighted-graph-v3",
+  "weights_sha256": "0cfa0b6a99d5e34e137aafa355fa88ea33da3fe0d479611b4fcdb2f01c911cae",
+  "weights": {
+    "model_version": "weighted-graph-v3",
+    "confidence": {
+      "high": 1.0,
+      "medium": 0.7,
+      "low": 0.4
+    },
+    "default_confidence": "medium",
+    "basis": {
+      "victim_report": 0.9,
+      "research_report": 0.85,
+      "vendor_advisory": 0.9,
+      "government_advisory": 0.9,
+      "legal_allegation": 0.65,
+      "attacker_claim": 0.3,
+      "unspecified": 0.6
+    },
+    "signal_status": {
+      "unresolved": 0.4,
+      "corroborated": 0.7,
+      "confirmed": 1.0
+    },
+    "half_life_days": {
+      "interest": 90,
+      "technical": 180
+    },
+    "interest_caps": {
+      "direct_signal": 60,
+      "incident_history": 20,
+      "sector_activity": 20
+    },
+    "technical_cap": 100,
+    "unknown_version_multiplier": 0.25,
+    "technical_base_multiplier": 0.6,
+    "exploitation_bonus_multiplier": 0.4,
+    "notes": "Экспертные коэффициенты, не вероятности. Текущая применимость отделена от подтверждённой исторической эксплуатации. Для событий используется завершение периода либо начало; для использования ПО — наблюдение, дата публикации отмечается как приближение. Статические факты CVE не затухают. В компоненте учитывается максимум, не сумма путей.",
+    "temporal_policy": {
+      "affects_product": "static_reference",
+      "actor_exploits": "static_reference",
+      "incident_exploited": "static_reference",
+      "known_exploited": "static_reference"
+    },
+    "include_incident_exploitation": true
+  },
+  "calculated_at": "2026-10-24T14:46:40+00:00",
+  "is_probability": false,
+  "aggregation": "strongest_path_per_component",
+  "snapshot_note": "Расчёт по текущему снимку и текущим проверкам; as_of не восстанавливает прошлые версии.",
+  "companies": [
+    {
+      "company_id": "novabev",
+      "company": "Novabev Group",
+      "is_demo": false,
+      "monitor_target": true,
+      "interest": {
+        "score": 0.4934706250067806,
+        "status": "historical_evidence_only",
+        "observed_components": [
+          "incident_history"
+        ],
+        "missing_components": [
+          "direct_signal",
+          "sector_activity"
+        ],
+        "component_coverage": 20,
+        "selected_path_ids": [
+          "81d24fd558b0448c24b89b0c"
+        ],
+        "candidate_paths": 6,
+        "interpretation": "Индекс силы доступных оснований, не вероятность атаки. Пропуски не означают безопасность."
+      },
+      "technical": {
+        "score": null,
+        "status": "insufficient_data",
+        "observed_components": [],
+        "missing_components": [
+          "product_cve"
+        ],
+        "component_coverage": 0,
+        "selected_path_ids": [],
+        "candidate_paths": 0,
+        "interpretation": "Индекс силы доступных оснований, не вероятность атаки. Пропуски не означают безопасность."
+      },
+      "historical_technical": {
+        "score": null,
+        "status": "insufficient_data",
+        "observed_components": [],
+        "missing_components": [
+          "confirmed_incident_exploitation"
+        ],
+        "component_coverage": 0,
+        "selected_path_ids": [],
+        "candidate_paths": 0,
+        "interpretation": "Сила подтверждения исторической цепочки эксплуатации. Не оценка текущей уязвимости, тяжести инцидента или вероятности атаки.",
+        "scope": "historical_fact",
+        "current_vulnerability_established": false
+      },
+      "paths": [
+        {
+          "id": "ed7394f6d24a1fc4661459fd",
+          "dimension": "interest",
+          "component": "direct_signal",
+          "edges": [
+            {
+              "id": "02543d94013cfe83a0aa67e9",
+              "kind": "attack_claim",
+              "subject": "novabev",
+              "object": "attack_claim",
+              "publication_id": "3f7053c03571c746f90cd465",
+              "source_url": "https://novabev.com/press-room/lenta/operating-results-9m-2026/",
+              "evidence_hash": "7d5f23d9ba1d34cc2e4790cdafe3db446602e667711b44e2dfe9f76c235b062d",
+              "excerpt": "В официальном сообщении от 8 октября 2026 года Novabev Group связывает часть динамики продаж сети ВинЛаб с восстановлением после кибератаки в июле 2025 года",
+              "status": "needs_review",
+              "confidence": "low",
+              "basis": "reviewed_signal",
+              "quality": 0.0,
+              "date": "2025-07-14",
+              "date_basis": "event_start",
+              "age_days": 467,
+              "temporal_policy": "decay",
+              "decay": 0.027415034722598923,
+              "weight": 0,
+              "defaults_used": [],
+              "warnings": [],
+              "published_day": "2026-10-08",
+              "catalog_added_day": null,
+              "observed_day": null,
+              "event_start_day": "2025-07-14",
+              "event_end_day": null,
+              "collected_at": "2026-10-24T07:46:33+00:00",
+              "reviewed_at": null,
+              "excluded_reason": "signal_not_reviewed_or_refuted"
+            }
+          ],
+          "event_groups": [
+            "event:novabev-2025",
+            "hash:7d5f23d9ba1d34cc2e4790cdafe3db446602e667711b44e2dfe9f76c235b062d",
+            "url:https://novabev.com/press-room/lenta/operating-results-9m-2026/"
+          ],
+          "multiplier": 1,
+          "strength": 0,
+          "max_points": 60,
+          "candidate_points": 0,
+          "contribution": 0,
+          "selected": false,
+          "excluded_reasons": [
+            "historical_context_not_current_signal",
+            "signal_not_reviewed_or_refuted"
+          ],
+          "context": {
+            "signal_scope": "business_followup",
+            "interpretation": "Адресный сигнал; его статус указан отдельно от факта атаки."
+          }
+        },
+        {
+          "id": "c213f2a9876fdddf390ab989",
+          "dimension": "interest",
+          "component": "direct_signal",
+          "edges": [
+            {
+              "id": "0f0d5f9a1fe955ffe0288fe2",
+              "kind": "attack_claim",
+              "subject": "novabev",
+              "object": "attack_claim",
+              "publication_id": "2c2d4a8b9cba7d1ed6584f25",
+              "source_url": "https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/",
+              "evidence_hash": "dd1020784bc0cf670170eb089778103bde3a85c06cdcd10980e2e0a980d7774b",
+              "excerpt": "Краткий пересказ официального сообщения: Novabev Group сообщила о кибератаке 14 июля 2025 года, нарушившей работу части ИТ-систем группы и сети ВинЛаб",
+              "status": "needs_review",
+              "confidence": "low",
+              "basis": "reviewed_signal",
+              "quality": 0.0,
+              "date": "2025-07-14",
+              "date_basis": "event_start",
+              "age_days": 467,
+              "temporal_policy": "decay",
+              "decay": 0.027415034722598923,
+              "weight": 0,
+              "defaults_used": [],
+              "warnings": [],
+              "published_day": "2025-07-16",
+              "catalog_added_day": null,
+              "observed_day": null,
+              "event_start_day": "2025-07-14",
+              "event_end_day": null,
+              "collected_at": "2026-10-23T18:21:15+00:00",
+              "reviewed_at": null,
+              "excluded_reason": "signal_not_reviewed_or_refuted"
+            }
+          ],
+          "event_groups": [
+            "event:novabev-2025",
+            "hash:dd1020784bc0cf670170eb089778103bde3a85c06cdcd10980e2e0a980d7774b",
+            "url:https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/"
+          ],
+          "multiplier": 1,
+          "strength": 0,
+          "max_points": 60,
+          "candidate_points": 0,
+          "contribution": 0,
+          "selected": false,
+          "excluded_reasons": [
+            "historical_context_not_current_signal",
+            "signal_not_reviewed_or_refuted"
+          ],
+          "context": {
+            "signal_scope": "historical_incident",
+            "interpretation": "Адресный сигнал; его статус указан отдельно от факта атаки."
+          }
+        },
+        {
+          "id": "25b12a9729760c68e68a6f8a",
+          "dimension": "interest",
+          "component": "direct_signal",
+          "edges": [
+            {
+              "id": "1dffa183cd1e862fa30b3f18",
+              "kind": "attack_claim",
+              "subject": "novabev",
+              "object": "attack_claim",
+              "publication_id": "e16f2c58cb6657ae24c861f7",
+              "source_url": "https://novabev.com/en/press-room/lenta/novabev-group-has-begun-modernizing-its-cybersecurity-system/",
+              "evidence_hash": "ede42a698ddf684a41db5a4a2426f014b517165903587943c55356462e3eda4a",
+              "excerpt": "Краткий пересказ официального сообщения от 18 августа 2025 года: Novabev Group рассказала об изменениях защиты после июльской кибератаки и восстановлении ключевых процессов",
+              "status": "needs_review",
+              "confidence": "low",
+              "basis": "reviewed_signal",
+              "quality": 0.0,
+              "date": "2025-07-14",
+              "date_basis": "event_start",
+              "age_days": 467,
+              "temporal_policy": "decay",
+              "decay": 0.027415034722598923,
+              "weight": 0,
+              "defaults_used": [],
+              "warnings": [],
+              "published_day": "2025-08-18",
+              "catalog_added_day": null,
+              "observed_day": null,
+              "event_start_day": "2025-07-14",
+              "event_end_day": null,
+              "collected_at": "2026-10-23T18:21:15+00:00",
+              "reviewed_at": null,
+              "excluded_reason": "signal_not_reviewed_or_refuted"
+            }
+          ],
+          "event_groups": [
+            "event:novabev-2025",
+            "hash:ede42a698ddf684a41db5a4a2426f014b517165903587943c55356462e3eda4a",
+            "url:https://novabev.com/en/press-room/lenta/novabev-group-has-begun-modernizing-its-cybersecurity-system/"
+          ],
+          "multiplier": 1,
+          "strength": 0,
+          "max_points": 60,
+          "candidate_points": 0,
+          "contribution": 0,
+          "selected": false,
+          "excluded_reasons": [
+            "historical_context_not_current_signal",
+            "signal_not_reviewed_or_refuted"
+          ],
+          "context": {
+            "signal_scope": "recovery_update",
+            "interpretation": "Адресный сигнал; его статус указан отдельно от факта атаки."
+          }
+        },
+        {
+          "id": "222dad730653301e0df3fd87",
+          "dimension": "interest",
+          "component": "direct_signal",
+          "edges": [
+            {
+              "id": "58b05e70b6419d8aa773cbfb",
+              "kind": "attack_claim",
+              "subject": "novabev",
+              "object": "attack_claim",
+              "publication_id": "e77e2d2008b7be95fb1b6487",
+              "source_url": "https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/",
+              "evidence_hash": "01e18a376ab63edfd579fec1b5d0e2790277ca130c2f865d1f4225338bb6be59",
+              "excerpt": "Инцидент Novabev 2025 затронул Novabev Group и ВинЛаб: официальное сообщение описывает кибератаку 14 июля 2025 года и денежное требование",
+              "status": "needs_review",
+              "confidence": "low",
+              "basis": "reviewed_signal",
+              "quality": 0.0,
+              "date": "2025-07-14",
+              "date_basis": "event_start",
+              "age_days": 467,
+              "temporal_policy": "decay",
+              "decay": 0.027415034722598923,
+              "weight": 0,
+              "defaults_used": [],
+              "warnings": [],
+              "published_day": "2025-07-16",
+              "catalog_added_day": null,
+              "observed_day": null,
+              "event_start_day": "2025-07-14",
+              "event_end_day": null,
+              "collected_at": "2026-10-23T20:36:07+00:00",
+              "reviewed_at": null,
+              "excluded_reason": "signal_not_reviewed_or_refuted"
+            }
+          ],
+          "event_groups": [
+            "event:novabev-2025",
+            "hash:01e18a376ab63edfd579fec1b5d0e2790277ca130c2f865d1f4225338bb6be59",
+            "url:https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/"
+          ],
+          "multiplier": 1,
+          "strength": 0,
+          "max_points": 60,
+          "candidate_points": 0,
+          "contribution": 0,
+          "selected": false,
+          "excluded_reasons": [
+            "historical_context_not_current_signal",
+            "signal_not_reviewed_or_refuted"
+          ],
+          "context": {
+            "signal_scope": "historical_incident",
+            "interpretation": "Адресный сигнал; его статус указан отдельно от факта атаки."
+          }
+        },
+        {
+          "id": "0371b15388521a95dc6ec3f1",
+          "dimension": "interest",
+          "component": "direct_signal",
+          "edges": [
+            {
+              "id": "7521812f6e3cf882b1a994ee",
+              "kind": "attack_claim",
+              "subject": "novabev",
+              "object": "attack_claim",
+              "publication_id": "5a4f2e808c4db46eb551315b",
+              "source_url": "https://novabev.com/press-room/lenta/novabev-group-and-winelab-are-gradually-restoring-operations-following-the-cyberattack/",
+              "evidence_hash": "2a7517240ac9501b51eb9e6abb1a3e0f5bffce2ab9b4fec20cb7d01a8cf6c55f",
+              "excerpt": "Краткий пересказ сообщения от 22 июля 2025 года: Novabev Group сообщила о восстановлении бизнес-процессов после кибератаки и открытии более ста магазинов ВинЛаб",
+              "status": "needs_review",
+              "confidence": "low",
+              "basis": "reviewed_signal",
+              "quality": 0.0,
+              "date": "2025-07-14",
+              "date_basis": "event_start",
+              "age_days": 467,
+              "temporal_policy": "decay",
+              "decay": 0.027415034722598923,
+              "weight": 0,
+              "defaults_used": [],
+              "warnings": [],
+              "published_day": "2025-07-22",
+              "catalog_added_day": null,
+              "observed_day": null,
+              "event_start_day": "2025-07-14",
+              "event_end_day": null,
+              "collected_at": "2026-10-23T18:21:15+00:00",
+              "reviewed_at": null,
+              "excluded_reason": "signal_not_reviewed_or_refuted"
+            }
+          ],
+          "event_groups": [
+            "event:novabev-2025",
+            "hash:2a7517240ac9501b51eb9e6abb1a3e0f5bffce2ab9b4fec20cb7d01a8cf6c55f",
+            "url:https://novabev.com/press-room/lenta/novabev-group-and-winelab-are-gradually-restoring-operations-following-the-cyberattack/"
+          ],
+          "multiplier": 1,
+          "strength": 0,
+          "max_points": 60,
+          "candidate_points": 0,
+          "contribution": 0,
+          "selected": false,
+          "excluded_reasons": [
+            "historical_context_not_current_signal",
+            "signal_not_reviewed_or_refuted"
+          ],
+          "context": {
+            "signal_scope": "recovery_update",
+            "interpretation": "Адресный сигнал; его статус указан отдельно от факта атаки."
+          }
+        },
+        {
+          "id": "81d24fd558b0448c24b89b0c",
+          "dimension": "interest",
+          "component": "incident_history",
+          "edges": [
+            {
+              "id": "8dcab9b43e5e3dfd3fa065cd",
+              "kind": "incident_affects",
+              "subject": "novabev-2025",
+              "object": "novabev",
+              "publication_id": "e77e2d2008b7be95fb1b6487",
+              "source_url": "https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/",
+              "evidence_hash": "01e18a376ab63edfd579fec1b5d0e2790277ca130c2f865d1f4225338bb6be59",
+              "excerpt": "Инцидент Novabev 2025 затронул Novabev Group и ВинЛаб: официальное сообщение описывает кибератаку 14 июля 2025 года и денежное требование. Группировка, конкретная CVE и установленное ПО в этом источнике не установлены.",
+              "status": "confirmed",
+              "confidence": "high",
+              "basis": "victim_report",
+              "quality": 0.9,
+              "date": "2025-07-14",
+              "date_basis": "event_start",
+              "age_days": 467,
+              "temporal_policy": "decay",
+              "decay": 0.027415034722598923,
+              "weight": 0.024673531250339033,
+              "defaults_used": [],
+              "warnings": [],
+              "published_day": "2025-07-16",
+              "catalog_added_day": null,
+              "observed_day": null,
+              "event_start_day": "2025-07-14",
+              "event_end_day": null,
+              "collected_at": "2026-10-23T20:36:07+00:00",
+              "reviewed_at": "2026-10-23T20:36:08+00:00",
+              "excluded_reason": null
+            }
+          ],
+          "event_groups": [
+            "event:novabev-2025",
+            "hash:01e18a376ab63edfd579fec1b5d0e2790277ca130c2f865d1f4225338bb6be59",
+            "url:https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/"
+          ],
+          "multiplier": 1,
+          "strength": 0.024673531250339033,
+          "max_points": 20,
+          "candidate_points": 0.4934706250067806,
+          "contribution": 0.4934706250067806,
+          "selected": true,
+          "excluded_reasons": [],
+          "context": {
+            "incident_id": "novabev-2025",
+            "interpretation": "Прошлый инцидент, не прогноз повторения."
+          }
+        }
+      ]
+    },
+    {
+      "company_id": "winelab",
+      "company": "ВинЛаб",
+      "is_demo": false,
+      "monitor_target": true,
+      "interest": {
+        "score": 0.4934706250067806,
+        "status": "historical_evidence_only",
+        "observed_components": [
+          "incident_history"
+        ],
+        "missing_components": [
+          "direct_signal",
+          "sector_activity"
+        ],
+        "component_coverage": 20,
+        "selected_path_ids": [
+          "5530b67481fd6b651a183963"
+        ],
+        "candidate_paths": 5,
+        "interpretation": "Индекс силы доступных оснований, не вероятность атаки. Пропуски не означают безопасность."
+      },
+      "technical": {
+        "score": null,
+        "status": "insufficient_data",
+        "observed_components": [],
+        "missing_components": [
+          "product_cve"
+        ],
+        "component_coverage": 0,
+        "selected_path_ids": [],
+        "candidate_paths": 0,
+        "interpretation": "Индекс силы доступных оснований, не вероятность атаки. Пропуски не означают безопасность."
+      },
+      "historical_technical": {
+        "score": null,
+        "status": "insufficient_data",
+        "observed_components": [],
+        "missing_components": [
+          "confirmed_incident_exploitation"
+        ],
+        "component_coverage": 0,
+        "selected_path_ids": [],
+        "candidate_paths": 0,
+        "interpretation": "Сила подтверждения исторической цепочки эксплуатации. Не оценка текущей уязвимости, тяжести инцидента или вероятности атаки.",
+        "scope": "historical_fact",
+        "current_vulnerability_established": false
+      },
+      "paths": [
+        {
+          "id": "a91d12e7dd80046f50fb6dda",
+          "dimension": "interest",
+          "component": "direct_signal",
+          "edges": [
+            {
+              "id": "045ff0a1c57ee3400f8779d4",
+              "kind": "attack_claim",
+              "subject": "winelab",
+              "object": "attack_claim",
+              "publication_id": "3f7053c03571c746f90cd465",
+              "source_url": "https://novabev.com/press-room/lenta/operating-results-9m-2026/",
+              "evidence_hash": "7d5f23d9ba1d34cc2e4790cdafe3db446602e667711b44e2dfe9f76c235b062d",
+              "excerpt": "В официальном сообщении от 8 октября 2026 года Novabev Group связывает часть динамики продаж сети ВинЛаб с восстановлением после кибератаки в июле 2025 года",
+              "status": "needs_review",
+              "confidence": "low",
+              "basis": "reviewed_signal",
+              "quality": 0.0,
+              "date": "2025-07-14",
+              "date_basis": "event_start",
+              "age_days": 467,
+              "temporal_policy": "decay",
+              "decay": 0.027415034722598923,
+              "weight": 0,
+              "defaults_used": [],
+              "warnings": [],
+              "published_day": "2026-10-08",
+              "catalog_added_day": null,
+              "observed_day": null,
+              "event_start_day": "2025-07-14",
+              "event_end_day": null,
+              "collected_at": "2026-10-24T07:46:33+00:00",
+              "reviewed_at": null,
+              "excluded_reason": "signal_not_reviewed_or_refuted"
+            }
+          ],
+          "event_groups": [
+            "event:novabev-2025",
+            "hash:7d5f23d9ba1d34cc2e4790cdafe3db446602e667711b44e2dfe9f76c235b062d",
+            "url:https://novabev.com/press-room/lenta/operating-results-9m-2026/"
+          ],
+          "multiplier": 1,
+          "strength": 0,
+          "max_points": 60,
+          "candidate_points": 0,
+          "contribution": 0,
+          "selected": false,
+          "excluded_reasons": [
+            "historical_context_not_current_signal",
+            "signal_not_reviewed_or_refuted"
+          ],
+          "context": {
+            "signal_scope": "business_followup",
+            "interpretation": "Адресный сигнал; его статус указан отдельно от факта атаки."
+          }
+        },
+        {
+          "id": "e6d6950df379bbac739816d7",
+          "dimension": "interest",
+          "component": "direct_signal",
+          "edges": [
+            {
+              "id": "60b2b2dc81abba58cc95e121",
+              "kind": "attack_claim",
+              "subject": "winelab",
+              "object": "attack_claim",
+              "publication_id": "e77e2d2008b7be95fb1b6487",
+              "source_url": "https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/",
+              "evidence_hash": "01e18a376ab63edfd579fec1b5d0e2790277ca130c2f865d1f4225338bb6be59",
+              "excerpt": "Инцидент Novabev 2025 затронул Novabev Group и ВинЛаб: официальное сообщение описывает кибератаку 14 июля 2025 года и денежное требование",
+              "status": "needs_review",
+              "confidence": "low",
+              "basis": "reviewed_signal",
+              "quality": 0.0,
+              "date": "2025-07-14",
+              "date_basis": "event_start",
+              "age_days": 467,
+              "temporal_policy": "decay",
+              "decay": 0.027415034722598923,
+              "weight": 0,
+              "defaults_used": [],
+              "warnings": [],
+              "published_day": "2025-07-16",
+              "catalog_added_day": null,
+              "observed_day": null,
+              "event_start_day": "2025-07-14",
+              "event_end_day": null,
+              "collected_at": "2026-10-23T20:36:07+00:00",
+              "reviewed_at": null,
+              "excluded_reason": "signal_not_reviewed_or_refuted"
+            }
+          ],
+          "event_groups": [
+            "event:novabev-2025",
+            "hash:01e18a376ab63edfd579fec1b5d0e2790277ca130c2f865d1f4225338bb6be59",
+            "url:https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/"
+          ],
+          "multiplier": 1,
+          "strength": 0,
+          "max_points": 60,
+          "candidate_points": 0,
+          "contribution": 0,
+          "selected": false,
+          "excluded_reasons": [
+            "historical_context_not_current_signal",
+            "signal_not_reviewed_or_refuted"
+          ],
+          "context": {
+            "signal_scope": "historical_incident",
+            "interpretation": "Адресный сигнал; его статус указан отдельно от факта атаки."
+          }
+        },
+        {
+          "id": "2171ad777389ad2f8b054774",
+          "dimension": "interest",
+          "component": "direct_signal",
+          "edges": [
+            {
+              "id": "8e601df80e9a3721d7493659",
+              "kind": "attack_claim",
+              "subject": "winelab",
+              "object": "attack_claim",
+              "publication_id": "5a4f2e808c4db46eb551315b",
+              "source_url": "https://novabev.com/press-room/lenta/novabev-group-and-winelab-are-gradually-restoring-operations-following-the-cyberattack/",
+              "evidence_hash": "2a7517240ac9501b51eb9e6abb1a3e0f5bffce2ab9b4fec20cb7d01a8cf6c55f",
+              "excerpt": "Краткий пересказ сообщения от 22 июля 2025 года: Novabev Group сообщила о восстановлении бизнес-процессов после кибератаки и открытии более ста магазинов ВинЛаб",
+              "status": "needs_review",
+              "confidence": "low",
+              "basis": "reviewed_signal",
+              "quality": 0.0,
+              "date": "2025-07-14",
+              "date_basis": "event_start",
+              "age_days": 467,
+              "temporal_policy": "decay",
+              "decay": 0.027415034722598923,
+              "weight": 0,
+              "defaults_used": [],
+              "warnings": [],
+              "published_day": "2025-07-22",
+              "catalog_added_day": null,
+              "observed_day": null,
+              "event_start_day": "2025-07-14",
+              "event_end_day": null,
+              "collected_at": "2026-10-23T18:21:15+00:00",
+              "reviewed_at": null,
+              "excluded_reason": "signal_not_reviewed_or_refuted"
+            }
+          ],
+          "event_groups": [
+            "event:novabev-2025",
+            "hash:2a7517240ac9501b51eb9e6abb1a3e0f5bffce2ab9b4fec20cb7d01a8cf6c55f",
+            "url:https://novabev.com/press-room/lenta/novabev-group-and-winelab-are-gradually-restoring-operations-following-the-cyberattack/"
+          ],
+          "multiplier": 1,
+          "strength": 0,
+          "max_points": 60,
+          "candidate_points": 0,
+          "contribution": 0,
+          "selected": false,
+          "excluded_reasons": [
+            "historical_context_not_current_signal",
+            "signal_not_reviewed_or_refuted"
+          ],
+          "context": {
+            "signal_scope": "recovery_update",
+            "interpretation": "Адресный сигнал; его статус указан отдельно от факта атаки."
+          }
+        },
+        {
+          "id": "dd39a58738104c282070ecb8",
+          "dimension": "interest",
+          "component": "direct_signal",
+          "edges": [
+            {
+              "id": "ebf7c12a26f3bbacd70cf921",
+              "kind": "attack_claim",
+              "subject": "winelab",
+              "object": "attack_claim",
+              "publication_id": "2c2d4a8b9cba7d1ed6584f25",
+              "source_url": "https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/",
+              "evidence_hash": "dd1020784bc0cf670170eb089778103bde3a85c06cdcd10980e2e0a980d7774b",
+              "excerpt": "Краткий пересказ официального сообщения: Novabev Group сообщила о кибератаке 14 июля 2025 года, нарушившей работу части ИТ-систем группы и сети ВинЛаб",
+              "status": "needs_review",
+              "confidence": "low",
+              "basis": "reviewed_signal",
+              "quality": 0.0,
+              "date": "2025-07-14",
+              "date_basis": "event_start",
+              "age_days": 467,
+              "temporal_policy": "decay",
+              "decay": 0.027415034722598923,
+              "weight": 0,
+              "defaults_used": [],
+              "warnings": [],
+              "published_day": "2025-07-16",
+              "catalog_added_day": null,
+              "observed_day": null,
+              "event_start_day": "2025-07-14",
+              "event_end_day": null,
+              "collected_at": "2026-10-23T18:21:15+00:00",
+              "reviewed_at": null,
+              "excluded_reason": "signal_not_reviewed_or_refuted"
+            }
+          ],
+          "event_groups": [
+            "event:novabev-2025",
+            "hash:dd1020784bc0cf670170eb089778103bde3a85c06cdcd10980e2e0a980d7774b",
+            "url:https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/"
+          ],
+          "multiplier": 1,
+          "strength": 0,
+          "max_points": 60,
+          "candidate_points": 0,
+          "contribution": 0,
+          "selected": false,
+          "excluded_reasons": [
+            "historical_context_not_current_signal",
+            "signal_not_reviewed_or_refuted"
+          ],
+          "context": {
+            "signal_scope": "historical_incident",
+            "interpretation": "Адресный сигнал; его статус указан отдельно от факта атаки."
+          }
+        },
+        {
+          "id": "5530b67481fd6b651a183963",
+          "dimension": "interest",
+          "component": "incident_history",
+          "edges": [
+            {
+              "id": "9c12403a6f20aa754a0fc5a1",
+              "kind": "incident_affects",
+              "subject": "novabev-2025",
+              "object": "winelab",
+              "publication_id": "e77e2d2008b7be95fb1b6487",
+              "source_url": "https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/",
+              "evidence_hash": "01e18a376ab63edfd579fec1b5d0e2790277ca130c2f865d1f4225338bb6be59",
+              "excerpt": "Инцидент Novabev 2025 затронул Novabev Group и ВинЛаб: официальное сообщение описывает кибератаку 14 июля 2025 года и денежное требование. Группировка, конкретная CVE и установленное ПО в этом источнике не установлены.",
+              "status": "confirmed",
+              "confidence": "high",
+              "basis": "victim_report",
+              "quality": 0.9,
+              "date": "2025-07-14",
+              "date_basis": "event_start",
+              "age_days": 467,
+              "temporal_policy": "decay",
+              "decay": 0.027415034722598923,
+              "weight": 0.024673531250339033,
+              "defaults_used": [],
+              "warnings": [],
+              "published_day": "2025-07-16",
+              "catalog_added_day": null,
+              "observed_day": null,
+              "event_start_day": "2025-07-14",
+              "event_end_day": null,
+              "collected_at": "2026-10-23T20:36:07+00:00",
+              "reviewed_at": "2026-10-23T20:36:08+00:00",
+              "excluded_reason": null
+            }
+          ],
+          "event_groups": [
+            "event:novabev-2025",
+            "hash:01e18a376ab63edfd579fec1b5d0e2790277ca130c2f865d1f4225338bb6be59",
+            "url:https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/"
+          ],
+          "multiplier": 1,
+          "strength": 0.024673531250339033,
+          "max_points": 20,
+          "candidate_points": 0.4934706250067806,
+          "contribution": 0.4934706250067806,
+          "selected": true,
+          "excluded_reasons": [],
+          "context": {
+            "incident_id": "novabev-2025",
+            "interpretation": "Прошлый инцидент, не прогноз повторения."
+          }
+        }
+      ]
+    }
+  ]
+}

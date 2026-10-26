@@ -1,0 +1,27 @@
+node { diameter: 52px; caption: '{name}'; font-size: 11px; }
+node.Company { color: #5B9BD5; }
+node.Product { color: #70AD47; }
+node.Vulnerability { color: #ED7D31; }
+node.Incident { color: #C0504D; }
+node.ThreatActor { color: #8064A2; }
+node.Malware { color: #A67C52; }
+node.Sector { color: #A5A5A5; }
+relationship { caption: '<type>'; font-size: 8px; }
+node.Technique { color: #F4B183; }
+node.Tactic { color: #FFD966; }
+node.Tool { color: #76B7B2; }
+node.AttackCampaign { color: #B07AA1; }
+relationship.INCLUDES_COMPANY { caption: '{caption}'; font-size: 9px; }
+relationship.ATTRIBUTED_ATTACK_ON { caption: '{caption}'; font-size: 9px; }
+relationship.CLAIMED_ATTACK_ON { caption: '{caption}'; font-size: 9px; }
+relationship.OBSERVED_ATTACK_IN_SECTOR { caption: '{caption}'; font-size: 9px; }
+relationship.USES_PRODUCT { caption: '{caption}'; font-size: 9px; }
+relationship.USED_PRODUCT { caption: '{caption}'; font-size: 9px; }
+relationship.REPORTED_USES_PRODUCT { caption: '{caption}'; font-size: 9px; }
+relationship.REPORTED_EXPLOITS { caption: '{caption}'; font-size: 9px; }
+node.Publication { color: #94A8C4; caption: '{title}'; }
+node.BugBountyProgram { color: #4C8F94; caption: '{name}'; }
+relationship.HAS_PUBLIC_BUG_BOUNTY { caption: '{caption}'; font-size: 9px; }
+relationship.SECURITY_NOTICE_FOR { caption: '{caption}'; font-size: 9px; }
+relationship.SECURITY_UPDATE_FOR { caption: '{caption}'; font-size: 9px; }
+relationship.MONITORING_HYPOTHESIS { caption: '{caption}'; font-size: 9px; }

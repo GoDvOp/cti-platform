@@ -1,0 +1,160 @@
+{
+  "method": "coefficient_sensitivity_on_frozen_snapshot",
+  "source_snapshot_content_sha256": "3d52fcf47ca50a9ef55a5a6d78cc5c5d17b7f6514d2d42d2fc8194e4e76acea7",
+  "analysis": {
+    "model_version": "weighted-graph-v3",
+    "baseline_weights_sha256": "0cfa0b6a99d5e34e137aafa355fa88ea33da3fe0d479611b4fcdb2f01c911cae",
+    "snapshot_sha256": "e3d858c3ac5c956157468cd9f500ff9abe4ab51958ee1cd7115bd3e54644849f",
+    "calculated_at": "2026-10-24T14:46:40+00:00",
+    "requested_delta": 0.2,
+    "is_probability": false,
+    "method": "one_at_a_time_and_joint",
+    "companies": [
+      {
+        "company_id": "novabev",
+        "company": "Novabev Group",
+        "monitor_target": true,
+        "interest": {
+          "baseline": 0.4934706250067806,
+          "one_at_a_time": {
+            "minimum": 0.2007975943491922,
+            "minimum_scenario": "half_life_days.interest:minus",
+            "maximum": 0.8986622636937412,
+            "maximum_scenario": "half_life_days.interest:plus",
+            "null_count": 0,
+            "scenario_count": 43,
+            "path_switch_count": 0
+          },
+          "joint": {
+            "minimum": 0.12851046038348302,
+            "minimum_scenario": "joint:minus",
+            "maximum": 0.9985136263263792,
+            "maximum_scenario": "joint:plus",
+            "null_count": 0,
+            "scenario_count": 3,
+            "path_switch_count": 0
+          }
+        },
+        "technical": {
+          "baseline": null,
+          "one_at_a_time": {
+            "minimum": null,
+            "minimum_scenario": null,
+            "maximum": null,
+            "maximum_scenario": null,
+            "null_count": 43,
+            "scenario_count": 43,
+            "path_switch_count": 0
+          },
+          "joint": {
+            "minimum": null,
+            "minimum_scenario": null,
+            "maximum": null,
+            "maximum_scenario": null,
+            "null_count": 3,
+            "scenario_count": 3,
+            "path_switch_count": 0
+          }
+        }
+      },
+      {
+        "company_id": "winelab",
+        "company": "ВинЛаб",
+        "monitor_target": true,
+        "interest": {
+          "baseline": 0.4934706250067806,
+          "one_at_a_time": {
+            "minimum": 0.2007975943491922,
+            "minimum_scenario": "half_life_days.interest:minus",
+            "maximum": 0.8986622636937412,
+            "maximum_scenario": "half_life_days.interest:plus",
+            "null_count": 0,
+            "scenario_count": 43,
+            "path_switch_count": 0
+          },
+          "joint": {
+            "minimum": 0.12851046038348302,
+            "minimum_scenario": "joint:minus",
+            "maximum": 0.9985136263263792,
+            "maximum_scenario": "joint:plus",
+            "null_count": 0,
+            "scenario_count": 3,
+            "path_switch_count": 0
+          }
+        },
+        "technical": {
+          "baseline": null,
+          "one_at_a_time": {
+            "minimum": null,
+            "minimum_scenario": null,
+            "maximum": null,
+            "maximum_scenario": null,
+            "null_count": 43,
+            "scenario_count": 43,
+            "path_switch_count": 0
+          },
+          "joint": {
+            "minimum": null,
+            "minimum_scenario": null,
+            "maximum": null,
+            "maximum_scenario": null,
+            "null_count": 3,
+            "scenario_count": 3,
+            "path_switch_count": 0
+          }
+        }
+      },
+      {
+        "company_id": "equifax",
+        "company": "Equifax",
+        "monitor_target": false,
+        "interest": {
+          "baseline": 5.1575632213488224e-11,
+          "one_at_a_time": {
+            "minimum": 6.710232591580535e-14,
+            "minimum_scenario": "half_life_days.interest:minus",
+            "maximum": 4.3276209817322025e-09,
+            "maximum_scenario": "half_life_days.interest:plus",
+            "null_count": 0,
+            "scenario_count": 43,
+            "path_switch_count": 0
+          },
+          "joint": {
+            "minimum": 4.294548858611543e-14,
+            "minimum_scenario": "joint:minus",
+            "maximum": 4.808467757480225e-09,
+            "maximum_scenario": "joint:plus",
+            "null_count": 0,
+            "scenario_count": 3,
+            "path_switch_count": 0
+          }
+        },
+        "technical": {
+          "baseline": 1.0664158149180905e-05,
+          "one_at_a_time": {
+            "minimum": 3.846565073469456e-07,
+            "minimum_scenario": "half_life_days.technical:minus",
+            "maximum": 9.768523053522219e-05,
+            "maximum_scenario": "half_life_days.technical:plus",
+            "null_count": 0,
+            "scenario_count": 43,
+            "path_switch_count": 0
+          },
+          "joint": {
+            "minimum": 1.9694413176163614e-07,
+            "minimum_scenario": "joint:minus",
+            "maximum": 0.00016880007836486392,
+            "maximum_scenario": "joint:plus",
+            "null_count": 0,
+            "scenario_count": 3,
+            "path_switch_count": 0
+          }
+        }
+      }
+    ],
+    "scenario_count": 45,
+    "interpretation": "Чувствительность экспертных индексов на одном текущем снимке; не точность прогноза и не доверительный интервал.",
+    "normalization": "Бюджеты компонентов сохраняют сумму 100, пара технических множителей — 1. Качества ограничены 0–1. Фактические изменения записаны отдельно.",
+    "snapshot_note": "Расчёт по текущему снимку и текущим проверкам; as_of не восстанавливает прошлые версии."
+  }
+}

@@ -1,0 +1,927 @@
+{
+  "version": "1.4",
+  "reviewed_at": "2026-10-23T20:15:35+00:00",
+  "provenance": "Проверенные краткие пересказы открытых публикаций и строк бюллетеня; сетевой сбор в них не имитируется.",
+  "companies": [
+    {
+      "id": "sibur",
+      "name": "СИБУР",
+      "aliases": [
+        "Сибур"
+      ],
+      "sector": "нефтехимия",
+      "country": "RU",
+      "entity_type": "group",
+      "reference_url": "https://trueconf.ru/blog/success-stories/sibur-trueconf",
+      "domains": []
+    },
+    {
+      "id": "oteko",
+      "name": "ОТЭКО",
+      "aliases": [
+        "ОТЭКО Групп"
+      ],
+      "sector": "портовая логистика",
+      "country": "RU",
+      "reference_url": "https://trueconf.ru/company/customers.html",
+      "domains": []
+    },
+    {
+      "id": "metalloinvest",
+      "name": "Металлоинвест",
+      "aliases": [],
+      "sector": "металлургия",
+      "country": "RU",
+      "reference_url": "https://trueconf.ru/company/customers.html",
+      "domains": []
+    },
+    {
+      "id": "askon",
+      "name": "АСКОН",
+      "aliases": [
+        "Аскон"
+      ],
+      "sector": "разработка ПО",
+      "country": "RU",
+      "reference_url": "https://trueconf.ru/company/customers.html",
+      "domains": []
+    },
+    {
+      "id": "ingosstrakh",
+      "name": "Ингосстрах",
+      "aliases": [
+        "СПАО Ингосстрах"
+      ],
+      "sector": "страхование",
+      "country": "RU",
+      "reference_url": "https://trueconf.ru/blog/wp-content/uploads/2022/06/ingosstakh.pdf",
+      "domains": []
+    },
+    {
+      "id": "rosatom-engineering",
+      "name": "Инжиниринговый дивизион Росатома",
+      "aliases": [
+        "Инжиниринговый дивизион Госкорпорации «Росатом»"
+      ],
+      "sector": "атомная энергетика",
+      "country": "RU",
+      "entity_type": "division",
+      "reference_url": "https://trueconf.ru/blog/wp-content/uploads/2023/06/id-rosatom-ru.pdf",
+      "domains": []
+    },
+    {
+      "id": "rosatom",
+      "name": "Росатом",
+      "aliases": [
+        "Госкорпорация Росатом"
+      ],
+      "sector": "атомная энергетика",
+      "country": "RU",
+      "entity_type": "group",
+      "reference_url": "https://trueconf.ru/blog/wp-content/uploads/2023/06/id-rosatom-ru.pdf",
+      "domains": []
+    },
+    {
+      "id": "roszarubezhneft",
+      "name": "Росзарубежнефть",
+      "aliases": [],
+      "sector": "нефтегазовая отрасль",
+      "country": "RU",
+      "reference_url": "https://trueconf.ru/blog/success-stories/roszarubezhneft-trueconf-server",
+      "domains": []
+    },
+    {
+      "id": "government-mo",
+      "name": "Правительство Московской области",
+      "aliases": [],
+      "sector": "государственное управление",
+      "country": "RU",
+      "entity_type": "public_authority",
+      "reference_url": "https://trueconf.ru/company/customers.html",
+      "domains": []
+    },
+    {
+      "id": "1c-vendor",
+      "name": "Фирма 1С",
+      "aliases": [
+        "Фирма «1С»"
+      ],
+      "sector": "разработка ПО",
+      "country": "RU",
+      "entity_type": "technology_vendor",
+      "monitor_target": false,
+      "reference_url": "https://www.company.rt.ru/press/REGIONALNEWS/d457564/",
+      "domains": []
+    }
+  ],
+  "products": [
+    {
+      "id": "trueconf-enterprise",
+      "name": "TrueConf Enterprise",
+      "vendor": "Труконф",
+      "aliases": [],
+      "is_demo": false
+    },
+    {
+      "id": "trueconf-room",
+      "name": "TrueConf Room",
+      "vendor": "Труконф",
+      "aliases": [],
+      "is_demo": false
+    },
+    {
+      "id": "1c-holding",
+      "name": "1С:Управление холдингом",
+      "vendor": "1С",
+      "aliases": [
+        "1C:Управление холдингом"
+      ],
+      "is_demo": false
+    }
+  ],
+  "publications": [
+    {
+      "key": "sibur-enterprise",
+      "source_id": "manual_web_trueconf_cases",
+      "url": "https://trueconf.ru/blog/success-stories/sibur-trueconf",
+      "title": "СИБУР: кейс внедрения TrueConf Enterprise",
+      "text": "СИБУР использует TrueConf Enterprise по описанию проекта поставщиком. Номер установленной версии не опубликован. TrueConf Enterprise учитывается отдельно от TrueConf Server.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:15:35+00:00",
+      "is_demo": false,
+      "external_id": "research-library:sibur-enterprise",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": "2026-05-28",
+        "content_scope": "verified_source_summary",
+        "independence_group": "trueconf",
+        "source_visibility": "public_page",
+        "source_reviewed_at": "2026-10-23T20:15:35+00:00"
+      }
+    },
+    {
+      "key": "oteko-enterprise",
+      "source_id": "manual_web_trueconf_cases",
+      "url": "https://trueconf.ru/company/customers.html",
+      "title": "ОТЭКО: публичный кейс внедрения",
+      "text": "ОТЭКО использует TrueConf Enterprise согласно карточке проекта разработчика. Версия и дата инвентаризации неизвестны.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:15:35+00:00",
+      "is_demo": false,
+      "external_id": "research-library:oteko-enterprise",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": null,
+        "content_scope": "verified_source_summary",
+        "independence_group": "trueconf",
+        "source_visibility": "public_page",
+        "source_reviewed_at": "2026-10-23T20:15:35+00:00"
+      }
+    },
+    {
+      "key": "metalloinvest-enterprise",
+      "source_id": "manual_web_trueconf_cases",
+      "url": "https://trueconf.ru/company/customers.html",
+      "title": "Металлоинвест: публичный кейс внедрения",
+      "text": "Металлоинвест использует TrueConf Enterprise согласно карточке проекта разработчика. Версия и дата инвентаризации неизвестны.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:15:35+00:00",
+      "is_demo": false,
+      "external_id": "research-library:metalloinvest-enterprise",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": null,
+        "content_scope": "verified_source_summary",
+        "independence_group": "trueconf",
+        "source_visibility": "public_page",
+        "source_reviewed_at": "2026-10-23T20:15:35+00:00"
+      }
+    },
+    {
+      "key": "askon-server",
+      "source_id": "manual_web_trueconf_cases",
+      "url": "https://trueconf.ru/company/customers.html",
+      "title": "АСКОН: публичный кейс внедрения",
+      "text": "АСКОН использует TrueConf Server согласно карточке проекта разработчика. Версия и дата инвентаризации неизвестны.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:15:35+00:00",
+      "is_demo": false,
+      "external_id": "research-library:askon-server",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": null,
+        "content_scope": "verified_source_summary",
+        "independence_group": "trueconf",
+        "source_visibility": "public_page",
+        "source_reviewed_at": "2026-10-23T20:15:35+00:00"
+      }
+    },
+    {
+      "key": "government-mo-server",
+      "source_id": "manual_web_trueconf_cases",
+      "url": "https://trueconf.ru/company/customers.html",
+      "title": "Правительство Московской области: публичный кейс внедрения",
+      "text": "Правительство Московской области использует TrueConf Server согласно карточке проекта разработчика. Версия и дата инвентаризации неизвестны.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:15:35+00:00",
+      "is_demo": false,
+      "external_id": "research-library:government-mo-server",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": null,
+        "content_scope": "verified_source_summary",
+        "independence_group": "trueconf",
+        "source_visibility": "public_page",
+        "source_reviewed_at": "2026-10-23T20:15:35+00:00"
+      }
+    },
+    {
+      "key": "ingosstrakh-server",
+      "source_id": "manual_web_trueconf_cases",
+      "url": "https://trueconf.ru/blog/wp-content/uploads/2022/06/ingosstakh.pdf",
+      "title": "Ингосстрах: платформа видеосвязи в IngoMobile",
+      "text": "Ингосстрах использует TrueConf Server как платформу видеосвязи для IngoMobile по описанию кейса поставщика. Версия не указана.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:15:35+00:00",
+      "is_demo": false,
+      "external_id": "research-library:ingosstrakh-server",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": null,
+        "content_scope": "verified_source_summary",
+        "independence_group": "trueconf",
+        "source_visibility": "indexed_pdf_excerpt",
+        "source_reviewed_at": "2026-10-23T20:15:35+00:00"
+      }
+    },
+    {
+      "key": "rosatom-engineering",
+      "source_id": "manual_web_trueconf_cases",
+      "url": "https://trueconf.ru/blog/wp-content/uploads/2023/06/id-rosatom-ru.pdf",
+      "title": "Инжиниринговый дивизион Росатома: кейс видеосвязи",
+      "text": "Инжиниринговый дивизион Росатома использует TrueConf Server и TrueConf Room по описанию кейса поставщика. Инжиниринговый дивизион Росатома входит в Росатом. Номера версий не указаны.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:15:35+00:00",
+      "is_demo": false,
+      "external_id": "research-library:rosatom-engineering",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": null,
+        "content_scope": "verified_source_summary",
+        "independence_group": "trueconf",
+        "source_visibility": "indexed_pdf_excerpt",
+        "source_reviewed_at": "2026-10-23T20:15:35+00:00"
+      }
+    },
+    {
+      "key": "roszarubezhneft-server",
+      "source_id": "manual_web_trueconf_cases",
+      "url": "https://trueconf.ru/blog/success-stories/roszarubezhneft-trueconf-server",
+      "title": "Росзарубежнефть: TrueConf Server в коммуникационной системе",
+      "text": "Росзарубежнефть использует TrueConf Server в собственном контуре по описанию проекта разработчиком. Установленная версия не названа.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:15:35+00:00",
+      "is_demo": false,
+      "external_id": "research-library:roszarubezhneft-server",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": "2026-08-16",
+        "content_scope": "verified_source_summary",
+        "independence_group": "trueconf",
+        "source_visibility": "public_page",
+        "source_reviewed_at": "2026-10-23T20:15:35+00:00"
+      }
+    },
+    {
+      "key": "rostelecom-1c",
+      "source_id": "manual_web_rostelecom",
+      "url": "https://www.company.rt.ru/press/REGIONALNEWS/d457564/",
+      "title": "Ростелеком и 1С: системы учёта и партнёрский договор",
+      "text": "Ростелеком внедряет 1С:Предприятие 8 и 1С:Управление холдингом по сообщению компании от декабря 2020 года. Ростелеком и Фирма 1С заключили партнёрский договор. Текущее использование и точные версии не установлены.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:15:35+00:00",
+      "is_demo": false,
+      "external_id": "research-library:rostelecom-1c",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": "2020-12-15",
+        "content_scope": "verified_source_summary",
+        "independence_group": "rostelecom",
+        "source_visibility": "public_page",
+        "source_reviewed_at": "2026-10-23T20:15:35+00:00"
+      }
+    },
+    {
+      "key": "advisory-cve-2026-72529",
+      "source_id": "manual_web_trueconf_catalog",
+      "url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories",
+      "title": "CVE-2026-72529 — TrueConf Server",
+      "text": "CVE-2026-72529: TrueConf Server; затронутые версии по бюллетеню: <5.3; 5.3.x<5.3.9; 5.4.x<5.4.9; 5.5.x<5.5.5.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:15:35+00:00",
+      "is_demo": false,
+      "external_id": "research-library:advisory-cve-2026-72529",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": null,
+        "content_scope": "verified_source_summary",
+        "independence_group": "trueconf",
+        "source_visibility": "public_page",
+        "source_reviewed_at": "2026-10-23T20:15:35+00:00"
+      }
+    },
+    {
+      "key": "advisory-cve-2026-72530",
+      "source_id": "manual_web_trueconf_catalog",
+      "url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories",
+      "title": "CVE-2026-72530 — TrueConf Server",
+      "text": "CVE-2026-72530: TrueConf Server; затронутые версии по бюллетеню: <5.3.9; 5.4.x<5.4.9; 5.5.x<5.5.5.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:15:35+00:00",
+      "is_demo": false,
+      "external_id": "research-library:advisory-cve-2026-72530",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": null,
+        "content_scope": "verified_source_summary",
+        "independence_group": "trueconf",
+        "source_visibility": "public_page",
+        "source_reviewed_at": "2026-10-23T20:15:35+00:00"
+      }
+    },
+    {
+      "key": "advisory-cve-2026-3502",
+      "source_id": "manual_web_trueconf_catalog",
+      "url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories",
+      "title": "CVE-2026-3502 — TrueConf Client",
+      "text": "CVE-2026-3502: TrueConf Client; затронутые версии по бюллетеню: 8.1.0–8.5.2. Исправление: 8.5.3.884.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:15:35+00:00",
+      "is_demo": false,
+      "external_id": "research-library:advisory-cve-2026-3502",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": null,
+        "content_scope": "verified_source_summary",
+        "independence_group": "trueconf",
+        "source_visibility": "public_page",
+        "source_reviewed_at": "2026-10-23T20:15:35+00:00"
+      }
+    },
+    {
+      "key": "advisory-cve-2025-66835",
+      "source_id": "manual_web_trueconf_catalog",
+      "url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories",
+      "title": "CVE-2025-66835 — TrueConf Client",
+      "text": "CVE-2025-66835: TrueConf Client; затронутые версии по бюллетеню: 8.5.2. Исправление: 8.5.3.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:15:35+00:00",
+      "is_demo": false,
+      "external_id": "research-library:advisory-cve-2025-66835",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": null,
+        "content_scope": "verified_source_summary",
+        "independence_group": "trueconf",
+        "source_visibility": "public_page",
+        "source_reviewed_at": "2026-10-23T20:15:35+00:00"
+      }
+    },
+    {
+      "key": "advisory-cve-2025-66834",
+      "source_id": "manual_web_trueconf_catalog",
+      "url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories",
+      "title": "CVE-2025-66834 — TrueConf Server",
+      "text": "CVE-2025-66834: TrueConf Server; затронутые версии по бюллетеню: 5.5.2.10813. Исправление: 5.5.3.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:15:35+00:00",
+      "is_demo": false,
+      "external_id": "research-library:advisory-cve-2025-66834",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": null,
+        "content_scope": "verified_source_summary",
+        "independence_group": "trueconf",
+        "source_visibility": "public_page",
+        "source_reviewed_at": "2026-10-23T20:15:35+00:00"
+      }
+    },
+    {
+      "key": "advisory-cve-2025-66824",
+      "source_id": "manual_web_trueconf_catalog",
+      "url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories",
+      "title": "CVE-2025-66824 — TrueConf Server",
+      "text": "CVE-2025-66824: TrueConf Server; затронутые версии по бюллетеню: 5.5.2.10813. Исправление: 5.5.3.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:15:35+00:00",
+      "is_demo": false,
+      "external_id": "research-library:advisory-cve-2025-66824",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": null,
+        "content_scope": "verified_source_summary",
+        "independence_group": "trueconf",
+        "source_visibility": "public_page",
+        "source_reviewed_at": "2026-10-23T20:15:35+00:00"
+      }
+    },
+    {
+      "key": "advisory-cve-2025-66823",
+      "source_id": "manual_web_trueconf_catalog",
+      "url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories",
+      "title": "CVE-2025-66823 — TrueConf Server",
+      "text": "CVE-2025-66823: TrueConf Server; затронутые версии по бюллетеню: 5.5.2.10813. Исправление: 5.5.3.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:15:35+00:00",
+      "is_demo": false,
+      "external_id": "research-library:advisory-cve-2025-66823",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": null,
+        "content_scope": "verified_source_summary",
+        "independence_group": "trueconf",
+        "source_visibility": "public_page",
+        "source_reviewed_at": "2026-10-23T20:15:35+00:00"
+      }
+    },
+    {
+      "key": "advisory-cve-2022-46764",
+      "source_id": "manual_web_trueconf_catalog",
+      "url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories",
+      "title": "CVE-2022-46764 — TrueConf Server",
+      "text": "CVE-2022-46764: TrueConf Server; затронутые версии по бюллетеню: 5.2.0.10225. Исправление: 5.2.6.10025.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:15:35+00:00",
+      "is_demo": false,
+      "external_id": "research-library:advisory-cve-2022-46764",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": null,
+        "content_scope": "verified_source_summary",
+        "independence_group": "trueconf",
+        "source_visibility": "public_page",
+        "source_reviewed_at": "2026-10-23T20:15:35+00:00"
+      }
+    },
+    {
+      "key": "advisory-cve-2022-46763",
+      "source_id": "manual_web_trueconf_catalog",
+      "url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories",
+      "title": "CVE-2022-46763 — TrueConf Server",
+      "text": "CVE-2022-46763: TrueConf Server; затронутые версии по бюллетеню: 5.2.0.10225. Исправление: 5.2.6.10025.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:15:35+00:00",
+      "is_demo": false,
+      "external_id": "research-library:advisory-cve-2022-46763",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": null,
+        "content_scope": "verified_source_summary",
+        "independence_group": "trueconf",
+        "source_visibility": "public_page",
+        "source_reviewed_at": "2026-10-23T20:15:35+00:00"
+      }
+    },
+    {
+      "key": "advisory-bdu-2025-13738",
+      "source_id": "manual_web_trueconf_catalog",
+      "url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories",
+      "title": "BDU:2025-13738 — TrueConf Server",
+      "text": "BDU:2025-13738: TrueConf Server; затронутые версии по бюллетеню: <5.5.2. Исправление: 5.5.2.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:15:35+00:00",
+      "is_demo": false,
+      "external_id": "research-library:advisory-bdu-2025-13738",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": null,
+        "content_scope": "verified_source_summary",
+        "independence_group": "trueconf",
+        "source_visibility": "public_page",
+        "source_reviewed_at": "2026-10-23T20:15:35+00:00"
+      }
+    },
+    {
+      "key": "advisory-bdu-2025-13737",
+      "source_id": "manual_web_trueconf_catalog",
+      "url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories",
+      "title": "BDU:2025-13737 — TrueConf Server",
+      "text": "BDU:2025-13737: TrueConf Server; затронутые версии по бюллетеню: <5.5.2. Исправление: 5.5.2.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:15:35+00:00",
+      "is_demo": false,
+      "external_id": "research-library:advisory-bdu-2025-13737",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": null,
+        "content_scope": "verified_source_summary",
+        "independence_group": "trueconf",
+        "source_visibility": "public_page",
+        "source_reviewed_at": "2026-10-23T20:15:35+00:00"
+      }
+    },
+    {
+      "key": "advisory-bdu-2025-13736",
+      "source_id": "manual_web_trueconf_catalog",
+      "url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories",
+      "title": "BDU:2025-13736 — TrueConf Server",
+      "text": "BDU:2025-13736: TrueConf Server; затронутые версии по бюллетеню: <5.5.2. Исправление: 5.5.2.",
+      "published_at": null,
+      "collected_at": "2026-10-23T20:15:35+00:00",
+      "is_demo": false,
+      "external_id": "research-library:advisory-bdu-2025-13736",
+      "metadata": {
+        "collection_method": "manual_web_summary",
+        "publication_day": null,
+        "content_scope": "verified_source_summary",
+        "independence_group": "trueconf",
+        "source_visibility": "public_page",
+        "source_reviewed_at": "2026-10-23T20:15:35+00:00"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "publication_key": "sibur-enterprise",
+      "kind": "uses_product",
+      "subject": "sibur",
+      "object": "trueconf-enterprise",
+      "excerpt": "СИБУР использует TrueConf Enterprise по описанию проекта поставщиком. Номер установленной версии не опубликован. TrueConf Enterprise учитывается отдельно от TrueConf Server.",
+      "attributes": {
+        "note": "Факт относится к описанному проекту; текущая установленная версия неизвестна.",
+        "observed_day": "2026-05-28",
+        "basis": "research_report",
+        "confidence": "medium"
+      },
+      "review_note": "Проверено по открытому материалу поставщика. Текущая версия у организации не установлена."
+    },
+    {
+      "publication_key": "oteko-enterprise",
+      "kind": "uses_product",
+      "subject": "oteko",
+      "object": "trueconf-enterprise",
+      "excerpt": "ОТЭКО использует TrueConf Enterprise согласно карточке проекта разработчика. Версия и дата инвентаризации неизвестны.",
+      "attributes": {
+        "note": "Факт относится к описанному проекту; текущая установленная версия неизвестна.",
+        "basis": "research_report",
+        "confidence": "medium"
+      },
+      "review_note": "Проверено по открытому материалу поставщика. Текущая версия у организации не установлена."
+    },
+    {
+      "publication_key": "metalloinvest-enterprise",
+      "kind": "uses_product",
+      "subject": "metalloinvest",
+      "object": "trueconf-enterprise",
+      "excerpt": "Металлоинвест использует TrueConf Enterprise согласно карточке проекта разработчика. Версия и дата инвентаризации неизвестны.",
+      "attributes": {
+        "note": "Факт относится к описанному проекту; текущая установленная версия неизвестна.",
+        "basis": "research_report",
+        "confidence": "medium"
+      },
+      "review_note": "Проверено по открытому материалу поставщика. Текущая версия у организации не установлена."
+    },
+    {
+      "publication_key": "askon-server",
+      "kind": "uses_product",
+      "subject": "askon",
+      "object": "trueconf-server",
+      "excerpt": "АСКОН использует TrueConf Server согласно карточке проекта разработчика. Версия и дата инвентаризации неизвестны.",
+      "attributes": {
+        "note": "Факт относится к описанному проекту; текущая установленная версия неизвестна.",
+        "basis": "research_report",
+        "confidence": "medium"
+      },
+      "review_note": "Проверено по открытому материалу поставщика. Текущая версия у организации не установлена."
+    },
+    {
+      "publication_key": "government-mo-server",
+      "kind": "uses_product",
+      "subject": "government-mo",
+      "object": "trueconf-server",
+      "excerpt": "Правительство Московской области использует TrueConf Server согласно карточке проекта разработчика. Версия и дата инвентаризации неизвестны.",
+      "attributes": {
+        "note": "Факт относится к описанному проекту; текущая установленная версия неизвестна.",
+        "basis": "research_report",
+        "confidence": "medium"
+      },
+      "review_note": "Проверено по открытому материалу поставщика. Текущая версия у организации не установлена."
+    },
+    {
+      "publication_key": "ingosstrakh-server",
+      "kind": "uses_product",
+      "subject": "ingosstrakh",
+      "object": "trueconf-server",
+      "excerpt": "Ингосстрах использует TrueConf Server как платформу видеосвязи для IngoMobile по описанию кейса поставщика. Версия не указана.",
+      "attributes": {
+        "note": "Факт относится к описанному проекту; текущая установленная версия неизвестна.",
+        "basis": "research_report",
+        "confidence": "medium"
+      },
+      "review_note": "Проверено по открытому материалу поставщика. Текущая версия у организации не установлена."
+    },
+    {
+      "publication_key": "rosatom-engineering",
+      "kind": "uses_product",
+      "subject": "rosatom-engineering",
+      "object": "trueconf-server",
+      "excerpt": "Инжиниринговый дивизион Росатома использует TrueConf Server и TrueConf Room по описанию кейса поставщика. Инжиниринговый дивизион Росатома входит в Росатом. Номера версий не указаны.",
+      "attributes": {
+        "basis": "research_report",
+        "confidence": "medium"
+      },
+      "review_note": "Проверено по открытому материалу поставщика. Текущая версия у организации не установлена."
+    },
+    {
+      "publication_key": "rosatom-engineering",
+      "kind": "uses_product",
+      "subject": "rosatom-engineering",
+      "object": "trueconf-room",
+      "excerpt": "Инжиниринговый дивизион Росатома использует TrueConf Server и TrueConf Room по описанию кейса поставщика. Инжиниринговый дивизион Росатома входит в Росатом. Номера версий не указаны.",
+      "attributes": {
+        "basis": "research_report",
+        "confidence": "medium"
+      },
+      "review_note": "Проверено по открытому материалу поставщика. Текущая версия у организации не установлена."
+    },
+    {
+      "publication_key": "rosatom-engineering",
+      "kind": "part_of",
+      "subject": "rosatom-engineering",
+      "object": "rosatom",
+      "excerpt": "Инжиниринговый дивизион Росатома использует TrueConf Server и TrueConf Room по описанию кейса поставщика. Инжиниринговый дивизион Росатома входит в Росатом. Номера версий не указаны.",
+      "attributes": {
+        "note": "Связь организационного дивизиона с группой, без переноса ИТ-стека на все организации группы.",
+        "basis": "research_report",
+        "confidence": "medium"
+      },
+      "review_note": "Название и содержание кейса явно относятся к инжиниринговому дивизиону Росатома."
+    },
+    {
+      "publication_key": "roszarubezhneft-server",
+      "kind": "uses_product",
+      "subject": "roszarubezhneft",
+      "object": "trueconf-server",
+      "excerpt": "Росзарубежнефть использует TrueConf Server в собственном контуре по описанию проекта разработчиком. Установленная версия не названа.",
+      "attributes": {
+        "note": "Факт относится к описанному проекту; текущая установленная версия неизвестна.",
+        "observed_day": "2026-08-16",
+        "basis": "research_report",
+        "confidence": "medium"
+      },
+      "review_note": "Проверено по открытому материалу поставщика. Текущая версия у организации не установлена."
+    },
+    {
+      "publication_key": "rostelecom-1c",
+      "kind": "uses_product",
+      "subject": "rostelecom",
+      "object": "1c-enterprise",
+      "excerpt": "Ростелеком внедряет 1С:Предприятие 8 и 1С:Управление холдингом по сообщению компании от декабря 2020 года. Ростелеком и Фирма 1С заключили партнёрский договор. Текущее использование и точные версии не установлены.",
+      "attributes": {
+        "observed_day": "2020-12-15",
+        "note": "Историческое сообщение о внедрении, без подтверждения текущей конфигурации.",
+        "basis": "victim_report",
+        "confidence": "medium"
+      },
+      "review_note": "Проверено по открытому материалу поставщика. Текущая версия у организации не установлена."
+    },
+    {
+      "publication_key": "rostelecom-1c",
+      "kind": "uses_product",
+      "subject": "rostelecom",
+      "object": "1c-holding",
+      "excerpt": "Ростелеком внедряет 1С:Предприятие 8 и 1С:Управление холдингом по сообщению компании от декабря 2020 года. Ростелеком и Фирма 1С заключили партнёрский договор. Текущее использование и точные версии не установлены.",
+      "attributes": {
+        "observed_day": "2020-12-15",
+        "note": "Историческое сообщение о внедрении, без подтверждения текущей конфигурации.",
+        "basis": "victim_report",
+        "confidence": "medium"
+      },
+      "review_note": "Проверено по открытому материалу поставщика. Текущая версия у организации не установлена."
+    },
+    {
+      "publication_key": "rostelecom-1c",
+      "kind": "partners_with",
+      "subject": "rostelecom",
+      "object": "1c-vendor",
+      "excerpt": "Ростелеком внедряет 1С:Предприятие 8 и 1С:Управление холдингом по сообщению компании от декабря 2020 года. Ростелеком и Фирма 1С заключили партнёрский договор. Текущее использование и точные версии не установлены.",
+      "attributes": {
+        "observed_day": "2020-12-15",
+        "note": "Исторический договор, технический доступ не подразумевается.",
+        "basis": "victim_report",
+        "confidence": "medium"
+      },
+      "review_note": "Официальное сообщение Ростелекома о партнёрском договоре с 1С."
+    },
+    {
+      "publication_key": "advisory-cve-2026-72529",
+      "kind": "affects_product",
+      "subject": "CVE-2026-72529",
+      "object": "trueconf-server",
+      "excerpt": "CVE-2026-72529: TrueConf Server; затронутые версии по бюллетеню: <5.3; 5.3.x<5.3.9; 5.4.x<5.4.9; 5.5.x<5.5.5.",
+      "attributes": {
+        "affected_version_text": "<5.3; 5.3.x<5.3.9; 5.4.x<5.4.9; 5.5.x<5.5.5",
+        "basis": "vendor_advisory",
+        "confidence": "medium"
+      },
+      "review_note": "Строка таблицы разработчика. Не переносить уязвимости Server на Enterprise или Client."
+    },
+    {
+      "publication_key": "advisory-cve-2026-72530",
+      "kind": "affects_product",
+      "subject": "CVE-2026-72530",
+      "object": "trueconf-server",
+      "excerpt": "CVE-2026-72530: TrueConf Server; затронутые версии по бюллетеню: <5.3.9; 5.4.x<5.4.9; 5.5.x<5.5.5.",
+      "attributes": {
+        "affected_version_text": "<5.3.9; 5.4.x<5.4.9; 5.5.x<5.5.5",
+        "basis": "vendor_advisory",
+        "confidence": "medium"
+      },
+      "review_note": "Строка таблицы разработчика. Не переносить уязвимости Server на Enterprise или Client."
+    },
+    {
+      "publication_key": "advisory-cve-2026-3502",
+      "kind": "affects_product",
+      "subject": "CVE-2026-3502",
+      "object": "trueconf-client",
+      "excerpt": "CVE-2026-3502: TrueConf Client; затронутые версии по бюллетеню: 8.1.0–8.5.2. Исправление: 8.5.3.884.",
+      "attributes": {
+        "affected_version_text": "8.1.0–8.5.2",
+        "fixed_versions": [
+          "8.5.3.884"
+        ],
+        "affected_ranges": [
+          {
+            "gte": "8.1.0",
+            "lte": "8.5.2"
+          }
+        ],
+        "basis": "vendor_advisory",
+        "confidence": "medium"
+      },
+      "review_note": "Строка таблицы разработчика. Не переносить уязвимости Server на Enterprise или Client."
+    },
+    {
+      "publication_key": "advisory-cve-2025-66835",
+      "kind": "affects_product",
+      "subject": "CVE-2025-66835",
+      "object": "trueconf-client",
+      "excerpt": "CVE-2025-66835: TrueConf Client; затронутые версии по бюллетеню: 8.5.2. Исправление: 8.5.3.",
+      "attributes": {
+        "affected_version_text": "8.5.2",
+        "affected_versions": [
+          "8.5.2"
+        ],
+        "fixed_versions": [
+          "8.5.3"
+        ],
+        "basis": "vendor_advisory",
+        "confidence": "medium"
+      },
+      "review_note": "Строка таблицы разработчика. Не переносить уязвимости Server на Enterprise или Client."
+    },
+    {
+      "publication_key": "advisory-cve-2025-66834",
+      "kind": "affects_product",
+      "subject": "CVE-2025-66834",
+      "object": "trueconf-server",
+      "excerpt": "CVE-2025-66834: TrueConf Server; затронутые версии по бюллетеню: 5.5.2.10813. Исправление: 5.5.3.",
+      "attributes": {
+        "affected_version_text": "5.5.2.10813",
+        "affected_versions": [
+          "5.5.2.10813"
+        ],
+        "fixed_versions": [
+          "5.5.3"
+        ],
+        "basis": "vendor_advisory",
+        "confidence": "medium"
+      },
+      "review_note": "Строка таблицы разработчика. Не переносить уязвимости Server на Enterprise или Client."
+    },
+    {
+      "publication_key": "advisory-cve-2025-66824",
+      "kind": "affects_product",
+      "subject": "CVE-2025-66824",
+      "object": "trueconf-server",
+      "excerpt": "CVE-2025-66824: TrueConf Server; затронутые версии по бюллетеню: 5.5.2.10813. Исправление: 5.5.3.",
+      "attributes": {
+        "affected_version_text": "5.5.2.10813",
+        "affected_versions": [
+          "5.5.2.10813"
+        ],
+        "fixed_versions": [
+          "5.5.3"
+        ],
+        "basis": "vendor_advisory",
+        "confidence": "medium"
+      },
+      "review_note": "Строка таблицы разработчика. Не переносить уязвимости Server на Enterprise или Client."
+    },
+    {
+      "publication_key": "advisory-cve-2025-66823",
+      "kind": "affects_product",
+      "subject": "CVE-2025-66823",
+      "object": "trueconf-server",
+      "excerpt": "CVE-2025-66823: TrueConf Server; затронутые версии по бюллетеню: 5.5.2.10813. Исправление: 5.5.3.",
+      "attributes": {
+        "affected_version_text": "5.5.2.10813",
+        "affected_versions": [
+          "5.5.2.10813"
+        ],
+        "fixed_versions": [
+          "5.5.3"
+        ],
+        "basis": "vendor_advisory",
+        "confidence": "medium"
+      },
+      "review_note": "Строка таблицы разработчика. Не переносить уязвимости Server на Enterprise или Client."
+    },
+    {
+      "publication_key": "advisory-cve-2022-46764",
+      "kind": "affects_product",
+      "subject": "CVE-2022-46764",
+      "object": "trueconf-server",
+      "excerpt": "CVE-2022-46764: TrueConf Server; затронутые версии по бюллетеню: 5.2.0.10225. Исправление: 5.2.6.10025.",
+      "attributes": {
+        "affected_version_text": "5.2.0.10225",
+        "affected_versions": [
+          "5.2.0.10225"
+        ],
+        "fixed_versions": [
+          "5.2.6.10025"
+        ],
+        "basis": "vendor_advisory",
+        "confidence": "medium"
+      },
+      "review_note": "Строка таблицы разработчика. Не переносить уязвимости Server на Enterprise или Client."
+    },
+    {
+      "publication_key": "advisory-cve-2022-46763",
+      "kind": "affects_product",
+      "subject": "CVE-2022-46763",
+      "object": "trueconf-server",
+      "excerpt": "CVE-2022-46763: TrueConf Server; затронутые версии по бюллетеню: 5.2.0.10225. Исправление: 5.2.6.10025.",
+      "attributes": {
+        "affected_version_text": "5.2.0.10225",
+        "affected_versions": [
+          "5.2.0.10225"
+        ],
+        "fixed_versions": [
+          "5.2.6.10025"
+        ],
+        "basis": "vendor_advisory",
+        "confidence": "medium"
+      },
+      "review_note": "Строка таблицы разработчика. Не переносить уязвимости Server на Enterprise или Client."
+    },
+    {
+      "publication_key": "advisory-bdu-2025-13738",
+      "kind": "affects_product",
+      "subject": "BDU:2025-13738",
+      "object": "trueconf-server",
+      "excerpt": "BDU:2025-13738: TrueConf Server; затронутые версии по бюллетеню: <5.5.2. Исправление: 5.5.2.",
+      "attributes": {
+        "affected_version_text": "<5.5.2",
+        "fixed_versions": [
+          "5.5.2"
+        ],
+        "basis": "vendor_advisory",
+        "confidence": "medium"
+      },
+      "review_note": "Строка таблицы разработчика. Не переносить уязвимости Server на Enterprise или Client."
+    },
+    {
+      "publication_key": "advisory-bdu-2025-13737",
+      "kind": "affects_product",
+      "subject": "BDU:2025-13737",
+      "object": "trueconf-server",
+      "excerpt": "BDU:2025-13737: TrueConf Server; затронутые версии по бюллетеню: <5.5.2. Исправление: 5.5.2.",
+      "attributes": {
+        "affected_version_text": "<5.5.2",
+        "fixed_versions": [
+          "5.5.2"
+        ],
+        "basis": "vendor_advisory",
+        "confidence": "medium"
+      },
+      "review_note": "Строка таблицы разработчика. Не переносить уязвимости Server на Enterprise или Client."
+    },
+    {
+      "publication_key": "advisory-bdu-2025-13736",
+      "kind": "affects_product",
+      "subject": "BDU:2025-13736",
+      "object": "trueconf-server",
+      "excerpt": "BDU:2025-13736: TrueConf Server; затронутые версии по бюллетеню: <5.5.2. Исправление: 5.5.2.",
+      "attributes": {
+        "affected_version_text": "<5.5.2",
+        "fixed_versions": [
+          "5.5.2"
+        ],
+        "basis": "vendor_advisory",
+        "confidence": "medium"
+      },
+      "review_note": "Строка таблицы разработчика. Не переносить уязвимости Server на Enterprise или Client."
+    }
+  ]
+}

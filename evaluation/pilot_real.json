@@ -1,0 +1,747 @@
+{
+  "version": "pilot-2026-10-24-v1",
+  "annotator": "assistant_manual_annotation",
+  "status": "development_pilot_not_independent_holdout",
+  "sampling": "Fixed seed 20261024 within seven source classes; three explicit case controls appended. 30 records.",
+  "task": "Primary event type of saved publication; ordinary research, recovery and business follow-ups are unknown.",
+  "limitations": [
+    "Labels prepared with AI assistance by the same agent that edits the code; independent human review required.",
+    "Not a random population sample, not a test of prediction or factual truth.",
+    "Some inputs are headlines/listing summaries only; company extraction not measured on this sample."
+  ],
+  "records": [
+    {
+      "sample_id": 1,
+      "publication_id": "649229526dcfb235f457c5a1",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:36+00:00",
+        "external_id": "https://www.securitylab.ru/news/579019.php",
+        "is_demo": false,
+        "metadata": {},
+        "published_at": "2026-10-21T08:44:20+00:00",
+        "source_id": "securitylab_news",
+        "text": "Пока владельцы сайтов ничего не подозревали, опасный механизм закреплялся глубоко внутри системы.",
+        "title": "Обновили WordPress и впустили хакеров. Популярный SEO-плагин раздавал скрытые бэкдоры",
+        "url": "https://www.securitylab.ru/news/579019.php"
+      },
+      "content_hash": "eb790d227c87bf30c00673cccc3be159e41f4dae5884593c961d659012dd81e8",
+      "gold_event_type": "attack_claim",
+      "annotation_note": "Сообщение о вредоносном распространении бэкдора, не штатном обновлении."
+    },
+    {
+      "sample_id": 2,
+      "publication_id": "bbb5ea6de6a36faecd2f6277",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:36+00:00",
+        "external_id": "https://www.securitylab.ru/news/578979.php",
+        "is_demo": false,
+        "metadata": {},
+        "published_at": "2026-10-20T08:39:37+00:00",
+        "source_id": "securitylab_news",
+        "text": "Передавать персональные данные в Китай можно без ожидания проверки уведомления, а для США сохраняется более строгая процедура.",
+        "title": "Китай оставили, Украину вычеркнули. Роскомнадзор утвердил 88 стран для передачи данных россиян",
+        "url": "https://www.securitylab.ru/news/578979.php"
+      },
+      "content_hash": "f5091f2a4e3f309324b81b098a4d8afc9ef931ffe8d43f15e2f73b7f97781853",
+      "gold_event_type": "unknown",
+      "annotation_note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 3,
+      "publication_id": "814cc947a2d3d864e52b9fa9",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:36+00:00",
+        "external_id": "https://www.securitylab.ru/news/579051.php",
+        "is_demo": false,
+        "metadata": {},
+        "published_at": "2026-10-22T05:15:10+00:00",
+        "source_id": "securitylab_news",
+        "text": "Восемь учебных заведений пришлось закрыть на два дня, а четыре тысячи детей остались дома.",
+        "title": "Киберпанк, который мы заслужили. Вымогатели взяли в заложники батареи и дверные замки в школах",
+        "url": "https://www.securitylab.ru/news/579051.php"
+      },
+      "content_hash": "73d38632c24aa87b857513e8e19bf4ea4a940a484cd9fa81d1df260d796e5c73",
+      "gold_event_type": "ransomware_claim",
+      "annotation_note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 4,
+      "publication_id": "52f27229732dc29153d5f621",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:36+00:00",
+        "external_id": "https://www.securitylab.ru/news/579007.php",
+        "is_demo": false,
+        "metadata": {},
+        "published_at": "2026-10-21T19:41:13+00:00",
+        "source_id": "securitylab_news",
+        "text": "Разработчики объединили модель пространства с симуляцией нервной системы из 140 тысяч нейронов.",
+        "title": "Мозг дрозофилы заперли в реальности, которой ещё не существует. ИИ достраивает мир прямо у неё под носом",
+        "url": "https://www.securitylab.ru/news/579007.php"
+      },
+      "content_hash": "69d1f20145ac592bba8a0bc8c25d1ddc28a5faf5ca16a5ce392e14bebd06071b",
+      "gold_event_type": "unknown",
+      "annotation_note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 5,
+      "publication_id": "9d14e730d34c5eb90f18d3eb",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:36+00:00",
+        "external_id": "https://www.securitylab.ru/news/579012.php",
+        "is_demo": false,
+        "metadata": {},
+        "published_at": "2026-10-20T12:31:10+00:00",
+        "source_id": "securitylab_news",
+        "text": "Прежний барьер преодолён, однако извлекать защищённые игровые файлы пока рано.",
+        "title": "PS5 снова взломали. Последняя прошивка продержалась меньше трёх недель",
+        "url": "https://www.securitylab.ru/news/579012.php"
+      },
+      "content_hash": "1db398572c49330f58268f31d424f2401ac029e31b961942200879623b732b32",
+      "gold_event_type": "unknown",
+      "annotation_note": "Обход ограничений игровой консоли не назван атакой на компанию."
+    },
+    {
+      "sample_id": 6,
+      "publication_id": "132cbb21b01f56dfe9d6ea67",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:36+00:00",
+        "external_id": "https://www.securitylab.ru/news/579088.php",
+        "is_demo": false,
+        "metadata": {},
+        "published_at": "2026-10-22T16:34:11+00:00",
+        "source_id": "securitylab_news",
+        "text": "Кот Шрёдингера может не выбирать: обе его судьбы остаются реальными.",
+        "title": "Добро пожаловать в квантовую мультивселенную: физики объяснили, почему мы, вероятно, уже живём в ней",
+        "url": "https://www.securitylab.ru/news/579088.php"
+      },
+      "content_hash": "deeee41b00abfde09e04f39aa434941a5c297e6b9161065dea63a91af56ebdfc",
+      "gold_event_type": "unknown",
+      "annotation_note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 7,
+      "publication_id": "73a6ced41f1d6f2c7a1b9949",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:36+00:00",
+        "external_id": "https://www.securitylab.ru/news/579073.php",
+        "is_demo": false,
+        "metadata": {},
+        "published_at": "2026-10-22T11:33:54+00:00",
+        "source_id": "securitylab_news",
+        "text": "Фальшивое резюме открывало дорогу в Windows, а дальше включался GitHub.",
+        "title": "GitHub стал командным центром. Касперский раскрыл новую операцию северокорейских хакеров",
+        "url": "https://www.securitylab.ru/news/579073.php"
+      },
+      "content_hash": "b71f726fa1ca8fe51b5face93be60fb1690eb26a1c99c4b184dd00a474f76b5d",
+      "gold_event_type": "attack_claim",
+      "annotation_note": "В тексте явно сообщается об операции атакующих."
+    },
+    {
+      "sample_id": 8,
+      "publication_id": "ce8804bf62d47bcb14b9b910",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:36+00:00",
+        "external_id": "https://www.securitylab.ru/news/578995.php",
+        "is_demo": false,
+        "metadata": {},
+        "published_at": "2026-10-20T16:06:13+00:00",
+        "source_id": "securitylab_news",
+        "text": "Вашингтон опасается, что конфиденциальные данные могут оказаться в руках Пекина.",
+        "title": "США приказали удалить DeepSeek со всех гражданских федеральных систем",
+        "url": "https://www.securitylab.ru/news/578995.php"
+      },
+      "content_hash": "af1427053c79a23fcb85a1aa15898426239342beb980eacd613cd1b06a40a599",
+      "gold_event_type": "unknown",
+      "annotation_note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 9,
+      "publication_id": "43d934054367bd0c19e84f46",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T07:02:22+00:00",
+        "external_id": "https://www.securitylab.ru/news/579145.php",
+        "is_demo": false,
+        "metadata": {},
+        "published_at": "2026-10-24T03:08:42+00:00",
+        "source_id": "securitylab_news",
+        "text": "Один позитрон против целой установки.",
+        "title": "Физики впервые построили квантовый циклотрон для одной частицы антиматерии",
+        "url": "https://www.securitylab.ru/news/579145.php"
+      },
+      "content_hash": "03468c23587e95850f928c4faab2a794370846f44f8ecaa1116600bfb23a2131",
+      "gold_event_type": "unknown",
+      "annotation_note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 10,
+      "publication_id": "a2573f0bc0f5fbd1642b7ef0",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:36+00:00",
+        "external_id": "https://www.securitylab.ru/news/579027.php",
+        "is_demo": false,
+        "metadata": {},
+        "published_at": "2026-10-21T05:14:21+00:00",
+        "source_id": "securitylab_news",
+        "text": "Автор PHP-UP-2026 опубликовал инструменты для предполагаемой эксплуатации ошибок.",
+        "title": "Две критические дыры в PHP. Готовый эксплойт появился раньше исправлений",
+        "url": "https://www.securitylab.ru/news/579027.php"
+      },
+      "content_hash": "bdebb088ac634faa4743aa112b6af7545498b9b8860ea9ef55131d434ba644f1",
+      "gold_event_type": "vulnerability_advisory",
+      "annotation_note": "Эксплойт и исправления описывают техническую уязвимость."
+    },
+    {
+      "sample_id": 11,
+      "publication_id": "3e524976cecfcf875e7ed264",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:39+00:00",
+        "external_id": "https://www.securitylab.ru/analytics/578851.php",
+        "is_demo": false,
+        "metadata": {},
+        "published_at": "2026-10-16T09:39:00+00:00",
+        "source_id": "securitylab_analytics",
+        "text": "Как команда akPots работала с R-Vision SIEM на кибербитве Standoff 17? Разбираем опыт защитников: от мониторинга событий до расследования инцидентов.",
+        "title": "R-Vision SIEM в бою: опыт эксплуатации командой защитников на Standoff",
+        "url": "https://www.securitylab.ru/analytics/578851.php"
+      },
+      "content_hash": "76b1a134f60af2a16211021b00a82b8c83f43bda8fce071a056721f5b72e0cbd",
+      "gold_event_type": "unknown",
+      "annotation_note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 12,
+      "publication_id": "447f1b308c138dda878cac03",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:39+00:00",
+        "external_id": "https://www.securitylab.ru/analytics/579059.php",
+        "is_demo": false,
+        "metadata": {},
+        "published_at": "2026-10-21T13:17:10+00:00",
+        "source_id": "securitylab_analytics",
+        "text": "Аналитики, которым нейросеть сказала «безопасно», пропускали втрое больше атак, чем те, кто работал без подсказки.",
+        "title": "ИИ-расследователь в центре мониторинга. Где кончается автономия и начинается риск",
+        "url": "https://www.securitylab.ru/analytics/579059.php"
+      },
+      "content_hash": "3e9a2fb2f408178a275948d84625be236caa9b003a5f32ca1fd21f2363c2425c",
+      "gold_event_type": "unknown",
+      "annotation_note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 13,
+      "publication_id": "76c5e42c8d7fc49dbe514d27",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:39+00:00",
+        "external_id": "https://www.securitylab.ru/analytics/559714.php",
+        "is_demo": false,
+        "metadata": {},
+        "published_at": "2026-10-12T07:19:00+00:00",
+        "source_id": "securitylab_analytics",
+        "text": "Как работает техника, минующая стандартные механизмы ОС Windows.",
+        "title": "Reflective DLL Injection. DLL без файла, но со следами",
+        "url": "https://www.securitylab.ru/analytics/559714.php"
+      },
+      "content_hash": "cd4d1eaafbf66fcf147abf2af1b4155ff72e7f5c7a2c590a43996298da1b3fad",
+      "gold_event_type": "unknown",
+      "annotation_note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 14,
+      "publication_id": "a954556caa89a02f3214fd32",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:39+00:00",
+        "external_id": "https://www.securitylab.ru/analytics/579163.php",
+        "is_demo": false,
+        "metadata": {},
+        "published_at": "2026-10-23T13:01:01+00:00",
+        "source_id": "securitylab_analytics",
+        "text": "Собрать корпоративную сеть можно прямо на домашнем компьютере. Разбираемся, какие инструменты понадобятся для первой лаборатории, как настроить маршрутизацию и что можно увидеть в трафике своими глазами.",
+        "title": "Первая домашняя лаборатория: что собрать на своём компьютере, чтобы понять корпоративную сеть",
+        "url": "https://www.securitylab.ru/analytics/579163.php"
+      },
+      "content_hash": "75e3a995ae9357467582942b33fa4a652ab104ff619bf9766833b1b5fc563756",
+      "gold_event_type": "unknown",
+      "annotation_note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 15,
+      "publication_id": "6a86081e22d9ece53d2c9461",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:53+00:00",
+        "external_id": "https://securelist.ru/moviereaper-malware-torrent-odyssey-solana/117109/",
+        "is_demo": false,
+        "metadata": {
+          "collection_method": "public_listing",
+          "content_scope": "title_only",
+          "date_checked_at": "2026-10-24T06:58:44+00:00",
+          "date_precision": "day",
+          "date_source_method": "manual_web_verification",
+          "date_source_url": "https://securelist.ru/moviereaper-malware-torrent-odyssey-solana/117109/",
+          "discovery_url": "https://securelist.ru/",
+          "publication_day": "2026-09-17",
+          "source_role": "research_context"
+        },
+        "published_at": null,
+        "source_id": "securelist_research",
+        "text": "Одиссей и троянцы снова вместе: MovieReaper атакует пользователей по всему миру через скомпрометированные торренты",
+        "title": "Одиссей и троянцы снова вместе: MovieReaper атакует пользователей по всему миру через скомпрометированные торренты",
+        "url": "https://securelist.ru/moviereaper-malware-torrent-odyssey-solana/117109/"
+      },
+      "content_hash": "b25f4bdd53606e87003637932a4f6e43bbd9811ddeea7f0a342f8b1d943353b3",
+      "gold_event_type": "attack_claim",
+      "annotation_note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 16,
+      "publication_id": "27152a205ef9d3bcb31c86a2",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:53+00:00",
+        "external_id": "https://securelist.ru/armored-likho-still-toolkit/116417/",
+        "is_demo": false,
+        "metadata": {
+          "collection_method": "public_listing",
+          "content_scope": "title_only",
+          "date_checked_at": "2026-10-24T06:58:44+00:00",
+          "date_precision": "day",
+          "date_source_method": "manual_web_verification",
+          "date_source_url": "https://securelist.ru/armored-likho-still-toolkit/116417/",
+          "discovery_url": "https://securelist.ru/",
+          "publication_day": "2026-08-13",
+          "source_role": "research_context"
+        },
+        "published_at": null,
+        "source_id": "securelist_research",
+        "text": "Благотворительность как приманка: Armored Likho расширяет арсенал инструментов для кибершпионажа",
+        "title": "Благотворительность как приманка: Armored Likho расширяет арсенал инструментов для кибершпионажа",
+        "url": "https://securelist.ru/armored-likho-still-toolkit/116417/"
+      },
+      "content_hash": "33539671f052c63e2b2b043e8f30f9ffce59414d835806afe37227f081113fe9",
+      "gold_event_type": "unknown",
+      "annotation_note": "По одному заголовку об инструментарии недостаточно сведений о конкретном событии."
+    },
+    {
+      "sample_id": 17,
+      "publication_id": "ab07fc4ee986d3045525de6a",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:53+00:00",
+        "external_id": "https://securelist.ru/toddycat-apt-umbrij-tool-and-oauth/116029/",
+        "is_demo": false,
+        "metadata": {
+          "collection_method": "public_listing",
+          "content_scope": "title_only",
+          "date_checked_at": "2026-10-24T06:58:44+00:00",
+          "date_precision": "day",
+          "date_source_method": "manual_web_verification",
+          "date_source_url": "https://securelist.ru/toddycat-apt-umbrij-tool-and-oauth/116029/",
+          "discovery_url": "https://securelist.ru/",
+          "publication_day": "2026-06-30",
+          "source_role": "research_context"
+        },
+        "published_at": null,
+        "source_id": "securelist_research",
+        "text": "ToddyCat — ваш скрытый почтовый ассистент. Часть 2",
+        "title": "ToddyCat — ваш скрытый почтовый ассистент. Часть 2",
+        "url": "https://securelist.ru/toddycat-apt-umbrij-tool-and-oauth/116029/"
+      },
+      "content_hash": "845d1130635a4b8cd44ebcb5483fecd4fc1ca290ac7fcb34cfbc8864d8fc6935",
+      "gold_event_type": "unknown",
+      "annotation_note": "Заголовок не позволяет восстановить тип события."
+    },
+    {
+      "sample_id": 18,
+      "publication_id": "5fb15ae4d040d410cf18cfbf",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:53+00:00",
+        "external_id": "https://securelist.ru/paper-unicorn-warehouse-security/117315/",
+        "is_demo": false,
+        "metadata": {
+          "collection_method": "public_listing",
+          "content_scope": "title_only",
+          "date_checked_at": "2026-10-24T06:58:44+00:00",
+          "date_precision": "day",
+          "date_source_method": "manual_web_verification",
+          "date_source_url": "https://securelist.ru/paper-unicorn-warehouse-security/117315/",
+          "discovery_url": "https://securelist.ru/",
+          "publication_day": "2026-10-20",
+          "source_role": "research_context"
+        },
+        "published_at": null,
+        "source_id": "securelist_research",
+        "text": "Приключения бумажного единорога внутри современного склада",
+        "title": "Приключения бумажного единорога внутри современного склада",
+        "url": "https://securelist.ru/paper-unicorn-warehouse-security/117315/"
+      },
+      "content_hash": "f4477592e34efdaaa915b2d98fc14f57cd3d0767b26a7937ec4fc3f0d471f520",
+      "gold_event_type": "unknown",
+      "annotation_note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 19,
+      "publication_id": "3f7053c03571c746f90cd465",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T07:46:33+00:00",
+        "external_id": "case:novabev-2025:9m2026",
+        "is_demo": false,
+        "metadata": {
+          "case_id": "novabev-2025",
+          "collection_method": "manual_web_summary",
+          "content_scope": "indexed_primary_source_summary",
+          "date_checked_at": "2026-10-24T07:46:33+00:00",
+          "date_precision": "day",
+          "direct_page_fetch": "failed_502_or_timeout",
+          "incident_id": "novabev-2025",
+          "publication_day": "2026-10-08",
+          "signal_scope": "business_followup",
+          "source_role": "historical_business_context",
+          "verification_method": "indexed_primary_source_text"
+        },
+        "published_at": null,
+        "source_id": "manual_web_novabev",
+        "text": "В официальном сообщении от 8 октября 2026 года Novabev Group связывает часть динамики продаж сети ВинЛаб с восстановлением после кибератаки в июле 2025 года. Это последующее описание экономических последствий одного исторического инцидента, а не сообщение о новой атаке.",
+        "title": "Novabev: итоги девяти месяцев 2026 года и последствия прежнего инцидента",
+        "url": "https://novabev.com/press-room/lenta/operating-results-9m-2026/"
+      },
+      "content_hash": "7d5f23d9ba1d34cc2e4790cdafe3db446602e667711b44e2dfe9f76c235b062d",
+      "gold_event_type": "unknown",
+      "annotation_note": "Основная тема — последствия старого инцидента, не новая атака."
+    },
+    {
+      "sample_id": 20,
+      "publication_id": "5a4f2e808c4db46eb551315b",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T18:21:15+00:00",
+        "external_id": null,
+        "is_demo": false,
+        "metadata": {
+          "case_id": "novabev-2025",
+          "date_checked_at": "2026-10-24T07:46:33+00:00",
+          "date_precision": "day",
+          "date_source_method": "indexed_primary_source_text",
+          "date_source_url": "https://novabev.com/en/press-room/lenta/novabev-group-and-winelab-are-gradually-restoring-operations-following-the-cyberattack/",
+          "incident_id": "novabev-2025",
+          "publication_day": "2025-07-22",
+          "signal_scope": "recovery_update"
+        },
+        "published_at": null,
+        "source_id": "manual_web_novabev",
+        "text": "Краткий пересказ сообщения от 22 июля 2025 года: Novabev Group сообщила о восстановлении бизнес-процессов после кибератаки и открытии более ста магазинов ВинЛаб. Сообщение относится к тому же июльскому событию.",
+        "title": "Novabev Group и ВинЛаб восстанавливают работу после кибератаки",
+        "url": "https://novabev.com/press-room/lenta/novabev-group-and-winelab-are-gradually-restoring-operations-following-the-cyberattack/"
+      },
+      "content_hash": "2a7517240ac9501b51eb9e6abb1a3e0f5bffce2ab9b4fec20cb7d01a8cf6c55f",
+      "gold_event_type": "unknown",
+      "annotation_note": "Восстановление, не новая атака."
+    },
+    {
+      "sample_id": 21,
+      "publication_id": "e77e2d2008b7be95fb1b6487",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T20:36:07+00:00",
+        "external_id": "threat-library:novabev-victim",
+        "is_demo": false,
+        "metadata": {
+          "case_id": "novabev-2025",
+          "collection_method": "manual_web_summary",
+          "content_scope": "reviewed_historical_summary",
+          "date_checked_at": "2026-10-24T07:46:33+00:00",
+          "date_precision": "day",
+          "date_source_method": "indexed_primary_source_text",
+          "date_source_url": "https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/",
+          "incident_id": "novabev-2025",
+          "note": "Краткий авторский пересказ источника; не живой сбор и не сканирование.",
+          "publication_day": "2025-07-16",
+          "signal_scope": "historical_incident"
+        },
+        "published_at": null,
+        "source_id": "manual_web_novabev",
+        "text": "Инцидент Novabev 2025 затронул Novabev Group и ВинЛаб: официальное сообщение описывает кибератаку 14 июля 2025 года и денежное требование. Группировка, конкретная CVE и установленное ПО в этом источнике не установлены.",
+        "title": "Novabev и ВинЛаб: отдельный узел июльского инцидента",
+        "url": "https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/"
+      },
+      "content_hash": "01e18a376ab63edfd579fec1b5d0e2790277ca130c2f865d1f4225338bb6be59",
+      "gold_event_type": "attack_claim",
+      "annotation_note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 22,
+      "publication_id": "05c99685d0b93186bfe9224e",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:44:37+00:00",
+        "external_id": null,
+        "is_demo": false,
+        "metadata": {
+          "collection_method": "manual_web_summary",
+          "content_scope": "verified_source_summary",
+          "note": "Проверено открытым веб-поиском; не RSS и не сканирование",
+          "publication_day": null
+        },
+        "published_at": null,
+        "source_id": "manual_web_novabev",
+        "text": "ВинЛаб входит в Novabev Group как собственная розничная сеть. Это связь группы и бренда, а не утверждение о конкретной структуре юридического владения.",
+        "title": "Novabev Group: собственная розничная сеть ВинЛаб",
+        "url": "https://novabev.com/about/business/"
+      },
+      "content_hash": "3a13e783f31a7a54a16e65e0628821aca99f0c5abcf4588e183e17d49ba7877b",
+      "gold_event_type": "unknown",
+      "annotation_note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 23,
+      "publication_id": "29341b44e2a179b9c769574b",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T07:02:41+00:00",
+        "external_id": "https://trueconf.ru/blog/success-stories/sibur-trueconf",
+        "is_demo": false,
+        "metadata": {
+          "collection_method": "vendor_case",
+          "content_scope": "public_case_text",
+          "date_precision": "day",
+          "independence_group": "trueconf",
+          "publication_day": "2026-05-28"
+        },
+        "published_at": null,
+        "source_id": "trueconf_case_sibur",
+        "text": "Сфера деятельности\nБизнес и промышленность\nСтрана\nРоссия\nДата внедрения\n2025 год\nКоличество сотрудников\nБолее 40 тыс.\nКоличество видеоконференций\n1,3 тыс. сеансов\nСайт\nwww.sibur.ru\nОб организации\nСИБУР — ведущая нефтегазохимическая компания России и одна из крупнейших мировых компаний отрасли. Продукция СИБУРа применяется во многих секторах экономики по всему миру: строительстве, пищевой промышленности, медицине и фармацевтике, сельском хозяйстве, автомобилестроении и других.\nЗадача\nПеред СИБУРом стояла задача по созданию системы на российском программном обеспечении и объединению сотрудников из географически распределённых структур, производств, филиалов и дочерних компаний. Было необходимо обеспечить бесшовную и безопасную интеграцию системы в существующую сложную ИТ-инфраструктуру.\nКлючевой целью компании стало обеспечение технологического суверенитета и бизнес-непрерывности через отказ от устаревшей системы Microsoft Skype for Business и исключение всех рисков блокировки, ограничений или зависимости от зарубежного ПО.\nНеобходимо было также повысить эффективность взаимодействия более 40 тыс. сотрудников во всех регионах присутствия компании и подключить более 600 переговорных комнат. Для этого требовалась глубокая интеграция с парком ИТ-служб и защитных систем для создания централизованной и безопасной цифровой экосистемы, исключающей изолированные решения.\nКроме того, стояла задача организовать гибкое и инклюзивное пространство для совещаний — от закрытых внутренних ВКС до публичных мероприятий с партнёрами и контрагентами из-за рубежа.\nРешение\nПеред внедрением СИБУР провел тщательный тест систем, чтобы выбрать продукт, полностью отвечающий строгим запросам промышленного холдинга. Отбор отечественных решений стартовал с формирования списка требований, затем было проведено всестороннее тестирование 12 претендентов по 150 критериям.\nВ результате была выбрана российская автономная система TrueConf Enterprise, которая подтвердила соответствие требованиям СИБУРа к безопасности и отказоустойчивости связи, многофункциональности, кроссплатформенности и широким интеграционным возможностям.\nВ связи со строгими стандартами информационной безопасности и особенностям распредёленной производственной структуры была проведена глубокая доработка платформы: комплексная интеграция с корпоративной почтой, системами управления пользователями и телефонией.\n«Подобного масштабного и амбициозного внедрения продукта с новой архитектурой, позволяющего проводить крупные конференции, ещё не было на российском рынке. Труконф станет нашей новой точкой опоры для корпоративных коммуникаций. Это зрелое, технологичное и удобное решение, которое команда Цифрового СИБУРа прорабатывала в течение последнего года. И теперь оно полностью соответствует нашим требованиям — и будет развиваться дальше».\nРустам Абдрахманов\nРуководитель по эксплуатации и сопровождению ИТ СИБУРа, генеральный директор ООО «СИБУР Коннект»\nРезультат\nВ результате внедрения был реализован один из крупнейших в мире проектов по созданию частной системы объединённых коммуникаций между географически распределёнными структурами, производствами и филиалами, позволивший значительно повысить эффективность совместной работы сотрудников, находящихся в разных часовых поясах.\nНа текущий момент в единую сеть на базе TrueConf Enterprise объединены более 40 тыс. сотрудников, 600 переговорных помещений, свыше 27 тысяч абонентов телефонии и 56 АТС.\nБлагодаря своей масштабируемости и отказоустойчивости, система стабильно функционирует даже при пиковых нагрузках. Одновременно в компании проводится свыше 1,3 тыс. сеансов многопользовательской видеоконференцсвязи, а на каждого сотрудника в среднем приходится около трёх часов видеосвязи ежедневно.\nКроме того, система TrueConf Enterprise глубоко интегрирована с существующим парком оборудования, включая ВКС-терминалы сторонних производителей, Microsoft Exchange, АТС, службы каталогов и систему EMM.\nВалерия Исакова",
+        "title": "СИБУР перевёл 40 тысяч сотрудников на Труконф",
+        "url": "https://trueconf.ru/blog/success-stories/sibur-trueconf"
+      },
+      "content_hash": "9b669cf84849ade668ce750be14e3bb0cb28fc10ff381fe2f96c81eb1cb8a8c6",
+      "gold_event_type": "unknown",
+      "annotation_note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 24,
+      "publication_id": "c1bc55745e1cf327645f3585",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T07:02:39+00:00",
+        "external_id": "vendor-table:BDU:2025-11412",
+        "is_demo": false,
+        "metadata": {
+          "collection_method": "vendor_table",
+          "content_scope": "advisory_table_row",
+          "date_precision": "unknown",
+          "independence_group": "trueconf",
+          "vendor_record": {
+            "attributes": {
+              "affected_version_text": "<5.5.2"
+            },
+            "identifier": "BDU:2025-11412",
+            "product_id": "trueconf-server"
+          }
+        },
+        "published_at": null,
+        "source_id": "trueconf_advisories",
+        "text": "BDU:2025-11412: TrueConf Server; затронутые версии по таблице: <5.5.2.",
+        "title": "BDU:2025-11412 — TrueConf Server",
+        "url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories"
+      },
+      "content_hash": "f8e1621bee183bfbf0664cdb63fa88c7f4895dd5f223174122e6a9b9a6a78746",
+      "gold_event_type": "vulnerability_advisory",
+      "annotation_note": "BDU — запись об уязвимости, несмотря на отсутствие CVE в заголовке."
+    },
+    {
+      "sample_id": 25,
+      "publication_id": "1dbc009e2dfac399a2a8648b",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T07:02:39+00:00",
+        "external_id": "vendor-table:CVE-2017-20114",
+        "is_demo": false,
+        "metadata": {
+          "collection_method": "vendor_table",
+          "content_scope": "advisory_table_row",
+          "date_precision": "unknown",
+          "independence_group": "trueconf",
+          "vendor_record": {
+            "attributes": {
+              "affected_version_text": "4.3.7",
+              "affected_versions": [
+                "4.3.7"
+              ]
+            },
+            "identifier": "CVE-2017-20114",
+            "product_id": "trueconf-server"
+          }
+        },
+        "published_at": null,
+        "source_id": "trueconf_advisories",
+        "text": "CVE-2017-20114: TrueConf Server; затронутые версии по таблице: 4.3.7.",
+        "title": "CVE-2017-20114 — TrueConf Server",
+        "url": "https://trueconf.com/blog/news/security-fixes-updates-and-advisories"
+      },
+      "content_hash": "99050280868495f3d7c891574ce1eb88ca99336bef9fcc566c37cdbd7148f361",
+      "gold_event_type": "vulnerability_advisory",
+      "annotation_note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 26,
+      "publication_id": "8b9adcd7fc5ecf9d9e5c3466",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T07:02:56+00:00",
+        "external_id": "CVE-2025-62593",
+        "is_demo": false,
+        "metadata": {
+          "catalog_added_day": "2026-08-17",
+          "catalog_released_at": "2026-10-23T19:30:18+00:00",
+          "catalog_sha256": "97a6e54bc74c651ab3c55657191db9adec6c63b05ca54e4205327cfd97a8fb70",
+          "catalog_version": "2026.10.23",
+          "collection_method": "cisa_kev_json",
+          "content_scope": "catalog_record",
+          "date_precision": "day",
+          "interpretation": "Включение в KEV не доказывает атаку на компанию из нашей выборки.",
+          "known_ransomware_campaign_use": "Unknown",
+          "notes": "https://github.com/ray-project/ray/security/advisories/GHSA-q279-jhrf-cc6v ; https://github.com/ray-project/ray/commit/70e7c72780bdec075dba6cad1afe0832772bfe09 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2025-62593",
+          "source_role": "vulnerability_context"
+        },
+        "published_at": null,
+        "source_id": "cisa_kev",
+        "text": "CVE-2025-62593: Ray-Project / Ray. Ray-Project Ray contains a code injection vulnerability that could allow remote code execution. Developers using Ray as a development tool may be exposed to this vulnerability exploitable through Firefox and Safari.\nCISA KEV dateAdded: 2026-08-17. Required action: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "title": "CVE-2025-62593 — Ray-Project Ray Code Injection Vulnerability",
+        "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json"
+      },
+      "content_hash": "054749caf768be142d11d0b59cba396b5d7dbf6298fbfb92977aff32b62e8382",
+      "gold_event_type": "vulnerability_advisory",
+      "annotation_note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 27,
+      "publication_id": "2d60d2d0215e27c5fb1e2f87",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-24T07:02:56+00:00",
+        "external_id": "CVE-2026-20079",
+        "is_demo": false,
+        "metadata": {
+          "catalog_added_day": "2026-09-09",
+          "catalog_released_at": "2026-10-23T19:30:18+00:00",
+          "catalog_sha256": "97a6e54bc74c651ab3c55657191db9adec6c63b05ca54e4205327cfd97a8fb70",
+          "catalog_version": "2026.10.23",
+          "collection_method": "cisa_kev_json",
+          "content_scope": "catalog_record",
+          "date_precision": "day",
+          "interpretation": "Включение в KEV не доказывает атаку на компанию из нашей выборки.",
+          "known_ransomware_campaign_use": "Unknown",
+          "notes": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-onprem-fmc-authbypass-5JPp45V2 ; BOD 26-04: https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk ; Forensics Triage Requirements: https://www.cisa.gov/news-events/directives/bod-26-04-implementation-guidance-prioritizing-security-updates-based-risk ; https://nvd.nist.gov/vuln/detail/CVE-2026-20079",
+          "source_role": "vulnerability_context"
+        },
+        "published_at": null,
+        "source_id": "cisa_kev",
+        "text": "CVE-2026-20079: Cisco / Secure Firewall Management Center (FMC) and Security Cloud Control (SCC) Firewall Management. Cisco Secure Firewall Management Center (FMC) Software and Cisco Security Cloud Control (SCC) Firewall Management contain an authentication Bypass using an alternate path or channel vulnerability that could allow an unauthenticated, remote attacker to bypass authentication and execute script files on an affected device to obtain root access to the underlying operating system.\nCISA KEV dateAdded: 2026-09-09. Required action: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "title": "CVE-2026-20079 — Cisco Firewall Management Center Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+        "url": "https://raw.githubusercontent.com/cisagov/kev-data/develop/known_exploited_vulnerabilities.json"
+      },
+      "content_hash": "0a13f154cd39b535991ea7753e7cbfc3c1800b744a98a472e9388c0d86f9e04d",
+      "gold_event_type": "vulnerability_advisory",
+      "annotation_note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 28,
+      "publication_id": "5bb37949c284cdfdb3dbbd19",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T19:30:53+00:00",
+        "external_id": "https://securelist.ru/tr/php2shell-critical-vulnerabilities-in-php/117380/",
+        "is_demo": false,
+        "metadata": {
+          "collection_method": "public_listing",
+          "content_scope": "title_only",
+          "date_checked_at": "2026-10-24T06:58:44+00:00",
+          "date_precision": "day",
+          "date_source_method": "manual_web_verification",
+          "date_source_url": "https://securelist.ru/tr/php2shell-critical-vulnerabilities-in-php/117380/",
+          "discovery_url": "https://securelist.ru/",
+          "publication_day": "2026-10-21",
+          "source_role": "research_context"
+        },
+        "published_at": null,
+        "source_id": "securelist_research",
+        "text": "Критические RCE-уязвимости в ядре PHP (CVE-2026-109618, CVE-2026-109619)",
+        "title": "Критические RCE-уязвимости в ядре PHP (CVE-2026-109618, CVE-2026-109619)",
+        "url": "https://securelist.ru/tr/php2shell-critical-vulnerabilities-in-php/117380/"
+      },
+      "content_hash": "a62d9504306b5cbda3fa8950a2b61baa1457930fa989e193d7c7ca2f8949d9e7",
+      "gold_event_type": "vulnerability_advisory",
+      "annotation_note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    },
+    {
+      "sample_id": 29,
+      "publication_id": "e16f2c58cb6657ae24c861f7",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T18:21:15+00:00",
+        "external_id": null,
+        "is_demo": false,
+        "metadata": {
+          "case_id": "novabev-2025",
+          "date_checked_at": "2026-10-24T07:46:33+00:00",
+          "date_precision": "day",
+          "date_source_method": "indexed_primary_source_text",
+          "date_source_url": "https://novabev.com/en/press-room/lenta/novabev-group-has-begun-modernizing-its-cybersecurity-system/",
+          "incident_id": "novabev-2025",
+          "publication_day": "2025-08-18",
+          "signal_scope": "recovery_update"
+        },
+        "published_at": null,
+        "source_id": "manual_web_novabev",
+        "text": "Краткий пересказ официального сообщения от 18 августа 2025 года: Novabev Group рассказала об изменениях защиты после июльской кибератаки и восстановлении ключевых процессов. Это последующее сообщение компании, а не независимое подтверждение и не новый инцидент.",
+        "title": "Novabev Group: модернизация защиты после июльского инцидента",
+        "url": "https://novabev.com/en/press-room/lenta/novabev-group-has-begun-modernizing-its-cybersecurity-system/"
+      },
+      "content_hash": "ede42a698ddf684a41db5a4a2426f014b517165903587943c55356462e3eda4a",
+      "gold_event_type": "unknown",
+      "annotation_note": "Модернизация после прежнего инцидента."
+    },
+    {
+      "sample_id": 30,
+      "publication_id": "2c2d4a8b9cba7d1ed6584f25",
+      "publication": {
+        "author": null,
+        "collected_at": "2026-10-23T18:21:15+00:00",
+        "external_id": null,
+        "is_demo": false,
+        "metadata": {
+          "case_id": "novabev-2025",
+          "date_checked_at": "2026-10-24T07:46:33+00:00",
+          "date_precision": "day",
+          "date_source_method": "indexed_primary_source_text",
+          "date_source_url": "https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/",
+          "incident_id": "novabev-2025",
+          "publication_day": "2025-07-16",
+          "signal_scope": "historical_incident"
+        },
+        "published_at": null,
+        "source_id": "manual_web_novabev",
+        "text": "Краткий пересказ официального сообщения: Novabev Group сообщила о кибератаке 14 июля 2025 года, нарушившей работу части ИТ-систем группы и сети ВинЛаб. В сообщении говорится о денежном требовании злоумышленников. Это описание прошлого события, а не признак новой атаки.",
+        "title": "Официальное заявление Novabev Group и сети ВинЛаб о кибератаке",
+        "url": "https://novabev.com/investors/news/official-statement-of-novabev-group-and-winelab-on-the-cyberattack/"
+      },
+      "content_hash": "dd1020784bc0cf670170eb089778103bde3a85c06cdcd10980e2e0a980d7774b",
+      "gold_event_type": "attack_claim",
+      "annotation_note": "Разметка по сохранённому заголовку и тексту; содержимое полной страницы не достраивалось."
+    }
+  ]
+}

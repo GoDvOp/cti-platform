@@ -1,0 +1,21 @@
+{
+  "verified_at": "2026-10-24T13:25:18+00:00",
+  "execution": "user_terminal",
+  "receipt_sha256": "5278f484b26693321948f1b15716ac924e4eff7d8da75c26844dbb89706aec30",
+  "successful_sources": [
+    "standoff_programs",
+    "bizone_news",
+    "trueconf_php_notice"
+  ],
+  "auto_collected_records": 29,
+  "disabled_after_probe": {
+    "bizone_bounty_zvuk": "javascript_shell_without_program_data",
+    "pt_standoff_news": "tls_error"
+  },
+  "notes": [
+    "Program records have unknown publication dates; observation time does not become publication time.",
+    "TrueConf 2026-10-22T00:34:38+03:00 is 2026-10-21T21:34:38Z; UTC day and publisher day differ.",
+    "Publisher headings and program names were repaired using captured HTML without another network request.",
+    "Typographic hyphens in CVEs are normalized for matching; original evidence text and hash are preserved."
+  ]
+}

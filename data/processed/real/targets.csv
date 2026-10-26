@@ -1,0 +1,18 @@
+﻿company_id,company,score,partial_score,coverage,confidence,category,is_demo
+aeroflot,ПАО Аэрофлот,,,0,low,недостаточно данных,False
+askon,АСКОН,,,0,low,недостаточно данных,False
+cloud-ru,Cloud.ru,,,0,low,недостаточно данных,False
+government-mo,Правительство Московской области,,,0,low,недостаточно данных,False
+ingosstrakh,Ингосстрах,,,0,low,недостаточно данных,False
+metalloinvest,Металлоинвест,,,0,low,недостаточно данных,False
+novabev,Novabev Group,,,0,low,недостаточно данных,False
+oteko,ОТЭКО,,,0,low,недостаточно данных,False
+rosatom,Росатом,,,0,low,недостаточно данных,False
+rosatom-engineering,Инжиниринговый дивизион Росатома,,,0,low,недостаточно данных,False
+rostelecom,ПАО Ростелеком,,,0,low,недостаточно данных,False
+roszarubezhneft,Росзарубежнефть,,,0,low,недостаточно данных,False
+sibur,СИБУР,,,0,low,недостаточно данных,False
+sovcombank,Совкомбанк,,,0,low,недостаточно данных,False
+winelab,ВинЛаб,,,0,low,недостаточно данных,False
+yandex,Яндекс,,,0,low,недостаточно данных,False
+zvuk,Звук,,,0,low,недостаточно данных,False

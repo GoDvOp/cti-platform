@@ -1,0 +1,41 @@
+{
+  "corpus_id": "41a838a3e2e74fad2ff9dfdd40c8366fa13bfc343ba39de24b5c624bd9808328",
+  "run_id": "611d464ba55dc2535365d99b7f144ea334f91dff4e2c1c40dc5e39425a08915a",
+  "as_of": "2026-10-24T14:46:40+00:00",
+  "task": "exact_directed_relations_and_catalog_product_and_vulnerability_mentions",
+  "count": 30,
+  "sampling": {
+    "method": "predeclared_source_quotas_then_sha256_order",
+    "seed": "extraction-review-20261024",
+    "quotas": {
+      "securitylab_news": 6,
+      "securitylab_analytics": 3,
+      "securelist_research": 2,
+      "trueconf_advisories": 5,
+      "cisa_kev": 5,
+      "bizone_news": 3,
+      "standoff_programs": 2,
+      "trueconf_php_notice": 1,
+      "manual_web_trueconf_cases": 3
+    },
+    "excluded_prior_pilot_urls": 25,
+    "excluded_prior_pilot_ids": 30,
+    "catalog_entry_identity": "publication_id_and_content_hash; catalogue URL may repeat",
+    "prediction_based_selection": false,
+    "unseen_development_holdout": false
+  },
+  "limitations": [
+    "Оцениваются сохранённые тексты и каталог, а не весь интернет или HTML-парсер.",
+    "Часть входов — краткие пересказы; они помечены в форме.",
+    "Материалы могли использоваться при разработке; это не скрытый holdout.",
+    "Человеческая независимость декларируется рецензентом, а не устанавливается программой."
+  ],
+  "prediction_quality_measured": false,
+  "extractor_sha256": "9a2d228c405a89317296b4de915152fd88e7a11959b543dbd60483fe46affa6f",
+  "status": "awaiting_human_labels",
+  "reviewed": 0,
+  "excluded": 0,
+  "metrics": null,
+  "reviewer": null,
+  "independence": "not_established"
+}

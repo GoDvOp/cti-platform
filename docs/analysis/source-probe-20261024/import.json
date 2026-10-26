@@ -1,0 +1,19 @@
+{
+  "counts": {
+    "inserted": 29
+  },
+  "publications_imported": 29,
+  "sources": [
+    "standoff_programs",
+    "bizone_news",
+    "trueconf_php_notice"
+  ],
+  "capture_receipt_sha256": "5278f484b26693321948f1b15716ac924e4eff7d8da75c26844dbb89706aec30",
+  "html_sha256": {
+    "standoff_programs": "eacc84746ad1e912459655f3ecf3ea0829b2d3a783e67c457884be0df243649a",
+    "bizone_news": "7e52833a2badf89dabdeb1d05bfeda112852e1248b94bb6694494cd5428213dc",
+    "trueconf_php_notice": "61412c492ca444c42c437625115a6799f812274276145b15977bb1d6128e73b4"
+  },
+  "imported_at": "2026-10-24T13:13:45+00:00",
+  "note": "Импортированы реальные ответы пользовательского сбора; нового сетевого запроса при импорте не выполнялось."
+}

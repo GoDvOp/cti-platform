@@ -1,0 +1,26 @@
+{
+  "format": "cti-review-snapshot-v1",
+  "frozen_at": "2026-10-24T14:46:40+00:00",
+  "content_sha256": "3d52fcf47ca50a9ef55a5a6d78cc5c5d17b7f6514d2d42d2fc8194e4e76acea7",
+  "provenance": "Public source summaries, collected listings/catalogue records, reviews and MITRE reference data. No .env or user configuration included.",
+  "file": "data/review_snapshot.json.gz",
+  "counts": {
+    "companies": 25,
+    "products": 11,
+    "knowledge_entities": 19,
+    "publications": 374,
+    "publication_versions": 376,
+    "publication_metadata_updates": 21,
+    "signals": 10,
+    "reviews": 0,
+    "factors": 0,
+    "factor_history": 0,
+    "source_runs": 22,
+    "assertions": 99,
+    "assertion_reviews": 67,
+    "attack_snapshots": 1,
+    "attack_objects": 26690,
+    "attack_mappings": 4,
+    "attack_mapping_reviews": 4
+  }
+}

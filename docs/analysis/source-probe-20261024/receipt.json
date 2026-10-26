@@ -1,0 +1,103 @@
+{
+  "checked_at": "2026-10-24T13:04:26+00:00",
+  "mode": "isolated_public_source_probe",
+  "results": [
+    {
+      "source_id": "standoff_programs",
+      "status": "ok",
+      "counts": {
+        "inserted": 20
+      },
+      "parse_warnings": {},
+      "freshness": {
+        "status": "unknown",
+        "as_of": "2026-10-24T13:04:38+00:00",
+        "max_age_days": 30,
+        "total": 20,
+        "recent": 0,
+        "stale": 0,
+        "unknown": 20,
+        "future": 0,
+        "date_meanings": {
+          "unknown": 20
+        },
+        "oldest_day": null,
+        "newest_day": null,
+        "newest_age_days": null
+      },
+      "items": 20,
+      "warnings": [],
+      "next_allowed_at": "2026-10-25T01:04:38+00:00"
+    },
+    {
+      "source_id": "bizone_bounty_zvuk",
+      "status": "error",
+      "stage": "parse",
+      "error_code": "invalid_format",
+      "message": "Ответ не соответствует ожидаемому формату источника",
+      "next_allowed_at": "2026-10-24T15:04:40+00:00"
+    },
+    {
+      "source_id": "bizone_news",
+      "status": "ok",
+      "counts": {
+        "inserted": 8
+      },
+      "parse_warnings": {},
+      "freshness": {
+        "status": "recent",
+        "as_of": "2026-10-24T13:04:47+00:00",
+        "max_age_days": 30,
+        "total": 8,
+        "recent": 8,
+        "stale": 0,
+        "unknown": 0,
+        "future": 0,
+        "date_meanings": {
+          "publication": 8
+        },
+        "oldest_day": "2026-10-14",
+        "newest_day": "2026-10-23",
+        "newest_age_days": 1
+      },
+      "items": 8,
+      "warnings": [],
+      "next_allowed_at": "2026-10-24T19:04:47+00:00"
+    },
+    {
+      "source_id": "pt_standoff_news",
+      "status": "error",
+      "stage": "robots_or_download",
+      "error_code": "tls_error",
+      "message": "Не удалось проверить защищённое соединение",
+      "next_allowed_at": "2026-10-24T14:04:47+00:00"
+    },
+    {
+      "source_id": "trueconf_php_notice",
+      "status": "ok",
+      "counts": {
+        "inserted": 1
+      },
+      "parse_warnings": {},
+      "freshness": {
+        "status": "recent",
+        "as_of": "2026-10-24T13:04:49+00:00",
+        "max_age_days": 30,
+        "total": 1,
+        "recent": 1,
+        "stale": 0,
+        "unknown": 0,
+        "future": 0,
+        "date_meanings": {
+          "publication": 1
+        },
+        "oldest_day": "2026-10-21",
+        "newest_day": "2026-10-21",
+        "newest_age_days": 3
+      },
+      "items": 1,
+      "warnings": [],
+      "next_allowed_at": "2026-10-25T01:04:49+00:00"
+    }
+  ]
+}

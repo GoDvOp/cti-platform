@@ -1,0 +1,5 @@
+[
+ {"id":"demo-alpha","name":"ООО Учебная Альфа","aliases":["Учебная Альфа"],"domains":["alpha.example"],"sector":"учебная торговля","country":"RU","is_demo":true},
+ {"id":"demo-beta","name":"ООО Учебная Бета","aliases":["Учебная Бета"],"domains":["beta.example"],"sector":"учебный транспорт","country":"RU","is_demo":true},
+ {"id":"demo-gamma","name":"ООО Учебная Гамма","aliases":["Учебная Гамма"],"domains":["gamma.example"],"sector":"учебные услуги","country":"RU","is_demo":true}
+]
