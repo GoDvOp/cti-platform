@@ -19,9 +19,12 @@ with open(os.environ['LAUNCH_LOG'], 'a') as log:
 mode = os.environ.get('LAUNCH_MODE', '')
 if name == 'systemctl':
     if 'is-active' in args:
-        sys.exit(3 if mode == 'inactive' else 0)
+        sys.exit(3 if mode in ('inactive', 'inactive-enabled') else 0)
     if 'show' in args:
         print('/another/project' if mode == 'other' else os.getcwd())
+    if 'is-enabled' in args:
+        print('disabled' if mode == 'inactive' else 'enabled')
+        sys.exit(1 if mode == 'inactive' else 0)
 elif args == ['info'] and mode == 'unavailable':
     sys.exit(1)
 elif args[:2] == ['compose', 'build'] and mode == 'build-failed':
@@ -36,7 +39,7 @@ elif args[:2] == ['compose', 'port']:
 
 
 class DockerLauncherTests(unittest.TestCase):
-    def run_launcher(self, mode='', *args):
+    def run_launcher(self, mode='', *args, direct=False):
         # The offline review container deliberately mounts /tmp with noexec.
         # Keep executable fixtures in a disposable folder on its data mount.
         with tempfile.TemporaryDirectory(prefix='.cti launcher ', dir=ROOT / 'data') as tmp:
@@ -58,7 +61,8 @@ class DockerLauncherTests(unittest.TestCase):
             log = base / 'calls.jsonl'
             env = dict(os.environ, PATH=str(commands) + os.pathsep + os.environ['PATH'],
                        LAUNCH_LOG=str(log), LAUNCH_MODE=mode)
-            done = subprocess.run([str(root / 'start-cti.sh'), *args], cwd=base,
+            command = ['sh', str(root / 'scripts/docker.sh')] if direct else [str(root / 'start-cti.sh')]
+            done = subprocess.run([*command, *args], cwd=base,
                                   env=env, capture_output=True, text=True, timeout=15)
             self.assertEqual((root / '.env').read_text(), 'NEO4J_PASSWORD=local-test-only\n')
             self.assertEqual((root / 'data/cti.sqlite3').read_bytes(), b'existing database')
@@ -74,6 +78,21 @@ class DockerLauncherTests(unittest.TestCase):
         stop = ['systemctl', ['--user', 'stop', 'cti-platform-update.service']]
         self.assertLess(calls.index(['docker', ['compose', 'build', 'cli']]), calls.index(stop))
         self.assertEqual(calls[calls.index(stop) - 1][1][:2], ['compose', 'run'])
+        disable = ['systemctl', ['--user', 'disable', 'cti-platform-update.service']]
+        up = next(c for c in calls if c[0] == 'docker' and c[1][:2] == ['compose', 'up'])
+        self.assertLess(calls.index(up), calls.index(disable))
+
+    def test_direct_helper_also_switches_own_desktop_service(self):
+        done, calls = self.run_launcher('', 'up', direct=True)
+        self.assertEqual(done.returncode, 0, done.stderr)
+        self.assertIn(['systemctl', ['--user', 'stop', 'cti-platform-update.service']], calls)
+        self.assertIn(['systemctl', ['--user', 'disable', 'cti-platform-update.service']], calls)
+
+    def test_inactive_but_enabled_service_cannot_restart_after_login(self):
+        done, calls = self.run_launcher('inactive-enabled')
+        self.assertEqual(done.returncode, 0, done.stderr)
+        self.assertIn(['systemctl', ['--user', 'disable', 'cti-platform-update.service']], calls)
+        self.assertFalse(any(name == 'systemctl' and 'stop' in args for name, args in calls))
 
     def test_preflight_and_build_failure_leave_desktop_running(self):
         for mode in ('unavailable', 'build-failed'):
@@ -87,6 +106,7 @@ class DockerLauncherTests(unittest.TestCase):
         self.assertNotEqual(done.returncode, 0)
         self.assertLess(calls.index(['docker', ['compose', 'stop', 'worker']]),
                         calls.index(['systemctl', ['--user', 'start', 'cti-platform-update.service']]))
+        self.assertFalse(any(name == 'systemctl' and 'disable' in args for name, args in calls))
 
     def test_failed_container_stop_does_not_start_second_collector(self):
         done, calls = self.run_launcher('stop-failed')

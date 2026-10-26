@@ -27,11 +27,11 @@
       "bytes": 712
     },
     "README.md": {
-      "sha256": "f7f3cacec11cdb88718af7b4c5078ebf24f45d13aa8eeeb8639c3a613b8dd3e6",
-      "bytes": 6504
+      "sha256": "5ec6bb6c3b6a20b87c944495c6b7d3ffe3cc1e36539d69079f5ca4725b1de7f5",
+      "bytes": 6634
     },
     "RELEASE_CHECKS.json": {
-      "sha256": "e5e916c2d4f647e318d753204d3958468c9ab419dd545726a502a8b75d495333",
+      "sha256": "59b98b4820a7d936a05b193325ab846ebf5a041c447aa94b04cca76df62eedb8",
       "bytes": 1988
     },
     "app/__init__.py": {
@@ -75,8 +75,8 @@
       "bytes": 25364
     },
     "app/automation.py": {
-      "sha256": "2ed59fcc5cece096aca8f6859e6e56c58c6558f985757b647f8856deafefafd4",
-      "bytes": 11042
+      "sha256": "c526b89e47202fcc31783e96f5779c6b214af1a2189c1373508261fc30a610c8",
+      "bytes": 11187
     },
     "app/collectors.py": {
       "sha256": "c1b68f329a0afa1bba1cd38d6d3ebecbffb6a744fffe2be85ac12dde32e9e394",
@@ -303,7 +303,7 @@
       "bytes": 1972
     },
     "docs/analysis/release-3.0.0/docker.json": {
-      "sha256": "c3d7941dd2417da6aef25d780fce71b0f6fd16942d3fbbe0ca6490466fc98ea3",
+      "sha256": "0eb4e259ef3ca21332b33dae9375929af03be9231af4989f3eaf347f38d1244f",
       "bytes": 2426
     },
     "docs/analysis/release-3.0.0/protected_inputs.json": {
@@ -311,7 +311,7 @@
       "bytes": 641
     },
     "docs/analysis/release-3.0.0/summary.json": {
-      "sha256": "5fd695ab1e8ff034434dcb34b84e2437789625958a533ff6959c39197bf6b60d",
+      "sha256": "15ddc422ef1bb35cd4d79a36e8102fd7b9155a06d8e0ba57c815ef3ec65db2fe",
       "bytes": 394
     },
     "docs/analysis/source-probe-20261024/case.md": {
@@ -507,8 +507,8 @@
       "bytes": 7811
     },
     "docs/docker.md": {
-      "sha256": "623983df95aac738817a280c1d3470162ab22ba7f2735da31f8c96ed9e990cda",
-      "bytes": 11039
+      "sha256": "fa9fc618e93230938091026e714cc958143afa5ba153dc882b923e08a9a7f816",
+      "bytes": 11599
     },
     "docs/extraction_review.md": {
       "sha256": "456f90179dc6e835ad055eff8801938a61a8103be24bac7daf85c4300fbedf9f",
@@ -699,8 +699,8 @@
       "bytes": 3120
     },
     "scripts/docker.sh": {
-      "sha256": "c9bcd6cb048756cb8aba9562194e7f4a25610757ad7f7fc889880462270f4129",
-      "bytes": 4239
+      "sha256": "47278f7842e73f2f0dace5b4ff0620a3f9cf42a3d390914b92fde5f8c9cca34e",
+      "bytes": 4579
     },
     "scripts/freeze_examples.py": {
       "sha256": "d29ac2b23adfd8d96aa8629f076ca9664889f4a9979196e75daa8ec452d97261",
@@ -747,8 +747,8 @@
       "bytes": 7161
     },
     "start-cti.sh": {
-      "sha256": "54b7dcba08b3097ede417460bb130705924ab613cbe0dfb77a8b91e6842253d1",
-      "bytes": 229
+      "sha256": "9d6ddf810978c7409b7ebaafe1068647a7edcd82d426be5f28474560bed84578",
+      "bytes": 203
     },
     "tests/fixtures/attack_demo.json": {
       "sha256": "209b073201f2d37e5ba34a65313da8cb80c926f845e58df280a37391348366e5",
@@ -807,8 +807,8 @@
       "bytes": 3909
     },
     "tests/test_docker_launcher.py": {
-      "sha256": "49fac8af9b8f5ef9f0401360dce8a330ab29c9977b15337b7c0f67f420339b74",
-      "bytes": 5579
+      "sha256": "22b457ace92062f48681ab74e206e70f47b46f091e47f0f664da6d0bea9f2cac",
+      "bytes": 6950
     },
     "tests/test_evaluation.py": {
       "sha256": "170996b264eb03ac4502e5cd01f65aa180a015deee4f707066a94e4d8ca7703e",

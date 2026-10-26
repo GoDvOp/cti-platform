@@ -31,14 +31,13 @@ mkdir -p data
 case "$action" in
   up)
     desktop_active=0
+    desktop_enabled=''
     if command -v systemctl >/dev/null 2>&1 && \
-       systemctl --user is-active --quiet cti-platform-update.service 2>/dev/null && \
-       [ "$(systemctl --user show --property=WorkingDirectory --value cti-platform-update.service)" = "$(pwd -P)" ]; then
-      desktop_active=1
-    fi
-    if [ "$desktop_active" = 1 ] && [ "${CTI_STOP_DESKTOP:-0}" != 1 ]; then
-      printf '%s\n' 'Для этой папки уже работает настольный сборщик. Сначала: systemctl --user stop cti-platform-update.service' >&2
-      exit 1
+       [ "$(systemctl --user show --property=WorkingDirectory --value cti-platform-update.service 2>/dev/null)" = "$(pwd -P)" ]; then
+      if systemctl --user is-active --quiet cti-platform-update.service 2>/dev/null; then
+        desktop_active=1
+      fi
+      desktop_enabled=$(systemctl --user is-enabled cti-platform-update.service 2>/dev/null || true)
     fi
     docker compose build cli
     if [ ! -f .env ]; then
@@ -58,6 +57,16 @@ case "$action" in
     fi
     sh scripts/stop_local_panel.sh
     if docker compose up -d --no-build --wait --wait-timeout 360 neo4j worker workbench; then
+      case "$desktop_enabled" in
+        enabled|enabled-runtime)
+          if [ "$desktop_enabled" = enabled-runtime ]; then
+            systemctl --user disable --runtime cti-platform-update.service
+          else
+            systemctl --user disable cti-platform-update.service
+          fi
+          printf '%s\n' 'Автозапуск настольного сборщика отключён; сбор выполняется в Docker.'
+          ;;
+      esac
       address=$(docker compose port workbench 8765)
       printf '\nПанель аналитика: http://%s/\n' "$address"
       printf '%s\n' 'Состояние: ./start-cti.sh status' 'Остановить: ./start-cti.sh stop (данные сохраняются)'

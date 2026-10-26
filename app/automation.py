@@ -183,7 +183,8 @@ def run_worker(store, sources_path, output, *, sync=True, interval=60, source_id
             try:
                 fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
             except BlockingIOError as exc:
-                raise ValueError('Автообновление уже запущено другим процессом') from exc
+                raise ValueError('Автообновление уже запущено другим процессом. '
+                                 'Для перехода с настольной службы на Docker выполните ./start-cti.sh.') from exc
             updater = AutoUpdater(store, output, folder, sources_path, sync=sync,
                                   source_id=source_id, stop_event=stopped)
             control = WorkerControl(folder)

@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "host_unit_tests": 340,
-  "container_unit_tests": 340,
+  "host_unit_tests": 342,
+  "container_unit_tests": 342,
   "container_skipped": 2,
   "docker_checks": 19,
   "browser_checks": 8,
