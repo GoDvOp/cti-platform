@@ -27,8 +27,8 @@
       "bytes": 712
     },
     "README.md": {
-      "sha256": "4234ead2a376445cc3a92f3fc6990021289ae976ec4daa3a2f9c2366ea3b3aac",
-      "bytes": 6886
+      "sha256": "ee8eb00ce98a289e9258cc76b590dfd8d7497e86b018e13fdb200e6e29d4e0af",
+      "bytes": 7269
     },
     "RELEASE_CHECKS.json": {
       "sha256": "101b65bcb84e8f045b949c23ece7a07c7f17765e308ef314c2f6f04be9d10725",
@@ -403,7 +403,7 @@
       "bytes": 641
     },
     "docs/analysis/release-3.0.0/summary.json": {
-      "sha256": "b385319fb20d68499c582e141db9efdc612b5dba36be2514cd7ac3a50e72dbc3",
+      "sha256": "3ebfe84ca74fa83d660b2c6c45aa04a987ddc89afa46d8f1999f102dc5c4988c",
       "bytes": 319
     },
     "docs/analysis/scoring-v3/comparison.json": {

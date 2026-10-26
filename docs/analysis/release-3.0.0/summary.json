@@ -7,7 +7,7 @@
   "browser_checks": 8,
   "offline_cli_smoke": "passed",
   "internal_html_links": {
-    "checked": 27,
+    "checked": 25,
     "broken": 0,
     "scope": [
       "README.md",
