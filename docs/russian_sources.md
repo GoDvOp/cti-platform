@@ -2,19 +2,23 @@
 
 Актуальная проверка 24.10.2026 и изменения источников: [Свежесть данных](freshness.md). Описанные ниже первоначальные пять подключений дополнены; RSS уязвимостей SecurityLab отключён как архивный. Securelist теперь может читать до пяти страниц за проход ради даты публикации.
 
-Текущая версия 1.4: [расширенная библиотека, ограничения и запросы](research_library.md).
+Исследовательская библиотека: [расширенная библиотека, ограничения и запросы](research_library.md).
 
-# Российские источники — версия 1.2
+# Источники и адаптеры
 
-В config/sources.json теперь пять подключений от трёх издателей/организаций:
+В `config/sources.json` включены 9 источников. Таблица отражает настройки поставки; доступность конкретного источника отображается в панели и журнале сборщика. Отключённые записи не опрашиваются; их прежние материалы сохраняются как исторические данные.
 
-| ID | Источник | Что читается | Интервал после успеха / ошибки |
+| ID | Источник | Адаптер | Интервал после успеха / ошибки, мин |
 |---|---|---|---|
-| securitylab_news | SecurityLab | Официальный RSS новостей | 60 / 15 мин |
-| securitylab_analytics | SecurityLab | Официальный RSS аналитики | 120 / 15 мин |
-| securitylab_vulnerabilities | SecurityLab | Официальный RSS уязвимостей | 180 / 15 мин |
-| securelist_research | Securelist, Касперский | Публичная страница: заголовки, краткие описания и ссылки | 360 / 30 мин |
-| nckci_advisories | НКЦКИ | Список уведомлений, до двух JSON-карточек и их явных .json | 360 / 30 мин |
+| securitylab_news | SecurityLab — новости | rss | 60 / 15 |
+| securitylab_analytics | SecurityLab — аналитика | rss | 120 / 15 |
+| securelist_research | Securelist — исследования Касперского | securelist_listing | 360 / 30 |
+| trueconf_advisories | Труконф — бюллетень CVE/BDU | vendor_advisories | 720 / 60 |
+| trueconf_case_sibur | Труконф — кейс СИБУР | vendor_case | 1440 / 60 |
+| cisa_kev | CISA — Known Exploited Vulnerabilities | cisa_kev | 360 / 60 |
+| standoff_programs | Standoff Bug Bounty — публичные программы | bounty_listing | 720 / 60 |
+| bizone_news | BI.ZONE — новости, включая Bug Bounty | publisher_news | 360 / 60 |
+| trueconf_php_notice | TrueConf — уведомление об обновлении PHP-компонента | vendor_notice | 720 / 60 |
 
 SecurityLab публикует RSS на https://www.securitylab.ru/rss.php. Наличие feed и доступность именно из вашей сети — разные проверки.
 
@@ -27,11 +31,10 @@ Securelist: https://securelist.ru/. В robots.txt на момент провер
 ## Запуск
 
 ```bash
-cd /home/nofear/Проекты/cti-platform
-.venv/bin/python -m app.main collect
-.venv/bin/python -m app.main status
-.venv/bin/python -m app.main report
-.venv/bin/python -m app.main graph-sync
+python3 -m app.main collect
+python3 -m app.main status
+python3 -m app.main report
+python3 -m app.main graph-sync
 ```
 
 Для одной площадки: collect --source-id securelist_research либо collect --source-id nckci_advisories. Выбор источника не обходит его интервал, robots.txt или Retry-After. Флага принудительного обхода ожидания нет.
@@ -73,9 +76,9 @@ RETURN path LIMIT 100;
 Если сайт открывается браузером, но сборщик возвращает ошибку, можно сохранить разрешённую страницу как HTML и проверить парсер без сети:
 
 ```bash
-.venv/bin/python -m app.main import-source securelist_research /путь/к/сохраненной_странице.html
-.venv/bin/python -m app.main import-source nckci_advisories /путь/к/списку_уведомлений.html
-.venv/bin/python -m app.main import-source nckci_advisories /путь/к/уведомлению.json --format json --url https://www.cert.gov.ru/путь/к/исходному_файлу.json
+python3 -m app.main import-source securelist_research /путь/к/сохраненной_странице.html
+python3 -m app.main import-source nckci_advisories /путь/к/списку_уведомлений.html
+python3 -m app.main import-source nckci_advisories /путь/к/уведомлению.json --format json --url https://www.cert.gov.ru/путь/к/исходному_файлу.json
 ```
 
 Используйте настоящую исходную ссылку опубликованного файла. Происхождение помечается local_file; дата сбора не подменяется датой события. День без точного времени хранится как metadata.publication_day, published_at остаётся null. Для фикстур из tests/fixtures обязательно --demo: они вымышлены и не должны попадать в рабочий набор.

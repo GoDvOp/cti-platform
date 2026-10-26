@@ -137,12 +137,16 @@ def make_server(app, host='127.0.0.1', port=8765):
                 if path == '/review':
                     return self.file(app.root / 'evaluation/blind_review.html', 'text/html; charset=utf-8')
                 if path == '/review-result':
-                    return self.file(app.root / 'data/processed/extraction_evaluation/extraction.html', 'text/html; charset=utf-8')
+                    folder = app.root / 'data/processed/extraction_evaluation'
+                    if not (folder / 'extraction.html').exists():
+                        from .extraction_evaluation import assess_files
+                        assess_files(app.root / 'evaluation', folder)
+                    return self.file(folder / 'extraction.html', 'text/html; charset=utf-8')
                 # Publish only known case artifacts, never a general filesystem tree.
                 if path.startswith('/cases/'):
                     parts = Path(path).parts
                     folders = {'ispras-gitlab-2026', 'trueconf-php-2026', 'novabev-2025', 'equifax-2017'}
-                    files = {'case.html', 'case.pdf', 'graph_view.html', 'graph.svg', 'evidence.json', 'decision.json', 'score_snapshot.json', 'graph.cypher', 'snapshot.json.gz', 'snapshot_manifest.json'}
+                    files = {'case.html', 'graph_view.html', 'graph.svg', 'evidence.json', 'decision.json', 'score_snapshot.json', 'graph.cypher', 'snapshot.json.gz', 'snapshot_manifest.json'}
                     if len(parts) == 4 and parts[2] in folders and parts[3] in files:
                         mime = {'html': 'text/html; charset=utf-8', 'pdf': 'application/pdf', 'svg': 'image/svg+xml', 'json': 'application/json; charset=utf-8', 'gz': 'application/gzip'}.get(parts[3].rsplit('.', 1)[-1], 'text/plain; charset=utf-8')
                         return self.file(app.root / 'docs/cases' / parts[2] / parts[3], mime)

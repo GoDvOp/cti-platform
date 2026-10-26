@@ -6,7 +6,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 ROOT=Path(__file__).resolve().parents[1]
-root=Path(sys.argv[1]) if len(sys.argv)>1 else ROOT/'data/processed/sensitivity'
+root=Path(sys.argv[1]) if len(sys.argv)>1 else ROOT/'docs/cases/weight-sensitivity'
 d=json.loads((root/'sensitivity.json').read_text())
 labels={'half_life_days.interest':'Период затухания интереса','half_life_days.technical':'Период затухания тех. оснований',
  'confidence.high':'Уверенность high','confidence.medium':'Уверенность medium','basis.victim_report':'Основание: сообщение компании',
@@ -36,5 +36,4 @@ for ax,(cid,dim,title) in zip(axes,[('novabev','interest','Novabev · интер
 fig.suptitle('Чувствительность к изменению одного коэффициента на ±20%',fontsize=16,fontweight='bold')
 fig.supxlabel('Шкалы панелей различаются · один текущий снимок · диапазоны не являются вероятностями или доверительными интервалами',fontsize=10)
 fig.savefig(root/'graph.svg',bbox_inches='tight')
-fig.savefig(root/'graph.png',dpi=120,bbox_inches='tight')
 print('Sensitivity figure saved')

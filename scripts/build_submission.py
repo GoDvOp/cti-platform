@@ -18,15 +18,14 @@ DIRECTORIES = ('app', 'config', 'scripts', 'tests', 'examples', 'evaluation', 'd
 DATA_FILES = ('data/review_snapshot.json.gz', 'data/submission_manifest.json',
               'data/attack/LICENSE-MITRE.txt', 'data/attack/import_manifest.json',
               'data/attack/status.json', 'data/attack/reviewed_mappings.json')
-DATA_DIRECTORIES = ('data/processed/real', 'data/processed/evaluation', 'data/processed/sensitivity',
-                    'data/processed/extraction_evaluation')
 
 
 def selected_files():
     paths = [ROOT / name for name in (*ROOT_FILES, *DATA_FILES)]
-    for name in (*DIRECTORIES, *DATA_DIRECTORIES):
+    for name in DIRECTORIES:
         paths.extend(p for p in (ROOT / name).rglob('*') if p.is_file()
-                     and '__pycache__' not in p.parts and p.suffix not in ('.pyc', '.sqlite3')
+                     and '__pycache__' not in p.parts and p.suffix not in ('.pyc', '.sqlite3', '.pdf')
+                     and not (p.suffix == '.png' and p.is_relative_to(ROOT / 'docs'))
                      and not p.is_relative_to(ROOT / 'docs/submission'))
     return sorted(set(paths))
 
@@ -46,7 +45,6 @@ def secret_values():
 def main():
     p = argparse.ArgumentParser(description='Собрать комплект сдачи без локальных секретов')
     p.add_argument('--output', type=Path, default=ROOT.parent / f'cti-platform-submission-{VERSION}.zip')
-    p.add_argument('--report-dir', type=Path, help='Отчёт с фиксированного снимка вместо изменяющегося рабочего отчёта')
     args = p.parse_args()
     files = selected_files()
     payload = {}
@@ -60,25 +58,6 @@ def main():
         if any(value in (gzip.decompress(data) if path.suffix == ".gz" else data) for value in forbidden):
             raise ValueError('Обнаружен локальный секрет в файле: ' + str(path.relative_to(ROOT)))
         payload[path.relative_to(ROOT).as_posix()] = data
-    if args.report_dir:
-        folder = args.report_dir.resolve()
-        for required in ('report.json', 'report.html', 'graph_view.json', 'graph_view.html'):
-            if not (folder / required).is_file():
-                raise ValueError('Не найден файл фиксированного отчёта: ' + required)
-        snapshot = json.loads((ROOT / 'data/submission_manifest.json').read_text())
-        report = json.loads((folder / 'report.json').read_text())
-        if report['as_of'] != snapshot['frozen_at']:
-            raise ValueError('Дата отчёта не совпадает с датой поставляемого снимка')
-        payload = {name: data for name, data in payload.items() if not name.startswith('data/processed/real/')}
-        for path in folder.rglob('*'):
-            if not path.is_file():
-                continue
-            if path.is_symlink() or path.suffix in ('.sqlite3', '.pyc'):
-                raise ValueError('Недопустимый файл фиксированного отчёта')
-            data = path.read_bytes()
-            if any(value in data for value in forbidden):
-                raise ValueError('Обнаружен локальный секрет в фиксированном отчёте')
-            payload['data/processed/real/' + path.relative_to(folder).as_posix()] = data
     metadata = json.loads(payload['data/submission_manifest.json'])
     manifest = {'project_version': VERSION, 'frozen_at': metadata['frozen_at'],
                 'snapshot_content_sha256': metadata['content_sha256'],

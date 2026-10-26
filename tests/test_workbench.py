@@ -157,6 +157,27 @@ class WorkbenchTests(unittest.TestCase):
         (folder / 'preferences.json').write_text('["invalid"]')
         self.assertFalse(control.paused)
 
+    def test_review_result_is_created_on_clean_install_and_preserves_existing_output(self):
+        shutil.copytree(ROOT / 'evaluation', self.root / 'evaluation')
+        app = Workbench(self.root, self.store.path)
+        self.addCleanup(app.close)
+        server = make_server(app, port=0)
+        thread = threading.Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        self.addCleanup(server.server_close)
+        self.addCleanup(server.shutdown)
+        target = self.root / 'data/processed/extraction_evaluation/extraction.html'
+        self.assertFalse(target.exists())
+        address = 'http://127.0.0.1:' + str(server.server_port) + '/review-result'
+        with urlopen(address) as response:
+            self.assertEqual(response.status, 200)
+            self.assertIn('Ожидается человеческая разметка', response.read().decode())
+        summary = json.loads(target.with_suffix('.json').read_text())
+        self.assertEqual(summary['status'], 'awaiting_human_labels')
+        target.write_text('Сохранённый результат проверки')
+        with urlopen(address) as response:
+            self.assertEqual(response.read().decode(), 'Сохранённый результат проверки')
+
     def test_http_rejects_other_hosts_cross_origin_and_missing_action_token(self):
         folder = self.state()
         app = Workbench(self.root, self.store.path)

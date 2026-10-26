@@ -1,16 +1,20 @@
 {
   "status": "passed",
-  "host_unit_tests": 339,
-  "container_unit_tests": 339,
+  "host_unit_tests": 340,
+  "container_unit_tests": 340,
   "container_skipped": 2,
   "docker_checks": 19,
   "browser_checks": 8,
   "offline_cli_smoke": "passed",
   "internal_html_links": {
-    "checked": 5,
+    "checked": 83,
     "broken": 0,
     "scope": [
-      "README.md"
+      "README.md",
+      "docs/**/*.md",
+      "docs/**/*.html",
+      "app/assets/*.html",
+      "evaluation/*.html"
     ]
   }
 }

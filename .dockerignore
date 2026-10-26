@@ -7,3 +7,4 @@ data/**
 !data/review_snapshot.json.gz
 !data/submission_manifest.json
 *.zip
+*.pdf

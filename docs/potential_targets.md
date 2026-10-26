@@ -33,9 +33,9 @@
 ## Запуск и просмотр
 
 ```bash
-.venv/bin/python -m app.main monitoring
-.venv/bin/python -m app.main report --output data/processed/research_update
-.venv/bin/python scripts/audit_graph.py --sync --repeat
+python3 -m app.main monitoring
+python3 -m app.main report --output data/processed/research_update
+python3 scripts/audit_graph.py --sync --repeat
 ```
 
 Результат: data/processed/monitoring/monitoring.html и monitoring.json. Запросы для Neo4j: potential_targets.cypher. Новые связи контекста включены в CompanyGraph с отдельной меткой слоя и проверяются отдельным сравнением аудита. Актуальная проверка выполняется для модели v3.
@@ -43,7 +43,7 @@
 ## Начать проверку прогностической полезности
 
 ```bash
-.venv/bin/python -m app.main monitoring --record-snapshot
+python3 -m app.main monitoring --record-snapshot
 ```
 
 Флаг сохраняет отдельный публичный снимок SQLite-данных, очередь и manifest в data/monitoring_history. Существующая запись не перезаписывается; --as-of с этим флагом запрещён, чтобы не выдавать пересчёт задним числом за прогноз. Повторять после поступления данных, затем через 30 дней размечать исходы. Нужны несколько временных срезов, независимая проверка и сопоставимый контроль; один сохранённый день ещё не измеряет качество прогноза.

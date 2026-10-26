@@ -20,8 +20,7 @@
 В обычном терминале:
 
 ```bash
-cd /home/nofear/Проекты/cti-platform
-.venv/bin/python -m app.main graph-sync
+python3 -m app.main graph-sync
 ```
 
 После успешной синхронизации в Neo4j Browser:

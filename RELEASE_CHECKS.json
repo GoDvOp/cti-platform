@@ -6,7 +6,7 @@
   "snapshot_content_sha256": "3d52fcf47ca50a9ef55a5a6d78cc5c5d17b7f6514d2d42d2fc8194e4e76acea7",
   "unit_tests": {
     "status": "passed",
-    "count": 339,
+    "count": 340,
     "python": "3.14.7"
   },
   "cli_smoke": {
@@ -18,7 +18,7 @@
     "status": "passed",
     "receipt": "docs/analysis/release-3.0.0/docker.json",
     "checks": 19,
-    "runtime_input_sha256": "4b066812940bf6c49502e8d0f971278707f662b98a0ce1dec3fab25227934991",
+    "runtime_input_sha256": "eca2be762fad1a0ee3cd8fc3806de324f4c12ce037291c78031ac298109a41b5",
     "execution": "real_docker_clean_archive"
   },
   "browser": {
@@ -48,7 +48,7 @@
     "status": "unchanged",
     "receipt": "docs/analysis/release-3.0.0/protected_inputs.json"
   },
-  "checked_at": "2026-10-26T09:53:36.341642+00:00",
+  "checked_at": "2026-10-26T10:15:25.347059+00:00",
   "offline_review": {
     "status": "passed",
     "snapshot_verified": true,
@@ -60,7 +60,7 @@
   },
   "container_unit_tests": {
     "status": "passed",
-    "count": 339,
+    "count": 340,
     "skipped": 2,
     "reason": "Node checks run on host"
   }

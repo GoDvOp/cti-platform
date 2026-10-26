@@ -31,7 +31,7 @@ def validate(root=ROOT):
           and manifest['frozen_at'] == at and manifest['counts'] == counts and settings['frozen_at'] == at)
     report_path = root / 'data/review/report/report.json'
     if not report_path.exists():
-        report_path = root / 'data/processed/real/report.json'
+        raise ValueError('Сначала выполните python3 scripts/review.py для проверки снимка')
     report = json.loads(report_path.read_text())
     check('frozen_report_uses_current_model', report['as_of'] == at and report['model_version'] == model
           and report['weighted_graph']['model_version'] == model)
@@ -59,7 +59,7 @@ def validate(root=ROOT):
     catalogs = {name: {r['id']: json.loads(r['data']) for r in snapshot['tables'][name]} for name in ('companies', 'products')}
     check('extraction_catalogs_match_snapshot', all({r['id']: r for r in corpus[name]} == catalogs[name] for name in catalogs))
     check('extractor_code_matches_frozen_predictions', predictions['extractor_sha256'] == files_fingerprint())
-    check('no_fabricated_human_metrics', read('data/processed/extraction_evaluation/extraction.json') == assessment)
+    check('no_fabricated_human_metrics', read('data/review/extraction_evaluation/extraction.json') == assessment)
     protected = read('docs/analysis/release-3.0.0/protected_inputs.json')
     check('original_review_inputs_unchanged', all(hashlib.sha256((root / name).read_bytes()).hexdigest() == digest
           for name, digest in protected['files'].items()))
