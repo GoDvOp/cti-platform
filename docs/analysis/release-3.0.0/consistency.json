@@ -76,16 +76,7 @@
     {
       "name": "docker_receipt_matches_runtime_files",
       "status": "passed"
-    },
-    {
-      "name": "final_report_case.html",
-      "status": "passed"
-    },
-    {
-      "name": "final_report_case.pdf",
-      "status": "passed"
     }
   ],
-  "human_extraction_review": "awaiting_human_labels",
-  "author_pending": true
+  "human_extraction_review": "awaiting_human_labels"
 }

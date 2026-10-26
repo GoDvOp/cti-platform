@@ -7,8 +7,11 @@
   "browser_checks": 8,
   "offline_cli_smoke": "passed",
   "internal_html_links": {
-    "checked": 67,
-    "broken": 0
-  },
-  "author_pending": true
+    "checked": 27,
+    "broken": 0,
+    "scope": [
+      "README.md",
+      "START_HERE.html"
+    ]
+  }
 }

@@ -282,8 +282,7 @@ H — сходство по географии и бизнес-модели бе
 Содержимое дампов, доступы и техническая подверженность компаний не проверяются.</p>
 <p>Источники и описание обработки: docs/data_sources.md. Проверка: docs/validation.md.
 Методологическая основа: <a href="https://www.first.org/global/sigs/cti/curriculum/source-evaluation">FIRST</a>,
-<a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-165a">CISA, DLS</a>.
-Для итоговой сдачи: печать отчёта в PDF из браузера, имя Фамилия_Имя.pdf; указать фактически выполненный объём.</p></html>'''
+<a href="https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-165a">CISA, DLS</a>.</p></html>'''
     (output / 'report.html').write_text(page, encoding='utf-8')
     if not demo:
         from .graph_view import export as export_graph_view

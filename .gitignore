@@ -21,6 +21,10 @@ htmlcov/
 *.zip.sha256
 .DS_Store
 
+# Written submission materials are kept outside the repository.
+/docs/submission/
+/Фамилия_Имя.pdf
+
 # Include only the reproducible submission data under data/.
 /data/*
 !/data/review_snapshot.json.gz

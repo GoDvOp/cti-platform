@@ -66,7 +66,7 @@ def validate(root=ROOT):
     check('release_version_and_snapshot', version == release['project_version'] == '3.0.0'
           and release['model_version'] == model and release['snapshot_as_of'] == at
           and release['snapshot_content_sha256'] == manifest['content_sha256'])
-    texts = [(root / name).read_text() for name in ('README.md', 'START_HERE.html', 'docs/submission/case.md')]
+    texts = [(root / name).read_text() for name in ('README.md', 'START_HERE.html')]
     check('public_summaries_use_current_version_and_counts', all(version in text and str(counts['publications']) in text for text in texts))
     additional = read_snapshot(root / 'docs/cases/ispras-gitlab-2026/snapshot.json.gz')
     new_case = read('docs/cases/ispras-gitlab-2026/decision.json')
@@ -85,12 +85,10 @@ def validate(root=ROOT):
     check('clean_archive_docker_acceptance', receipt.get('status') == 'passed'
           and receipt.get('project_version') == version and receipt.get('isolated_resource_cleanup') == 'passed')
     check('docker_receipt_matches_runtime_files', receipt.get('runtime_input_sha256') == runtime_fingerprint(root))
-    for name in ('case.html', 'case.pdf'):
-        check('final_report_' + name, (root / 'docs/submission' / name).is_file())
     return {'status': 'passed' if all(r['status'] == 'passed' for r in checks) else 'failed',
             'project_version': version, 'model_version': model, 'as_of': at,
             'snapshot_sha256': manifest['content_sha256'], 'checks': checks,
-            'human_extraction_review': assessment['status'], 'author_pending': not settings.get('author')}
+            'human_extraction_review': assessment['status']}
 
 
 if __name__ == '__main__':

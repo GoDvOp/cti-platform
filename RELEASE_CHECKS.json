@@ -18,7 +18,7 @@
     "status": "passed",
     "receipt": "docs/analysis/release-3.0.0/docker.json",
     "checks": 19,
-    "runtime_input_sha256": "8cafa5b64a8bad5125fca7db7c9db9b12e9a6a2ab3efa0facc604bd64fc5e94d",
+    "runtime_input_sha256": "d62914a1948abc9a53f4eabb3e044c4e10c5eb7c9be2137d5268bfc0335517b6",
     "execution": "real_docker_clean_archive"
   },
   "browser": {
@@ -44,16 +44,11 @@
     "independent": false
   },
   "independent_prediction_validation": "not_performed",
-  "author_name": "pending_user_input",
   "protected_inputs": {
     "status": "unchanged",
     "receipt": "docs/analysis/release-3.0.0/protected_inputs.json"
   },
-  "checked_at": "2026-10-25T09:58:06.739995+00:00",
-  "submission_ready": false,
-  "pending_fields": [
-    "author_full_name"
-  ],
+  "checked_at": "2026-10-26T09:40:33.307583+00:00",
   "offline_review": {
     "status": "passed",
     "snapshot_verified": true,

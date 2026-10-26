@@ -26,13 +26,9 @@ def selected_files():
     paths = [ROOT / name for name in (*ROOT_FILES, *DATA_FILES)]
     for name in (*DIRECTORIES, *DATA_DIRECTORIES):
         paths.extend(p for p in (ROOT / name).rglob('*') if p.is_file()
-                     and '__pycache__' not in p.parts and p.suffix not in ('.pyc', '.sqlite3'))
-    # The PDF name is set explicitly; a missing author never becomes an invented name.
-    settings = json.loads((ROOT / 'config/submission.json').read_text())
-    report_name = settings['report_filename']
-    if Path(report_name).name != report_name or not report_name.endswith('.pdf'):
-        raise ValueError('Некорректное имя итогового PDF')
-    return sorted(set(paths)), report_name
+                     and '__pycache__' not in p.parts and p.suffix not in ('.pyc', '.sqlite3')
+                     and not p.is_relative_to(ROOT / 'docs/submission'))
+    return sorted(set(paths))
 
 
 def secret_values():
@@ -52,7 +48,7 @@ def main():
     p.add_argument('--output', type=Path, default=ROOT.parent / f'cti-platform-submission-{VERSION}.zip')
     p.add_argument('--report-dir', type=Path, help='Отчёт с фиксированного снимка вместо изменяющегося рабочего отчёта')
     args = p.parse_args()
-    files, report_name = selected_files()
+    files = selected_files()
     payload = {}
     forbidden = secret_values()
     for path in files:
@@ -83,10 +79,8 @@ def main():
             if any(value in data for value in forbidden):
                 raise ValueError('Обнаружен локальный секрет в фиксированном отчёте')
             payload['data/processed/real/' + path.relative_to(folder).as_posix()] = data
-    payload[report_name] = payload['docs/submission/case.pdf']
     metadata = json.loads(payload['data/submission_manifest.json'])
     manifest = {'project_version': VERSION, 'frozen_at': metadata['frozen_at'],
-                'report': report_name, 'author': json.loads(payload['config/submission.json'])['author'],
                 'snapshot_content_sha256': metadata['content_sha256'],
                 'exclusions': ['.env', '.venv', 'working databases', 'backups', 'credentials'],
                 'files': {name: {'sha256': hashlib.sha256(data).hexdigest(), 'bytes': len(data)}
@@ -103,8 +97,7 @@ def main():
     checksum = hashlib.sha256(args.output.read_bytes()).hexdigest()
     args.output.with_suffix(args.output.suffix + '.sha256').write_text(checksum + '  ' + args.output.name + '\n')
     print(json.dumps({'archive': str(args.output.resolve()), 'files': len(payload),
-                      'bytes': args.output.stat().st_size, 'sha256': checksum,
-                      'author_pending': manifest['author'] is None}, ensure_ascii=False, indent=2))
+                      'bytes': args.output.stat().st_size, 'sha256': checksum}, ensure_ascii=False, indent=2))
 
 if __name__ == '__main__':
     main()
