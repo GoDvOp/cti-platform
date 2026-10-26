@@ -18,7 +18,7 @@
     "status": "passed",
     "receipt": "docs/analysis/release-3.0.0/docker.json",
     "checks": 19,
-    "runtime_input_sha256": "d62914a1948abc9a53f4eabb3e044c4e10c5eb7c9be2137d5268bfc0335517b6",
+    "runtime_input_sha256": "4b066812940bf6c49502e8d0f971278707f662b98a0ce1dec3fab25227934991",
     "execution": "real_docker_clean_archive"
   },
   "browser": {
@@ -48,7 +48,7 @@
     "status": "unchanged",
     "receipt": "docs/analysis/release-3.0.0/protected_inputs.json"
   },
-  "checked_at": "2026-10-26T09:40:33.307583+00:00",
+  "checked_at": "2026-10-26T09:53:36.341642+00:00",
   "offline_review": {
     "status": "passed",
     "snapshot_verified": true,

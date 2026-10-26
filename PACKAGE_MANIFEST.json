@@ -19,24 +19,20 @@
       "bytes": 66
     },
     ".gitignore": {
-      "sha256": "aa2d635944b73e3215d8440ed60edf302f6a884cb69e6cbf1fb973189a9bf22d",
-      "bytes": 846
+      "sha256": "5de0d83074d46aa10e7b0fc803271ccdd84117ca6e3928994dfc90d60c03ba01",
+      "bytes": 819
     },
     "Dockerfile": {
       "sha256": "f5ee9c6c05dbf38413e97f2ade6e45515b9793e6d60246f226fd162e8162712a",
       "bytes": 712
     },
     "README.md": {
-      "sha256": "ee8eb00ce98a289e9258cc76b590dfd8d7497e86b018e13fdb200e6e29d4e0af",
-      "bytes": 7269
+      "sha256": "6ba07d32477de05d276fa2b3f8e7f3b233d1a84926f401cf854e6e092df8e901",
+      "bytes": 6335
     },
     "RELEASE_CHECKS.json": {
-      "sha256": "101b65bcb84e8f045b949c23ece7a07c7f17765e308ef314c2f6f04be9d10725",
+      "sha256": "5f6a05431f42acbb65d6f0d1a79ced3cfe57a16cad9264768417a92ce86c01ad",
       "bytes": 1988
-    },
-    "START_HERE.html": {
-      "sha256": "1cc111ebb93339829566752669ef0f2476bcb6142f8a2e461832934fee97274e",
-      "bytes": 4361
     },
     "app/__init__.py": {
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -395,7 +391,7 @@
       "bytes": 1972
     },
     "docs/analysis/release-3.0.0/docker.json": {
-      "sha256": "489deb5392ca580e27278ec72052c71b9340385d2d96d9a0c7c820af34d95399",
+      "sha256": "294f43d7428658af6c23bef98ce6922d28b78fb0c14cdc38b453fd1a30985122",
       "bytes": 2426
     },
     "docs/analysis/release-3.0.0/protected_inputs.json": {
@@ -403,8 +399,8 @@
       "bytes": 641
     },
     "docs/analysis/release-3.0.0/summary.json": {
-      "sha256": "3ebfe84ca74fa83d660b2c6c45aa04a987ddc89afa46d8f1999f102dc5c4988c",
-      "bytes": 319
+      "sha256": "d0e0ac361730f9d77b22b7a265251d95c9a8d891561c706c5655fdfa174ab343",
+      "bytes": 293
     },
     "docs/analysis/scoring-v3/comparison.json": {
       "sha256": "42c16474dae54d19e86c80f8fbe512d8997ab127fa49e8d131d1966062d51ace",
@@ -803,8 +799,8 @@
       "bytes": 2020
     },
     "scripts/build_submission.py": {
-      "sha256": "23582d73e8f1400840385497e5f41f00469ed16d5cd0ed7f2a71ccd730a03a4f",
-      "bytes": 6097
+      "sha256": "ec1a48ccb7e00ecbca18e4000046476fbe3340864c5cc84b9821565cf3ec40fd",
+      "bytes": 6078
     },
     "scripts/check_docker.py": {
       "sha256": "a58acabae8902efc21568f8613b0f15a0f48fa83bc7addad198236ec6b63ae5c",
@@ -871,8 +867,8 @@
       "bytes": 1897
     },
     "scripts/validate_submission.py": {
-      "sha256": "c10c42bb140451fb003b482039a71000e9537faf1861a103478d69f53e001dd0",
-      "bytes": 7140
+      "sha256": "9cc77e3cbd125bb652264ff576b0ad2f91684ebda3fcbec84d2f3c5bccecd491",
+      "bytes": 7102
     },
     "start-cti.sh": {
       "sha256": "54b7dcba08b3097ede417460bb130705924ab613cbe0dfb77a8b91e6842253d1",

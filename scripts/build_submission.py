@@ -10,7 +10,7 @@ import tomllib
 
 ROOT = Path(__file__).resolve().parents[1]
 VERSION = tomllib.loads((ROOT / "pyproject.toml").read_text())["project"]["version"]
-ROOT_FILES = ('README.md', 'START_HERE.html', 'pyproject.toml', 'requirements.txt',
+ROOT_FILES = ('README.md', 'pyproject.toml', 'requirements.txt',
               'start-cti.sh',
               'Dockerfile', 'docker-compose.yml', '.env.example', '.gitignore', '.dockerignore',
               'RELEASE_CHECKS.json')

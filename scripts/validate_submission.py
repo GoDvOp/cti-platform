@@ -66,7 +66,7 @@ def validate(root=ROOT):
     check('release_version_and_snapshot', version == release['project_version'] == '3.0.0'
           and release['model_version'] == model and release['snapshot_as_of'] == at
           and release['snapshot_content_sha256'] == manifest['content_sha256'])
-    texts = [(root / name).read_text() for name in ('README.md', 'START_HERE.html')]
+    texts = [(root / 'README.md').read_text()]
     check('public_summaries_use_current_version_and_counts', all(version in text and str(counts['publications']) in text for text in texts))
     additional = read_snapshot(root / 'docs/cases/ispras-gitlab-2026/snapshot.json.gz')
     new_case = read('docs/cases/ispras-gitlab-2026/decision.json')
