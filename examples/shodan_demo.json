@@ -1,0 +1,19 @@
+{
+  "_cti_example": "synthetic",
+  "_notice": "Вымышленные данные для проверки импорта. Это не результат запроса к Shodan и не сведения о реальной компании.",
+  "ip_str": "203.0.113.10",
+  "org": "Учебный хостинг",
+  "data": [
+    {
+      "port": 443,
+      "transport": "tcp",
+      "timestamp": "2026-10-24T10:00:00Z",
+      "product": "GitLab",
+      "version": "19.5.0",
+      "hostnames": ["gitlab.alpha.example"],
+      "domains": ["alpha.example"],
+      "http": {"host": "gitlab.alpha.example"},
+      "vulns": {"CVE-2099-20001": {"verified": false}}
+    }
+  ]
+}

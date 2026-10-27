@@ -88,6 +88,25 @@ def parser():
     q.add_argument('--weights', type=Path)
     q.add_argument('--demo', action='store_true')
     q.add_argument('--output', type=Path, default=ROOT / 'data/processed/sensitivity')
+    q = sub.add_parser('shodan-import', help='Импорт уже собранных JSON/JSONL Shodan; без обращений к хостам')
+    q.add_argument('file', type=Path)
+    q.add_argument('--demo', action='store_true')
+    q.add_argument('--output', type=Path)
+    q = sub.add_parser('shodan-host', help='Прочитать существующую запись одного IP из API Shodan')
+    q.add_argument('ip')
+    q.add_argument('--output', type=Path)
+    q = sub.add_parser('shodan-list', help='Технические наблюдения отдельно от индексов компаний')
+    q.add_argument('--demo', action='store_true')
+    q.add_argument('--output', type=Path)
+    q = sub.add_parser('shodan-review', help='Проверить принадлежность наблюдаемого сервиса компании')
+    q.add_argument('id')
+    q.add_argument('--company', required=True)
+    q.add_argument('--status', choices=['confirmed', 'refuted', 'needs_review'], required=True)
+    q.add_argument('--reviewer', required=True)
+    q.add_argument('--note', required=True)
+    q.add_argument('--evidence-url', required=True)
+    q = sub.add_parser('shodan-demo', help='Вымышленный пример Shodan в отдельной демонстрационной базе')
+    q.add_argument('--output', type=Path)
     q = sub.add_parser('evaluate', help='Пилотная проверка классификации на сохранённой размеченной выборке')
     q.add_argument('--corpus', type=Path, default=ROOT / 'evaluation/pilot_real.json')
     q.add_argument('--output', type=Path, default=ROOT / 'data/processed/evaluation')
@@ -190,11 +209,34 @@ def parser():
 
 
 def run(args):
-    is_demo = args.command in ('demo', 'knowledge-demo') or getattr(args, 'demo', False)
+    is_demo = args.command in ('demo', 'knowledge-demo', 'shodan-demo') or getattr(args, 'demo', False)
     default_db = ROOT / 'data' / ('demo.sqlite3' if is_demo else 'cti.sqlite3')
-    store = CTIStore(args.db or os.getenv('CTI_DB_PATH') or default_db)
+    database = args.db or (default_db if args.command == 'shodan-demo' else os.getenv('CTI_DB_PATH') or default_db)
+    store = CTIStore(database)
     store.load_products(read_json(ROOT / 'config/products.json'))
     command = args.command
+    if command.startswith('shodan-'):
+        from . import shodan
+        if command == 'shodan-demo':
+            store.load_companies(read_json(ROOT / 'examples/companies_demo.json'))
+            result = shodan.import_export(store, shodan.read_export(shodan.EXAMPLE), demo=True)
+            return dict(result, **shodan.export_report(store, args.output or ROOT / 'data/processed/shodan-demo', True),
+                        warning='Вымышленные данные; это не наблюдение реальной организации')
+        if command == 'shodan-import':
+            result = shodan.import_export(store, shodan.read_export(args.file), demo=is_demo)
+        elif command == 'shodan-host':
+            result = shodan.fetch_host(store, args.ip)
+            if result['status'] == 'error':
+                raise ValueError(result['message'] + ' [' + result['error_code'] + ']')
+        elif command == 'shodan-review':
+            return shodan.review_association(store, args.id, args.company, args.status,
+                                              args.reviewer, args.note, args.evidence_url)
+        else:
+            result = {'observations': [o for o in shodan.observations(store, include_demo=is_demo)
+                                       if o['is_demo'] == is_demo]}
+        if getattr(args, 'output', None):
+            result['report'] = shodan.export_report(store, args.output, is_demo)
+        return result
     if command == 'init':
         store.load_companies(read_json(args.companies))
         return {'database': str(store.path), 'companies': len(store.companies())}

@@ -101,6 +101,69 @@ const output = process.argv[3] || '/tmp/cti-workbench-browser';
       assert.equal(await test.evaluate(()=>window.__ctiInjected===true),false);
       await isolated.close();
     });
+    // This block writes fictional fixtures; use only the isolated acceptance DB.
+    if(process.env.CTI_TEST_SHODAN==='1') {
+      const observations=async()=>await(await page.request.get(base+'/api/shodan')).json();
+      const company=async()=>{const d=await(await page.request.get(base+'/api/dashboard')).json();return d.companies.find(c=>c.id==='shodan-test-client');};
+      const initialCompany=await company();assert.ok(initialCompany,'Seed fictional shodan-test-client in the isolated DB');
+      await page.setViewportSize({width:1440,height:1000});
+      await check('shodan_example_is_marked_and_does_not_write',async()=>{
+        await page.locator('[data-view="shodan"]').click();
+        await page.waitForFunction(()=>document.getElementById('shodan-note').textContent.includes('Сохранённых'));
+        const before=(await observations()).observations.length;
+        await page.locator('#shodan-example').click();
+        await page.waitForFunction(()=>document.getElementById('shodan-note').textContent.includes('Вымышленный пример'));
+        assert.match(await page.locator('.shodan-card').innerText(),/Вымышленный пример/);
+        assert.equal(await page.locator('.shodan-review').count(),0);
+        assert.equal((await observations()).observations.length,before);
+      });
+      const fixture={ip_str:'203.0.113.10',data:[{port:443,transport:'tcp',timestamp:'2026-10-24T10:00:00Z',product:'<img src=x onerror="window.__shodanInjected=true">',version:'1.0',hostnames:['git.client.example'],vulns:{'CVE-2099-20001':{verified:false}}}]};
+      await check('shodan_upload_is_unattributed_safe_text',async()=>{
+        await page.locator('#shodan-file').setInputFiles({name:'fictional-service.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(fixture))});
+        await page.waitForSelector('.shodan-review',{state:'attached'});
+        assert.equal((await observations()).observations.length,1);
+        assert.equal((await observations()).observations[0].association_review,null);
+        assert.match(await page.locator('.shodan-card').innerText(),/Совпадения имён для проверки/);
+        assert.equal(await page.locator('.shodan-card img').count(),0);
+        assert.equal(await page.evaluate(()=>window.__shodanInjected===true),false);
+      });
+      await check('shodan_manual_association_reaches_company_card_without_score_change',async()=>{
+        await page.locator('.shodan-card details').first().locator('summary').click();
+        const form=page.locator('.shodan-review');
+        await form.getByLabel('Компания',{exact:true}).selectOption('shodan-test-client');
+        await form.getByLabel('Решение по принадлежности',{exact:true}).selectOption('confirmed');
+        await form.getByLabel('Кто проверил',{exact:true}).fill('Browser acceptance');
+        await form.getByLabel('Какие сведения подтверждают или опровергают связь',{exact:true}).fill('Fictional fixture association in isolated acceptance DB');
+        await form.getByLabel('Публичная ссылка на основание',{exact:true}).fill('https://client.example/about');
+        await form.getByRole('button',{name:'Сохранить проверку'}).click();
+        await page.waitForFunction(()=>document.querySelector('.shodan-card').textContent.includes('принадлежность подтверждена'));
+        const c=await company();assert.equal(c.technical_observations.length,1);
+        assert.deepEqual(c.interest,initialCompany.interest);assert.deepEqual(c.technical,initialCompany.technical);
+        await page.locator('[data-view="queue"]').click();await page.locator('[data-tab="history"]').click();
+        await page.locator('[data-company="shodan-test-client"]').click();
+        assert.match(await page.locator('#company-detail').innerText(),/Версия по баннеру/);
+        await page.locator('[data-view="shodan"]').click();
+        await page.evaluate(()=>scrollTo(0,0));
+        await page.screenshot({path:path.join(output,'shodan-desktop.png'),fullPage:true});
+      });
+      await check('shodan_mobile_layout_has_no_horizontal_overflow',async()=>{
+        await page.setViewportSize({width:390,height:844});
+        assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+        await page.screenshot({path:path.join(output,'shodan-mobile.png'),fullPage:true});
+      });
+      await check('shodan_repeated_upload_and_revocation_preserve_observation',async()=>{
+        await page.locator('#shodan-file').setInputFiles({name:'repeated.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(fixture))});
+        await page.waitForFunction(()=>document.getElementById('message').textContent.includes('Импортировано наблюдений'));
+        assert.equal((await observations()).observations.length,1);
+        assert.equal((await observations()).observations[0].association_review.status,'confirmed');
+        await page.locator('.shodan-card details').first().locator('summary').click();
+        await page.locator('.shodan-review').getByLabel('Решение по принадлежности',{exact:true}).selectOption('refuted');
+        await page.locator('.shodan-review').getByRole('button',{name:'Сохранить проверку'}).click();
+        await page.waitForFunction(()=>document.querySelector('.shodan-card').textContent.includes(': отклонена'));
+        assert.equal((await observations()).observations[0].association_review.status,'refuted');
+        assert.deepEqual((await company()).technical_observations,[]);
+      });
+    }
     if(process.env.CTI_TEST_CONTROLS==='1') {
       await check('desktop_pause_resume_and_refresh_controls',async()=>{
         await page.setViewportSize({width:1440,height:1000});

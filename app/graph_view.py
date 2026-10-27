@@ -48,9 +48,13 @@ def payload(store, as_of=None, status=None):
     configs.update({s['id']: s for s in json.loads((ROOT / 'config/sources.json').read_text())})
     for p in store.publications():
         data = json.loads(p['data'])
+        observation = data.get('metadata', {}).get('observation', {})
         node(p['id'], 'Publication', data['title'], url=p['url'], published_at=p['published_at'],
              collected_at=p['collected_at'], content_hash=p['content_hash'],
              collection_method=data.get('metadata', {}).get('collection_method'),
+             observed_ip=observation.get('ip'), observed_port=observation.get('port'),
+             observed_product=observation.get('product'), reported_version=observation.get('reported_version'),
+             observed_at=observation.get('observed_at'),
              verification_method=data.get('metadata', {}).get('verification_method'))
         config = configs.get(p['source_id'], {})
         node(scope_id(p['source_id']), 'Source', config.get('name', p['source_id']),

@@ -81,5 +81,12 @@
     "independence_group": "trueconf",
     "reference_url": "https://trueconf.ru/products/changelog.html",
     "role": "vendor_update_reference"
+  },
+  "shodan_observations": {
+    "name": "Shodan: сохранённые технические наблюдения",
+    "reference_url": "https://developer.shodan.io/api",
+    "independence_group": "shodan",
+    "collection_method": "explicit_import_or_existing_host_api",
+    "limitations": "Принадлежность сервиса проверяется отдельно. Версия по баннеру и CVE являются сообщением стороннего источника; индексы не повышаются автоматически."
   }
 }

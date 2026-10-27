@@ -77,6 +77,36 @@ class Workbench:
             raise ValueError('Сборщик не работает или открыт офлайн-снимок. Запустите сборщик выбранным способом.')
         return request_control(self.root / 'data/diagnostics/auto_update', action)
 
+    def shodan(self):
+        from .shodan import observations
+        with snapshot(self.database, self.folder) as store:
+            return {'observations': observations(store, include_demo=True), 'offline': self.offline,
+                    'companies': store.companies(), 'changes_company_indices': False}
+
+    def import_shodan(self, body):
+        if self.offline:
+            raise ValueError('Офлайн-панель использует временную базу. Импортируйте файл после обычного запуска стенда.')
+        from .shodan import import_export
+        from .storage import CTIStore
+        with self.lock:
+            result = import_export(CTIStore(self.database), body)
+            self.cached = None
+        return result
+
+    def review_shodan(self, body):
+        if self.offline:
+            raise ValueError('Временная офлайн-база не сохраняет проверки. Откройте обычный стенд.')
+        from .shodan import review_association
+        from .storage import CTIStore
+        required = {'id', 'company_id', 'status', 'reviewer', 'note', 'evidence_url'}
+        if not isinstance(body, dict) or set(body) != required:
+            raise ValueError('Shodan: заполните компанию, статус, проверяющего, объяснение и ссылку')
+        with self.lock:
+            result = review_association(CTIStore(self.database), body['id'], body['company_id'],
+                                        body['status'], body['reviewer'], body['note'], body['evidence_url'])
+            self.cached = None
+        return result
+
 
 def make_server(app, host='127.0.0.1', port=8765):
     class Handler(BaseHTTPRequestHandler):
@@ -121,11 +151,19 @@ def make_server(app, host='127.0.0.1', port=8765):
                 if path == '/':
                     page = (app.root / 'app/assets/workbench.html').read_text()
                     return self.send(200, page.replace('__TOKEN__', app.token), 'text/html; charset=utf-8')
-                if path in ('/workbench.js', '/workbench.css'):
+                if path in ('/workbench.js', '/workbench.css', '/shodan.js'):
                     mime = 'application/javascript; charset=utf-8' if path.endswith('.js') else 'text/css; charset=utf-8'
                     return self.file(app.root / 'app/assets' / path[1:], mime)
                 if path == '/api/dashboard':
                     return self.send(200, app.data())
+                if path == '/api/shodan':
+                    return self.send(200, app.shodan())
+                if path == '/api/shodan/example':
+                    from .shodan import normalize_export
+                    records = normalize_export(json.loads((app.root / 'examples/shodan_demo.json').read_text()))
+                    return self.send(200, {'observations': records, 'companies': [], 'example_only': True})
+                if path == '/shodan-example.json':
+                    return self.file(app.root / 'examples/shodan_demo.json', 'application/json; charset=utf-8')
                 if path == '/health':
                     return self.send(200, {'ok': True, 'service': 'cti-workbench', 'offline': app.offline})
                 if path == '/graph':
@@ -170,6 +208,10 @@ def make_server(app, host='127.0.0.1', port=8765):
                 if not 0 < length <= 2_000_000:
                     return self.send(413, {'error': 'Недопустимый размер запроса'})
                 body = json.loads(self.rfile.read(length))
+                if urlsplit(self.path).path == '/api/shodan/import':
+                    return self.send(200, app.import_shodan(body))
+                if urlsplit(self.path).path == '/api/shodan/review':
+                    return self.send(200, app.review_shodan(body))
                 if urlsplit(self.path).path == '/api/control':
                     if not isinstance(body, dict) or set(body) != {'action'}:
                         raise ValueError('Нужно выбрать действие панели')
@@ -188,7 +230,7 @@ def make_server(app, host='127.0.0.1', port=8765):
                 return self.send(404, {'error': 'Действие не найдено'})
             except (ValueError, KeyError, TypeError) as exc:
                 return self.send(400, {'error': str(exc)})
-            except OSError:
+            except (OSError, sqlite3.Error):
                 return self.send(503, {'error': 'Не удалось сохранить результат'})
 
     return ThreadingHTTPServer((host, port), Handler)

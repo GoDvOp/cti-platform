@@ -126,6 +126,20 @@ def overview_rows(store, as_of=None):
             publication_ids.add(report['publication_id'])
             references[report['publication_id']].update(report['cves'])
     publications = {p['id']: p for p in store.publications()}
+    from .shodan import observations, review_available
+    for observation in observations(store, now=as_of, as_of=as_of):
+        review = observation['association_review']
+        if (not review_available(review, as_of) or review['company_id'] not in companies
+                or observation['freshness'] == 'future'):
+            continue
+        add('HAS_TECHNICAL_OBSERVATION', 'Company', review['company_id'], 'Publication', observation['id'],
+            {'caption': 'Сервис: принадлежность проверена', 'status': 'reviewed_service_association',
+             'view_layer': 'technical_observation', 'weight_role': 'context_only',
+             'observed_at': observation['observed_at'], 'reported_version': observation['reported_version'],
+             'evidence_url': review['evidence_url'], 'reviewer': review['reviewer'],
+             'reviewed_at': review['reviewed_at'], 'current_vulnerability_established': False,
+             'interpretation': 'Проверена принадлежность сервиса; версия и CVE остаются сообщением Shodan.'})
+        publication_ids.add(observation['id'])
     for pid, identifiers in sorted(references.items()):
         if pid not in publications:
             continue

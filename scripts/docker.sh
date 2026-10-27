@@ -3,7 +3,7 @@
 set -eu
 cd "$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)"
 export CTI_UID="${CTI_UID:-$(id -u)}" CTI_GID="${CTI_GID:-$(id -g)}"
-export CTI_IMAGE="${CTI_IMAGE:-cti-platform:3.0.0}"
+export CTI_IMAGE="${CTI_IMAGE:-cti-platform:3.1.0}"
 action=${1:-help}
 if [ "$#" -gt 0 ]; then shift; fi
 

@@ -109,4 +109,14 @@ with tempfile.TemporaryDirectory(prefix='cti-smoke-') as tmp:
     attack_graph = json.loads((folder / 'attack-graph.json').read_text())
     assert any('ATTACK_USES_TECHNIQUE' in q['statement'] for q in attack_graph['statements'])
     assert any('SET n:CompanyGraph' in q['statement'] for q in attack_graph['statements'])
-    print('CLI smoke: OK — сбор/импорт, повторы, единый граф, импорт и сопоставления ATT&CK, проверка версий, отчёт.')
+    shodan_db = folder / 'shodan-demo.sqlite3'
+    shodan = call(shodan_db, 'shodan-demo', '--output', folder / 'shodan')
+    assert shodan['counts'] == {'inserted': 1}
+    assert call(shodan_db, 'shodan-demo', '--output', folder / 'shodan')['counts'] == {'unchanged': 1}
+    observed = call(shodan_db, 'shodan-list', '--demo')['observations']
+    assert len(observed) == 1 and observed[0]['is_demo'] is True
+    assert observed[0]['company_candidates'][0]['id'] == 'demo-alpha'
+    assert observed[0]['association_review'] is None
+    assert call(shodan_db, 'shodan-list')['observations'] == []
+    assert (folder / 'shodan/shodan.html').is_file()
+    print('CLI smoke: OK — сбор/импорт, повторы, единый граф, ATT&CK, версии, отчёт и отдельный пример Shodan.')

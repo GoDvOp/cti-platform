@@ -1,5 +1,5 @@
 """SQLite source of truth, immutable review audit and publication versions."""
-from contextlib import contextmanager
+from contextlib import contextmanager, nullcontext
 import json
 from pathlib import Path
 import sqlite3
@@ -96,8 +96,8 @@ class CTIStore:
         with self.connect() as db:
             return [json.loads(r['data']) for r in db.execute('SELECT data FROM companies ORDER BY id')]
 
-    def save_publication(self, pub, extraction):
-        with self.connect() as db:
+    def save_publication(self, pub, extraction, connection=None):
+        with (nullcontext(connection) if connection is not None else self.connect()) as db:
             old = db.execute('SELECT content_hash,data FROM publications WHERE id=?', (pub.id,)).fetchone()
             if old and old['content_hash'] == pub.content_hash:
                 # Date enrichment must persist even when title/text are unchanged.

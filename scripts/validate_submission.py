@@ -1,4 +1,4 @@
-"""Validate the 3.0.0 submission against its frozen inputs and current receipts."""
+"""Validate the current submission against its frozen inputs and current receipts."""
 import argparse
 import hashlib
 import json
@@ -60,10 +60,11 @@ def validate(root=ROOT):
     check('extraction_catalogs_match_snapshot', all({r['id']: r for r in corpus[name]} == catalogs[name] for name in catalogs))
     check('extractor_code_matches_frozen_predictions', predictions['extractor_sha256'] == files_fingerprint())
     check('no_fabricated_human_metrics', read('data/review/extraction_evaluation/extraction.json') == assessment)
-    protected = read('docs/analysis/release-3.0.0/protected_inputs.json')
+    release_dir = root / 'docs/analysis' / ('release-' + version)
+    protected = json.loads((release_dir / 'protected_inputs.json').read_text())
     check('review_inputs_match_recorded_hashes', all(hashlib.sha256((root / name).read_bytes()).hexdigest() == digest
           for name, digest in protected['files'].items()))
-    check('release_version_and_snapshot', version == release['project_version'] == '3.0.0'
+    check('release_version_and_snapshot', version == release['project_version']
           and release['model_version'] == model and release['snapshot_as_of'] == at
           and release['snapshot_content_sha256'] == manifest['content_sha256'])
     texts = [(root / 'README.md').read_text()]
@@ -77,10 +78,10 @@ def validate(root=ROOT):
     check('positive_case_preserves_unknown_version_and_attack', new_case['decision'] == 'conditional_monitoring_candidate'
           and new_case['named_external_target_supported'] is False
           and new_case['attack_established_by_this_chain'] is False and new_case['decision_gates']['affected_installed_version'] is None)
-    browser_path = root / 'docs/analysis/release-3.0.0/browser/checks.json'
+    browser_path = release_dir / 'browser/checks.json'
     browser = json.loads(browser_path.read_text()) if browser_path.exists() else {}
     check('real_browser_acceptance', browser.get('status') == 'passed' and not browser.get('page_errors'))
-    receipt_path = root / 'docs/analysis/release-3.0.0/docker.json'
+    receipt_path = release_dir / 'docker.json'
     receipt = json.loads(receipt_path.read_text()) if receipt_path.exists() else {}
     check('clean_archive_docker_acceptance', receipt.get('status') == 'passed'
           and receipt.get('project_version') == version and receipt.get('isolated_resource_cleanup') == 'passed')

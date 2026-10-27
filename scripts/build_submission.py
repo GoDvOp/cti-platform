@@ -37,7 +37,7 @@ def secret_values():
     if source.exists():
         for line in source.read_text().splitlines():
             key, _, value = line.partition('=')
-            if any(marker in key.upper() for marker in ('TOKEN', 'PASSWORD', 'SECRET')) and len(value.strip()) >= 8:
+            if any(marker in key.upper() for marker in ('TOKEN', 'PASSWORD', 'SECRET', 'API_KEY')) and len(value.strip()) >= 8:
                 values.append(value.strip().strip('\"\'').encode())
     return values
 

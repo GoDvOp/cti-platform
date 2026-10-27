@@ -135,6 +135,8 @@ def dashboard(store, root=ROOT, as_of=None, offline=False):
     names.update({p['id']: p['name'] for p in store.products()})
     names.update({e['id']: e['name'] for e in store.entities()})
     cards = []
+    from .shodan import observations, review_available
+    service_observations = observations(store, now=at, as_of=at)
     for row in scores['companies']:
         cid = row['company_id']
         hypotheses = [r for r in research['hypotheses'] if r['company_id'] == cid]
@@ -221,6 +223,10 @@ def dashboard(store, root=ROOT, as_of=None, offline=False):
             'priority_reason': reason, 'next_action': next_action, 'interest': row['interest'],
             'technical': row['technical'], 'historical_technical': row['historical_technical'],
             'hypotheses': hypotheses, 'missing': missing,
+            'technical_observations': [o for o in service_observations
+                                      if review_available(o['association_review'], at)
+                                      and o['association_review']['company_id'] == cid
+                                      and o['freshness'] != 'future'],
             'counterevidence': counter, 'evidence': evidence, 'relations': relations, 'paths': paths,
             'signals': [{'id': s['id'], 'event_type': s['event_type'], 'entity_status': s['entity_status'],
                          'verification_status': s['verification_status'], 'excerpt': s['excerpt'],

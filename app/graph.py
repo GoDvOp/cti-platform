@@ -34,6 +34,7 @@ def statements(store, demo=False, as_of=None):
         content = json.loads(pub['data'])
         extraction = json.loads(pub['extraction'])
         source = source_config.get(pub['source_id'], {})
+        observation = content.get('metadata', {}).get('observation', {})
         source_key = scope + pub['source_id']
         sources[source_key] = {'id': source_key, 'source_id': pub['source_id'],
                               'name': source.get('name', pub['source_id']),
@@ -44,6 +45,10 @@ def statements(store, demo=False, as_of=None):
                                                         'collected_at', 'content_hash')},
                                  'title': content['title'], 'is_demo': demo, 'source_key': source_key,
                                  'event_type': extraction.get('event_type', 'unknown'),
+                                 'observed_ip': observation.get('ip'), 'observed_port': observation.get('port'),
+                                 'observed_product': observation.get('product'),
+                                 'reported_version': observation.get('reported_version'),
+                                 'observed_at': observation.get('observed_at'),
                                  'content_scope': content.get('metadata', {}).get('content_scope', 'feed_or_import')})
         for cve in extraction.get('cves', []):
             cve_rows.append({'id': scope + cve, 'cve': cve, 'publication_id': pub['id'], 'is_demo': demo})
@@ -67,6 +72,9 @@ def statements(store, demo=False, as_of=None):
                       'SET p.url=row.url, p.title=row.title, p.name=row.title, p.source_id=row.source_id, '
                       'p.published_at=row.published_at, p.collected_at=row.collected_at, '
                       'p.content_hash=row.content_hash, p.is_demo=row.is_demo, '
+                      'p.observed_ip=row.observed_ip,p.observed_port=row.observed_port, '
+                      'p.observed_product=row.observed_product,p.reported_version=row.reported_version, '
+                      'p.observed_at=row.observed_at, '
                       'p.event_type=row.event_type, p.content_scope=row.content_scope '
                       'WITH p,row MATCH (src:Source {id:row.source_key}) MERGE (p)-[:PUBLISHED_BY]->(src)',
          'parameters': {'rows': publication_rows}},

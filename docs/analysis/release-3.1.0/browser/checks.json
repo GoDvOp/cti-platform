@@ -33,14 +33,28 @@
     {
       "name": "untrusted_evidence_stays_text_and_unsafe_link_is_not_active",
       "status": "passed"
+    },
+    {
+      "name": "shodan_example_is_marked_and_does_not_write",
+      "status": "passed"
+    },
+    {
+      "name": "shodan_upload_is_unattributed_safe_text",
+      "status": "passed"
+    },
+    {
+      "name": "shodan_manual_association_reaches_company_card_without_score_change",
+      "status": "passed"
+    },
+    {
+      "name": "shodan_mobile_layout_has_no_horizontal_overflow",
+      "status": "passed"
+    },
+    {
+      "name": "shodan_repeated_upload_and_revocation_preserve_observation",
+      "status": "passed"
     }
   ],
   "page_errors": [],
-  "controls": "verified_separately_in_isolated_docker",
-  "blind_review_progress_restore": {
-    "status": "passed",
-    "legacy_progress_preserved": true,
-    "assistance_flags_preserved": true,
-    "attestation_reset_on_import": true
-  }
+  "controls": "verified_separately_in_isolated_docker"
 }

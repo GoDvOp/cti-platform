@@ -10,6 +10,7 @@ import sqlite3
 import subprocess
 import tempfile
 import time
+import tomllib
 import uuid
 import zipfile
 from urllib.request import Request, urlopen
@@ -46,7 +47,7 @@ def main():
     if shutil.disk_usage(args.temp_dir).free < 512 * 1024 ** 2:
         raise SystemExit('Для приёмки нужно минимум 512 MiB свободного места; задайте другой --temp-dir.')
     results = []
-    receipt = {'project_version': '3.0.0', 'execution': 'real_docker_clean_archive',
+    receipt = {'execution': 'real_docker_clean_archive',
                'started_at': datetime.now(timezone.utc).isoformat(), 'checks': results}
     with tempfile.TemporaryDirectory(prefix='cti docker acceptance ', dir=args.temp_dir) as tmp:
         base = Path(tmp)
@@ -60,10 +61,11 @@ def main():
                 if not member.is_dir():
                     (base / member.filename).chmod(0o755 if (member.external_attr >> 16) & 0o111 else 0o644)
         root = base / 'cti-platform'
+        receipt['project_version'] = tomllib.loads((root / 'pyproject.toml').read_text())['project']['version']
         receipt['runtime_input_sha256'] = runtime_fingerprint(root)
         project = 'cti-check-' + uuid.uuid4().hex[:10]
         env = {k: v for k, v in os.environ.items()
-               if not k.startswith(('CTI_', 'NEO4J_', 'COMPOSE_'))}
+               if not k.startswith(('CTI_', 'NEO4J_', 'COMPOSE_', 'SHODAN_'))}
         env.update(COMPOSE_PROJECT_NAME=project, CTI_IMAGE='cti-platform-check:' + project,
                    CTI_NEO4J_HTTP_PORT='0', CTI_NEO4J_BOLT_PORT='0', CTI_WORKBENCH_PORT='0')
         # Use an existing disabled source to avoid external traffic in acceptance.
@@ -129,6 +131,13 @@ def main():
                   and len(panel['sources']) == 9 and all(s['enabled'] for s in panel['sources']))
             with urlopen(panel_url, timeout=20) as response:
                 page = response.read().decode()
+            with urlopen(panel_url + '/api/shodan/example', timeout=20) as response:
+                preview = json.load(response)
+            with urlopen(panel_url + '/api/shodan', timeout=20) as response:
+                observed = json.load(response)
+            check('shodan_preview_requires_no_key_and_preserves_database',
+                  preview['example_only'] is True and preview['observations'][0]['is_demo'] is True
+                  and observed['observations'] == [] and 'Наблюдения Shodan' in page)
             token = re.search(r'name="cti-token" content="([^"]+)"', page).group(1)
             def panel_action(action):
                 req = Request(panel_url + '/api/control', data=json.dumps({'action': action}).encode(),
@@ -176,6 +185,9 @@ def main():
             check('live_graph_audit_after_recreation', live['status'] == 'passed'
                   and live['repeat']['graph_unchanged'] is True,
                   checks=len(live['checks']), repeat_unchanged=live['repeat']['graph_unchanged'])
+            shodan = json.loads(run('docker', 'compose', 'run', '--rm', '--no-deps', '-T',
+                '-e', 'CTI_DISPOSABLE_GRAPH_CHECK=1', 'cli', 'python', 'scripts/check_shodan_graph.py'))
+            check('shodan_live_context_edge_indices_and_revocation', shodan['status'] == 'passed', **shodan)
             test_result = run('docker', 'compose', 'run', '--rm', '--no-deps', '-T', 'review',
                 'python', '-c', 'import unittest,json,sys; '
                 'r=unittest.TextTestRunner().run(unittest.defaultTestLoader.discover("tests")); '

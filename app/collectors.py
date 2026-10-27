@@ -356,7 +356,9 @@ def ingest(store, publications):
     companies = store.companies()
     products = store.products()
     for pub in publications:
-        extraction = extract(pub, companies, products, store.entities(pub.is_demo))
+        from .shodan import is_observation, empty_extraction
+        extraction = (empty_extraction() if is_observation(pub) else
+                      extract(pub, companies, products, store.entities(pub.is_demo)))
         counts[store.save_publication(pub, extraction)] += 1
         for assertion in extraction.get('assertions', []):
             store.add_assertion(assertion)

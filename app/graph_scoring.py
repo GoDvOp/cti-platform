@@ -392,6 +392,8 @@ def projection_statements(store, demo=False, as_of=None):
             # Taxonomy has no evidential weight and cannot imply threat interest.
             if row['relation'] == 'INCLUDES_COMPANY':
                 strength, role = None, 'taxonomy_only'
+            elif row['relation'] == 'HAS_TECHNICAL_OBSERVATION':
+                strength, role = None, 'context_only'
             elif row['relation'] == 'OBSERVED_ATTACK_IN_SECTOR':
                 strength, role = None, 'aggregate_context_only'
             else:

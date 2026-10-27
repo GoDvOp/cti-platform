@@ -1,5 +1,5 @@
 x-image: &image
-  image: ${CTI_IMAGE:-cti-platform:3.0.0}
+  image: ${CTI_IMAGE:-cti-platform:3.1.0}
   build: .
   user: "${CTI_UID:-1000}:${CTI_GID:-1000}"
   init: true
