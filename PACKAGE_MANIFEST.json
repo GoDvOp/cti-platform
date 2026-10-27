@@ -27,8 +27,8 @@
       "bytes": 712
     },
     "README.md": {
-      "sha256": "5ec6bb6c3b6a20b87c944495c6b7d3ffe3cc1e36539d69079f5ca4725b1de7f5",
-      "bytes": 6634
+      "sha256": "3d3fa2de3de477537103e6fba71dc48151bacc5d8bb9802e7c54f32275aea070",
+      "bytes": 6611
     },
     "RELEASE_CHECKS.json": {
       "sha256": "59b98b4820a7d936a05b193325ab846ebf5a041c447aa94b04cca76df62eedb8",
@@ -290,10 +290,6 @@
       "sha256": "dc126c950a3d50698911f34e0f882f08aa2235f11e4664cd2078ad2c87706315",
       "bytes": 1991
     },
-    "docs/analysis/monitoring_cohort.md": {
-      "sha256": "4bbec013f508c9995946367a41fa4e45656f76026870f126885eb3169ac674f9",
-      "bytes": 2937
-    },
     "docs/analysis/release-3.0.0/browser/checks.json": {
       "sha256": "97de1e9d83e729bf102220624e0741ab5b50a3c374b7bfc2a9bced75ab06f47e",
       "bytes": 903
@@ -314,10 +310,6 @@
       "sha256": "15ddc422ef1bb35cd4d79a36e8102fd7b9155a06d8e0ba57c815ef3ec65db2fe",
       "bytes": 394
     },
-    "docs/analysis/source-probe-20261024/case.md": {
-      "sha256": "e6dda1c964dd89c7c22dfb2fb206758a82e86519ee0bc5742e1bb05de9e06c55",
-      "bytes": 2249
-    },
     "docs/analysis/source-probe-20261024/import.json": {
       "sha256": "d47d17bedcab01601c0bcb1decffb173a74e8b516ab309baf72dd8f328be1dc6",
       "bytes": 815
@@ -330,17 +322,13 @@
       "sha256": "5bbe57728a1ff85b99048df309dec143bc29f4d1433dbc226d98c765f615b324",
       "bytes": 884
     },
-    "docs/attack_integration.md": {
-      "sha256": "890b925fcc6563233555e0942eb90bb553875f3a29f12675e8d63b70935ea9ac",
-      "bytes": 11066
-    },
     "docs/attack_queries.cypher": {
       "sha256": "a612bc75d782abe2884bae0fc0c81560c7ea738f279b325b5e1f53c54737459e",
       "bytes": 851
     },
     "docs/auto_update.md": {
-      "sha256": "4d643842c7155517dda21c85180fa5182dc08d702c58cef064ddb7a0430c30c5",
-      "bytes": 5237
+      "sha256": "433c67920c3def426e46eb00ea379f5fce7f86b39cf3b490c440ed9a077cfe64",
+      "bytes": 5221
     },
     "docs/cases/equifax-2017/case.html": {
       "sha256": "d91827feea67514984f12aa7855b96f50e5e49020d5159dcc71676713c3ba066",
@@ -498,49 +486,25 @@
       "sha256": "58ea9a435893598946e894d5c9d411e7420c3fd7be4a446e4252f56a3eb08c81",
       "bytes": 583
     },
-    "docs/company_graph.md": {
-      "sha256": "6ee0219510ad35e93d598e6eb445e77be8ad5d3202035c32cab01a5386bb6fed",
-      "bytes": 8315
-    },
     "docs/data_sources.md": {
-      "sha256": "f7d1df3863e1804fb23c20c0d794b85a4db1d9839dd793edf9675e191a429480",
-      "bytes": 7811
+      "sha256": "9ddddae41d9eddad3ce356c08b7371f91202c8ef5a1f6dc478df0bce1fd83318",
+      "bytes": 7839
     },
     "docs/docker.md": {
-      "sha256": "fa9fc618e93230938091026e714cc958143afa5ba153dc882b923e08a9a7f816",
-      "bytes": 11599
+      "sha256": "f6e9766620a6a1c43b155630102e870f43abc9fe81a3754f824fc29d4e08dac1",
+      "bytes": 11707
     },
     "docs/extraction_review.md": {
       "sha256": "456f90179dc6e835ad055eff8801938a61a8103be24bac7daf85c4300fbedf9f",
       "bytes": 7591
     },
-    "docs/freshness.md": {
-      "sha256": "cd36621e97fc58ade1894c80a7a75c0750b0477c2292b1ad4feced5393c3b833",
-      "bytes": 3232
-    },
     "docs/graph_queries.cypher": {
       "sha256": "c73efa6a40af1cb7f2659c5eb038da79d8cf63c38c502ebdbab8611211d2c1c9",
       "bytes": 2893
     },
-    "docs/graph_scoring.md": {
-      "sha256": "3c338ab430cf4a613e9cbfd882a19b30f4845820c0fef80d0956e1d7d4c8add2",
-      "bytes": 9804
-    },
     "docs/graph_validation.cypher": {
       "sha256": "46117abbfe357df41bea6ce7ae9083c5240d1c7e58dc67bd69dbba36f0a08021",
       "bytes": 2832
-    },
-    "docs/knowledge_graph.md": {
-      "sha256": "fbbf1168753ee8e5d8d0f5feb649c96492eb4bc52e2b622dd655ad4e80cd42ae",
-      "bytes": 14592
-    },
-    "docs/methodology.md": {
-      "sha256": "6d9d2bf899c66e38100bb6f72ac7ad5042c44500e929e19dc4d92d978b265e1f",
-      "bytes": 11732
-    },
-    "docs/neo4j_audit.md": {
-      "sha256": "50a0fc956cfdca7b98763f567d41939d99efe21f371a99890dd8c26e9a1daf99",
-      "bytes": 1812
     },
     "docs/neo4j_style.grass": {
       "sha256": "95bd07ed8badcd0f1f8cc8a65a60a0e96253e0148f97e18803e8b5ac044d3827",
@@ -550,18 +514,6 @@
       "sha256": "8f555239d6f2569f32bf82271dd6a4da4f2a5be96d78d7ab2c259cdd21938f90",
       "bytes": 2425
     },
-    "docs/potential_targets.md": {
-      "sha256": "33fdd4900fcaa658528641ab7f6aaf8849a805635b7411b54ef26cd2674b0e12",
-      "bytes": 10761
-    },
-    "docs/research_library.md": {
-      "sha256": "86f2a56ec7cf02aa6f26e402ff5b6c66a68d770a1f4d728cecbe60c4bc7d2acc",
-      "bytes": 6611
-    },
-    "docs/russian_sources.md": {
-      "sha256": "e1e87aabcf7d0ca1bfb1bed894889a19577c2210008f6cd468262f03c4d07f36",
-      "bytes": 10134
-    },
     "docs/securelist_dates_verified.json": {
       "sha256": "32a9ed80d1aeb6a3e2c9f53606f40aa6e46dbf8b607a00f2f9dbe867c4d0dc47",
       "bytes": 6050
@@ -570,25 +522,13 @@
       "sha256": "9475156472534aa927f042315d5fe1459df9e171b255d336ed1a2de07a941132",
       "bytes": 1459
     },
-    "docs/task_mapping.md": {
-      "sha256": "e0e4d08404c6ab6e4b84d7ab92aa9d26300f8b52f7c895162eabcbddfd22bad0",
-      "bytes": 4818
-    },
     "docs/unified_graph.cypher": {
       "sha256": "b916321e955e49fd62e95bc3d2a5aa1dc220a44b8d24d8c25919758dcbd8ccd4",
       "bytes": 386
     },
-    "docs/unified_graph.md": {
-      "sha256": "16078df9ff2d6f96a8699f55dc13f61deba8b9fc14ff0e6f9bdd982faf9df5fa",
-      "bytes": 13457
-    },
     "docs/validation.md": {
       "sha256": "dccf42ebfa24228bcb74d0ed4f1dc1ab911536586a885488fb04aec5fb066769",
       "bytes": 3545
-    },
-    "docs/workbench.md": {
-      "sha256": "4dd22a5468ccef70c9d405f0c40ebecc1cbd5658d43873dd8dfaf1ff50398fb6",
-      "bytes": 11081
     },
     "evaluation/blind_review.html": {
       "sha256": "7c2ccabc30c5bd03f7643e9cd36458913ec138bfb7b74f9c85d0be69fe30e5fd",
