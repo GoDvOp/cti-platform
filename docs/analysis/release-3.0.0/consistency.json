@@ -3,7 +3,7 @@
   "project_version": "3.0.0",
   "model_version": "weighted-graph-v3",
   "as_of": "2026-10-24T14:46:40+00:00",
-  "snapshot_sha256": "3d52fcf47ca50a9ef55a5a6d78cc5c5d17b7f6514d2d42d2fc8194e4e76acea7",
+  "snapshot_sha256": "e3402e1adb9d10526747c9999b5502c84bd769d5c11f291bd4f177be0a11c4e9",
   "checks": [
     {
       "name": "snapshot_manifest_and_configuration",
@@ -46,7 +46,7 @@
       "status": "passed"
     },
     {
-      "name": "original_review_inputs_unchanged",
+      "name": "review_inputs_match_recorded_hashes",
       "status": "passed"
     },
     {

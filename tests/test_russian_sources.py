@@ -92,7 +92,7 @@ class RobotsAndDiagnosticsTests(unittest.TestCase):
         self.assertFalse(policy.allowed('https://securelist.ru/feed/'))
 
     def test_user_agent_not_impersonated(self):
-        policy = RobotsPolicy('User-agent: *\nDisallow: /\n\nUser-agent: ChatGPT-User\nAllow: /\n')
+        policy = RobotsPolicy('User-agent: *\nDisallow: /\n\nUser-agent: ExampleCrawler\nAllow: /\n')
         self.assertFalse(policy.allowed('https://securelist.ru/'))
 
     def test_longest_allow_wins(self):

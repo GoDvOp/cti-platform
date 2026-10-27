@@ -70,7 +70,7 @@ class ExpansionTests(unittest.TestCase):
         configured = json.loads((ROOT/'config/companies.json').read_text())
         self.assertEqual({c['id'] for c in self.store.companies()}, {c['id'] for c in configured} | {'rosatom-engineering'})
         self.assertEqual(result['companies'], len(self.store.companies()))
-        self.assertTrue(all(a['reviewer']=='assistant_source_review' for a in self.store.assertions()))
+        self.assertTrue(all(a['reviewer']=='project_source_review' for a in self.store.assertions()))
 
     def test_reimport_does_not_duplicate_or_erase_refutation(self):
         expand_knowledge(self.store, ROOT)

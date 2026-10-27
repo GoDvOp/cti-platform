@@ -53,7 +53,7 @@ def expand_knowledge(store, root):
                 and old['excerpt'] == row['excerpt']):
             preserved += 1
             continue
-        store.review_assertion(identifier, 'confirmed', 'assistant_source_review', note)
+        store.review_assertion(identifier, 'confirmed', 'project_source_review', note)
         reviewed += 1
     return {'counts': counts, 'library_publications': len(pubs), 'library_claims': len(data['claims']),
             'reviewed': reviewed, 'existing_reviews_preserved': preserved,
@@ -80,7 +80,7 @@ def seed_knowledge(store, root):
             ids.append(identifier)
             continue
         identifier = store.add_assertion(row)
-        store.review_assertion(identifier, 'confirmed', 'assistant_source_review', note)
+        store.review_assertion(identifier, 'confirmed', 'project_source_review', note)
         ids.append(identifier)
     return {'counts': result, 'reviewed_assertions': ids,
             'provenance': 'Краткие пересказы открытых первоисточников, проверенных веб-поиском; не результат RSS.',

@@ -21,7 +21,7 @@
       "source_quote": "DevOps — Docker, GitLab CI/CD (YAML)",
       "source_reviewed_at": "2026-10-24T19:13:42+00:00",
       "supporting_url": "https://gitlab.ispras.ru/mvg/utopia-eda",
-      "verification_method": "assistant_primary_source_review"
+      "verification_method": "project_primary_source_review"
     }
   },
   {
@@ -105,7 +105,7 @@
           }
         ],
         "conditions": "Область — самостоятельно управляемые GitLab CE/EE. Достижимость уязвимого обработчика и точная версия установки требуют внутренней проверки.",
-        "extraction_status": "assistant_primary_source_review",
+        "extraction_status": "project_primary_source_review",
         "fixed_versions": [
           "18.11.13",
           "19.0.10",
@@ -124,7 +124,7 @@
       },
       "source_publisher": "GitLab",
       "source_reviewed_at": "2026-10-24T19:13:42+00:00",
-      "verification_method": "assistant_primary_source_review"
+      "verification_method": "project_primary_source_review"
     }
   }
 ]

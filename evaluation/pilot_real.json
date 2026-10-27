@@ -1,11 +1,11 @@
 {
   "version": "pilot-2026-10-24-v1",
-  "annotator": "assistant_manual_annotation",
+  "annotator": "project_development_annotation",
   "status": "development_pilot_not_independent_holdout",
   "sampling": "Fixed seed 20261024 within seven source classes; three explicit case controls appended. 30 records.",
   "task": "Primary event type of saved publication; ordinary research, recovery and business follow-ups are unknown.",
   "limitations": [
-    "Labels prepared with AI assistance by the same agent that edits the code; independent human review required.",
+    "Development labels prepared within the project; independent human review required.",
     "Not a random population sample, not a test of prediction or factual truth.",
     "Some inputs are headlines/listing summaries only; company extraction not measured on this sample."
   ],

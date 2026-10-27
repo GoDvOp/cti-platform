@@ -123,8 +123,8 @@ def validate_labels(corpus, labels):
         raise ValueError('Нужно имя или псевдоним рецензента')
     if reviewer.get('role') not in ('project_author', 'external_reviewer'):
         raise ValueError('Нужно указать отношение рецензента к проекту')
-    if reviewer.get('predictions_seen') is not False or reviewer.get('ai_assisted') is not False:
-        raise ValueError('Слепая человеческая проверка требует разметки без ответов алгоритма и помощи ИИ')
+    if reviewer.get('predictions_seen') is not False or reviewer.get('external_assistance') is not False:
+        raise ValueError('Слепая человеческая проверка требует самостоятельной разметки без ответов алгоритма и внешних подсказок')
     expected = {r['sample_id']: r for r in corpus['records']}
     rows = labels.get('records')
     if not isinstance(rows, list) or len({r['sample_id'] for r in rows}) != len(rows):

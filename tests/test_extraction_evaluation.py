@@ -36,7 +36,7 @@ class ExtractionEvaluationTests(unittest.TestCase):
             self.corpus, self.predictions = prepare(self.store, NOW, {'records': []}, count=3)
         self.labels = {'format': 'cti-extraction-labels-v1', 'corpus_id': self.corpus['corpus_id'],
                        'reviewer': {'name': 'Fictional reviewer', 'role': 'project_author',
-                                    'predictions_seen': False, 'ai_assisted': False}, 'records': []}
+                                    'predictions_seen': False, 'external_assistance': False}, 'records': []}
         for row in self.corpus['records']:
             key = row['publication']['url'].rsplit('/', 1)[1]
             relation = {'kind': 'uses_product', 'subject': 'alpha', 'object': 'product-a', 'excerpt': self.texts[key]}
@@ -88,7 +88,7 @@ class ExtractionEvaluationTests(unittest.TestCase):
             with self.assertRaises(ValueError):assess(self.corpus, self.predictions, labels)
 
     def test_assisted_or_unblinded_annotations_cannot_claim_blind_human_review(self):
-        for field in ('predictions_seen', 'ai_assisted'):
+        for field in ('predictions_seen', 'external_assistance'):
             labels = deepcopy(self.labels);labels['reviewer'][field] = True
             with self.assertRaises(ValueError):assess(self.corpus, self.predictions, labels)
 

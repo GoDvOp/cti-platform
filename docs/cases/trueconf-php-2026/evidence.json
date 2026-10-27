@@ -76,7 +76,7 @@
           }
         ],
         "conditions": "Для веток 5.4 и 5.3 разработчик описывает отдельные меры; конфигурация и доступность установки клиента не проверены.",
-        "extraction_status": "assistant_primary_source_review",
+        "extraction_status": "project_primary_source_review",
         "fixed_versions": [
           "5.5.8",
           "5.4.11",

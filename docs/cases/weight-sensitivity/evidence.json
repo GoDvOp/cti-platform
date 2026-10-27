@@ -1,6 +1,6 @@
 {
   "method": "coefficient_sensitivity_on_frozen_snapshot",
-  "source_snapshot_content_sha256": "3d52fcf47ca50a9ef55a5a6d78cc5c5d17b7f6514d2d42d2fc8194e4e76acea7",
+  "source_snapshot_content_sha256": "e3402e1adb9d10526747c9999b5502c84bd769d5c11f291bd4f177be0a11c4e9",
   "analysis": {
     "model_version": "weighted-graph-v3",
     "baseline_weights_sha256": "0cfa0b6a99d5e34e137aafa355fa88ea33da3fe0d479611b4fcdb2f01c911cae",

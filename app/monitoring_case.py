@@ -67,7 +67,7 @@ def seed(store, bundle_path=None):
             conflicts.append(identifier)
             continue
         identifier = store.add_assertion(row)
-        store.review_assertion(identifier, 'confirmed', 'assistant_source_review', note)
+        store.review_assertion(identifier, 'confirmed', 'project_source_review', note)
         # Replaying the recorded review is distinct from reviewing it again now.
         with store.connect() as db:
             current = json.loads(db.execute('SELECT data FROM assertions WHERE id=?', (identifier,)).fetchone()[0])
@@ -145,7 +145,7 @@ def analyze(store, as_of=None):
                             'Описание лаборатории недатировано; дата 24.10.2026 относится к отдельному наблюдению сервиса.',
                             'Описание лаборатории и её сервис — одна группа источников, не два независимых подтверждения.',
                             'Наблюдение касается одного публичного сервиса; вывод не переносится на весь институт.',
-                            'В кейсе ручные пересказы и проверка ассистентом; независимая экспертиза не заявляется.'],
+                            'В кейсе сохранены краткие пересказы и проектная проверка; независимая экспертиза не заявляется.'],
             'scores': scores}
 
 
@@ -255,7 +255,7 @@ RETURN use_path, notice_path, cve_path;
 
 ## Воспроизведение
 
-В отдельной базе выполнить python3 scripts/build_monitoring_case.py. Скрипт использует короткие сохранённые первичные материалы из examples/ispras_gitlab_case.json и фиксированный AS_OF. Повторный seed не перезаписывает компании, публикации и существующие проверки, в том числе отменённые. Повторный импорт — не новая ручная проверка источника: сохраняется исходное время проверки ассистентом и отдельно фиксируется время импорта.
+В отдельной базе выполнить python3 scripts/build_monitoring_case.py. Скрипт использует короткие сохранённые первичные материалы из examples/ispras_gitlab_case.json и фиксированный AS_OF. Повторный seed не перезаписывает компании, публикации и существующие проверки, в том числе отменённые. Повторный импорт — не новая ручная проверка источника: сохраняется исходное время проектной проверки и отдельно фиксируется время импорта.
 
 Готовый дополнительный снимок можно восстановить стандартным app.review_snapshot.restore_snapshot и пересчитать app.monitoring_case.analyze на дате из snapshot_manifest.json. decision.json, evidence.json и score_snapshot.json содержат решение, происхождение и отдельные экспертные индексы. graph_view.html показывает подграф, graph.cypher — путь в Neo4j. Подграф не добавляет стрелку атаки на организацию. Контент — ручные краткие пересказы с открытыми ссылками, не автоматическая выгрузка первоисточников.
 '''

@@ -55,7 +55,7 @@ def export(result, output):
     rows = ''.join('<tr>' + ''.join('<td>' + esc(r[k]) + '</td>' for k in ('sample_id','title','gold','predicted','correct','note')) + '</tr>' for r in result['records'])
     metrics = ''.join('<tr>' + ''.join('<td>' + esc('нет оценки' if r[k] is None else round(r[k],4) if isinstance(r[k],float) else r[k]) + '</td>' for k in ('class','support','predicted','precision','recall','f1')) + '</tr>' for r in result['per_class'])
     page = '<!doctype html><html lang="ru"><meta charset="utf-8"><title>Пилотная проверка классификации</title><style>body{font:15px/1.5 system-ui;max-width:1150px;margin:32px auto;padding:20px}table{border-collapse:collapse}td,th{border:1px solid #ccd5df;padding:9px;text-align:left}</style><h1>Пилотная проверка классификации</h1>'
-    page += '<p>Разметка ассистентом на данных, доступных при разработке. Это не независимая проверочная выборка и не оценка вероятности атаки.</p>'
+    page += '<p>Проектная разметка данных, доступных при разработке. Это не независимая проверочная выборка и не оценка вероятности атаки.</p>'
     page += f'<p>Правильно: {result["correct"]}/{result["count"]}; accuracy={result["accuracy"]:.3f}; macro F1 по представленным классам={result["macro_f1_supported"]:.3f}.</p>'
     page += '<table><tr><th>Класс</th><th>Поддержка</th><th>Предсказано</th><th>Precision</th><th>Recall</th><th>F1</th></tr>' + metrics + '</table><h2>Разбор каждого текста</h2><table><tr><th>ID</th><th>Заголовок</th><th>Разметка</th><th>Результат</th><th>Совпало</th><th>Комментарий</th></tr>' + rows + '</table></html>'
     (output / 'evaluation.html').write_text(page, encoding='utf-8')

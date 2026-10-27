@@ -36,5 +36,11 @@
     }
   ],
   "page_errors": [],
-  "controls": "verified_separately_in_isolated_docker"
+  "controls": "verified_separately_in_isolated_docker",
+  "blind_review_progress_restore": {
+    "status": "passed",
+    "legacy_progress_preserved": true,
+    "assistance_flags_preserved": true,
+    "attestation_reset_on_import": true
+  }
 }

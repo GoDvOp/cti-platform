@@ -1,7 +1,7 @@
 {
   "format": "cti-review-snapshot-v1",
   "frozen_at": "2026-10-24T14:46:40+00:00",
-  "content_sha256": "3d52fcf47ca50a9ef55a5a6d78cc5c5d17b7f6514d2d42d2fc8194e4e76acea7",
+  "content_sha256": "e3402e1adb9d10526747c9999b5502c84bd769d5c11f291bd4f177be0a11c4e9",
   "provenance": "Public source summaries, collected listings/catalogue records, reviews and MITRE reference data. No .env or user configuration included.",
   "file": "data/review_snapshot.json.gz",
   "counts": {

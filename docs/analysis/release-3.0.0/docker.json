@@ -1,7 +1,7 @@
 {
   "project_version": "3.0.0",
   "execution": "real_docker_clean_archive",
-  "started_at": "2026-10-26T10:28:20.613096+00:00",
+  "started_at": "2026-10-27T13:41:17.570281+00:00",
   "checks": [
     {
       "name": "archive_excludes_local_env_and_working_database",
@@ -90,11 +90,11 @@
       "status": "passed"
     }
   ],
-  "runtime_input_sha256": "1a5c9c9c261b84b00af573884f0be91d442fd7a6de6db0550f4d4ea32dc964e6",
+  "runtime_input_sha256": "11752e19951daf7cb5e3c58d3e0db9dbd8e00b9efdc73315f6dd38fc1c7fb50c",
   "docker_engine": "29.9.1",
   "docker_compose": "2.40.3-3",
   "python_container": "Python 3.13.17",
   "status": "passed",
   "isolated_resource_cleanup": "passed",
-  "finished_at": "2026-10-26T10:31:48.267344+00:00"
+  "finished_at": "2026-10-27T13:44:38.925624+00:00"
 }

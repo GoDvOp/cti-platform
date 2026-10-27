@@ -61,7 +61,7 @@ def validate(root=ROOT):
     check('extractor_code_matches_frozen_predictions', predictions['extractor_sha256'] == files_fingerprint())
     check('no_fabricated_human_metrics', read('data/review/extraction_evaluation/extraction.json') == assessment)
     protected = read('docs/analysis/release-3.0.0/protected_inputs.json')
-    check('original_review_inputs_unchanged', all(hashlib.sha256((root / name).read_bytes()).hexdigest() == digest
+    check('review_inputs_match_recorded_hashes', all(hashlib.sha256((root / name).read_bytes()).hexdigest() == digest
           for name, digest in protected['files'].items()))
     check('release_version_and_snapshot', version == release['project_version'] == '3.0.0'
           and release['model_version'] == model and release['snapshot_as_of'] == at

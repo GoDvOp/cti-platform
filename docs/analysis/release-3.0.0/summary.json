@@ -7,7 +7,7 @@
   "browser_checks": 8,
   "offline_cli_smoke": "passed",
   "internal_html_links": {
-    "checked": 83,
+    "checked": 52,
     "broken": 0,
     "scope": [
       "README.md",
@@ -16,5 +16,6 @@
       "app/assets/*.html",
       "evaluation/*.html"
     ]
-  }
+  },
+  "blind_review_progress_restore": "passed"
 }

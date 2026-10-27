@@ -1,11 +1,23 @@
 {
   "status": "passed",
-  "original_snapshot_and_blind_review_inputs_unchanged": true,
+  "source_texts_and_extraction_answers_unchanged": true,
+  "metadata_revision": {
+    "scope": "project review identifiers and independent-review form wording",
+    "checked_at": "2026-10-27T13:34:45.577161+00:00",
+    "baseline_commit": "f7ec6d744d9ddce7e4212c45be8935729934a13d",
+    "previous_file_sha256": {
+      "evaluation/extraction_corpus.json": "0714694cd7b5afc9ffc445d98e3fed2a7511bd16cb1a7199cf566daaa7738fa3",
+      "evaluation/extraction_predictions.json": "08a2e07699353f8d7d0e90a2ee42e2459085abfab54afcfdf4eb6aa388735453",
+      "evaluation/blind_review.html": "7c2ccabc30c5bd03f7643e9cd36458913ec138bfb7b74f9c85d0be69fe30e5fd",
+      "data/review_snapshot.json.gz": "5f51b2159dbb8ac45ecfe817e78287adc6b08eec506087b270f4e9f716820883",
+      "data/submission_manifest.json": "622206adb1d46bf4504fdf7218b070e0d671c1946f36803e569a158f1a75fcc5"
+    }
+  },
   "files": {
     "evaluation/extraction_corpus.json": "0714694cd7b5afc9ffc445d98e3fed2a7511bd16cb1a7199cf566daaa7738fa3",
     "evaluation/extraction_predictions.json": "08a2e07699353f8d7d0e90a2ee42e2459085abfab54afcfdf4eb6aa388735453",
-    "evaluation/blind_review.html": "7c2ccabc30c5bd03f7643e9cd36458913ec138bfb7b74f9c85d0be69fe30e5fd",
-    "data/review_snapshot.json.gz": "5f51b2159dbb8ac45ecfe817e78287adc6b08eec506087b270f4e9f716820883",
-    "data/submission_manifest.json": "622206adb1d46bf4504fdf7218b070e0d671c1946f36803e569a158f1a75fcc5"
+    "evaluation/blind_review.html": "8d0939012784434fd6eab557bbb006dd0336972871e66d5ea1f9be487261cffe",
+    "data/review_snapshot.json.gz": "0640265eab2c351163e1346fcfba27d2c5d05c8c14e4e6ac3fdf0083bbdc72b8",
+    "data/submission_manifest.json": "b8b380fdafab91ed79aa42342428c14117b93bc1a846eb3254e2f6bb53dab910"
   }
 }

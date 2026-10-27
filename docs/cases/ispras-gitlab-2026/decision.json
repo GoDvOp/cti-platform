@@ -28,7 +28,7 @@
     "is_probability": false,
     "decision": "Проверить актуальность установки и обновление; атака и неустранённая уязвимость не установлены.",
     "horizon_days": 30,
-    "notice_review_status": "assistant_primary_source_review",
+    "notice_review_status": "project_primary_source_review",
     "scope_source_urls": [
       "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/"
     ],
@@ -63,7 +63,7 @@
       "note": "Ручное наблюдение сервиса вместе со ссылкой официальной лаборатории. Дата наблюдения не подменяет неизвестную дату публикации описания.",
       "observed_day": "2026-10-24"
     },
-    "reviewer": "assistant_source_review",
+    "reviewer": "project_source_review",
     "reviewed_at": "2026-10-24T19:13:42+00:00"
   },
   "evidence": [
@@ -89,7 +89,7 @@
         "source_quote": "DevOps — Docker, GitLab CI/CD (YAML)",
         "source_reviewed_at": "2026-10-24T19:13:42+00:00",
         "supporting_url": "https://gitlab.ispras.ru/mvg/utopia-eda",
-        "verification_method": "assistant_primary_source_review"
+        "verification_method": "project_primary_source_review"
       }
     },
     {
@@ -173,7 +173,7 @@
             }
           ],
           "conditions": "Область — самостоятельно управляемые GitLab CE/EE. Достижимость уязвимого обработчика и точная версия установки требуют внутренней проверки.",
-          "extraction_status": "assistant_primary_source_review",
+          "extraction_status": "project_primary_source_review",
           "fixed_versions": [
             "18.11.13",
             "19.0.10",
@@ -192,7 +192,7 @@
         },
         "source_publisher": "GitLab",
         "source_reviewed_at": "2026-10-24T19:13:42+00:00",
-        "verification_method": "assistant_primary_source_review"
+        "verification_method": "project_primary_source_review"
       }
     }
   ],
@@ -212,6 +212,6 @@
     "Описание лаборатории недатировано; дата 24.10.2026 относится к отдельному наблюдению сервиса.",
     "Описание лаборатории и её сервис — одна группа источников, не два независимых подтверждения.",
     "Наблюдение касается одного публичного сервиса; вывод не переносится на весь институт.",
-    "В кейсе ручные пересказы и проверка ассистентом; независимая экспертиза не заявляется."
+    "В кейсе сохранены краткие пересказы и проектная проверка; независимая экспертиза не заявляется."
   ]
 }

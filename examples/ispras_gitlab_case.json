@@ -3,7 +3,7 @@
   "case_id": "ispras-gitlab-2026",
   "AS_OF": "2026-10-24T19:13:42+00:00",
   "source_reviewed_at": "2026-10-24T19:13:42+00:00",
-  "provenance": "Краткие пересказы первоисточников и отдельное ручное наблюдение обычной публичной страницы. Проверено ассистентом; внешняя экспертиза, RSS-сбор, проверка версии и эксплуатация не заявляются.",
+  "provenance": "Краткие пересказы первоисточников и отдельное ручное наблюдение обычной публичной страницы. Проверено в рамках проекта; внешняя экспертиза, RSS-сбор, проверка версии и эксплуатация не заявляются.",
   "company": {
     "id": "ispras",
     "name": "ИСП РАН",
@@ -38,7 +38,7 @@
       "collected_at": "2026-10-24T19:13:42+00:00",
       "metadata": {
         "collection_method": "manual_primary_source_summary",
-        "verification_method": "assistant_primary_source_review",
+        "verification_method": "project_primary_source_review",
         "independence_group": "ispras",
         "source_publisher": "ИСП РАН",
         "date_precision": "unknown",
@@ -86,7 +86,7 @@
       "collected_at": "2026-10-24T19:13:42+00:00",
       "metadata": {
         "collection_method": "manual_primary_source_summary",
-        "verification_method": "assistant_primary_source_review",
+        "verification_method": "project_primary_source_review",
         "independence_group": "gitlab_vendor",
         "source_publisher": "GitLab",
         "publication_day": "2026-10-21",
@@ -138,7 +138,7 @@
             "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/"
           ],
           "scope_updated_day": "2026-10-21",
-          "extraction_status": "assistant_primary_source_review",
+          "extraction_status": "project_primary_source_review",
           "conditions": "Область — самостоятельно управляемые GitLab CE/EE. Достижимость уязвимого обработчика и точная версия установки требуют внутренней проверки.",
           "requires_verified_scope": true
         }

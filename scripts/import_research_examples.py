@@ -29,7 +29,7 @@ def main():
         if old['attributes']!=attrs or old['evidence_hash']!=publication.content_hash or old['status']!='confirmed':
             uid=store.add_assertion({'kind':'uses_product','subject':old['subject'],'object':old['object'],
                 'publication_id':publication.id,'excerpt':publication.text[:1000],'attributes':attrs})
-            store.review_assertion(uid,'confirmed','assistant_primary_source_review',
+            store.review_assertion(uid,'confirmed','project_primary_source_review',
                 'Повторно проверен официальный кейс: TrueConf Server, публикация 16.08.2026, собственный ЦОД и закрытый контур без внешнего доступа. Это контраргумент внешней доступности, не текущая проверка конфигурации.')
     print(json.dumps({'summaries':counts,'companies':len(store.companies()),'manual_source_review':True,
         'note':'Эти пересказы первоисточников помечены отдельно от автоматического сетевого сбора; ограничения проверки сохранены в метаданных.'},ensure_ascii=False,indent=2))

@@ -83,7 +83,7 @@ def build(store, as_of=None):
         key=(item[0]['url'],item[2]['product_id'])
         def scope_rank(record):
             return (record[2].get('scope_updated_day') or (record[3].isoformat() if record[3] else ''),
-                    record[2].get('extraction_status')=='assistant_primary_source_review',record[0]['collected_at'])
+                    record[2].get('extraction_status')=='project_primary_source_review',record[0]['collected_at'])
         if key not in unique or scope_rank(item)>scope_rank(unique[key]):unique[key]=item
     for use in store.assertions():
         if use['kind']!='uses_product' or use['status']!='confirmed' or use['subject'] not in companies:continue

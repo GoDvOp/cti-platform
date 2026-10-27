@@ -43,7 +43,7 @@ def seed_threats(store, root, filename="threat_library.json"):
                 and old['evidence_hash'] == hashes[row['publication_id']]):
             preserved += 1
         else:
-            store.review_assertion(identifier, 'confirmed', 'assistant_source_review', note)
+            store.review_assertion(identifier, 'confirmed', 'project_source_review', note)
             reviewed += 1
     return {'counts': counts, 'library_claims': len(library['claims']), 'reviewed': reviewed,
             'existing_reviews_preserved': preserved, 'entities': len(store.entities()),

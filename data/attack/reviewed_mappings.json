@@ -5,7 +5,7 @@
     "local_id": "carbanak-malware",
     "note": "Проверено семейство вредоносного ПО Carbanak S0030 в STIX 20.0; это не группировка Carbanak G0008.",
     "reviewed_at": "2026-10-23T20:59:32+00:00",
-    "reviewer": "assistant_source_review",
+    "reviewer": "project_source_review",
     "snapshot_sha256": "81113ba98afa2928f3dcff62022539f7ce30c315c32e14422f11ff95ce534352",
     "status": "confirmed",
     "stix_id": "malware--72f54d66-675d-4587-9bd3-4ed09f9522e4"
@@ -16,7 +16,7 @@
     "local_id": "clop-ransomware",
     "note": "Проверены тип malware, семейство Clop и официальный ID S0611; сопоставляется локальное вредоносное ПО CLOP ransomware, а не операция CL0P.",
     "reviewed_at": "2026-10-23T20:51:00+00:00",
-    "reviewer": "assistant_source_review",
+    "reviewer": "project_source_review",
     "snapshot_sha256": "81113ba98afa2928f3dcff62022539f7ce30c315c32e14422f11ff95ce534352",
     "status": "confirmed",
     "stix_id": "malware--cad3ba95-8c89-4146-ab10-08daa813f9de"
@@ -27,7 +27,7 @@
     "local_id": "fin7",
     "note": "Проверены каноническое имя FIN7, тип intrusion-set и профиль G0046 в официальном STIX 20.0; не объединяется с группировкой Carbanak G0008.",
     "reviewed_at": "2026-10-23T20:59:32+00:00",
-    "reviewer": "assistant_source_review",
+    "reviewer": "project_source_review",
     "snapshot_sha256": "81113ba98afa2928f3dcff62022539f7ce30c315c32e14422f11ff95ce534352",
     "status": "confirmed",
     "stix_id": "intrusion-set--3753cc21-2dae-4dfb-8481-d004e74502cc"
@@ -38,7 +38,7 @@
     "local_id": "ta505",
     "note": "Проверены тип intrusion-set, каноническое имя TA505, ID G0092 и карточка официального STIX 20.0; FIN11 не объединяется.",
     "reviewed_at": "2026-10-23T20:51:00+00:00",
-    "reviewer": "assistant_source_review",
+    "reviewer": "project_source_review",
     "snapshot_sha256": "81113ba98afa2928f3dcff62022539f7ce30c315c32e14422f11ff95ce534352",
     "status": "confirmed",
     "stix_id": "intrusion-set--7eda3dd8-b09b-4705-8090-c2ad9fb8c14d"
