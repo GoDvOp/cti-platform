@@ -79,7 +79,10 @@ case "$action" in
           printf '%s\n' 'Не удалось остановить контейнер сборщика; настольная служба оставлена остановленной.' >&2
         fi
       fi
-      printf '%s\n' 'Запуск не завершён. Диагностика: ./start-cti.sh logs' >&2
+      printf '%s\n' 'Запуск не завершён. Состояние сервисов и последние логи:' >&2
+      docker compose ps --all >&2 || true
+      docker compose logs --no-color --tail 40 neo4j worker workbench >&2 || true
+      printf '%s\n' 'Полные последние логи: ./start-cti.sh logs' >&2
       exit 1
     fi
     ;;
