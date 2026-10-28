@@ -27,8 +27,8 @@
       "bytes": 712
     },
     "README.md": {
-      "sha256": "03b08752fb61ada78a51bf58e7b1f301db0b86eda850ab2f3d28a9fcabedb0ea",
-      "bytes": 10284
+      "sha256": "cfdc37e94e1731ae0971ee4ba7fbc73059125fddde601c43e33f4ee2c4bf9def",
+      "bytes": 12775
     },
     "RELEASE_CHECKS.json": {
       "sha256": "35bd55be09f54ae19bbb116569e48607a21a52fdf7e0295e7a7ded124c3bc358",
@@ -499,8 +499,8 @@
       "bytes": 7839
     },
     "docs/docker.md": {
-      "sha256": "79e732f9132ca2c02f9331d3948400908b365355aeaea87c7ac5acb30963b867",
-      "bytes": 15857
+      "sha256": "2a8b7e181a6284c3a5c450c72f927df5553b07d8e5477743c6f6fdee7c8473d9",
+      "bytes": 17941
     },
     "docs/extraction_review.md": {
       "sha256": "202694b83845ed11ee8b69f5dfb8fd291a37740e8e56bd152b88ba684658171a",
