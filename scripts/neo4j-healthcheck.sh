@@ -1,7 +1,10 @@
 #!/bin/bash
 set -eu
 
-cypher-shell -u neo4j -p "${CTI_GRAPH_PASSWORD:?}" 'RETURN 1' >/dev/null 2>&1
+if ! cypher-shell -u neo4j -p "${CTI_GRAPH_PASSWORD:?}" 'RETURN 1' >/dev/null 2>&1; then
+  printf '%s\n' 'Cypher-проверка не прошла. При Unauthorized / authentication failure в логах выполните ./start-cti.sh repair-neo4j.' >&2
+  exit 1
+fi
 
 # Bolt can already accept queries while the HTTP API used by the worker is starting.
 # Use Bash builtins because the official image has neither curl nor Python.

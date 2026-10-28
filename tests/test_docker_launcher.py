@@ -33,6 +33,8 @@ elif args[:2] == ['compose', 'up'] and mode in ('up-failed', 'stop-failed'):
     sys.exit(1)
 elif args == ['compose', 'stop', 'worker'] and mode == 'stop-failed':
     sys.exit(1)
+elif args[:2] == ['compose', 'run'] and 'neo4j-recovery' in args and mode == 'repair-failed':
+    sys.exit(1)
 elif args[:2] == ['compose', 'port']:
     print('127.0.0.1:18766')
 '''
@@ -129,3 +131,20 @@ class DockerLauncherTests(unittest.TestCase):
                 self.assertEqual(done.returncode, 0, done.stderr)
                 self.assertIn(['docker', expected], calls)
                 self.assertFalse(any(name == 'systemctl' for name, _ in calls))
+
+    def test_repair_stops_stack_before_recovery_and_restarts_normal_stack(self):
+        done, calls = self.run_launcher('', 'repair-neo4j')
+        self.assertEqual(done.returncode, 0, done.stderr)
+        stop = ['docker', ['compose', 'stop', '-t', '60', 'workbench', 'worker', 'neo4j']]
+        recovery = next(c for c in calls if 'neo4j-recovery' in c[1])
+        normal = next(c for c in calls if c[1][:2] == ['compose', 'up'])
+        self.assertLess(calls.index(stop), calls.index(recovery))
+        self.assertLess(calls.index(recovery), calls.index(normal))
+        self.assertIn('workbench', normal[1])
+        self.assertIn('--wait', normal[1])
+
+    def test_failed_repair_restores_authenticated_service_without_starting_worker(self):
+        done, calls = self.run_launcher('repair-failed', 'repair-neo4j')
+        self.assertEqual(done.returncode, 1)
+        ups = [c[1] for c in calls if c[1][:2] == ['compose', 'up']]
+        self.assertEqual(ups, [['compose', 'up', '-d', '--no-build', 'neo4j']])

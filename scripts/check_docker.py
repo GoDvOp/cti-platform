@@ -208,6 +208,23 @@ def main():
                       and 'preserve-graph-on-repair' in cypher('MATCH (n:CtiStartupAcceptance) RETURN n.id'))
             cypher('MATCH (n:CtiStartupAcceptance) DETACH DELETE n')
             run(str(root / 'start-cti.sh'))
+            recovery_config = json.loads(run('docker', 'compose', '--profile', 'tools',
+                                             'config', '--format', 'json'))['services']['neo4j-recovery']
+            check('password_recovery_has_no_network_or_published_ports',
+                  recovery_config['network_mode'] == 'none' and not recovery_config.get('ports')
+                  and recovery_config['hostname'] == 'localhost')
+            cypher("MATCH (n:Company) WITH n LIMIT 1 SET n.cti_recovery_marker = 'preserve-auth-repair'")
+            cypher("ALTER USER neo4j SET PASSWORD 'cti-acceptance-old-password' CHANGE NOT REQUIRED")
+            run(str(root / 'start-cti.sh'), 'repair-neo4j')
+            backups = list((root / 'data/diagnostics/neo4j-recovery').glob('recovery.*/neo4j-data.tar.gz'))
+            check('password_recovery_preserves_graph_and_creates_backup',
+                  len(backups) == 1 and backups[0].stat().st_size > 0
+                  and 'preserve-auth-repair' in cypher('MATCH (n:Company) WHERE n.cti_recovery_marker IS NOT NULL RETURN n.cti_recovery_marker')
+                  and hashlib.sha256((root / '.env').read_bytes()).hexdigest() == env_hash)
+            run(str(root / 'start-cti.sh'), 'repair-neo4j')
+            check('password_recovery_also_accepts_already_matching_password',
+                  'preserve-auth-repair' in cypher('MATCH (n:Company) WHERE n.cti_recovery_marker IS NOT NULL RETURN n.cti_recovery_marker'))
+            cypher('MATCH (n:Company) REMOVE n.cti_recovery_marker')
             run('docker', 'compose', 'run', '--rm', '--no-deps', '-T', 'cli',
                 'python', 'scripts/audit_graph.py', '--sync', '--repeat')
             live = read('data/diagnostics/neo4j_audit/audit.json')

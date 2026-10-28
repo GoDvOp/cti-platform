@@ -1,3 +1,5 @@
+x-neo4j-image: &neo4j-image neo4j:5.26-community@sha256:adaa077a3ab023015143b8f73f7076a7d053f12985f5b06f4c6a128c3a2f7240
+
 x-image: &image
   image: ${CTI_IMAGE:-cti-platform:3.1.0}
   build: .
@@ -13,6 +15,7 @@ x-runtime: &runtime
   environment:
     CTI_DB_PATH: /app/data/cti.sqlite3
     NEO4J_HTTP_URL: http://neo4j:7474
+    NEO4J_PASSWORD: "${NEO4J_PASSWORD:-}"
     CTI_BOOTSTRAP: ${CTI_BOOTSTRAP:-snapshot}
     CTI_RUNTIME: docker
   volumes:
@@ -21,7 +24,7 @@ x-runtime: &runtime
 
 services:
   neo4j:
-    image: neo4j:5.26-community@sha256:adaa077a3ab023015143b8f73f7076a7d053f12985f5b06f4c6a128c3a2f7240
+    image: *neo4j-image
     entrypoint: ["/bin/sh", "/cti/neo4j-start.sh"]
     command: ["neo4j"]
     restart: unless-stopped
@@ -44,6 +47,29 @@ services:
       timeout: 10s
       start_period: 30s
       retries: 20
+  neo4j-recovery:
+    image: *neo4j-image
+    profiles: ["tools"]
+    hostname: localhost
+    network_mode: none
+    init: true
+    stop_grace_period: 90s
+    entrypoint: ["/bin/sh", "/cti/neo4j-recover.sh"]
+    environment:
+      CTI_GRAPH_PASSWORD: "${NEO4J_PASSWORD:-}"
+      CTI_UID: "${CTI_UID:-1000}"
+      CTI_GID: "${CTI_GID:-1000}"
+      TINI_SUBREAPER: "1"
+      NEO4J_AUTH: none
+      NEO4J_server_default__listen__address: 127.0.0.1
+      NEO4J_server_default__advertised__address: localhost
+      NEO4J_server_memory_heap_initial__size: 256m
+      NEO4J_server_memory_heap_max__size: 512m
+    volumes:
+      - neo4j_data:/data
+      - ./data/diagnostics/neo4j-recovery:/backup
+      - ./scripts/neo4j-start.sh:/cti/neo4j-start.sh:ro
+      - ./scripts/neo4j-recover.sh:/cti/neo4j-recover.sh:ro
   worker:
     <<: *runtime
     command: ["worker", "--sync-graph"]

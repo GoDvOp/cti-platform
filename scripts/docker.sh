@@ -8,12 +8,12 @@ action=${1:-help}
 if [ "$#" -gt 0 ]; then shift; fi
 
 usage() {
-  printf '%s\n' 'Usage: ./start-cti.sh [up|review|cli [args...]|status|logs|stop]' \
+  printf '%s\n' 'Usage: ./start-cti.sh [up|repair-neo4j|review|cli [args...]|status|logs|stop]' \
     'Без аргументов ./start-cti.sh запускает весь проект.' \
     'Также доступно: sh scripts/docker.sh up|review|cli [args...]|status|logs|stop'
 }
 case "$action" in
-  up|review|cli|status|logs|stop) ;;
+  up|repair-neo4j|review|cli|status|logs|stop) ;;
   help|-h|--help) usage; exit 0 ;;
   *) usage >&2; exit 2 ;;
 esac
@@ -29,6 +29,21 @@ docker compose version >/dev/null
 mkdir -p data
 
 case "$action" in
+  repair-neo4j)
+    docker compose build cli
+    docker compose run --rm --no-deps -T cli python -c \
+      'from app.graph import connection; connection(); print("Настройки Neo4j корректны.")'
+    mkdir -p data/diagnostics/neo4j-recovery
+    docker compose stop -t 60 workbench worker neo4j
+    if docker compose run --rm --no-deps -T neo4j-recovery; then
+      printf '%s\n' 'Доступ восстановлен. Запускаю платформу с включённой авторизацией.'
+      exec sh scripts/docker.sh up
+    else
+      docker compose up -d --no-build neo4j || true
+      printf '%s\n' 'Восстановление не завершено. Обычный Neo4j возвращён к конфигурации с авторизацией; данные и резервная копия сохранены.' >&2
+      exit 1
+    fi
+    ;;
   up)
     desktop_active=0
     desktop_enabled=''

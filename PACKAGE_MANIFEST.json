@@ -31,7 +31,7 @@
       "bytes": 10284
     },
     "RELEASE_CHECKS.json": {
-      "sha256": "63dbd95237e1df7a6d620751baa3fcbf372ad0445b7b4616e672cf75fc6af04e",
+      "sha256": "35bd55be09f54ae19bbb116569e48607a21a52fdf7e0295e7a7ded124c3bc358",
       "bytes": 2403
     },
     "app/__init__.py": {
@@ -287,8 +287,8 @@
       "bytes": 827
     },
     "docker-compose.yml": {
-      "sha256": "03d31473fc21bd8d2688deafb5e903513888b31caa245a503a89bf66581d686b",
-      "bytes": 2634
+      "sha256": "24b50df990f671c597789ea66ce54e120a1536311cf41b289f76bbda65b42723",
+      "bytes": 3524
     },
     "docs/all_knowledge_graph.cypher": {
       "sha256": "d8a56feca0c49db059b3811cbfc85f9d2de3982619d38f8db99e90dbb9f9407f",
@@ -307,8 +307,8 @@
       "bytes": 1975
     },
     "docs/analysis/release-3.1.0/docker.json": {
-      "sha256": "b5401f30b53e69259ebbddba4e9ddc925eb9e4c973d6b8edd5f2c7731a32f086",
-      "bytes": 3108
+      "sha256": "aacdd56a54c2eda0b30cd8d3859c2e79765c72da3761cc80ab3017fa806753a3",
+      "bytes": 3435
     },
     "docs/analysis/release-3.1.0/protected_inputs.json": {
       "sha256": "e0324fe46adf8cedf8c0e7a10eb66f5bf5a42a0d3162243e723f4bead19631ff",
@@ -499,8 +499,8 @@
       "bytes": 7839
     },
     "docs/docker.md": {
-      "sha256": "8c063030f4a7076ebe56540fc6a6f6d38b68dd3da8a900cddf659f60acf509b4",
-      "bytes": 13954
+      "sha256": "79e732f9132ca2c02f9331d3948400908b365355aeaea87c7ac5acb30963b867",
+      "bytes": 15857
     },
     "docs/extraction_review.md": {
       "sha256": "202694b83845ed11ee8b69f5dfb8fd291a37740e8e56bd152b88ba684658171a",
@@ -631,8 +631,8 @@
       "bytes": 4445
     },
     "scripts/check_docker.py": {
-      "sha256": "e4c5200250e3529ecdca6f3fdfcf8a198b0755af2169125a521914313360e6b1",
-      "bytes": 16535
+      "sha256": "f492c7d19c64a1b4c49c32d7a6f7b6e35cf0e27070e537ddc4ac05a767d7abf4",
+      "bytes": 18071
     },
     "scripts/check_extraction.py": {
       "sha256": "2213e1996794acfde5ed89dbdfc2e97a83561cfb3892948786cb3ef22b81ebc7",
@@ -655,8 +655,8 @@
       "bytes": 3120
     },
     "scripts/docker.sh": {
-      "sha256": "47dab52f4fbc9c9e85f2cf4b28e23451328f39e30624119bc7898c1d1ebe311b",
-      "bytes": 4815
+      "sha256": "22248adeae7352f9e9a6a88e5ac52243d636fdef448e1140ef60ab98613871ba",
+      "bytes": 5729
     },
     "scripts/freeze_examples.py": {
       "sha256": "d29ac2b23adfd8d96aa8629f076ca9664889f4a9979196e75daa8ec452d97261",
@@ -671,8 +671,12 @@
       "bytes": 1362
     },
     "scripts/neo4j-healthcheck.sh": {
-      "sha256": "799eb95e8f8ce4614778b9da8036146372aa66766a4cf9c4dcbecb2cfec9131a",
-      "bytes": 417
+      "sha256": "d4321bb910ac54780d25ea171cff76305462408ff00a69531744730b908bce5e",
+      "bytes": 612
+    },
+    "scripts/neo4j-recover.sh": {
+      "sha256": "d3d89a5d5f0959023e390c83b8a6116ace976543db2a93e423df342320cfb25d",
+      "bytes": 3022
     },
     "scripts/neo4j-start.sh": {
       "sha256": "28f2bdfce6d9fc1a10f826e95c9840c27d65ad63d8ad18be37a22bc3f1c78cc5",
@@ -771,8 +775,8 @@
       "bytes": 3909
     },
     "tests/test_docker_launcher.py": {
-      "sha256": "22b457ace92062f48681ab74e206e70f47b46f091e47f0f664da6d0bea9f2cac",
-      "bytes": 6950
+      "sha256": "273391faed5bdbf281a3aee0e7377fa8657ecc90096d6dc02d21d1e01b8b98d6",
+      "bytes": 8074
     },
     "tests/test_evaluation.py": {
       "sha256": "170996b264eb03ac4502e5cd01f65aa180a015deee4f707066a94e4d8ca7703e",
