@@ -17,9 +17,10 @@
   "docker": {
     "status": "passed",
     "receipt": "docs/analysis/release-3.1.0/docker.json",
-    "checks": 21,
-    "runtime_input_sha256": "b2df263446843d9dca2594dc50db7e82f35d9a1e602df803d203ede417815c6f",
-    "execution": "real_docker_clean_archive"
+    "checks": 24,
+    "runtime_input_sha256": "7772aa1e94b249b03dc76427b6e89fcee1213c98b6f3155077f4e7e72ef394e2",
+    "execution": "real_docker_clean_archive",
+    "checked_at": "2026-10-28T17:39:36.727204+00:00"
   },
   "browser": {
     "status": "passed",

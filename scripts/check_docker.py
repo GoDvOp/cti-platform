@@ -165,6 +165,8 @@ def main():
             check('new_database_restored_from_public_snapshot', '"restored_public_snapshot": true' in logs)
             env_hash = hashlib.sha256((root / '.env').read_bytes()).hexdigest()
             check('generated_env_is_private', (root / '.env').stat().st_mode & 0o777 == 0o600)
+            identity_hash = run('docker', 'compose', 'exec', '-T', 'neo4j',
+                                'sha256sum', '/data/server_id').strip()
             run('docker', 'compose', 'stop', 'worker')
             with sqlite3.connect(root / 'data/cti.sqlite3') as db:
                 db.execute('CREATE TABLE acceptance_marker (id TEXT PRIMARY KEY)')
@@ -179,6 +181,33 @@ def main():
             check('data_and_password_survive_container_recreation',
                   marker == 'preserve-after-recreate' and pubs == after_pubs
                   and hashlib.sha256((root / '.env').read_bytes()).hexdigest() == env_hash)
+            check('valid_neo4j_identity_survives_container_recreation',
+                  run('docker', 'compose', 'exec', '-T', 'neo4j',
+                      'sha256sum', '/data/server_id').strip() == identity_hash)
+            def cypher(statement):
+                return run('docker', 'compose', 'exec', '-T', 'neo4j', 'sh', '-c',
+                           'exec cypher-shell -u neo4j -p "$CTI_GRAPH_PASSWORD" "$1"',
+                           'acceptance', statement)
+            cypher("CREATE (:CtiStartupAcceptance {id: 'preserve-graph-on-repair'})")
+            for length in (0, 8):
+                run('docker', 'compose', 'stop', 'worker', 'neo4j')
+                run('docker', 'compose', 'run', '--rm', '--no-deps', '-T',
+                    '--entrypoint', 'sh', 'neo4j', '-c',
+                    'head -c "$1" /data/server_id > /data/cti-acceptance-truncated; '
+                    'cat /data/cti-acceptance-truncated > /data/server_id',
+                    'acceptance', str(length))
+                run('docker', 'compose', 'up', '-d', '--no-build', '--wait',
+                    '--wait-timeout', '180', 'neo4j')
+                backups = run('docker', 'compose', 'exec', '-T', 'neo4j', 'sh', '-c',
+                              'find /data -maxdepth 2 -path "/data/cti-server-id-backup.*/server_id" '
+                              '-type f -exec cmp -s /data/cti-acceptance-truncated {} \\; -print')
+                size = run('docker', 'compose', 'exec', '-T', 'neo4j',
+                           'sh', '-c', 'wc -c < /data/server_id').strip()
+                check(f'neo4j_recovers_{length}_byte_identity_without_losing_graph',
+                      bool(backups.strip()) and size == '17'
+                      and 'preserve-graph-on-repair' in cypher('MATCH (n:CtiStartupAcceptance) RETURN n.id'))
+            cypher('MATCH (n:CtiStartupAcceptance) DETACH DELETE n')
+            run(str(root / 'start-cti.sh'))
             run('docker', 'compose', 'run', '--rm', '--no-deps', '-T', 'cli',
                 'python', 'scripts/audit_graph.py', '--sync', '--repeat')
             live = read('data/diagnostics/neo4j_audit/audit.json')

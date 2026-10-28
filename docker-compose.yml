@@ -21,7 +21,9 @@ x-runtime: &runtime
 
 services:
   neo4j:
-    image: neo4j:5.26-community
+    image: neo4j:5.26-community@sha256:adaa077a3ab023015143b8f73f7076a7d053f12985f5b06f4c6a128c3a2f7240
+    entrypoint: ["/bin/sh", "/cti/neo4j-start.sh"]
+    command: ["neo4j"]
     restart: unless-stopped
     environment:
       # docker.sh creates a local random password before starting this service.
@@ -34,8 +36,10 @@ services:
       - "127.0.0.1:${CTI_NEO4J_BOLT_PORT:-7687}:7687"
     volumes:
       - neo4j_data:/data
+      - ./scripts/neo4j-start.sh:/cti/neo4j-start.sh:ro
+      - ./scripts/neo4j-healthcheck.sh:/cti/neo4j-healthcheck.sh:ro
     healthcheck:
-      test: ["CMD-SHELL", "cypher-shell -u neo4j -p \"$${CTI_GRAPH_PASSWORD}\" 'RETURN 1' >/dev/null 2>&1"]
+      test: ["CMD", "/bin/bash", "/cti/neo4j-healthcheck.sh"]
       interval: 10s
       timeout: 10s
       start_period: 30s
