@@ -219,7 +219,9 @@ def dashboard(store, root=ROOT, as_of=None, offline=False):
                                          if c['status'] == 'confirmed' else [],
                       'excerpt': c['excerpt'], 'publication_id': c['publication_id'],
                       'url': c['publication']['url']} for c in company_claims]
+        from .company_edit import profile, revision
         cards.append({'id': cid, 'name': row['company'], 'sector': companies[cid].get('sector', 'не указан'),
+            'profile': profile(companies[cid]), 'profile_revision': revision(companies[cid]),
             'monitor_target': row['monitor_target'], 'example': example, 'priority': priority, 'decision_label': label,
             'priority_reason': reason, 'next_action': next_action, 'interest': row['interest'],
             'technical': row['technical'], 'historical_technical': row['historical_technical'],

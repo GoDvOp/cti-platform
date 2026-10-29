@@ -8,6 +8,11 @@ from .models import utcnow, redact
 SCHEMA = '''
 PRAGMA journal_mode=WAL;
 CREATE TABLE IF NOT EXISTS companies(id TEXT PRIMARY KEY, data TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS company_overrides(
+ company_id TEXT PRIMARY KEY REFERENCES companies(id), data TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS company_edit_history(
+ id INTEGER PRIMARY KEY, company_id TEXT NOT NULL REFERENCES companies(id),
+ changed_at TEXT NOT NULL, before_data TEXT NOT NULL, after_data TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS publications(
  id TEXT PRIMARY KEY, source_id TEXT NOT NULL, url TEXT NOT NULL,
  content_hash TEXT NOT NULL, published_at TEXT, collected_at TEXT NOT NULL,
@@ -96,7 +101,11 @@ class CTIStore:
             if not isinstance(c.get('aliases', []), list) or not isinstance(c.get('domains', []), list):
                 raise ValueError('aliases и domains должны быть списками')
         with self.connect() as db:
+            db.execute('BEGIN IMMEDIATE')
             for c in companies:
+                override = db.execute('SELECT data FROM company_overrides WHERE company_id=?', (c['id'],)).fetchone()
+                if override:
+                    c = {**c, **json.loads(override['data'])}
                 db.execute('INSERT INTO companies VALUES(?,?) ON CONFLICT(id) DO UPDATE SET data=excluded.data',
                            (c['id'], dumps(c)))
 

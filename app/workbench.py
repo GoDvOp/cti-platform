@@ -95,6 +95,16 @@ class Workbench:
         with self.lock:
             return configure_target(CTIStore(self.database), **body)
 
+    def edit_company(self, body):
+        if self.offline:
+            raise ValueError('Редактирование доступно в рабочей платформе, вне офлайн-снимка')
+        from .company_edit import save
+        from .storage import CTIStore
+        with self.lock:
+            result = save(CTIStore(self.database), body)
+            self.cached = None
+            return result
+
     def import_shodan(self, body):
         if self.offline:
             raise ValueError('Офлайн-панель использует временную базу. Импортируйте файл после обычного запуска стенда.')
@@ -220,6 +230,8 @@ def make_server(app, host='127.0.0.1', port=8765):
                 if not 0 < length <= 2_000_000:
                     return self.send(413, {'error': 'Недопустимый размер запроса'})
                 body = json.loads(self.rfile.read(length))
+                if urlsplit(self.path).path == '/api/company/edit':
+                    return self.send(200, app.edit_company(body))
                 if urlsplit(self.path).path == '/api/shodan/import':
                     return self.send(200, app.import_shodan(body))
                 if urlsplit(self.path).path == '/api/shodan/review':
