@@ -98,6 +98,11 @@ def parser():
     q = sub.add_parser('shodan-list', help='Технические наблюдения отдельно от индексов компаний')
     q.add_argument('--demo', action='store_true')
     q.add_argument('--output', type=Path)
+    q = sub.add_parser('shodan-watch', help='Включить ежедневный поиск Shodan по домену компании')
+    q.add_argument('--company', required=True)
+    q.add_argument('--domain', required=True)
+    q.add_argument('--disable', action='store_true')
+    sub.add_parser('shodan-monitor-status', help='Домены, лимиты и результаты фонового наблюдения')
     q = sub.add_parser('shodan-review', help='Проверить принадлежность наблюдаемого сервиса компании')
     q.add_argument('id')
     q.add_argument('--company', required=True)
@@ -217,6 +222,12 @@ def run(args):
     command = args.command
     if command.startswith('shodan-'):
         from . import shodan
+        if command == 'shodan-watch':
+            from .shodan_monitor import configure_target
+            return configure_target(store, args.company, args.domain, not args.disable)
+        if command == 'shodan-monitor-status':
+            from .shodan_monitor import monitor_status
+            return monitor_status(store)
         if command == 'shodan-demo':
             store.load_companies(read_json(ROOT / 'examples/companies_demo.json'))
             result = shodan.import_export(store, shodan.read_export(shodan.EXAMPLE), demo=True)

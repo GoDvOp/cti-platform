@@ -79,9 +79,21 @@ class Workbench:
 
     def shodan(self):
         from .shodan import observations
+        from .shodan_monitor import monitor_status
         with snapshot(self.database, self.folder) as store:
             return {'observations': observations(store, include_demo=True), 'offline': self.offline,
+                    'monitor': monitor_status(store), 'runtime': runtime(self.root, self.offline),
                     'companies': store.companies(), 'changes_company_indices': False}
+
+    def configure_shodan(self, body):
+        if self.offline:
+            raise ValueError('Откройте обычный стенд для настройки наблюдения')
+        if not isinstance(body, dict) or set(body) != {'company_id', 'domain', 'enabled'}:
+            raise ValueError('Shodan: выберите компанию, домен и состояние наблюдения')
+        from .shodan_monitor import configure_target
+        from .storage import CTIStore
+        with self.lock:
+            return configure_target(CTIStore(self.database), **body)
 
     def import_shodan(self, body):
         if self.offline:
@@ -212,6 +224,8 @@ def make_server(app, host='127.0.0.1', port=8765):
                     return self.send(200, app.import_shodan(body))
                 if urlsplit(self.path).path == '/api/shodan/review':
                     return self.send(200, app.review_shodan(body))
+                if urlsplit(self.path).path == '/api/shodan/monitor':
+                    return self.send(200, app.configure_shodan(body))
                 if urlsplit(self.path).path == '/api/control':
                     if not isinstance(body, dict) or set(body) != {'action'}:
                         raise ValueError('Нужно выбрать действие панели')

@@ -83,6 +83,7 @@ def runtime(root=ROOT, offline=False, now=None):
             'running': fresh, 'phase': 'offline' if offline else state.get('phase', 'unknown'),
             'paused': preferences.get('paused') is True,
             'heartbeat_at': None if offline else state.get('heartbeat_at'),
+            'shodan_monitor': None if offline else state.get('shodan_monitor'),
             'last_graph_success': None if offline else state.get('last_graph_success'),
             'error': None if offline else state.get('last_graph_error') or state.get('last_error'),
             'controls_available': fresh and not offline, 'graph_counts': state.get('graph_counts') if not offline else None}

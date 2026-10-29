@@ -221,6 +221,11 @@ def _candidates(observation, companies):
 def observations(store, *, now=None, include_demo=False, as_of=None):
     at = datetime.fromisoformat(date_iso(now or utcnow()))
     companies = store.companies()
+    discovered = {}
+    with store.connect() as db:
+        for row in db.execute('SELECT d.publication_id,t.company_id,t.domain FROM shodan_discoveries d '
+                              'JOIN shodan_targets t ON t.id=d.target_id'):
+            discovered.setdefault(row['publication_id'], []).append({'company_id': row['company_id'], 'domain': row['domain']})
     result = []
     for demo in (False, True) if include_demo else (False,):
         for row in store.publications(demo, as_of=as_of):
@@ -237,6 +242,7 @@ def observations(store, *, now=None, include_demo=False, as_of=None):
                                age_days=None if age is None else round(age, 2),
                                freshness='unknown' if age is None else 'future' if age < 0 else 'stale' if age > 30 else 'recent',
                                association_review=review, company_candidates=candidates,
+                               discovered_for=discovered.get(row['id'], []),
                                interpretation='Наблюдение стороннего источника. Версия по баннеру и CVE не устанавливают нынешнюю уязвимость компании.'))
     return sorted(result, key=lambda o: (o['observed_at'] or '', o['id']), reverse=True)
 
@@ -292,25 +298,42 @@ def fetch_host(store, address, *, api_key=None, opener=None, now=None):
             raise ValueError()
     except ValueError:
         raise ValueError('Shodan API: нужен один публичный IP-адрес, без URL, сети или диапазона') from None
+    def consume(payload, imported_at):
+        rows = normalize_export(payload)
+        if any(o['ip'] != str(ip) for o in rows):
+            raise ValueError('host_mismatch')
+        return import_export(store, payload, imported_at=imported_at, origin='api')
+    return _api_request(store, '/shodan/host/' + str(ip), {}, 'shodan_host_' + digest(str(ip))[:16],
+                        consume, api_key=api_key, opener=opener, now=now)
+
+
+def _api_request(store, endpoint, params, source_id, consume, *, api_key=None, opener=None,
+                 now=None, interval=3600, search=False):
     secret = api_key if api_key is not None else os.getenv('SHODAN_API_KEY', '')
     if not isinstance(secret, str) or not re.fullmatch(r'[A-Za-z0-9]{16,128}', secret):
         raise ValueError('Задайте SHODAN_API_KEY локально. Импорт JSON работает без ключа.')
     at = datetime.fromisoformat(date_iso(now or utcnow()))
-    host_source = 'shodan_host_' + digest(str(ip))[:16]
     from .storage import dumps
     with store.connect() as db:
         db.execute('BEGIN IMMEDIATE')
-        for sid in ('shodan_api', host_source):
+        for sid in ('shodan_api', source_id):
             last = db.execute('SELECT details FROM source_runs WHERE source_id=? ORDER BY id DESC LIMIT 1', (sid,)).fetchone()
             if last:
                 until = json.loads(last['details']).get('next_allowed_at')
                 if until and at < datetime.fromisoformat(until):
                     return {'status': 'cooldown', 'next_allowed_at': until, 'message': 'Интервал Shodan ещё не истёк'}
-        for sid, seconds in (('shodan_api', 60), (host_source, 3600)):
+        if search:
+            used = db.execute("SELECT attempted_at FROM source_runs WHERE source_id LIKE 'shodan_search_%' "
+                              "AND status='requested' AND attempted_at>? ORDER BY attempted_at",
+                              ((at - timedelta(days=1)).isoformat(),)).fetchall()
+            if len(used) >= 10:
+                until = (datetime.fromisoformat(used[0]['attempted_at']) + timedelta(days=1)).isoformat()
+                return {'status': 'budget_exhausted', 'next_allowed_at': until,
+                        'message': 'Достигнут лимит: 10 поисковых запросов за 24 часа'}
+        for sid, seconds in (('shodan_api', 60), (source_id, interval)):
             db.execute('INSERT INTO source_runs(source_id,attempted_at,status,details) VALUES(?,?,?,?)',
                        (sid, at.isoformat(), 'requested', dumps({'next_allowed_at': (at + timedelta(seconds=seconds)).isoformat()})))
-    endpoint = 'https://api.shodan.io/shodan/host/' + str(ip)
-    request = Request(endpoint + '?' + urlencode({'key': secret}),
+    request = Request('https://api.shodan.io' + endpoint + '?' + urlencode(dict(params, key=secret)),
                       headers={'Accept': 'application/json', 'User-Agent': 'CTI-Passive-Observations/1.0'})
     client = opener or build_opener(NoRedirect())
     try:
@@ -320,10 +343,7 @@ def fetch_host(store, address, *, api_key=None, opener=None, now=None):
             raise ValueError('response_too_large')
         payload = decode_export(raw)
         payload = json.loads(json.dumps(payload).replace(secret, '[REDACTED]'))
-        normalized_rows = normalize_export(payload)
-        if any(o['ip'] != str(ip) for o in normalized_rows):
-            raise ValueError('host_mismatch')
-        result = import_export(store, payload, imported_at=at.isoformat(), origin='api')
+        result = consume(payload, at.isoformat())
     except HTTPError as exc:
         code = {401: 'unauthorized', 403: 'forbidden', 404: 'not_found', 429: 'rate_limited'}.get(exc.code, 'http_error')
         retry = 3600
@@ -340,17 +360,18 @@ def fetch_host(store, address, *, api_key=None, opener=None, now=None):
         exc.close()
         result = {'status': 'error', 'error_code': code, 'http_status': exc.code,
                   'message': 'Shodan API отклонил чтение существующей записи'}
-        if exc.code == 429:
+        if exc.code in (401, 403, 429):
             until = (at + timedelta(seconds=retry)).isoformat()
-            store.source_run('shodan_api', 'rate_limited', {'next_allowed_at': until}, at.isoformat())
+            store.source_run('shodan_api', code, {'next_allowed_at': until, 'error_code': code}, at.isoformat())
             result['next_allowed_at'] = until
     except (URLError, TimeoutError, ConnectionError, OSError):
         result = {'status': 'error', 'error_code': 'network_error', 'message': 'Не удалось прочитать данные Shodan'}
     except (ValueError, TypeError, KeyError) as exc:
         code = 'response_too_large' if str(exc) == 'response_too_large' else 'invalid_response'
         result = {'status': 'error', 'error_code': code, 'message': 'Shodan вернул непригодные данные'}
-    seconds = 3600 if result['status'] == 'ok' else 300
-    store.source_run(host_source, result['status'], {**result, 'next_allowed_at': (at + timedelta(seconds=seconds)).isoformat()}, at.isoformat())
+    seconds = interval if result['status'] == 'ok' else 3600 if result.get('http_status') in (401, 403) else 300
+    result.setdefault('next_allowed_at', (at + timedelta(seconds=seconds)).isoformat())
+    store.source_run(source_id, result['status'], result, at.isoformat())
     return result
 
 

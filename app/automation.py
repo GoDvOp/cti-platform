@@ -100,6 +100,16 @@ class AutoUpdater:
             results = collection
             if results is None:
                 results = []
+                if self.stop_event and self.stop_event.is_set():
+                    self.state['phase'] = 'stopping'
+                    self.save()
+                    return self.state
+                if not self.source_id:
+                    # Run Shodan before slow feeds, but never during the initial
+                    # local projection (collection=[]), offline reviews or filters.
+                    from .shodan_monitor import poll
+                    self.state['shodan_monitor'] = poll(self.store, now=now)
+                    self.save()
                 for source in sources:
                     if self.stop_event and self.stop_event.is_set():
                         self.state['phase'] = 'stopping'

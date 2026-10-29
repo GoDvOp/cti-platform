@@ -35,6 +35,14 @@ CREATE TABLE IF NOT EXISTS factor_history(
 CREATE TABLE IF NOT EXISTS source_runs(
  id INTEGER PRIMARY KEY, source_id TEXT NOT NULL, attempted_at TEXT NOT NULL,
  status TEXT NOT NULL, details TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS shodan_targets(
+ id TEXT PRIMARY KEY, company_id TEXT NOT NULL REFERENCES companies(id),
+ domain TEXT NOT NULL, enabled INTEGER NOT NULL, created_at TEXT NOT NULL,
+ UNIQUE(company_id,domain));
+CREATE TABLE IF NOT EXISTS shodan_discoveries(
+ target_id TEXT NOT NULL REFERENCES shodan_targets(id),
+ publication_id TEXT NOT NULL REFERENCES publications(id),
+ PRIMARY KEY(target_id,publication_id));
 CREATE TABLE IF NOT EXISTS score_runs(
  id INTEGER PRIMARY KEY, calculated_at TEXT NOT NULL, model_version TEXT NOT NULL,
  data TEXT NOT NULL);
